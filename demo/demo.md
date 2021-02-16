@@ -1,34 +1,33 @@
 # auro-card
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis in tellus nec pellentesque. Integer bibendum ligula sit amet vehicula gravida. Maecenas accumsan, ligula vitae molestie iaculis, tellus mi laoreet ex [install instructions](https://auro.alaskaair.com/components/auro/button/install), ac malesuada velit dolor vel mi. Cras et rutrum urna. Sed mattis mi eu tortor ullamcorper, egestas bibendum mauris cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus viverra eros eget neque commodo vulputate. In tempus eu velit at dictum.
-Here are some more card features.
-
-Nulla at augue facilisis `odio lobortis` molestie vitae a nulla.
+TODO: Write description
 
 ## auro-card use cases
 
 The `auro-card` element should be used in situations where users may:
 
-* egestas bibendum mauris cursus
-* quis euismod felis mollis
-* consectetur ipsum risus sed tortor
+* use case 1
+* use case 2
+* use case 3
 
-> Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam fermentum libero ipsum, ac tempor sapien blandit in. Nam tincidunt non felis molestie varius.
-
-|convallis|tristique|nisl dignissim|eleifend|
-|---|---|---|---|
-|√|√|||
-|||√|√|
-
-<div class="exampleWrapper">
-  <auro-card cssClass="testClass">Hello World!</auro-card>
-</div>
+<auro-card
+    cssClass="my-class"
+    imageSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png"
+    teaserText="oneworld Explorer fare makes it easy to travel from city to city, and continent to continent. And, for every dot you connect, you earn more miles and points to spend across the oneworld Alliance."
+    linkTarget="https://www.alaskaair.com/">
+  </auro-card>
 
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
 
   ```html
-  <auro-card cssClass="testClass">Hello World!</auro-card>
+  <auro-card
+    cssClass="my-class"
+    imageSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png"
+    titleText="oneworld Explorer"
+    teaserText="oneworld Explorer fare makes it easy to travel from city to city, and continent to continent. And, for every dot you connect, you earn more miles and points to spend across the oneworld Alliance."
+    linkTarget="https://www.alaskaair.com/">
+  </auro-card>
   ```
 
 </auro-accordion>
