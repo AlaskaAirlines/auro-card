@@ -10,23 +10,44 @@ The `auro-card` element should be used in situations where users may:
 * use case 2
 * use case 3
 
-<auro-card
-    cssClass="my-class"
-    imageSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png"
-    teaserText="oneworld Explorer fare makes it easy to travel from city to city, and continent to continent. And, for every dot you connect, you earn more miles and points to spend across the oneworld Alliance."
-    linkTarget="https://www.alaskaair.com/">
-  </auro-card>
-
+<div class="exampleWrapper">
+    <auro-card
+      cssClass="my-class"
+      imageSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png">
+      <div slot="title" style="text-align: center;">
+        <auro-header level="2" display="600">
+          <b>one</b>world Explorer
+        </auro-header>
+      </div>
+      <a slot="cta" href="https://www.alaskaair.com/">
+        More info
+      </a>
+      <p slot="teaser-text">
+          oneworld Explorer fare makes it easy to travel from city to city, and continent to continent.
+          And, for every dot you connect, you earn more miles and points to spend across the oneworld Alliance.
+      </p>
+    </auro-card>
+</div>
+  
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
 
   ```html
   <auro-card
     cssClass="my-class"
-    imageSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png"
-    titleText="oneworld Explorer"
-    teaserText="oneworld Explorer fare makes it easy to travel from city to city, and continent to continent. And, for every dot you connect, you earn more miles and points to spend across the oneworld Alliance."
-    linkTarget="https://www.alaskaair.com/">
+    imageSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png">
+    <div slot="title" style="text-align: center;">
+      <auro-header level="2" display="600">
+        <b>one</b>world Explorer
+      </auro-header>
+    </div>
+    <a slot="cta" href="https://www.alaskaair.com/">
+      More info
+    </a>
+    <p slot="teaser-text">
+        oneworld Explorer fare makes it easy to travel from city to city, and continent to continent.
+        And, for every dot you connect, you earn more miles and points to spend across the oneworld Alliance.
+    </p>
   </auro-card>
   ```
 

@@ -32,9 +32,7 @@ class AuroCard extends LitElement {
     super();
 
     // Default values;
-    this.titleLevel = 2;
-    this.titleDisplay = "600";
-    this.linkText = 'More info';
+    this.imageAltText = "TODO: Provide alt text";
   }
 
   // function to define props used within the scope of this component
@@ -43,12 +41,6 @@ class AuroCard extends LitElement {
       cssClass: { type: String },
       imageSrc: { type: String },
       imageAltText: { type: String },
-      titleText: { type: String },
-      titleLevel: { type: Number },
-      titleDisplay: { type: String },
-      teaserText: { type: String },
-      linkText: { type: String },
-      linkTarget: { type: String },
     };
   }
 
@@ -71,22 +63,9 @@ class AuroCard extends LitElement {
             alt="${this.imageAltText}"
             style="width: 100%; height: auto;">
         ` : html``}
-        ${this.titleText ? html`
-          <div style="text-align: center;">
-            <auro-header level="${this.titleLevel}" display="${this.titleDisplay}">
-              ${this.titleText}
-            </auro-header>
-          </div>
-        ` : html``}
-        ${this.teaserText ? html`
-          <p style="text-align: center;">
-            ${this.teaserText}
-          </p>
-        ` : html``}
-        ${this.linkTarget ? html`
-          <a href="${this.linkTarget}">${this.linkText}</a>
-        ` : html``}
-        <slot></slot>
+        <slot name="title"></slot>
+        <slot name="teaser-text"></slot>
+        <slot name="cta"></slot>
       </div>
     `;
   }
