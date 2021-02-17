@@ -97,7 +97,6 @@ class AuroCard extends LitElement {
         <div class="card-gutter"></div>
         <div class="card-details">
           ${this.isTitleAboveImage ? null : html`<slot name="title" class="card-title"></slot>`}
-          <slot name="title" class="card-title"></slot>
           <slot name="subtitle" class="card-sub-title"></slot>
           <slot name="description" class="card-description"></slot>
           <slot name="cta" class="card-cta"></slot>
