@@ -12,8 +12,6 @@
 @import './node_modules/@alaskaairux/webcorestylesheets/dist/essentials';
 @import './node_modules/@alaskaairux/webcorestylesheets/dist/headings';
 
-@import './demo-styles';
-
 // Import Utility classes (will produce CSS in output)
 $layout-properties: margin;
 $layout-extensions: Right;

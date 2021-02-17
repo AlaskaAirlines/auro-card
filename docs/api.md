@@ -4,13 +4,18 @@ auro-card provides users a way to ...
 
 ## Properties
 
-| Property               | Attribute              | Type      | Default    | Description                                      |
-|------------------------|------------------------|-----------|------------|--------------------------------------------------|
-| `backgroundImageClass` | `backgroundImageClass` | `String`  | "bg-image" | A space-separates list of class names to be applied to the element with a<br />background image.  Only relevant when isBackgroundImage is true. |
-| `cssClass`             | `cssClass`             | `String`  |            | Applies designated CSS class to DOM element.     |
-| `imageAltText`         | `imageAltText`         | `String`  |            | Alt text for the given image.  If background image, this text is used as aria-label. |
-| `imageSrc`             | `imageSrc`             | `String`  |            | A url (relative or absolute) for card image.     |
-| `isBackgroundImage`    | `isBackgroundImage`    | `Boolean` | false      | Indicates whether the given image should be set as a background image. |
+| Property          | Attribute         | Type      | Default                                 | Description                                      |
+|-------------------|-------------------|-----------|-----------------------------------------|--------------------------------------------------|
+| `bgImgClass`      | `bgImgClass`      | `String`  | "bg-image"                              | A space-separates list of class names to be applied to the element with a<br />background image.  Only relevant when isBackgroundImage is true. |
+| `cardBgAlt`       | `cardBgAlt`       | `String`  |                                         |                                                  |
+| `cardBgColor`     | `cardBgColor`     | `String`  | "var(--auro-color-background-lightest)" |                                                  |
+| `cardBgImg`       | `cardBgImg`       | `String`  |                                         |                                                  |
+| `cssClass`        | `cssClass`        | `String`  |                                         | Applies designated CSS class to DOM element.     |
+| `imgAltText`      | `imgAltText`      | `String`  |                                         | Alt text for the given image.  If background image, this text is used as aria-label. |
+| `imgSrc`          | `imgSrc`          | `String`  |                                         | A url (relative or absolute) for card image.     |
+| `isBgImg`         | `isBgImg`         | `Boolean` | false                                   | Indicates whether the given image should be set as a background image. |
+| `isTitleAboveImg` | `isTitleAboveImg` | `Boolean` | false                                   |                                                  |
+| `padding`         | `padding`         | `String`  | "var(--auro-size-md)"                   |                                                  |
 
 ## Slots
 

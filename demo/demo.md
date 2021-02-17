@@ -7,26 +7,26 @@ information.
 
 ## auro-card as single small tile
 
-<div style="max-width: 300px" class="exampleWrapper">
-    <auro-card
-      cssClass="my-class"
-      imageSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png"
-      imageAlt="This is an image of a logo">
-      <auro-header slot="title" style="text-align: center;" level="2" display="600">
-        <b>one</b>world Explorer
-      </auro-header>
-      <p slot="subtitle" style="text-align: center;">A place for explorers</p>
-      <div slot="cta" style="text-align: center;">
-          <a href="https://www.alaskaair.com/">More info</a>
-      </div>
-      <p slot="description">
-        <b>one</b>world Explorer fare makes it easy to travel from city to city, and continent to continent.
-        And, for every dot you connect, you earn more miles and points to spend across the oneworld Alliance.
-      </p>
-      <p slot="disclaimer">
-        * Void where prohibited.
-      </p>
-    </auro-card>
+<div style="max-width: 400px">
+  <auro-card
+    cssClass="my-class"
+    imgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png"
+    imgAltText="This is an image of a logo">
+    <auro-header slot="title" style="text-align: center;" level="2" display="600">
+      <b>one</b>world Explorer
+    </auro-header>
+    <p slot="subtitle" style="text-align: center;">A place for explorers</p>
+    <div slot="cta" style="text-align: center;">
+        <a href="https://www.alaskaair.com/">More info</a>
+    </div>
+    <p slot="description">
+      <b>one</b>world Explorer fare makes it easy to travel from city to city, and continent to continent.
+      And, for every dot you connect, you earn more miles and points to spend across the oneworld Alliance.
+    </p>
+    <p slot="disclaimer">
+      * Void where prohibited.
+    </p>
+  </auro-card>
 </div>
   
 <auro-accordion lowProfile justifyRight>
@@ -36,8 +36,8 @@ information.
 <div style="max-width: 400px">
   <auro-card
     cssClass="my-class"
-    imageSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png"
-    imageAlt="This is an image of a logo">
+    imgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png"
+    imgAltText="This is an image of a logo">
     <auro-header slot="title" style="text-align: center;" level="2" display="600">
       <b>one</b>world Explorer
     </auro-header>
@@ -63,8 +63,8 @@ information.
 <div class="exampleWrapper tile-container">
     <auro-card
       cssClass="tile"
-      imageSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png"
-      imageAlt="This is an image of a logo">
+      imgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png"
+      imgAltText="This is an image of a logo">
       <auro-header slot="title" style="text-align: center;" level="2" display="600">
         <b>one</b>world Explorer
       </auro-header>
@@ -73,13 +73,13 @@ information.
         And, for every dot you connect, you earn more miles and points to spend across the oneworld Alliance.
       </p>
       <div slot="cta" style="text-align: center;">
-          <a href="https://www.alaskaair.com/">More info</a>
+        <a href="https://www.alaskaair.com/">More info</a>
       </div>
     </auro-card>
     <auro-card
       cssClass="tile"
-      imageSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/green.png"
-      imageAlt="This is an image of a logo">
+      imgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/green.png"
+      imgAltText="This is an image of a logo">
       <auro-header slot="title" style="text-align: center;" level="2" display="600">
         <b>one</b>world Explorer
       </auro-header>
@@ -88,13 +88,13 @@ information.
         And, for every dot you connect, you earn more miles and points to spend across the oneworld Alliance.
       </p>
       <div slot="cta" style="text-align: center;">
-          <a href="https://www.alaskaair.com/">More info</a>
+        <a href="https://www.alaskaair.com/">More info</a>
       </div>
     </auro-card>
     <auro-card
       cssClass="tile"
-      imageSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/pink.png"
-      imageAlt="This is an image of a logo">
+      imgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/pink.png"
+      imgAltText="This is an image of a logo">
       <auro-header slot="title" style="text-align: center;" level="2" display="600">
         <b>one</b>world Explorer
       </auro-header>
@@ -103,7 +103,7 @@ information.
         And, for every dot you connect, you earn more miles and points to spend across the oneworld Alliance.
       </p>
       <div slot="cta" style="text-align: center;">
-          <a href="https://www.alaskaair.com/">More info</a>
+        <a href="https://www.alaskaair.com/">More info</a>
       </div>
     </auro-card>
     
