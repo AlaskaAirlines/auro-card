@@ -70,6 +70,10 @@ class AuroCard extends LitElement {
       isBackgroundImage: { type: Boolean },
       backgroundImageClass: { type: String },
       isTitleAboveImage: { type: Boolean },
+      backgroundImage: { type: String },
+      backgroundIAlt: { type: String },
+      backgroundColor: { type: String },
+      padding: { type: String },
     };
   }
 
