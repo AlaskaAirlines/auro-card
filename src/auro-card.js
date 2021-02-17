@@ -32,7 +32,8 @@ class AuroCard extends LitElement {
     super();
 
     // Default values;
-    this.imageAltText = "TODO: Provide alt text";
+    this.isBackgroundImage = false;
+    this.backgroundImageClass = "bg-image";
   }
 
   // function to define props used within the scope of this component
@@ -41,6 +42,8 @@ class AuroCard extends LitElement {
       cssClass: { type: String },
       imageSrc: { type: String },
       imageAltText: { type: String },
+      isBackgroundImage: { type: Boolean },
+      backgroundImageClass: { type: String }
     };
   }
 
@@ -57,15 +60,30 @@ class AuroCard extends LitElement {
   render() {
     return html`
       <div class=${this.cssClass}>
-        ${this.imageSrc ? html`
-          <img
-            src="${this.imageSrc}"
-            alt="${this.imageAltText}"
-            style="width: 100%; height: auto;">
-        ` : html``}
-        <slot name="title"></slot>
-        <slot name="teaser-text"></slot>
-        <slot name="cta"></slot>
+        <div class="card-image-wrapper">
+          <slot name="image" class="card-image">
+            ${this.isBackgroundImage ? html`
+              <div
+                class="${this.backgroundImageClass}"
+                aria-label="${this.imageAltText}"
+                style="background-image: url(${this.imageSrc})"
+              ></div>
+            ` : html`
+              <img
+                src="${this.imageSrc}"
+                alt="${this.imageAltText}"
+                style="width: 100%; height: auto;">
+            `}
+          </slot>
+        </div>
+        <div class="card-gutter"></div>
+        <div class="card-details">
+          <slot name="title" class="card-title"></slot>
+          <slot name="sub-title" class="card-sub-title"></slot>
+          <slot name="description" class="card-description"></slot>
+          <slot name="cta" class="card-cta"></slot>
+          <slot name="disclaimer" class="card-disclaimer"></slot>
+        </div>
       </div>
     `;
   }
