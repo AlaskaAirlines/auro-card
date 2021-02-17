@@ -23,8 +23,17 @@ import "@alaskaairux/auro-header";
  *
  * @attr {String} cssClass - Applies designated CSS class to DOM element.
  * @attr {String} imageSrc - A url (relative or absolute) for card image.
+ * @attr {String} imageAltText - Alt text for the given image.  If background image, this text is used as aria-label.
+ * @attr {Boolean} isBackgroundImage - Indicates whether the given image should be set as a background image.
+ * @attr {String} backgroundImageClass - A space-separates list of class names to be applied to the element with a
+ * background image.  Only relevant when isBackgroundImage is true.
  *
- * @slot - TODO: if supported
+ * @slot image - Use to override the image with your own image markup format.
+ * @slot title - The card heading.
+ * @slot subtitle - A subtitle, if needed.
+ * @slot description - The main body of text on this card.
+ * @slot cta - The call to action for this card.
+ * @slot disclaimer - Any disclaimer text after the main body of text.
  */
 // build the component class
 class AuroCard extends LitElement {
@@ -79,7 +88,7 @@ class AuroCard extends LitElement {
         <div class="card-gutter"></div>
         <div class="card-details">
           <slot name="title" class="card-title"></slot>
-          <slot name="sub-title" class="card-sub-title"></slot>
+          <slot name="subtitle" class="card-sub-title"></slot>
           <slot name="description" class="card-description"></slot>
           <slot name="cta" class="card-cta"></slot>
           <slot name="disclaimer" class="card-disclaimer"></slot>
