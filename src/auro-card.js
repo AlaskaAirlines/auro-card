@@ -43,6 +43,7 @@ class AuroCard extends LitElement {
     // Default values;
     this.isBackgroundImage = false;
     this.backgroundImageClass = "bg-image";
+    this.isTitleAboveImage = false;
   }
 
   // This function removes the CSS selector if a slot is empty
@@ -68,6 +69,7 @@ class AuroCard extends LitElement {
       imageAltText: { type: String },
       isBackgroundImage: { type: Boolean },
       backgroundImageClass: { type: String },
+      isTitleAboveImage: { type: Boolean },
     };
   }
 
@@ -84,6 +86,7 @@ class AuroCard extends LitElement {
   render() {
     return html`
       <div class=${this.cssClass}>
+        ${this.isTitleAboveImage ? html` <slot name="title" class="card-title"></slot>` : null}
         <div class="card-image-wrapper">
           <slot name="image" class="card-image">
             ${this.isBackgroundImage
@@ -93,6 +96,7 @@ class AuroCard extends LitElement {
         </div>
         <div class="card-gutter"></div>
         <div class="card-details">
+          ${this.isTitleAboveImage ? null : html`<slot name="title" class="card-title"></slot>`}
           <slot name="title" class="card-title"></slot>
           <slot name="subtitle" class="card-sub-title"></slot>
           <slot name="description" class="card-description"></slot>
