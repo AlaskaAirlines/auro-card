@@ -45,6 +45,21 @@ class AuroCard extends LitElement {
     this.backgroundImageClass = "bg-image";
   }
 
+  // This function removes the CSS selector if a slot is empty
+  firstUpdated() {
+    const slotClass = this.cssClass.split(" ").join("."),
+      slotObj = this.shadowRoot.querySelectorAll(`.${slotClass} slot`);
+
+    for (const item of slotObj) {
+      this.slt = item.assignedNodes();
+
+      // eslint-disable-next-line no-magic-numbers
+      if (this.slt.length === 0) {
+        item.removeAttribute("class");
+      }
+    }
+  }
+
   // function to define props used within the scope of this component
   static get properties() {
     return {
@@ -52,7 +67,7 @@ class AuroCard extends LitElement {
       imageSrc: { type: String },
       imageAltText: { type: String },
       isBackgroundImage: { type: Boolean },
-      backgroundImageClass: { type: String }
+      backgroundImageClass: { type: String },
     };
   }
 
@@ -71,18 +86,9 @@ class AuroCard extends LitElement {
       <div class=${this.cssClass}>
         <div class="card-image-wrapper">
           <slot name="image" class="card-image">
-            ${this.isBackgroundImage ? html`
-              <div
-                class="${this.backgroundImageClass}"
-                aria-label="${this.imageAltText}"
-                style="background-image: url(${this.imageSrc})"
-              ></div>
-            ` : html`
-              <img
-                src="${this.imageSrc}"
-                alt="${this.imageAltText}"
-                style="width: 100%; height: auto;">
-            `}
+            ${this.isBackgroundImage
+              ? html` <div class="${this.backgroundImageClass}" aria-label="${this.imageAltText}" style="background-image: url(${this.imageSrc})"></div> `
+              : html` <img src="${this.imageSrc}" alt="${this.imageAltText}" style="width: 100%; height: auto;" /> `}
           </slot>
         </div>
         <div class="card-gutter"></div>
