@@ -37,7 +37,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;
-  width: 100%;
+  width: 400px;
   background-position: center center;
 }
 
@@ -54,6 +54,7 @@
 
 // Modified Styles
 
+// Banner Style
 .banner {
   background-color: $auro-color-background-lightest;
   color: $auro-color-text-primary-on-light;
@@ -66,5 +67,35 @@
   }
   .card-details {
     flex-grow: 1;
+  }
+}
+
+.hero {
+  background-color: $auro-color-background-lightest;
+  color: $auro-color-text-primary-on-light;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+  @media screen and (min-width: $auro-breakpoint-md) {
+    flex-direction: row-reverse;
+  }
+  .card-details {
+    flex-grow: 1;
+  }
+  .card-description {
+    display: block;
+    margin-bottom: 40px;
+  }
+}
+
+.imgRight {
+  @media screen and (min-width: $auro-breakpoint-md) {
+    flex-direction: row-reverse;
+  }
+}
+.imgLeft {
+  @media screen and (min-width: $auro-breakpoint-md) {
+    flex-direction: row-reverse;
   }
 }
