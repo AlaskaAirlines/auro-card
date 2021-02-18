@@ -5,6 +5,7 @@
 
 // If use litElement base class
 import { LitElement, html, css } from "lit-element";
+import { styleMap } from 'lit-html/directives/style-map';
 
 // If using auroElement base class
 // See instructions for importing auroElement base class https://git.io/JULq4
@@ -50,7 +51,9 @@ class AuroCard extends LitElement {
     this.bgImgClass = "bg-image";
     this.isTitleAboveImg = false;
     this.cardBgColor = "var(--auro-color-background-lightest)";
-    this.padding = "var(--auro-size-md)";
+    this.padding = "md";
+
+    this.styles = {padding: '0px'};
   }
 
   // This function removes the CSS selector if a slot is empty
@@ -91,11 +94,16 @@ class AuroCard extends LitElement {
     `;
   }
 
+  setPadding() {
+    this.styles.padding = `var(--auro-size-${this.padding})`;
+  }
+
   // When using auroElement, use the following attribute and function when hiding content from screen readers.
   // aria-hidden="${this.hideAudible(this.hiddenAudible)}"
 
   // function that renders the HTML and CSS into  the scope of the component
   render() {
+    this.setPadding();
     return html`
       <div class=${this.cssClass}>
         ${this.isTitleAboveImg ? html` <slot name="title" class="card-title"></slot>` : null}
@@ -106,7 +114,7 @@ class AuroCard extends LitElement {
               : html` <img src="${this.imgSrc}" alt="${this.imgAltText}" style="width: 100%; height: auto;" /> `}
           </slot>
         </div>
-        <div class="card-details">
+        <div class="card-details" style=${styleMap(this.styles)}>
           ${this.isTitleAboveImg ? null : html`<slot name="title" class="card-title"></slot>`}
           <slot name="subtitle" class="card-sub-title"></slot>
           <slot name="description" class="card-description"></slot>
