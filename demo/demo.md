@@ -156,7 +156,7 @@ as the primary source of information.
 <div class="exampleWrapper">
   <auro-card
     cssClass="banner imgRight"
-    isBgImg
+    coverImgContainer
     imgSrc="https://sitecore-qa-cd-westus2.azurewebsites.net/-/media/Images/pages/examples/ocean.png"
     imgAltText="A cellpone overlooking a tropical beach"
     cardBgColor="var(--auro-color-background-darker)"
@@ -178,7 +178,7 @@ as the primary source of information.
 ```html
 <auro-card
   cssClass="banner imgRight"
-  isBgImg
+  coverImgContainer
   imgSrc="https://sitecore-qa-cd-westus2.azurewebsites.net/-/media/Images/pages/examples/ocean.png"
   imgAltText="A cellpone overlooking a tropical beach"
   cardBgColor="var(--auro-color-background-darker)">

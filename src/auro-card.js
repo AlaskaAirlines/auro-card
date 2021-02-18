@@ -48,7 +48,7 @@ class AuroCard extends LitElement {
     super();
 
     // Default values;
-    this.isBgImg = false;
+    this.coverImgContainer = false;
     this.bgImgClass = "card-bg-image-cover card-bg-imageHeight-400";
     this.isTitleAboveImg = false;
     this.cardBgColor = "var(--auro-color-background-lightest)";
@@ -78,7 +78,7 @@ class AuroCard extends LitElement {
       cssClass: { type: String },
       imgSrc: { type: String },
       imgAltText: { type: String },
-      isBgImg: { type: Boolean },
+      coverImgContainer: { type: Boolean },
       bgImgClass: { type: String },
       isTitleAboveImg: { type: Boolean },
       cardBgImgSrc: { type: String },
@@ -134,7 +134,7 @@ class AuroCard extends LitElement {
         ${this.isTitleAboveImg ? html` <slot name="title" class="card-title"></slot>` : null}
         <div class="card-image-wrapper">
           <slot name="image" class="card-image">
-            ${this.isBgImg
+            ${this.coverImgContainer
               ? html` <div class="card-bg-image ${this.bgImgClass}" aria-label="${this.imgAltText}" style="background-image: url(${this.imgSrc})"></div> `
               : html` <img src="${this.imgSrc}" alt="${this.imgAltText}" style="width: 100%; height: auto;" /> `}
           </slot>
