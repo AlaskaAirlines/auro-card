@@ -26,6 +26,20 @@ describe('auro-card', () => {
     await expect(el).to.be.true;
   });
 
+  it('sets all classes for high level auro-card modifiers', async () => {
+    const el = await fixture(html`
+      <auro-card cssclass="testClass" banner hero imgLeft imgRight card miniBanner ></auro-card>
+    `);
+
+    const div = el.shadowRoot.querySelector('div');
+    expect(div).to.have.class('banner');
+    expect(div).to.have.class('hero');
+    expect(div).to.have.class('imgLeft');
+    expect(div).to.have.class('imgRight');
+    expect(div).to.have.class('card');
+    expect(div).to.have.class('miniBanner');
+  });
+
   it('sets the card-bg-image CSS class when there is a card background image', async () => {
     const el = await fixture(html`
       <auro-card cssclass="testClass" cardBgImgSrc="pic.png"></auro-card>
