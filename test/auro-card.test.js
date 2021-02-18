@@ -25,4 +25,13 @@ describe('auro-card', () => {
 
     await expect(el).to.be.true;
   });
+
+  it('sets the card-bg-image CSS class when there is a card background image', async () => {
+    const el = await fixture(html`
+      <auro-card cssclass="testClass" cardBgImgSrc="pic.png"></auro-card>
+    `);
+
+    const div = el.shadowRoot.querySelector('div');
+    expect(div.className).to.contain('card-bg-image');
+  });
 });

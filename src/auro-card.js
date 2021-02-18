@@ -57,6 +57,7 @@ class AuroCard extends LitElement {
     super();
 
     // Default values;
+    this.cssClass = "";
     this.bgImgClass = 'card-bg-image-cover card-bg-imageHeight-400';
     this.cardBgColor = 'var(--auro-color-background-lightest)';
     this.padding = 'none';
