@@ -16,9 +16,7 @@ as the primary source of information.
       <b>one</b>world Explorer
     </auro-header>
     <p slot="subtitle" style="text-align: center;">A place for explorers</p>
-    <div slot="cta" style="text-align: center;">
-        <a href="https://www.alaskaair.com/">More info</a>
-    </div>
+    <auro-hyperlink href="#" secondary slot="cta" targe="_blank">More info</auro-hyperlink>
     <p slot="description">
       <b>one</b>world Explorer fare makes it easy to travel from city to city, and continent to continent.
       And, for every dot you connect, you earn more miles and points to spend across the oneworld Alliance.
@@ -37,9 +35,7 @@ as the primary source of information.
   <auro-card cssClass="my-class" imgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png" imgAltText="This is an image of a logo">
     <auro-header slot="title" style="text-align: center;" level="2" display="600"> <b>one</b>world Explorer </auro-header>
     <p slot="subtitle" style="text-align: center;">A place for explorers</p>
-    <div slot="cta" style="text-align: center;">
-      <a href="https://www.alaskaair.com/">More info</a>
-    </div>
+    <auro-hyperlink href="#" secondary slot="cta" targe="_blank">More info</auro-hyperlink>
     <p slot="description">
       <b>one</b>world Explorer fare makes it easy to travel from city to city, and continent to continent. And, for every dot you connect, you earn more miles and points to spend
       across the oneworld Alliance.
@@ -55,6 +51,7 @@ as the primary source of information.
 
 <div class="exampleWrapper tile-container">
     <auro-card
+    isTitleAboveImg
       cssClass="tile"
       imgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png"
       imgAltText="This is an image of a logo">
@@ -65,11 +62,10 @@ as the primary source of information.
         <b>one</b>world Explorer fare makes it easy to travel from city to city, and continent to continent.
         And, for every dot you connect, you earn more miles and points to spend across the oneworld Alliance.
       </p>
-      <div slot="cta" style="text-align: center;">
-        <a href="https://www.alaskaair.com/">More info</a>
-      </div>
+      <auro-hyperlink href="#" secondary slot="cta" targe="_blank">More info</auro-hyperlink>
     </auro-card>
     <auro-card
+    isTitleAboveImg
       cssClass="tile"
       imgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/green.png"
       imgAltText="This is an image of a logo">
@@ -80,11 +76,10 @@ as the primary source of information.
         <b>one</b>world Explorer fare makes it easy to travel from city to city, and continent to continent.
         And, for every dot you connect, you earn more miles and points to spend across the oneworld Alliance.
       </p>
-      <div slot="cta" style="text-align: center;">
-        <a href="https://www.alaskaair.com/">More info</a>
-      </div>
+      <auro-hyperlink href="#" secondary slot="cta" targe="_blank">More info</auro-hyperlink>
     </auro-card>
     <auro-card
+    isTitleAboveImg
       cssClass="tile"
       imgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/pink.png"
       imgAltText="This is an image of a logo">
@@ -95,18 +90,16 @@ as the primary source of information.
         <b>one</b>world Explorer fare makes it easy to travel from city to city, and continent to continent.
         And, for every dot you connect, you earn more miles and points to spend across the oneworld Alliance.
       </p>
-      <div slot="cta" style="text-align: center;">
-        <a href="https://www.alaskaair.com/">More info</a>
-      </div>
+      <auro-hyperlink href="#" secondary slot="cta" targe="_blank">More info</auro-hyperlink>
     </auro-card>
-    
     <style>
       .tile-container {
         display: flex;
         flex-direction: row;
       }
-      .tile-container .tile {
+      .tile-container auro-card {
         min-width: 5rem;
+        margin:0 24px;
       }
     </style>
 </div>
