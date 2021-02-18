@@ -71,7 +71,6 @@ class AuroCard extends LitElement {
       imgAltText: { type: String },
       isBgImg: { type: Boolean },
       bgImgClass: { type: String },
-
       isTitleAboveImg: { type: Boolean },
       cardBgImg: { type: String },
       cardBgAlt: { type: String },
@@ -93,16 +92,16 @@ class AuroCard extends LitElement {
   render() {
     return html`
       <div class=${this.cssClass}>
-        ${this.isTitleAboveImage ? html` <slot name="title" class="card-title"></slot>` : null}
+        ${this.isTitleAboveImg ? html` <slot name="title" class="card-title"></slot>` : null}
         <div class="card-image-wrapper">
           <slot name="image" class="card-image">
-            ${this.isBackgroundImage
-              ? html` <div class="${this.backgroundImageClass}" aria-label="${this.imageAltText}" style="background-image: url(${this.imageSrc})"></div> `
-              : html` <img src="${this.imageSrc}" alt="${this.imageAltText}" style="width: 100%; height: auto;" /> `}
+            ${this.isBgImg
+              ? html` <div class="${this.bgImgClass}" aria-label="${this.imgAltText}" style="background-image: url(${this.imgSrc})"></div> `
+              : html` <img src="${this.imgSrc}" alt="${this.imgAltText}" style="width: 100%; height: auto;" /> `}
           </slot>
         </div>
         <div class="card-details">
-          ${this.isTitleAboveImage ? null : html`<slot name="title" class="card-title"></slot>`}
+          ${this.isTitleAboveImg ? null : html`<slot name="title" class="card-title"></slot>`}
           <slot name="subtitle" class="card-sub-title"></slot>
           <slot name="description" class="card-description"></slot>
           <slot name="cta" class="card-cta"></slot>

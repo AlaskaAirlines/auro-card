@@ -2,15 +2,29 @@
 
 auro-card provides users a way to ...
 
+## Attributes
+
+| Attribute              | Type      | Description                                      |
+|------------------------|-----------|--------------------------------------------------|
+| `backgroundImageClass` | `String`  | A space-separates list of class names to be applied to the element with a<br />background image.  Only relevant when isBackgroundImage is true. |
+| `imageAltText`         | `String`  | Alt text for the given image.  If background image, this text is used as aria-label. |
+| `imageSrc`             | `String`  | A url (relative or absolute) for card image.     |
+| `isBackgroundImage`    | `Boolean` | Indicates whether the given image should be set as a background image. |
+
 ## Properties
 
-| Property               | Attribute              | Type      | Default    | Description                                      |
-|------------------------|------------------------|-----------|------------|--------------------------------------------------|
-| `backgroundImageClass` | `backgroundImageClass` | `String`  | "bg-image" | A space-separates list of class names to be applied to the element with a<br />background image.  Only relevant when isBackgroundImage is true. |
-| `cssClass`             | `cssClass`             | `String`  |            | Applies designated CSS class to DOM element.     |
-| `imageAltText`         | `imageAltText`         | `String`  |            | Alt text for the given image.  If background image, this text is used as aria-label. |
-| `imageSrc`             | `imageSrc`             | `String`  |            | A url (relative or absolute) for card image.     |
-| `isBackgroundImage`    | `isBackgroundImage`    | `Boolean` | false      | Indicates whether the given image should be set as a background image. |
+| Property          | Attribute         | Type      | Default                                 | Description                                  |
+|-------------------|-------------------|-----------|-----------------------------------------|----------------------------------------------|
+| `bgImgClass`      | `bgImgClass`      | `string`  | "bg-image"                              |                                              |
+| `cardBgAlt`       | `cardBgAlt`       | `string`  |                                         |                                              |
+| `cardBgColor`     | `cardBgColor`     | `string`  | "var(--auro-color-background-lightest)" |                                              |
+| `cardBgImg`       | `cardBgImg`       | `string`  |                                         |                                              |
+| `cssClass`        | `cssClass`        | `String`  |                                         | Applies designated CSS class to DOM element. |
+| `imgAltText`      | `imgAltText`      | `string`  |                                         |                                              |
+| `imgSrc`          | `imgSrc`          | `string`  |                                         |                                              |
+| `isBgImg`         | `isBgImg`         | `boolean` | false                                   |                                              |
+| `isTitleAboveImg` | `isTitleAboveImg` | `boolean` | false                                   |                                              |
+| `padding`         | `padding`         | `string`  | "var(--auro-size-md)"                   |                                              |
 
 ## Slots
 

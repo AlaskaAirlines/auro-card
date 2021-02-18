@@ -33,12 +33,17 @@
   padding: var(--auro-text-body-size-default);
 }
 
-//Spacing between Image and Copy
-.card-gutter {
-  padding: $auro-size-sm;
-  @media screen and (min-width: $auro-breakpoint-md) {
-    padding: $auro-size-lg;
-  }
+.bg-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+  background-position: center center;
+}
+
+.card-description {
+  font-size: $auro-text-body-size-default;
+  line-height: $auro-text-heading-300-height;
 }
 
 // Disclaimer size
