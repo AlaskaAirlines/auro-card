@@ -192,23 +192,25 @@ as the primary source of information.
 
 ## auro-card as a banner
 <div>
+  <auro-card
     cssClass="my-class banner"
     imgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png"
     imgAltText="This is an image of a logo">
-      <auro-header slot="title" level="2" display="600">
-      </auro-header>
+      <auro-header slot="title" level="2" display="600"> <b>one</b>world Explorer</auro-header>
       <p slot="subtitle">A place for explorers</p>
       <auro-hyperlink href="#" secondary slot="cta" target="_blank">More info</auro-hyperlink>
       <p slot="description">
+        <b>one</b>world Explorer fare makes it easy to travel from city to city, and continent to continent. And, for every dot you connect, you earn more miles and points to spend
+        across the oneworld Alliance.
       </p>
-      <p slot="disclaimer"> * Void where prohibited.</p>
+      <p slot="disclaimer">* Void where prohibited.</p>
   </auro-card>
 </div>
 <auro-accordion lowProfile justifyRight>
 <span slot="trigger">See code</span>
 
 ```html
-<div style="max-width: 400px">
+<div>
   <auro-card cssClass="my-class" imageSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png" imageAlt="This is an image of a logo">
     <auro-header slot="title" level="2" display="600"> <b>one</b>world Explorer </auro-header>
     <p slot="subtitle">A place for explorers</p>
@@ -216,7 +218,12 @@ as the primary source of information.
     <p slot="description">
       <b>one</b>world Explorer fare makes it easy to travel from city to city, and continent to continent. And, for every dot you connect, you earn more miles and points to spend
       across the oneworld Alliance.
+    </p>
     <p slot="disclaimer">* Void where prohibited.</p>
+  </auro-card>
+</div>
+
+
 ```javascript
 toggleDialog = (elName) => {
   let dialog = document.querySelector(elName);
