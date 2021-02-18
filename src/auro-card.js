@@ -77,7 +77,6 @@ class AuroCard extends LitElement {
       imgAltText: { type: String },
       isBgImg: { type: Boolean },
       bgImgClass: { type: String },
-
       isTitleAboveImg: { type: Boolean },
       cardBgImgSrc: { type: String },
       cardBgImgAlt: { type: String },
@@ -103,7 +102,7 @@ class AuroCard extends LitElement {
         <div class="card-image-wrapper">
           <slot name="image" class="card-image">
             ${this.isBgImg
-              ? html` <div class="${this.backgroundImageClass}" aria-label="${this.imgAltText}" style="background-image: url(${this.imgSrc})"></div> `
+              ? html` <div class="${this.bgImgClass}" aria-label="${this.imgAltText}" style="background-image: url(${this.imgSrc})"></div> `
               : html` <img src="${this.imgSrc}" alt="${this.imgAltText}" style="width: 100%; height: auto;" /> `}
           </slot>
         </div>
