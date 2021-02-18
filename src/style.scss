@@ -51,3 +51,20 @@
   color: $auro-color-text-secondary-on-light;
   font-size: 10px;
 }
+
+// Modified Styles
+
+.banner {
+  background-color: $auro-color-background-lightest;
+  color: $auro-color-text-primary-on-light;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+  @media screen and (min-width: $auro-breakpoint-md) {
+    flex-direction: row;
+  }
+  .card-details {
+    flex-grow: 1;
+  }
+}
