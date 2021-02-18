@@ -35,7 +35,7 @@ describe('auro-card', () => {
     expect(div).to.have.class('card-bg-image');
   });
 
-  it('sets title below image when isTitleAboveImg is not set', async () => {
+  it('sets title below image when titleTop is not set', async () => {
     const el = await fixture(html`
       <auro-card cssclass="testClass"></auro-card>
     `);
@@ -45,9 +45,9 @@ describe('auro-card', () => {
     expect(div.querySelectorAll('#title-below')).to.exist;
   });
 
-  it('sets title above image when isTitleAboveImg is set', async () => {
+  it('sets title above image when titleTop is set', async () => {
     const el = await fixture(html`
-      <auro-card cssclass="testClass" isTitleAboveImg></auro-card>
+      <auro-card cssclass="testClass" titleTop></auro-card>
     `);
 
     const div = el.shadowRoot.querySelector('div');
