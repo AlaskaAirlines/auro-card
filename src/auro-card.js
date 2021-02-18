@@ -57,7 +57,7 @@ class AuroCard extends LitElement {
     super();
 
     // Default values;
-    this.cssClass = "";
+    this.cssClass = "auro-card";
     this.bgImgClass = 'card-bg-image-cover card-bg-imageHeight-400';
     this.cardBgColor = 'var(--auro-color-background-lightest)';
     this.padding = 'none';
@@ -152,7 +152,7 @@ class AuroCard extends LitElement {
       'left',
       'right'
     ])) {
-      this.justify = 'center';
+      this.justify = 'left';
     }
     this.cardDetailsStyles.textAlign = this.justify;
   }
