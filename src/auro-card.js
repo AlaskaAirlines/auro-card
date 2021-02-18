@@ -3,13 +3,7 @@
 
 // ---------------------------------------------------------------------
 
-// If use litElement base class
 import { LitElement, html, css } from "lit-element";
-
-// If using auroElement base class
-// See instructions for importing auroElement base class https://git.io/JULq4
-// import { html, css } from "lit-element";
-// import AuroElement from '@alaskaairux/webcorestylesheets/dist/auroElement/auroElement';
 
 // Import touch detection lib
 import "focus-visible/dist/focus-visible.min.js";
@@ -19,7 +13,10 @@ import "@alaskaairux/auro-header";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
- * auro-card provides users a way to ...
+ * auro-card provides users a flexible way to convey a summary of information. The primary elements of a card include an
+ * image, and details. The details are broken down into title, description, cta, and others. A card should be used to
+ * grab the attention of a user and direct them to another resource for further information.  A card should not be used
+ * as the primary source of information.
  *
  * @attr {String} cssClass - Applies designated CSS class to DOM element.
  * @attr {String} imgSrc - A url (relative or absolute) for card image.
@@ -27,11 +24,16 @@ import "@alaskaairux/auro-header";
  * @attr {Boolean} isBgImg - Indicates whether the given image should be set as a background image.
  * @attr {String} bgImgClass - A space-separates list of class names to be applied to the element with a
  * background image.  Only relevant when isBackgroundImage is true.
- * @attr {Boolean} isTitleAboveImg
- * @attr {String} cardBgImg
- * @attr {String} cardBgAlt
- * @attr {String} cardBgColor
- * @attr {String} padding
+ * @attr {Boolean} isTitleAboveImg - Indicates whether the title prefers to appear above the image.  This property does
+ * not affect the position of the title when in a banner layout.
+ * @attr {String} cardBgImgSrc - A background image that spans the breadth of the component.
+ * @attr {String} cardBgImgAlt - If set, will serve as alt text for a full component background image.  Usage of this
+ * property is only advised if the corresponding background image is considered relevant to the semantics of the page.
+ * That is, if the image is not merely decorative.
+ * @attr {String} cardBgColor - Indicates a background color that spans the breadth of the component.
+ * @attr {String} padding - Indicates padding around the details section of the card. This can be one of the following
+ * tokens: 'sm', 'md', or 'lg'.  It can also be a standard CSS 4-tuple of spacing, e.g. "5px 10px 2px 10px", and
+ * supports CSS variable, e.g. "var(--t-padding) var(--r-padding) var(--b-padding) 20px"
  *
  * @slot image - Use to override the image with your own image markup format.
  * @slot title - The card heading.
@@ -40,7 +42,6 @@ import "@alaskaairux/auro-header";
  * @slot cta - The call to action for this card.
  * @slot disclaimer - Any disclaimer text after the main body of text.
  */
-// build the component class
 class AuroCard extends LitElement {
   constructor() {
     super();
@@ -77,8 +78,8 @@ class AuroCard extends LitElement {
       isBgImg: { type: Boolean },
       bgImgClass: { type: String },
       isTitleAboveImg: { type: Boolean },
-      cardBgImg: { type: String },
-      cardBgAlt: { type: String },
+      cardBgImgSrc: { type: String },
+      cardBgImgAlt: { type: String },
       cardBgColor: { type: String },
       padding: { type: String },
     };
