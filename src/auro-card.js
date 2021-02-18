@@ -94,10 +94,9 @@ class AuroCard extends LitElement {
     `;
   }
 
-  setPadding() {
-    const auroSizes = ['none', 'xxxs', 'xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl', 'xxxl'];
+  setCardDetailsStyles() {
+    const auroSizes = ["none", "xxxs", "xxs", "xs", "sm", "md", "lg", "xl", "xxl", "xxxl"];
     this.cardDetailsStyles.padding = auroSizes.some(size => size === this.padding) ? `var(--auro-size-${this.padding})` : this.padding;
-
   }
 
   // When using auroElement, use the following attribute and function when hiding content from screen readers.
@@ -105,7 +104,7 @@ class AuroCard extends LitElement {
 
   // function that renders the HTML and CSS into  the scope of the component
   render() {
-    this.setPadding();
+    this.setCardDetailsStyles();
     return html`
       <div class=${this.cssClass} style="${this.cardBgColor ? `background-color: ${this.cardBgColor}` : ``}">
         ${this.isTitleAboveImg ? html` <slot name="title" class="card-title"></slot>` : null}

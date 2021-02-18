@@ -26,6 +26,11 @@
 //   ...
 // }
 
+:host {
+  font-family: var(--auro-font-family-default);
+  font-weight: var(--auro-text-body-default-weight);
+}
+
 .card-image-wrapper {
   flex-basis: 450px;
 }
