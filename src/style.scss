@@ -26,24 +26,42 @@
 //   ...
 // }
 
-.testClass {
-  color: var(--auro-color-border-error-on-light);
-  border: 1px solid var(--auro-color-border-error-on-light);
-  display: inline-block;
-  padding: var(--auro-text-body-size-default);
+.card-image-wrapper {
+  flex-basis: 450px;
 }
-
-.bg-image {
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 300px;
-  width: 400px;
-  background-position: center center;
+.card-details {
+  flex-basis: 550px;
 }
-
 .card-description {
   font-size: $auro-text-body-size-default;
   line-height: $auro-text-heading-300-height;
+}
+.card-bg-image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.card-bg-image-cover {
+  background-size: cover;
+}
+.card-bg-image-contain {
+  background-size: contain;
+}
+
+.card-bg-imageHeight-300 {
+  height: 300px;
+}
+.card-bg-imageHeight-400 {
+  height: 400px;
+}
+.card-bg-imageHeight-500 {
+  height: 500px;
+}
+.card-bg-imageHeight-600 {
+  height: 600px;
+}
+.card-bg-imageHeight-700 {
+  height: 700px;
 }
 
 // Disclaimer size
@@ -62,14 +80,13 @@
   align-items: center;
   overflow: hidden;
   flex-direction: column;
-  @media screen and (min-width: $auro-breakpoint-md) {
+  @media screen and (min-width: $auro-breakpoint-sm) {
     flex-direction: row;
   }
-  .card-details {
-    flex-grow: 1;
-  }
 }
-
+.card-details {
+  flex-grow: 1;
+}
 .hero {
   background-color: $auro-color-background-lightest;
   color: $auro-color-text-primary-on-light;
@@ -77,11 +94,8 @@
   align-items: center;
   overflow: hidden;
   flex-direction: column;
-  @media screen and (min-width: $auro-breakpoint-md) {
+  @media screen and (min-width: $auro-breakpoint-sm) {
     flex-direction: row-reverse;
-  }
-  .card-details {
-    flex-grow: 1;
   }
   .card-description {
     display: block;
@@ -90,12 +104,12 @@
 }
 
 .imgRight {
-  @media screen and (min-width: $auro-breakpoint-md) {
+  @media screen and (min-width: $auro-breakpoint-sm) {
     flex-direction: row-reverse;
   }
 }
 .imgLeft {
-  @media screen and (min-width: $auro-breakpoint-md) {
+  @media screen and (min-width: $auro-breakpoint-sm) {
     flex-direction: row-reverse;
   }
 }

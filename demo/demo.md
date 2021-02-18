@@ -53,7 +53,7 @@ as the primary source of information.
     cssClass="banner"
     imgSrc="https://sitecore-qa-cd-westus2.azurewebsites.net/-/media/Images/pages/examples/lounge.png"
     imgAltText="Lounge amenities">
-    <auro-header slot="title" style="text-align: center;" level="2" display="600">
+    <auro-header slot="title" level="2" display="700">
       Relax before the runway
     </auro-header>
     <p slot="description">
@@ -90,7 +90,6 @@ as the primary source of information.
 <div class="exampleWrapper">
   <auro-card
     cssClass="banner hero imgRight"
-    isBgImg
     imgSrc="https://sitecore-qa-cd-westus2.azurewebsites.net/-/media/Images/pages/examples/yellow.png"
     imgAltText="Airport gates">
     <auro-header margin="bottom" size="xxxs" color="var(--auro-color-brand-midnight-400)" slot="title" level="6" display="300">
@@ -132,7 +131,8 @@ as the primary source of information.
 
 <div class="exampleWrapper">
   <auro-card
-    cssClass="banner"
+    cssClass="banner imgRight"
+    isBgImg
     imgSrc="https://sitecore-qa-cd-westus2.azurewebsites.net/-/media/Images/pages/examples/ocean.png"
     imgAltText="A cellpone overlooking a tropical beach"
     cardBgColor="var(--auro-color-background-darker)">
