@@ -52,8 +52,9 @@ class AuroCard extends LitElement {
     this.bgImgClass = "card-bg-image-cover card-bg-imageHeight-400";
     this.isTitleAboveImg = false;
     this.cardBgColor = "var(--auro-color-background-lightest)";
-    this.padding = "md";
-    this.styles = {padding: '0px'};
+    this.padding = "none";
+
+    this.cardDetailsStyles = {};
   }
 
   // This function removes the CSS selector if a slot is empty
@@ -93,8 +94,23 @@ class AuroCard extends LitElement {
     `;
   }
 
-  setPadding() {
-    this.styles.padding = `var(--auro-size-${this.padding})`;
+  setCardDetailsStyles() {
+    const auroSizes = [
+      'none',
+      'xxxs',
+      'xxs',
+      'xs',
+      'sm',
+      'md',
+      'lg',
+      'xl',
+      'xxl',
+      'xxxl'
+    ];
+
+    this.cardDetailsStyles.padding = auroSizes.some((size) => size === this.padding)
+      ? `var(--auro-size-${this.padding})`
+      : this.padding;
   }
 
   setCardBgImg() {
@@ -108,7 +124,7 @@ class AuroCard extends LitElement {
 
   // function that renders the HTML and CSS into  the scope of the component
   render() {
-    this.setPadding();
+    this.setCardDetailsStyles();
     this.setCardBgImg();
 
     return html`
@@ -123,7 +139,7 @@ class AuroCard extends LitElement {
               : html` <img src="${this.imgSrc}" alt="${this.imgAltText}" style="width: 100%; height: auto;" /> `}
           </slot>
         </div>
-        <div class="card-details" style=${styleMap(this.styles)}>
+        <div class="card-details" style=${styleMap(this.cardDetailsStyles)}>
           ${this.isTitleAboveImg ? null : html`<slot name="title" class="card-title"></slot>`}
           <slot name="subtitle" class="card-sub-title"></slot>
           <slot name="description" class="card-description"></slot>
