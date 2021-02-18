@@ -52,9 +52,9 @@ class AuroCard extends LitElement {
     this.bgImgClass = "card-bg-image-cover card-bg-imageHeight-400";
     this.isTitleAboveImg = false;
     this.cardBgColor = "var(--auro-color-background-lightest)";
-    this.padding = "md";
+    this.padding = "none";
 
-    this.styles = {};
+    this.cardDetailsStyles = {};
   }
 
   // This function removes the CSS selector if a slot is empty
@@ -96,7 +96,8 @@ class AuroCard extends LitElement {
 
   setPadding() {
     const auroSizes = ['none', 'xxxs', 'xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl', 'xxxl'];
-    this.styles.padding = auroSizes.some(size => size === this.padding) ? `var(--auro-size-${this.padding})` : this.padding;
+    this.cardDetailsStyles.padding = auroSizes.some(size => size === this.padding) ? `var(--auro-size-${this.padding})` : this.padding;
+
   }
 
   // When using auroElement, use the following attribute and function when hiding content from screen readers.
@@ -115,7 +116,7 @@ class AuroCard extends LitElement {
               : html` <img src="${this.imgSrc}" alt="${this.imgAltText}" style="width: 100%; height: auto;" /> `}
           </slot>
         </div>
-        <div class="card-details" style=${styleMap(this.styles)}>
+        <div class="card-details" style=${styleMap(this.cardDetailsStyles)}>
           ${this.isTitleAboveImg ? null : html`<slot name="title" class="card-title"></slot>`}
           <slot name="subtitle" class="card-sub-title"></slot>
           <slot name="description" class="card-description"></slot>

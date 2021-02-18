@@ -10,7 +10,8 @@ as the primary source of information.
 <div style="max-width: 400px" class="exampleWrapper">
   <auro-card
     imgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png"
-    imgAltText="This is an image of a logo">
+    imgAltText="This is an image of a logo"
+    padding="md">
     <auro-header slot="title" style="text-align: center;" level="2" display="600">
       <b>one</b>world Explorer
     </auro-header>
@@ -135,7 +136,8 @@ as the primary source of information.
     isBgImg
     imgSrc="https://sitecore-qa-cd-westus2.azurewebsites.net/-/media/Images/pages/examples/ocean.png"
     imgAltText="A cellpone overlooking a tropical beach"
-    cardBgColor="var(--auro-color-background-darker)">
+    cardBgColor="var(--auro-color-background-darker)"
+    padding="20px 15px 20px 15px">
     <auro-header slot="title" color="var(--auro-color-text-primary-on-dark)" level="2" display="600">
       Alaska Mileageplan
     </auro-header>
