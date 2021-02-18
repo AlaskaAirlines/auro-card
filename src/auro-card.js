@@ -53,7 +53,6 @@ class AuroCard extends LitElement {
     this.isTitleAboveImg = false;
     this.cardBgColor = "var(--auro-color-background-lightest)";
     this.padding = "md";
-
     this.styles = {padding: '0px'};
   }
 
@@ -98,14 +97,24 @@ class AuroCard extends LitElement {
     this.styles.padding = `var(--auro-size-${this.padding})`;
   }
 
+  setCardBgImg() {
+    if (this.cardBgImgSrc) {
+      this.cssClass += ' card-bg-image';
+    }
+  }
+
   // When using auroElement, use the following attribute and function when hiding content from screen readers.
   // aria-hidden="${this.hideAudible(this.hiddenAudible)}"
 
   // function that renders the HTML and CSS into  the scope of the component
   render() {
     this.setPadding();
+    this.setCardBgImg();
+
     return html`
-      <div class=${this.cssClass} style="${this.cardBgColor ? `background-color: ${this.cardBgColor}` : ``}">
+      <div
+        class=${this.cssClass}
+        style="${this.cardBgColor ? `background-color: ${this.cardBgColor};` : ``}${this.cardBgImgSrc ? ` background-image: url(${this.cardBgImgSrc})` : ``}">
         ${this.isTitleAboveImg ? html` <slot name="title" class="card-title"></slot>` : null}
         <div class="card-image-wrapper">
           <slot name="image" class="card-image">
