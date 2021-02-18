@@ -54,7 +54,7 @@ class AuroCard extends LitElement {
     this.cardBgColor = "var(--auro-color-background-lightest)";
     this.padding = "md";
 
-    this.styles = {padding: '0px'};
+    this.styles = {};
   }
 
   // This function removes the CSS selector if a slot is empty
@@ -95,7 +95,8 @@ class AuroCard extends LitElement {
   }
 
   setPadding() {
-    this.styles.padding = `var(--auro-size-${this.padding})`;
+    const auroSizes = ['none', 'xxxs', 'xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl', 'xxxl'];
+    this.styles.padding = auroSizes.some(size => size === this.padding) ? `var(--auro-size-${this.padding})` : this.padding;
   }
 
   // When using auroElement, use the following attribute and function when hiding content from screen readers.
