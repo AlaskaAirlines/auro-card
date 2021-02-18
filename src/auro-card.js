@@ -22,11 +22,16 @@ import "@alaskaairux/auro-header";
  * auro-card provides users a way to ...
  *
  * @attr {String} cssClass - Applies designated CSS class to DOM element.
- * @attr {String} imageSrc - A url (relative or absolute) for card image.
- * @attr {String} imageAltText - Alt text for the given image.  If background image, this text is used as aria-label.
- * @attr {Boolean} isBackgroundImage - Indicates whether the given image should be set as a background image.
- * @attr {String} backgroundImageClass - A space-separates list of class names to be applied to the element with a
+ * @attr {String} imgSrc - A url (relative or absolute) for card image.
+ * @attr {String} imgAltText - Alt text for the given image.  If background image, this text is used as aria-label.
+ * @attr {Boolean} isBgImg - Indicates whether the given image should be set as a background image.
+ * @attr {String} bgImgClass - A space-separates list of class names to be applied to the element with a
  * background image.  Only relevant when isBackgroundImage is true.
+ * @attr {Boolean} isTitleAboveImg
+ * @attr {String} cardBgImg
+ * @attr {String} cardBgAlt
+ * @attr {String} cardBgColor
+ * @attr {String} padding
  *
  * @slot image - Use to override the image with your own image markup format.
  * @slot title - The card heading.

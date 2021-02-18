@@ -1,53 +1,137 @@
 # auro-card
 
-TODO: Write description
+A flexible component for displaying a summary of information. The primary elements of a card include an image, a title,
+and a short description. A card also supports a call to action. A card should be used to grab the attention of a user
+and direct them to another resource for further details. A card should not be used as the primary source of
+information.
 
-## auro-card use cases
-
-The `auro-card` element should be used in situations where users may:
-
-- use case 1
-- use case 2
-- use case 3
+## auro-card as single small tile
 
 <div style="max-width: 400px">
-    <auro-card
-      cssClass="my-class"
-      isBgImg
-      imgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png"
-      imgAlt="This is an image of a logo">
-      <auro-header slot="title" style="text-align: center;" level="2" display="600"><b>one</b>world Explorer</auro-header>
-      <auro-hyperlink slot="cta" href="#" target="_blank" secondary slot="cta">More info</auro-hyperlink>
-      <p slot="description">
-        <b>one</b>world Explorer fare makes it easy to travel from city to city, and continent to continent.
-        And, for every dot you connect, you earn more miles and points to spend across the oneworld Alliance.
-      </p>
-    </auro-card>
+  <auro-card
+    cssClass="my-class"
+    imgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png"
+    imgAltText="This is an image of a logo">
+    <auro-header slot="title" style="text-align: center;" level="2" display="600">
+      <b>one</b>world Explorer
+    </auro-header>
+    <p slot="subtitle" style="text-align: center;">A place for explorers</p>
+    <div slot="cta" style="text-align: center;">
+        <a href="https://www.alaskaair.com/">More info</a>
+    </div>
+    <p slot="description">
+      <b>one</b>world Explorer fare makes it easy to travel from city to city, and continent to continent.
+      And, for every dot you connect, you earn more miles and points to spend across the oneworld Alliance.
+    </p>
+    <p slot="disclaimer">
+      * Void where prohibited.
+    </p>
+  </auro-card>
 </div>
   
 <auro-accordion lowProfile justifyRight>
 <span slot="trigger">See code</span>
 
 ```html
-<auro-card cssClass="my-class" imageSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png" imageAlt="This is an image of a logo">
-  <auro-header slot="title" style="text-align: center;" level="2" display="600"> <b>one</b>world Explorer </auro-header>
-  <p slot="subtitle" style="text-align: center;">A place for explorers</p>
-  <div slot="cta" style="text-align: center;">
-    <a href="https://www.alaskaair.com/">More info</a>
-  </div>
-  <p slot="description">
-    <b>one</b>world Explorer fare makes it easy to travel from city to city, and continent to continent. And, for every dot you connect, you earn more miles and points to spend
-    across the oneworld Alliance.
-  </p>
-  <p slot="disclaimer">* Void where prohibited.</p>
-</auro-card>
+<div style="max-width: 400px">
+  <auro-card cssClass="my-class" imgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png" imgAltText="This is an image of a logo">
+    <auro-header slot="title" style="text-align: center;" level="2" display="600"> <b>one</b>world Explorer </auro-header>
+    <p slot="subtitle" style="text-align: center;">A place for explorers</p>
+    <div slot="cta" style="text-align: center;">
+      <a href="https://www.alaskaair.com/">More info</a>
+    </div>
+    <p slot="description">
+      <b>one</b>world Explorer fare makes it easy to travel from city to city, and continent to continent. And, for every dot you connect, you earn more miles and points to spend
+      across the oneworld Alliance.
+    </p>
+    <p slot="disclaimer">* Void where prohibited.</p>
+  </auro-card>
+</div>
 ```
 
 </auro-accordion>
 
-## Then there is more
+## auro-card in a group
 
-Aenean at blandit lorem. Fusce imperdiet mi nec gravida maximus. Quisque nisl libero, condimentum in nisi a, imperdiet lacinia arcu.
+<div class="exampleWrapper tile-container">
+    <auro-card
+      cssClass="tile"
+      imgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png"
+      imgAltText="This is an image of a logo">
+      <auro-header slot="title" style="text-align: center;" level="2" display="600">
+        <b>one</b>world Explorer
+      </auro-header>
+      <p slot="description">
+        <b>one</b>world Explorer fare makes it easy to travel from city to city, and continent to continent.
+        And, for every dot you connect, you earn more miles and points to spend across the oneworld Alliance.
+      </p>
+      <div slot="cta" style="text-align: center;">
+        <a href="https://www.alaskaair.com/">More info</a>
+      </div>
+    </auro-card>
+    <auro-card
+      cssClass="tile"
+      imgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/green.png"
+      imgAltText="This is an image of a logo">
+      <auro-header slot="title" style="text-align: center;" level="2" display="600">
+        <b>one</b>world Explorer
+      </auro-header>
+      <p slot="description">
+        <b>one</b>world Explorer fare makes it easy to travel from city to city, and continent to continent.
+        And, for every dot you connect, you earn more miles and points to spend across the oneworld Alliance.
+      </p>
+      <div slot="cta" style="text-align: center;">
+        <a href="https://www.alaskaair.com/">More info</a>
+      </div>
+    </auro-card>
+    <auro-card
+      cssClass="tile"
+      imgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/pink.png"
+      imgAltText="This is an image of a logo">
+      <auro-header slot="title" style="text-align: center;" level="2" display="600">
+        <b>one</b>world Explorer
+      </auro-header>
+      <p slot="description">
+        <b>one</b>world Explorer fare makes it easy to travel from city to city, and continent to continent.
+        And, for every dot you connect, you earn more miles and points to spend across the oneworld Alliance.
+      </p>
+      <div slot="cta" style="text-align: center;">
+        <a href="https://www.alaskaair.com/">More info</a>
+      </div>
+    </auro-card>
+    
+    <style>
+      .tile-container {
+        display: flex;
+        flex-direction: row;
+      }
+      .tile-container .tile {
+        min-width: 5rem;
+      }
+    </style>
+</div>
+  
+<auro-accordion lowProfile justifyRight>
+<span slot="trigger">See code</span>
+
+```html
+<div style="max-width: 400px">
+  <auro-card cssClass="my-class" imageSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png" imageAlt="This is an image of a logo">
+    <auro-header slot="title" style="text-align: center;" level="2" display="600"> <b>one</b>world Explorer </auro-header>
+    <p slot="subtitle" style="text-align: center;">A place for explorers</p>
+    <div slot="cta" style="text-align: center;">
+      <a href="https://www.alaskaair.com/">More info</a>
+    </div>
+    <p slot="description">
+      <b>one</b>world Explorer fare makes it easy to travel from city to city, and continent to continent. And, for every dot you connect, you earn more miles and points to spend
+      across the oneworld Alliance.
+    </p>
+    <p slot="disclaimer">* Void where prohibited.</p>
+  </auro-card>
+</div>
+```
+
+</auro-accordion>
 
 ```javascript
 toggleDialog = (elName) => {
