@@ -132,7 +132,7 @@ class AuroCard extends LitElement {
       <div
         class=${this.cssClass}
         style="${this.cardBgColor ? `background-color: ${this.cardBgColor};` : ``}${this.cardBgImgSrc ? ` background-image: url(${this.cardBgImgSrc})` : ``}">
-        ${this.isTitleAboveImg ? html` <slot name="title" class="card-title"></slot>` : null}
+        ${this.isTitleAboveImg ? html`<slot id="title-above" name="title" class="card-title"></slot>` : null}
         <div class="card-image-wrapper">
           <slot name="image" class="card-image">
             ${this.coverImgContainer
@@ -141,7 +141,7 @@ class AuroCard extends LitElement {
           </slot>
         </div>
         <div class="card-details" style=${styleMap(this.cardDetailsStyles)}>
-          ${this.isTitleAboveImg ? null : html`<slot name="title" class="card-title"></slot>`}
+          ${this.isTitleAboveImg ? null : html`<slot id="title-below" name="title" class="card-title"></slot>`}
           <slot name="subtitle" class="card-sub-title"></slot>
           <slot name="description" class="card-description"></slot>
           <slot name="cta" class="card-cta"></slot>

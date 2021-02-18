@@ -9,7 +9,7 @@ describe('auro-card', () => {
     `);
 
     const div = el.shadowRoot.querySelector('div');
-    expect(div.className).to.equal('testClass');
+    expect(div).to.have.class('testClass');
   });
 
   it('auro-card is accessible', async () => {
@@ -32,6 +32,26 @@ describe('auro-card', () => {
     `);
 
     const div = el.shadowRoot.querySelector('div');
-    expect(div.className).to.contain('card-bg-image');
+    expect(div).to.have.class('card-bg-image');
+  });
+
+  it('sets title below image when isTitleAboveImg is not set', async () => {
+    const el = await fixture(html`
+      <auro-card cssclass="testClass"></auro-card>
+    `);
+
+    const div = el.shadowRoot.querySelector('div');
+    expect(div.querySelector('#title-above')).not.to.exist;
+    expect(div.querySelectorAll('#title-below')).to.exist;
+  });
+
+  it('sets title above image when isTitleAboveImg is set', async () => {
+    const el = await fixture(html`
+      <auro-card cssclass="testClass" isTitleAboveImg></auro-card>
+    `);
+
+    const div = el.shadowRoot.querySelector('div');
+    expect(div.querySelector('#title-above')).to.exist;
+    expect(div.querySelectorAll('#title-below')).not.to.exist;
   });
 });
