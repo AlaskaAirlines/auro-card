@@ -5,6 +5,10 @@ image, and details. The details are broken down into title, description, cta, an
 grab the attention of a user and direct them to another resource for further information. A card should not be used
 as the primary source of information.
 
+## Modifiers
+Layout can be modified using the following collection of modifiers.  The modifiers can be added to the `cssClass`
+property.
+
 ## auro-card as Single Tile
 
 <div style="max-width: 400px" class="exampleWrapper">
@@ -59,7 +63,7 @@ as the primary source of information.
 
 <div class="exampleWrapper">
   <auro-card
-    cssClass="banner"
+    banner
     imgSrc="https://sitecore-qa-cd-westus2.azurewebsites.net/-/media/Images/pages/examples/lounge.png"
     imgAltText="Lounge amenities">
     <auro-header slot="title" level="2" display="700">
@@ -81,7 +85,7 @@ as the primary source of information.
 
 ```html
 <auro-card
-  cssClass="banner"
+  banner
   imgSrc="https://sitecore-qa-cd-westus2.azurewebsites.net/-/media/Images/pages/examples/lounge.png"
   imgAltText="Lounge amenities">
   <auro-header slot="title" level="2" display="700">
@@ -106,7 +110,9 @@ as the primary source of information.
 
 <div class="exampleWrapper">
   <auro-card
-    cssClass="banner hero imgRight"
+    banner
+    hero
+    imgRight
     imgSrc="https://sitecore-qa-cd-westus2.azurewebsites.net/-/media/Images/pages/examples/yellow.png"
     imgAltText="Airport gates">
     <auro-header slot="title" margin="bottom" size="xxxs" color="var(--auro-color-brand-midnight-400)" level="6" display="300">
@@ -129,7 +135,9 @@ as the primary source of information.
 
 ```html
 <auro-card
-  cssClass="banner hero imgRight"
+  banner
+  hero
+  imgRight
   imgSrc="https://sitecore-qa-cd-westus2.azurewebsites.net/-/media/Images/pages/examples/yellow.png"
   imgAltText="Airport gates">
   <auro-header slot="title" margin="bottom" size="xxxs" color="var(--auro-color-brand-midnight-400)" level="6" display="300">
@@ -155,7 +163,8 @@ as the primary source of information.
 
 <div class="exampleWrapper">
   <auro-card
-    cssClass="banner imgRight"
+    banner
+    imgRight
     coverImgContainer
     imgSrc="https://sitecore-qa-cd-westus2.azurewebsites.net/-/media/Images/pages/examples/ocean.png"
     imgAltText="A cellpone overlooking a tropical beach"
@@ -177,7 +186,8 @@ as the primary source of information.
 
 ```html
 <auro-card
-  cssClass="banner imgRight"
+  banner
+  imgRight
   coverImgContainer
   imgSrc="https://sitecore-qa-cd-westus2.azurewebsites.net/-/media/Images/pages/examples/ocean.png"
   imgAltText="A cellpone overlooking a tropical beach"
@@ -201,7 +211,8 @@ as the primary source of information.
 
 <div class="exampleWrapper">
   <auro-card
-    cssClass="banner"
+    banner
+    imgLeft
     cardBgImgSrc="https://sitecore-qa-cd-westus2.azurewebsites.net/-/media/Images/pages/vacations/600x180_car_rental.jpg"
     cardBgImgAlt="Father and son using a rented car in the forest">
     <auro-header slot="title" color="var(--auro-color-text-primary-on-dark)" level="2" display="600">
@@ -220,7 +231,8 @@ as the primary source of information.
 
 ```html
 <auro-card
-  cssClass="banner"
+  banner
+  imgLeft
   cardBgImgSrc="https://sitecore-qa-cd-westus2.azurewebsites.net/-/media/Images/pages/vacations/600x180_car_rental.jpg"
   cardBgImgAlt="Father and son using a rented car in the forest">
   <auro-header slot="title" color="var(--auro-color-text-primary-on-dark)" level="2" display="600">
@@ -235,8 +247,3 @@ as the primary source of information.
 ```
 
 </auro-accordion>
-
-```javascript toggleDialog = (elName) => { let dialog = document.querySelector(elName); const html = document.querySelector("html"); html.style.overflow = "hidden";
-dialog.removeAttribute("open"); dialog.setAttribute("open", true); }; toggleDialogClose = (elName) => { let dialog = document.querySelector(elName); const html =
-document.querySelector("html"); html.style.overflow = ""; dialog.removeAttribute("open"); };
-````
