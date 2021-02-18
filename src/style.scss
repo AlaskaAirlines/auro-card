@@ -25,12 +25,17 @@
 // .auro-card {
 //   ...
 // }
-
-.card-image-wrapper {
-  flex-basis: 450px;
-}
-.card-details {
-  flex-basis: 550px;
+@media screen and (min-width: $auro-breakpoint-sm) {
+  .card-image-wrapper {
+    flex-basis: 450px;
+    flex-shrink: 1;
+    flex-grow: 2;
+  }
+  .card-details {
+    flex-basis: 550px;
+    flex-shrink: 3;
+    flex-grow: 1;
+  }
 }
 .card-description {
   font-size: $auro-text-body-size-default;
@@ -84,9 +89,7 @@
     flex-direction: row;
   }
 }
-.card-details {
-  flex-grow: 1;
-}
+
 .hero {
   background-color: $auro-color-background-lightest;
   color: $auro-color-text-primary-on-light;
@@ -108,8 +111,9 @@
     flex-direction: row-reverse;
   }
 }
+//This is also the default behavior for banners
 .imgLeft {
   @media screen and (min-width: $auro-breakpoint-sm) {
-    flex-direction: row-reverse;
+    flex-direction: row;
   }
 }
