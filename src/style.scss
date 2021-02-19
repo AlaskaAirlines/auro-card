@@ -33,7 +33,7 @@
 @media screen and (min-width: $auro-breakpoint-sm) {
   .img-left,
   .img-right {
-    card-image-wrapper {
+    .card-image-wrapper {
       flex-basis: 450px;
       flex-shrink: 1;
       flex-grow: 2;
