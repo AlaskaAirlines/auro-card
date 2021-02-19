@@ -114,6 +114,15 @@ describe('auro-card', () => {
     expect(div.style.padding).to.equal('3px 5px 7px 8px');
   });
 
+  it('sets justify content when given a justify', async () => {
+    const el = await fixture(html`
+      <auro-card justify="right"></auro-card>
+    `);
+
+    const div = el.shadowRoot.querySelector('div.card-details');
+    expect(div.style["text-align"]).to.equal('right');
+  });
+
   it('sets default card background color when not given a background color', async () => {
     const el = await fixture(html`
       <auro-card></auro-card>

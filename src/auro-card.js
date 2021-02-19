@@ -147,14 +147,14 @@ class AuroCard extends LitElement {
   }
 
   setCardDetailsJustify() {
-    if (!(this.justify in [
+    if (![
       'center',
       'left',
       'right'
-    ])) {
+    ].includes(this.justify)) {
       this.justify = 'left';
     }
-    this.cardDetailsStyles.textAlign = this.justify;
+    this.cardDetailsStyles["text-align"] = this.justify;
   }
 
   // eslint-disable-next-line max-statements
