@@ -146,7 +146,7 @@ class AuroCard extends LitElement {
     }
   }
 
-  setJustify() {
+  setCardDetailsJustify() {
     if (!(this.justify in [
       'center',
       'left',
@@ -185,8 +185,8 @@ class AuroCard extends LitElement {
   // function that renders the HTML and CSS into  the scope of the component
   render() {
     this.setCardDetailsPadding();
+    this.setCardDetailsJustify();
     this.setCardBgImg();
-    this.setJustify();
     this.setModifierClasses();
 
     return html`
