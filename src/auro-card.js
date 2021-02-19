@@ -121,7 +121,7 @@ class AuroCard extends LitElement {
     `;
   }
 
-  setCardDetailsStyles() {
+  setCardDetailsPadding() {
     const auroSizes = [
       'none',
       'xxxs',
@@ -184,7 +184,7 @@ class AuroCard extends LitElement {
 
   // function that renders the HTML and CSS into  the scope of the component
   render() {
-    this.setCardDetailsStyles();
+    this.setCardDetailsPadding();
     this.setCardBgImg();
     this.setJustify();
     this.setModifierClasses();
@@ -193,7 +193,7 @@ class AuroCard extends LitElement {
       <div
         class=${this.cssClass}
         style="${this.cardBgColor ? `background-color: ${this.cardBgColor};` : ``}${this.cardBgImgSrc ? ` background-image: url(${this.cardBgImgSrc})` : ``}">
-        ${this.titleTop ? html` <slot name="title" class="card-title"></slot>` : null}
+        ${this.titleTop ? html` <slot id="title-above" name="title" class="card-title"></slot>` : null}
         ${this.imgSrc ? html`
           <div class="card-image-wrapper">
             <slot name="image" class="card-image">
@@ -204,7 +204,7 @@ class AuroCard extends LitElement {
           </div>
         ` : ``}
         <div class="card-details" style=${styleMap(this.cardDetailsStyles)}>
-          ${this.titleTop ? null : html`<slot name="title" class="card-title"></slot>`}
+          ${this.titleTop ? null : html`<slot id="title-below" name="title" class="card-title"></slot>`}
           <slot name="subtitle" class="card-sub-title"></slot>
           <slot name="description" class="card-description"></slot>
           <slot name="cta" class="card-cta"></slot>
