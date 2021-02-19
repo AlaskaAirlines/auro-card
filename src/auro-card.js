@@ -192,7 +192,7 @@ class AuroCard extends LitElement {
     return html`
       <div
         class=${this.cssClass}
-        style="${this.cardBgColor ? `background-color: ${this.cardBgColor};` : ``}${this.cardBgImgSrc ? ` background-image: url(${this.cardBgImgSrc})` : ``}">
+        style="${`background-color: ${this.cardBgColor};`}${this.cardBgImgSrc ? ` background-image: url(${this.cardBgImgSrc})` : ``}">
         ${this.titleTop ? html` <slot id="title-above" name="title" class="card-title"></slot>` : null}
         ${this.imgSrc ? html`
           <div class="card-image-wrapper">
