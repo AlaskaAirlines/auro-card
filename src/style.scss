@@ -31,15 +31,18 @@
 }
 
 @media screen and (min-width: $auro-breakpoint-sm) {
-  .card-image-wrapper {
-    flex-basis: 450px;
-    flex-shrink: 1;
-    flex-grow: 2;
-  }
-  .card-details {
-    flex-basis: 550px;
-    flex-shrink: 3;
-    flex-grow: 1;
+  .img-left,
+  .img-right {
+    card-image-wrapper {
+      flex-basis: 450px;
+      flex-shrink: 1;
+      flex-grow: 2;
+    }
+    .card-details {
+      flex-basis: 550px;
+      flex-shrink: 3;
+      flex-grow: 1;
+    }
   }
 }
 @media screen and (max-width: $auro-breakpoint-sm) {
@@ -52,7 +55,7 @@
   font-size: $auro-text-body-size-default;
   line-height: $auro-text-heading-300-height;
 }
-.card-bg-image {
+.bg-image {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -88,43 +91,99 @@
 
 // Modified Styles
 
+.auro-card {
+  background-color: $auro-color-background-lightest;
+  color: $auro-color-text-primary-on-light;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+}
+
 // Banner Style
-.banner {
-  background-color: $auro-color-background-lightest;
-  color: $auro-color-text-primary-on-light;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
+//.banner {
+//  background-color: $auro-color-background-lightest;
+//  color: $auro-color-text-primary-on-light;
+//  display: flex;
+//  align-items: center;
+//  overflow: hidden;
+//  flex-direction: column;
+//  @media screen and (min-width: $auro-breakpoint-sm) {
+//    flex-direction: row;
+//  }
+//}
+//
+//.hero {
+//  background-color: $auro-color-background-lightest;
+//  color: $auro-color-text-primary-on-light;
+//  display: flex;
+//  align-items: center;
+//  overflow: hidden;
+//  flex-direction: column;
+//  @media screen and (min-width: $auro-breakpoint-sm) {
+//    flex-direction: row-reverse;
+//  }
+//  .card-description {
+//    display: block;
+//    margin-bottom: 40px;
+//  }
+//}
+
+.img-top {
   flex-direction: column;
-  @media screen and (min-width: $auro-breakpoint-sm) {
-    flex-direction: row;
-  }
 }
 
-.hero {
-  background-color: $auro-color-background-lightest;
-  color: $auro-color-text-primary-on-light;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  flex-direction: column;
-  @media screen and (min-width: $auro-breakpoint-sm) {
-    flex-direction: row-reverse;
-  }
-  .card-description {
-    display: block;
-    margin-bottom: 40px;
-  }
+.img-right {
+  //@media screen and (min-width: $auro-breakpoint-sm) {
+  //  flex-direction: row-reverse;
+  //}
+  flex-direction: row-reverse;
 }
 
-.imgRight {
-  @media screen and (min-width: $auro-breakpoint-sm) {
-    flex-direction: row-reverse;
-  }
+.img-bottom {
+  flex-direction: column-reverse;
 }
+
 //This is also the default behavior for banners
-.imgLeft {
-  @media screen and (min-width: $auro-breakpoint-sm) {
-    flex-direction: row;
-  }
+.img-left {
+  //@media screen and (min-width: $auro-breakpoint-sm) {
+  //  flex-direction: row;
+  //}
+  flex-direction: row;
+}
+
+.bg-img-anchor-top {
+  background-position: center top;
+}
+
+.bg-img-anchor-right {
+  background-position: right center;
+}
+
+.bg-img-anchor-bottom {
+  background-position: center bottom;
+}
+
+.bg-img-anchor-left {
+  background-position: left center;
+}
+
+.bg-img-anchor-top-right {
+  background-position: right top;
+}
+
+.bg-img-anchor-bottom-right {
+  background-position: right bottom;
+}
+
+.bg-img-anchor-bottom-left {
+  background-position: left bottom;
+}
+
+.bg-img-anchor-top-left {
+  background-position: left top;
+}
+
+.bg-img-anchor-center {
+  background-position: center center;
 }
