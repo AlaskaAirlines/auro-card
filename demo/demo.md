@@ -207,7 +207,8 @@ property.
   <auro-card
     justifyRight
     bgImgSrc="https://sitecore-qa-cd-westus2.azurewebsites.net/-/media/Images/pages/vacations/600x180_car_rental.jpg"
-    bgImgAlt="Father and son using a rented car in the forest">
+    bgImgAlt="Father and son using a rented car in the forest"
+    padding="0px 10px 10px 475px">
     <auro-header slot="title" color="var(--auro-color-text-primary-on-dark)" level="2" display="600">
       Car Rentals
     </auro-header>
@@ -249,12 +250,13 @@ property.
     imgTop
     justifyCenter
     bgImgAnchorBottomLeft
-    imgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/oneworld-travel-bright-Horizontal.jpg"
-    imgAlt="oneworld travel bright"
     bgImgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/light-blue-large.jpg"
     padding="20px 200px">
     <p slot="description" style="color:var(--auro-color-text-primary-on-dark)">
-      We’ll explain any additional costs before you book your car rental. More details on what’s included?
+      <img src="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/oneworld-travel-bright-Horizontal.jpg"
+        alt="oneworld travel bright"
+        height="100px"/>
+      <br />We’ll explain any additional costs before you book your car rental. More details on what’s included?
       Just check the Ts&Cs of any car.
     </p>
     <auro-hyperlink href="#" cta onDark secondary slot="cta" target="_blank">More info</auro-hyperlink>
