@@ -30,6 +30,16 @@
   font-weight: var(--auro-text-body-default-weight);
 }
 
+.auro-card {
+  background-color: $auro-color-background-lightest;
+  color: $auro-color-text-primary-on-light;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+// At larger breakpoints
 @media screen and (min-width: $auro-breakpoint-sm) {
   .img-left,
   .img-right {
@@ -45,10 +55,15 @@
     }
   }
 }
+
+// At small breakpoint
 @media screen and (max-width: $auro-breakpoint-sm) {
   .card-details {
     padding-left: 0px !important;
     padding-right: 0px !important;
+  }
+  .card-image-wrapper {
+    width: 100%;
   }
 }
 .card-description {
@@ -91,65 +106,26 @@
 
 // Modified Styles
 
-.auro-card {
-  background-color: $auro-color-background-lightest;
-  color: $auro-color-text-primary-on-light;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  flex-direction: column;
-}
-
-// Banner Style
-//.banner {
-//  background-color: $auro-color-background-lightest;
-//  color: $auro-color-text-primary-on-light;
-//  display: flex;
-//  align-items: center;
-//  overflow: hidden;
-//  flex-direction: column;
-//  @media screen and (min-width: $auro-breakpoint-sm) {
-//    flex-direction: row;
-//  }
-//}
-//
-//.hero {
-//  background-color: $auro-color-background-lightest;
-//  color: $auro-color-text-primary-on-light;
-//  display: flex;
-//  align-items: center;
-//  overflow: hidden;
-//  flex-direction: column;
-//  @media screen and (min-width: $auro-breakpoint-sm) {
-//    flex-direction: row-reverse;
-//  }
-//  .card-description {
-//    display: block;
-//    margin-bottom: 40px;
-//  }
-//}
-
 .img-top {
   flex-direction: column;
 }
 
 .img-right {
-  //@media screen and (min-width: $auro-breakpoint-sm) {
-  //  flex-direction: row-reverse;
-  //}
   flex-direction: row-reverse;
+  @media screen and (max-width: $auro-breakpoint-sm) {
+    flex-direction: column-reverse;
+  }
 }
 
 .img-bottom {
   flex-direction: column-reverse;
 }
 
-//This is also the default behavior for banners
 .img-left {
-  //@media screen and (min-width: $auro-breakpoint-sm) {
-  //  flex-direction: row;
-  //}
   flex-direction: row;
+  @media screen and (max-width: $auro-breakpoint-sm) {
+    flex-direction: column;
+  }
 }
 
 .bg-img-anchor-top {

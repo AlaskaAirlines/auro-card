@@ -112,7 +112,7 @@ property.
 
 <div class="exampleWrapper">
   <auro-card
-    imgRight
+    imgLeft
     imgSrc="https://sitecore-qa-cd-westus2.azurewebsites.net/-/media/Images/pages/examples/yellow.png"
     imgAltText="Airport gates">
     <auro-header slot="title" margin="bottom" size="xxxs" color="var(--auro-color-brand-midnight-400)" level="6" display="300">
@@ -135,7 +135,7 @@ property.
 
 ```html
 <auro-card
-  imgRight
+  imgLeft
   imgSrc="https://sitecore-qa-cd-westus2.azurewebsites.net/-/media/Images/pages/examples/yellow.png"
   imgAltText="Airport gates">
   <auro-header slot="title" margin="bottom" size="xxxs" color="var(--auro-color-brand-midnight-400)" level="6" display="300">
