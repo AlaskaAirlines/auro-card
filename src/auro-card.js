@@ -192,7 +192,7 @@ class AuroCard extends LitElement {
   }
 
   setBgImg() {
-    if (this.cardBgImgSrc) {
+    if (this.bgImgSrc) {
       this.cssClass += ' bg-image';
       if (
         (this.bgImgAnchorTop ? 1 : 0) + (this.bgImgAnchorRight ? 1 : 0) +
