@@ -45,6 +45,7 @@
     }
   }
 }
+
 @media screen and (max-width: $auro-breakpoint-sm) {
   .card-details {
     padding-left: 0px !important;
@@ -134,22 +135,21 @@
 }
 
 .img-right {
-  //@media screen and (min-width: $auro-breakpoint-sm) {
-  //  flex-direction: row-reverse;
-  //}
   flex-direction: row-reverse;
+  @media screen and (max-width: $auro-breakpoint-sm) {
+    flex-direction: column-reverse;
+  }
 }
 
 .img-bottom {
   flex-direction: column-reverse;
 }
 
-//This is also the default behavior for banners
 .img-left {
-  //@media screen and (min-width: $auro-breakpoint-sm) {
-  //  flex-direction: row;
-  //}
   flex-direction: row;
+  @media screen and (max-width: $auro-breakpoint-sm) {
+    flex-direction: column;
+  }
 }
 
 .bg-img-anchor-top {
