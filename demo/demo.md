@@ -36,6 +36,7 @@ property.
   <auro-card
     imgTop
     justifyCenter
+    titleontop
     imgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png"
     imgAltText="This is an image of a logo">
     <auro-header slot="title" style="text-align: center;" level="2" display="600">
@@ -63,7 +64,7 @@ property.
 <div class="exampleWrapper">
   <auro-card
     imgRight
-    justifyCenter
+    justifyLeft
     imgSrc="https://sitecore-qa-cd-westus2.azurewebsites.net/-/media/Images/pages/examples/lounge.png"
     imgAltText="Lounge amenities"
     padding="0 40px 0 0 ">
@@ -87,7 +88,7 @@ property.
 ```html
 <auro-card
   imgRight
-  justifyCenter
+  justifyLeft
   imgSrc="https://sitecore-qa-cd-westus2.azurewebsites.net/-/media/Images/pages/examples/lounge.png"
   imgAltText="Lounge amenities">
   <auro-header slot="title" level="2" display="700">
@@ -112,7 +113,8 @@ property.
 
 <div class="exampleWrapper">
   <auro-card
-    imgLeft
+    justifyLeft
+    imgRight
     imgSrc="https://sitecore-qa-cd-westus2.azurewebsites.net/-/media/Images/pages/examples/yellow.png"
     imgAltText="Airport gates">
     <auro-header slot="title" margin="bottom" size="xxxs" color="var(--auro-color-brand-midnight-400)" level="6" display="300">
@@ -135,6 +137,7 @@ property.
 
 ```html
 <auro-card
+  justifyLeft
   imgLeft
   imgSrc="https://sitecore-qa-cd-westus2.azurewebsites.net/-/media/Images/pages/examples/yellow.png"
   imgAltText="Airport gates">
@@ -163,6 +166,7 @@ property.
   <auro-card
     imgRight
     coverImgContainer
+    justifyLeft
     imgSrc="https://sitecore-qa-cd-westus2.azurewebsites.net/-/media/Images/pages/examples/ocean.png"
     imgAltText="A cellpone overlooking a tropical beach"
     bgColor="var(--auro-color-background-darker)"
@@ -172,7 +176,7 @@ property.
       Mileage Plan is the Alaska Airlines loyalty program. Travel with us, and with our global airline partners to over
       800+ destinations around the world.
     </p>
-    <auro-hyperlink href="#" cta onDark primary slot="cta" target="_blank">More info</auro-hyperlink>
+    <auro-hyperlink href="#" cta secondary slot="cta" target="_blank">More info</auro-hyperlink>
   </auro-card>
 </div>
   
@@ -183,6 +187,7 @@ property.
 <auro-card
   imgRight
   coverImgContainer
+  justifyLeft
   imgSrc="https://sitecore-qa-cd-westus2.azurewebsites.net/-/media/Images/pages/examples/ocean.png"
   imgAltText="A cellpone overlooking a tropical beach"
   bgColor="var(--auro-color-background-darker)">
@@ -193,7 +198,7 @@ property.
     Mileage Plan is the Alaska Airlines loyalty program. Travel with us, and with our global airline partners to over
     800+ destinations around the world.
   </p>
-  <auro-hyperlink href="#" cta onDark primary slot="cta" target="_blank">More info</auro-hyperlink>
+  <auro-hyperlink href="#" cta onDark secondary slot="cta" target="_blank">More info</auro-hyperlink>
 </auro-card>
 ```
 
@@ -216,7 +221,7 @@ property.
       We’ll explain any additional costs before you book your car rental. More details on what’s included?
       Just check the Ts&Cs of any car.
     </p>
-    <auro-hyperlink href="#" cta onDark primary slot="cta" target="_blank">More info</auro-hyperlink>
+    <auro-hyperlink href="#" cta secondary slot="cta" target="_blank">More info</auro-hyperlink>
   </auro-card>
 </div>
   
@@ -235,7 +240,7 @@ property.
     We’ll explain any additional costs before you book your car rental. More details on what’s included?
     Just check the Ts&Cs of any car.
   </p>
-  <auro-hyperlink href="#" cta onDark primary slot="cta" target="_blank">More info</auro-hyperlink>
+  <auro-hyperlink href="#" cta secondary slot="cta" target="_blank">More info</auro-hyperlink>
 </auro-card>
 ```
 
@@ -251,14 +256,14 @@ property.
     justifyCenter
     bgImgAnchorBottomRight
     bgImgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/light-blue-large-1270.png"
-    padding="0 24px 48px"
+    padding="0 0 48px"
     imgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/oneworld-travel-bright-Horizontal-300.png"
     imgAltText="oneworld travel bright">
     <p slot="description" style="color:var(--auro-color-text-primary-on-light)">
       We’ll explain any additional costs before you book your car rental. More details on what’s included?
       Just check the Ts&Cs of any car.
     </p>
-    <auro-hyperlink href="#" cta ondark secondary slot="cta" target="_blank">More info</auro-hyperlink>
+    <auro-hyperlink href="#" cta secondary slot="cta" target="_blank">More info</auro-hyperlink>
   </auro-card>
 </div>
   
@@ -266,21 +271,20 @@ property.
 <span slot="trigger">See code</span>
 
 ```html
-<auro-card
-  imgTop
-  justifyCenter
-  bgImgAnchorBottomLeft
-  bgImgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/light-blue-large.jpg"
-  bgImgAlt="Father and son using a rented car in the forest">
-  <auro-header slot="title" color="var(--auro-color-text-primary-on-dark)" level="2" display="600">
-    Car Rentals
-  </auro-header>
-  <p slot="description" style="color:var(--auro-color-text-primary-on-dark)">
-    We’ll explain any additional costs before you book your car rental. More details on what’s included?
-    Just check the Ts&Cs of any car.
-  </p>
-  <auro-hyperlink href="#" cta ondark primary slot="cta" target="_blank">More info</auro-hyperlink>
-</auro-card>
+  <auro-card
+    imgTop
+    justifyCenter
+    bgImgAnchorBottomRight
+    bgImgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/light-blue-large-1270.png"
+    padding="0 0 48px"
+    imgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/oneworld-travel-bright-Horizontal-300.png"
+    imgAltText="oneworld travel bright">
+    <p slot="description" style="color:var(--auro-color-text-primary-on-light)">
+      We’ll explain any additional costs before you book your car rental. More details on what’s included?
+      Just check the Ts&Cs of any car.
+    </p>
+    <auro-hyperlink href="#" cta secondary slot="cta" target="_blank">More info</auro-hyperlink>
+  </auro-card>
 ```
 
 </auro-accordion>
