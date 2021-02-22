@@ -37,6 +37,26 @@
   align-items: center;
   overflow: hidden;
   flex-direction: column;
+  &.bg-image {
+    padding: 24px;
+  }
+}
+
+.img-top {
+  .card-image-wrapper {
+    margin-top: 48px;
+  }
+  .card-details {
+    max-width: 500px;
+  }
+}
+.img-bottom {
+  .card-image-wrapper {
+    margin-bottom: 48px;
+  }
+  .card-details {
+    max-width: 500px;
+  }
 }
 
 // At larger breakpoints
@@ -56,12 +76,6 @@
   }
 }
 
-// At small breakpoint
-@media screen and (max-width: $auro-breakpoint-sm) {
-  .card-image-wrapper {
-    width: 100%;
-  }
-}
 .card-description {
   font-size: $auro-text-body-size-default;
   line-height: $auro-text-heading-300-height;

@@ -249,16 +249,16 @@ property.
   <auro-card
     imgTop
     justifyCenter
-    bgImgAnchorBottomLeft
-    bgImgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/light-blue-large.jpg"
-    padding="20px 200px"
-    imgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/oneworld-travel-bright-Horizontal.jpg"
+    bgImgAnchorBottomRight
+    bgImgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/light-blue-large-1270.png"
+    padding="0 24px 48px"
+    imgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/oneworld-travel-bright-Horizontal-300.png"
     imgAltText="oneworld travel bright">
-    <p slot="description" style="color:var(--auro-color-text-primary-on-dark)">
-      <br />We’ll explain any additional costs before you book your car rental. More details on what’s included?
+    <p slot="description" style="color:var(--auro-color-text-primary-on-light)">
+      We’ll explain any additional costs before you book your car rental. More details on what’s included?
       Just check the Ts&Cs of any car.
     </p>
-    <auro-hyperlink href="#" cta onDark secondary slot="cta" target="_blank">More info</auro-hyperlink>
+    <auro-hyperlink href="#" cta ondark secondary slot="cta" target="_blank">More info</auro-hyperlink>
   </auro-card>
 </div>
   
@@ -279,7 +279,7 @@ property.
     We’ll explain any additional costs before you book your car rental. More details on what’s included?
     Just check the Ts&Cs of any car.
   </p>
-  <auro-hyperlink href="#" cta onDark primary slot="cta" target="_blank">More info</auro-hyperlink>
+  <auro-hyperlink href="#" cta ondark primary slot="cta" target="_blank">More info</auro-hyperlink>
 </auro-card>
 ```
 
