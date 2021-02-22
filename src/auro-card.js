@@ -22,29 +22,36 @@ import "@alaskaairux/auro-header";
  * as the primary source of information.
  *
  * @attr {String} cssClass - Applies designated CSS class to DOM element.
- * @attr {String} imgSrc - A url (relative or absolute) for card image.
- * @attr {String} imgAltText - Alt text for the given image.  If background image, this text is used as aria-label.
- * @attr {String} bgImgClass - A space-separates list of class names to be applied to the element with a
- * background image.  Only relevant when isBackgroundImage is true.
- * @attr {String} cardBgImgSrc - A background image that spans the breadth of the component.
- * @attr {String} cardBgImgAlt - If set, will serve as alt text for a full component background image.  Usage of this
- * property is only advised if the corresponding background image is considered relevant to the semantics of the page.
- * That is, if the image is not merely decorative.
- * @attr {String} cardBgColor - Indicates a background color that spans the breadth of the component.
+ * @attr {String} bgColor - Indicates a background color that spans the breadth of the component.
  * @attr {String} padding - Indicates padding around the details section of the card. This can be one of the following
  * tokens: 'sm', 'md', or 'lg'.  It can also be a standard CSS 4-tuple of spacing, e.g. "5px 10px 2px 10px", and
  * supports CSS variable, e.g. "var(--t-padding) var(--r-padding) var(--b-padding) 20px"
- * @attr {String} justify - Indicates the text alignment for the card details section. Acceptable values are 'left',
- * 'right', and 'center'. If any other value is provided, it will be defaulted to 'center'.
+ * @attr {Boolean} justifyLeft - Indicates whether to left justify the contents of the details panel.
+ * @attr {Boolean} justifyRight - Indicates whether to right justify the contents of the details panel.
+ * @attr {Boolean} justifyCenter - Indicates whether to center justify the contents of the details panel.
+ * @attr {Boolean} titleTop - Indicates whether to position the title above the primary image when applicable.
+ * @attr {String} imgSrc - A url (relative or absolute) for primary image.
+ * @attr {String} imgAltText - Alt text for the given primary image.
+ * @attr {Boolean} imgTop - Indicates if the primary image should be positioned above the details panel.
+ * @attr {Boolean} imgRight - Indicates if the primary image should be positioned to the right of the details panel. At
+ * smaller breakpoints, the image will be positioned below the details panel.
+ * @attr {Boolean} imgBottom - Indicates if the primary image should be positioned below the details panel.
+ * @attr {Boolean} imgLeft - Indicates if the primary image should be positioned to the left of the details panel. At
+ * smaller breakpoints, the image will be positioned above the details panel.
  * @attr {Boolean} coverImgContainer - Indicates if the primary image should completely cover the image panel at all
  * times. This is accomplished by setting the primary image as a background image.
- * @attr {Boolean} banner - Indicates whether to force the card into "banner" mode (horizontal) at all breakpoints.
- * @attr {Boolean} hero - Indicates whether to apply "hero" styling to the card or banner.
- * @attr {Boolean} imgLeft - Indicates whether the image panel prefers the left side when applicable.
- * @attr {Boolean} imgRight - Indicates whether the image panel prefers the right side when applicable.
- * @attr {Boolean} card - Indicates whether to force the card into "card" mode (vertical) at all breakpoints.
- * @attr {Boolean} titleTop - Indicates whether to position the title above the primary image when applicable.
- * @attr {Boolean} miniBanner - Indicates whether to force the card into "mini banner" mode at all breakpoints.
+ * @attr {String} bgImgSrc - A background image that spans the breadth of the component.
+ * @attr {String} bgImgAlt - If set, will serve as alt text for a full component background image.  Usage of this
+ * property is only advised if the corresponding background image is considered relevant to the semantics of the page.
+ * That is, if the image is not merely decorative.
+ * @attr {Boolean} bgImgAnchorTop - Indicates whether to anchor the background image to the top of the image container.
+ * @attr {Boolean} bgImgAnchorRight - Indicates whether to anchor the background image to the right of the image container.
+ * @attr {Boolean} bgImgAnchorBottom - Indicates whether to anchor the background image to the bottom of the image container.
+ * @attr {Boolean} bgImgAnchorLeft - Indicates whether to anchor the background image to the left of the image container.
+ * @attr {Boolean} bgImgAnchorTopRight - Indicates whether to anchor the background image to the top-right of the image container.
+ * @attr {Boolean} bgImgAnchorBottomRight - Indicates whether to anchor the background image to the bottom-right of the image container.
+ * @attr {Boolean} bgImgAnchorBottomLeft - Indicates whether to anchor the background image to the bottom-left of the image container.
+ * @attr {Boolean} bgImgAnchorTopLeft - Indicates whether to anchor the background image to the top-left of the image container.
  *
  * @slot image - Use to override the image with your own image markup format.
  * @slot title - The card heading.
