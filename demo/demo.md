@@ -251,11 +251,10 @@ property.
     justifyCenter
     bgImgAnchorBottomLeft
     bgImgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/light-blue-large.jpg"
-    padding="20px 200px">
+    padding="20px 200px"
+    imgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/oneworld-travel-bright-Horizontal.jpg"
+    imgAltText="oneworld travel bright">
     <p slot="description" style="color:var(--auro-color-text-primary-on-dark)">
-      <img src="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/oneworld-travel-bright-Horizontal.jpg"
-        alt="oneworld travel bright"
-        height="100px"/>
       <br />We’ll explain any additional costs before you book your car rental. More details on what’s included?
       Just check the Ts&Cs of any car.
     </p>
