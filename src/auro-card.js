@@ -117,7 +117,6 @@ class AuroCard extends LitElement {
     for (const item of slotObj) {
       this.slt = item.assignedNodes();
 
-      // eslint-disable-next-line no-magic-numbers
       if (this.slt.length === 0) {
         item.removeAttribute("class");
       }
@@ -171,12 +170,12 @@ class AuroCard extends LitElement {
   }
 
   setJustify() {
-    if (this.justifyLeft) {
-      this._detailsStyles.textAlign = 'left';
+    if (this.justifyCenter) {
+      this._detailsStyles.textAlign = 'center';
     } else if (this.justifyRight) {
       this._detailsStyles.textAlign = 'right';
     } else {
-      this._detailsStyles.textAlign = 'center';
+      this._detailsStyles.textAlign = 'left';
     }
   }
 
@@ -249,7 +248,7 @@ class AuroCard extends LitElement {
     return html`
       <div
         class="auro-card ${this.cssClass}"
-        style="${this.bgColor ? `background-color: ${this.bgColor};` : ``}${this.bgImgSrc ? ` background-image: url(${this.bgImgSrc})` : ``}">
+        style="background-color: ${this.bgColor};${this.bgImgSrc ? ` background-image: url(${this.bgImgSrc})` : ``}">
         ${this.titleTop ? html` <slot id="title-above" name="title" class="card-title"></slot>` : null}
         ${this.imgSrc ? html`
           <div class="card-image-wrapper">
