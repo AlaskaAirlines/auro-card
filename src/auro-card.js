@@ -171,10 +171,7 @@ class AuroCard extends LitElement {
   }
 
   setJustify() {
-    if ((this.justifyLeft ? 1 : 0) + (this.justifyRight ? 1 : 0) + (this.justifyCenter ? 1 : 0) > 1) {
-      // More then one is invalid, so set to default
-      this._detailsStyles.textAlign = 'center';
-    } else if (this.justifyLeft) {
+    if (this.justifyLeft) {
       this._detailsStyles.textAlign = 'left';
     } else if (this.justifyRight) {
       this._detailsStyles.textAlign = 'right';
@@ -184,10 +181,7 @@ class AuroCard extends LitElement {
   }
 
   setImgPlacement() {
-    if ((this.imgTop ? 1 : 0) + (this.imgRight ? 1 : 0) + (this.imgBottom ? 1 : 0) + (this.imgLeft ? 1 : 0) > 1) {
-      // More then one is invalid, so set to default
-      this.cssClass += ` img-left`;
-    } else if (this.imgTop) {
+    if (this.imgTop) {
       this.cssClass += ` img-top`;
     } else if (this.imgRight) {
       this.cssClass += ` img-right`;
@@ -201,15 +195,7 @@ class AuroCard extends LitElement {
   setBgImg() {
     if (this.bgImgSrc) {
       this.cssClass += ' bg-image';
-      if (
-        (this.bgImgAnchorTop ? 1 : 0) + (this.bgImgAnchorRight ? 1 : 0) +
-        (this.bgImgAnchorBottom ? 1 : 0) + (this.bgImgAnchorLeft ? 1 : 0) +
-        (this.bgImgAnchorTopRight ? 1 : 0) + (this.bgImgAnchorBottomRight ? 1 : 0) +
-        (this.bgImgAnchorBottomLeft ? 1 : 0) + (this.bgImgAnchorTopLeft ? 1 : 0) +
-        (this.bgImgAnchorCenter ? 1 : 0) > 1) {
-        // More then one is invalid, so set to default
-        this.cssClass += ' bg-img-anchor-center';
-      } else if (this.bgImgAnchorTop) {
+      if (this.bgImgAnchorTop) {
         this.cssClass += ' bg-img-anchor-top';
       } else if (this.bgImgAnchorRight) {
         this.cssClass += ' bg-img-anchor-right';
