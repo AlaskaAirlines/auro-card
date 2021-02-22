@@ -5,10 +5,6 @@ image, and details. The details are broken down into title, description, cta, an
 grab the attention of a user and direct them to another resource for further information. A card should not be used
 as the primary source of information.
 
-## Modifiers
-Layout can be modified using the following collection of modifiers.  The modifiers can be added to the `cssClass`
-property.
-
 ## auro-card as Single Tile
 
 <div style="max-width: 400px" class="exampleWrapper">
