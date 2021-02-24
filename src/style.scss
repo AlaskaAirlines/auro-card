@@ -4,10 +4,10 @@
 // ---------------------------------------------------------------------
 
 // Import Auro tokens
-@import "./node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables";
+// @import "./node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables";
 @import "./node_modules/@alaskaairux/design-tokens/dist/tokens/SassCustomProperties";
 
-@import "./node_modules/@alaskaairux/webcorestylesheets/dist/breakpoints";
+// @import "./node_modules/@alaskaairux/webcorestylesheets/dist/breakpoints";
 @import "./node_modules/@alaskaairux/webcorestylesheets/dist/core";
 
 // Support for auroElement styles
@@ -21,155 +21,40 @@
 // layout styles - define any layout specifications for UI that is contained WITHIN the component
 // never define layout that would cause effect on element outside the scope of this component
 
-// component shape styles
-// .auro-card {
-//   ...
-// }
-:host {
-  font-family: var(--auro-font-family-default);
-  font-weight: var(--auro-text-body-default-weight);
-}
 
-.auro-card {
-  background-color: $auro-color-background-lightest;
-  color: $auro-color-text-primary-on-light;
+:host {
   display: flex;
   align-items: center;
   overflow: hidden;
   flex-direction: column;
-  &.bg-image {
-    padding: 24px;
+  text-align: center;
+}
+
+:host([alignLeft]) {
+  text-align: left;
+}
+
+.imageWrapper {
+  width: 19rem; //1rem grid
+  height: 19rem; //1rem grid
+  margin-top: 0;
+
+  ::slotted(img) {
+    display: block;
+    width: 100%;
   }
 }
 
-.img-top {
-  .card-image-wrapper {
-    margin-top: 48px;
-  }
-  .card-details {
-    max-width: 500px;
-  }
-}
-.img-bottom {
-  .card-image-wrapper {
-    margin-bottom: 48px;
-  }
-  .card-details {
-    max-width: 500px;
-  }
+.description {
+  max-width: 19rem; //1rem grid
+  display: block;
 }
 
-// At larger breakpoints
-@media screen and (min-width: $auro-breakpoint-sm) {
-  .img-left,
-  .img-right {
-    .card-image-wrapper {
-      flex-basis: 450px;
-      flex-shrink: 1;
-      flex-grow: 2;
-    }
-    .card-details {
-      flex-basis: 550px;
-      flex-shrink: 3;
-      flex-grow: 1;
-    }
-  }
+.disclaimer {
+  color: var(--auro-color-text-secondary-on-light);
+  font-size: var(--auro-text-body-size-xs);
 }
 
-.card-description {
-  font-size: $auro-text-body-size-default;
-  line-height: $auro-text-heading-300-height;
-}
-.bg-image {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-.card-bg-image-cover {
-  background-size: cover;
-}
-.card-bg-image-contain {
-  background-size: contain;
-}
-
-.card-bg-imageHeight-300 {
-  height: 300px;
-}
-.card-bg-imageHeight-400 {
-  height: 400px;
-}
-.card-bg-imageHeight-500 {
-  height: 500px;
-}
-.card-bg-imageHeight-600 {
-  height: 600px;
-}
-.card-bg-imageHeight-700 {
-  height: 700px;
-}
-
-// Disclaimer size
-.card-disclaimer {
-  color: $auro-color-text-secondary-on-light;
-  font-size: 10px;
-}
-
-// Modified Styles
-
-.img-top {
-  flex-direction: column;
-}
-
-.img-right {
-  flex-direction: row-reverse;
-  @media screen and (max-width: $auro-breakpoint-sm) {
-    flex-direction: column-reverse;
-  }
-}
-
-.img-bottom {
-  flex-direction: column-reverse;
-}
-
-.img-left {
-  flex-direction: row;
-  @media screen and (max-width: $auro-breakpoint-sm) {
-    flex-direction: column;
-  }
-}
-
-.bg-img-anchor-top {
-  background-position: center top;
-}
-
-.bg-img-anchor-right {
-  background-position: right center;
-}
-
-.bg-img-anchor-bottom {
-  background-position: center bottom;
-}
-
-.bg-img-anchor-left {
-  background-position: left center;
-}
-
-.bg-img-anchor-top-right {
-  background-position: right top;
-}
-
-.bg-img-anchor-bottom-right {
-  background-position: right bottom;
-}
-
-.bg-img-anchor-bottom-left {
-  background-position: left bottom;
-}
-
-.bg-img-anchor-top-left {
-  background-position: left top;
-}
-
-.bg-img-anchor-center {
-  background-position: center center;
+auro-header {
+  max-width: 19rem;
 }

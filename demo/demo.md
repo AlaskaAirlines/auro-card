@@ -1,56 +1,78 @@
-# auro-card
+# Card
 
-auro-card provides users a flexible way to convey a summary of information. The primary elements of a card include an
-image, and details. The details are broken down into title, description, cta, and others. A card should be used to
-grab the attention of a user and direct them to another resource for further information. A card should not be used
-as the primary source of information.
+The `auro-card` element provides users a flexible way to convey a summary of information. The primary elements of a card include an image, and details.
 
-## auro-card as Single Tile
+The details are broken down into `title`, `description`, `cta`, and `disclaimer`.
 
-<div style="max-width: 400px" class="exampleWrapper">
-  <auro-card
-    imgTop
-    justifyCenter
-    titleTop
-    imgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png"
-    imgAltText="This is an image of a logo">
-    <auro-header slot="title" style="text-align: center;" level="2" display="600">
-      <b>one</b>world Explorer
-    </auro-header>
-    <p slot="subtitle" style="text-align: center;">A place for explorers</p>
+## Component use cases
+
+Use the `auro-card` element to:
+
+* grab the attention of a user
+* direct your user to another resource for further information
+
+## Do not...
+
+Use `auro-card` as the primary source of information.
+
+## Default element
+
+The default `auro-card` element features a single configuration using the `title`, `image`, `description`, `action` and `disclaimer` slots for structured content placement.
+
+The card has a maximum width of `19rem`. The element will remain centered within the scope of a parent element.
+
+Notice the use of the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink) element and the `action` slot. Given this example, all the [properties](https://auro.alaskaair.com/components/auro/hyperlink/api) of the Hyperlink element are directly applicable.
+
+<div class="exampleWrapper">
+  <auro-card>
+    <span slot="title">
+      Pri dicat graece abhorreant
+    </span>
+    <img
+      slot="image"
+      src="https://picsum.photos/304?random=0"
+      alt="Random insert 0"/>
     <p slot="description">
-      <b>one</b>world Explorer fare makes it easy to travel from city to city, and continent to continent.
-      And, for every dot you connect, you earn more miles and points to spend across the oneworld Alliance.
+      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
     </p>
-    <auro-hyperlink href="#" secondary slot="cta" target="_blank" style="text-align: center;">More info</auro-hyperlink>
+    <auro-hyperlink
+      nav
+      href="/"
+      slot="action"
+      target="_blank">
+      More info
+    </auro-hyperlink>
     <p slot="disclaimer">
-      * Void where prohibited.
+      * Errem tempor eligendi cu eos
     </p>
   </auro-card>
 </div>
-  
+
 <auro-accordion lowProfile justifyRight>
 <span slot="trigger">See code</span>
 
 ```html
-<div style="max-width: 400px" class="exampleWrapper">
-  <auro-card
-    imgTop
-    justifyCenter
-    titleTop
-    imgSrc="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png"
-    imgAltText="This is an image of a logo">
-    <auro-header slot="title" style="text-align: center;" level="2" display="600">
-      <b>one</b>world Explorer
-    </auro-header>
-    <p slot="subtitle" style="text-align: center;">A place for explorers</p>
+<div class="exampleWrapper">
+  <auro-card>
+    <span slot="title">
+      Pri dicat graece abhorreant
+    </span>
+    <img
+      slot="blockImage"
+      src="https://picsum.photos/304?random=0"
+      alt="Random insert 0"/>
     <p slot="description">
-      <b>one</b>world Explorer fare makes it easy to travel from city to city, and continent to continent.
-      And, for every dot you connect, you earn more miles and points to spend across the oneworld Alliance.
+      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
     </p>
-    <auro-hyperlink href="#" secondary slot="cta" target="_blank" style="text-align: center;">More info</auro-hyperlink>
+    <auro-hyperlink
+      nav
+      href="/"
+      slot="action"
+      target="_blank">
+      More info
+    </auro-hyperlink>
     <p slot="disclaimer">
-      * Void where prohibited.
+      * Errem tempor eligendi cu eos
     </p>
   </auro-card>
 </div>
@@ -58,9 +80,240 @@ as the primary source of information.
 
 </auro-accordion>
 
-<hr />
+## Align left
 
-## auro-card as Banner
+For card content to `align-left` within the context of the custom element, use the `alignLeft` property.
+
+<div class="exampleWrapper">
+  <auro-card alignLeft>
+    <span slot="title">
+      Pri dicat graece abhorreant
+    </span>
+    <img
+      slot="image"
+      src="https://picsum.photos/304?random=1"
+      alt="Random insert 0"/>
+    <p slot="description">
+      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+    </p>
+    <auro-hyperlink
+      nav
+      href="/"
+      slot="action"
+      target="_blank">
+      More info
+    </auro-hyperlink>
+    <p slot="disclaimer">
+      * Errem tempor eligendi cu eos
+    </p>
+  </auro-card>
+</div>
+
+<auro-accordion lowProfile justifyRight>
+<span slot="trigger">See code</span>
+
+```html
+<div class="exampleWrapper">
+  <auro-card alignLeft>
+    <span slot="title">
+      Pri dicat graece abhorreant
+    </span>
+    <img
+      slot="blockImage"
+      src="https://picsum.photos/304?random=1"
+      alt="Random insert 0"/>
+    <p slot="description">
+      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+    </p>
+    <auro-hyperlink
+      nav
+      href="/"
+      slot="action"
+      target="_blank">
+      More info
+    </auro-hyperlink>
+    <p slot="disclaimer">
+      * Errem tempor eligendi cu eos
+    </p>
+  </auro-card>
+</div>
+```
+
+</auro-accordion>
+
+## Multi-option layout
+
+When placing multiple `auro-card` elements within a single parent container, the following example illustrates using `flexbox` for layout support.
+
+<style>
+  @media screen and (min-width: 1024px) {
+    .flexLayout {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+</style>
+
+<div class="exampleWrapper flexLayout">
+  <auro-card>
+    <span slot="title">
+      Pri dicat graece abhorreant
+    </span>
+    <img
+      slot="image"
+      src="https://picsum.photos/304?random=3"
+      alt="Random insert 0"/>
+    <p slot="description">
+      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+    </p>
+    <auro-hyperlink
+      nav
+      href="/"
+      slot="action"
+      target="_blank">
+      More info
+    </auro-hyperlink>
+    <p slot="disclaimer">
+      * Errem tempor eligendi cu eos
+    </p>
+  </auro-card>
+
+  <auro-card>
+    <span slot="title">
+      Pri dicat graece abhorreant
+    </span>
+    <img
+      slot="image"
+      src="https://picsum.photos/304?random=4"
+      alt="Random insert 0"/>
+    <p slot="description">
+      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+    </p>
+    <auro-hyperlink
+      nav
+      href="/"
+      slot="action"
+      target="_blank">
+      More info
+    </auro-hyperlink>
+    <p slot="disclaimer">
+      * Errem tempor eligendi cu eos
+    </p>
+  </auro-card>
+
+  <auro-card>
+    <span slot="title">
+      Pri dicat graece abhorreant
+    </span>
+    <img
+      slot="image"
+      src="https://picsum.photos/304?random=5"
+      alt="Random insert 0"/>
+    <p slot="description">
+      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+    </p>
+    <auro-hyperlink
+      nav
+      href="/"
+      slot="action"
+      target="_blank">
+      More info
+    </auro-hyperlink>
+    <p slot="disclaimer">
+      * Errem tempor eligendi cu eos
+    </p>
+  </auro-card>
+</div>
+
+<auro-accordion lowProfile justifyRight>
+<span slot="trigger">See code</span>
+
+```html
+<style>
+  @media screen and (min-width: 1024px) {
+    .flexLayout {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+</style>
+
+<div class="flexLayout">
+  <auro-card>
+    <span slot="title">
+      Pri dicat graece abhorreant
+    </span>
+    <img
+      slot="image"
+      src="https://picsum.photos/304?random=3"
+      alt="Random insert 0"/>
+    <p slot="description">
+      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+    </p>
+    <auro-hyperlink
+      nav
+      href="/"
+      slot="action"
+      target="_blank">
+      More info
+    </auro-hyperlink>
+    <p slot="disclaimer">
+      * Errem tempor eligendi cu eos
+    </p>
+  </auro-card>
+
+  <auro-card>
+    <span slot="title">
+      Pri dicat graece abhorreant
+    </span>
+    <img
+      slot="image"
+      src="https://picsum.photos/304?random=4"
+      alt="Random insert 0"/>
+    <p slot="description">
+      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+    </p>
+    <auro-hyperlink
+      nav
+      href="/"
+      slot="action"
+      target="_blank">
+      More info
+    </auro-hyperlink>
+    <p slot="disclaimer">
+      * Errem tempor eligendi cu eos
+    </p>
+  </auro-card>
+
+  <auro-card>
+    <span slot="title">
+      Pri dicat graece abhorreant
+    </span>
+    <img
+      slot="image"
+      src="https://picsum.photos/304?random=5"
+      alt="Random insert 0"/>
+    <p slot="description">
+      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+    </p>
+    <auro-hyperlink
+      nav
+      href="/"
+      slot="action"
+      target="_blank">
+      More info
+    </auro-hyperlink>
+    <p slot="disclaimer">
+      * Errem tempor eligendi cu eos
+    </p>
+  </auro-card>
+</div>
+```
+
+</auro-accordion>
+
+
+<!-- ## auro-card as Banner
 
 <div class="exampleWrapper">
   <auro-card
@@ -79,10 +332,10 @@ as the primary source of information.
       our flagship lounge has it all. Prepare to relax by the grand fireplace or sip a local brew at the spacious bar
       while taking in the best runway views at Sea-Tac.
     </p>
-    <auro-hyperlink href="#" secondary slot="cta" target="_blank">More info</auro-hyperlink>
+    <auro-hyperlink href="#" secondary slot="action" target="_blank">More info</auro-hyperlink>
   </auro-card>
 </div>
-  
+
 <auro-accordion lowProfile justifyRight>
 <span slot="trigger">See code</span>
 
@@ -103,7 +356,7 @@ as the primary source of information.
     our flagship lounge has it all. Prepare to relax by the grand fireplace or sip a local brew at the spacious bar
     while taking in the best runway views at Sea-Tac.
   </p>
-  <auro-hyperlink href="#" secondary slot="cta" target="_blank">More info</auro-hyperlink>
+  <auro-hyperlink href="#" secondary slot="action" target="_blank">More info</auro-hyperlink>
 </auro-card>
 ```
 
@@ -130,10 +383,10 @@ as the primary source of information.
       Welcome to <b>one</b>world®, an alliance of the world’s leading airlines committed to providing the highest level
       of service and convenience across more than 1,000 destinations worldwide.
     </p>
-    <auro-hyperlink href="#" secondary cta slot="cta" target="_blank">About <b>one</b>world</auro-hyperlink>
+    <auro-hyperlink href="#" secondary cta slot="action" target="_blank">About <b>one</b>world</auro-hyperlink>
   </auro-card>
 </div>
-  
+
 <auro-accordion lowProfile justifyRight>
 <span slot="trigger">See code</span>
 
@@ -154,7 +407,7 @@ as the primary source of information.
     Welcome to <b>one</b>world®, an alliance of the world’s leading airlines committed to providing the highest level
     of service and convenience across more than 1,000 destinations worldwide.
   </p>
-  <auro-hyperlink href="#" secondary cta slot="cta" target="_blank">About <b>one</b>world</auro-hyperlink>
+  <auro-hyperlink href="#" secondary cta slot="action" target="_blank">About <b>one</b>world</auro-hyperlink>
 </auro-card>
 ```
 
@@ -178,10 +431,10 @@ as the primary source of information.
       Mileage Plan is the Alaska Airlines loyalty program. Travel with us, and with our global airline partners to over
       800+ destinations around the world.
     </p>
-    <auro-hyperlink href="#" cta secondary slot="cta" target="_blank">More info</auro-hyperlink>
+    <auro-hyperlink href="#" cta secondary slot="action" target="_blank">More info</auro-hyperlink>
   </auro-card>
 </div>
-  
+
 <auro-accordion lowProfile justifyRight>
 <span slot="trigger">See code</span>
 
@@ -199,7 +452,7 @@ as the primary source of information.
     Mileage Plan is the Alaska Airlines loyalty program. Travel with us, and with our global airline partners to over
     800+ destinations around the world.
   </p>
-  <auro-hyperlink href="#" cta secondary slot="cta" target="_blank">More info</auro-hyperlink>
+  <auro-hyperlink href="#" cta secondary slot="action" target="_blank">More info</auro-hyperlink>
 </auro-card>
 ```
 
@@ -222,10 +475,10 @@ as the primary source of information.
       We’ll explain any additional costs before you book your car rental. More details on what’s included?
       Just check the Ts&Cs of any car.
     </p>
-    <auro-hyperlink href="#" cta secondary slot="cta" target="_blank">More info</auro-hyperlink>
+    <auro-hyperlink href="#" cta secondary slot="action" target="_blank">More info</auro-hyperlink>
   </auro-card>
 </div>
-  
+
 <auro-accordion lowProfile justifyRight>
 <span slot="trigger">See code</span>
 
@@ -242,7 +495,7 @@ as the primary source of information.
     We’ll explain any additional costs before you book your car rental. More details on what’s included?
     Just check the Ts&Cs of any car.
   </p>
-  <auro-hyperlink href="#" cta secondary slot="cta" target="_blank">More info</auro-hyperlink>
+  <auro-hyperlink href="#" cta secondary slot="action" target="_blank">More info</auro-hyperlink>
 </auro-card>
 ```
 
@@ -265,10 +518,10 @@ as the primary source of information.
       We’ll explain any additional costs before you book your car rental. More details on what’s included?
       Just check the Ts&Cs of any car.
     </p>
-    <auro-hyperlink href="#" cta secondary slot="cta" target="_blank">More info</auro-hyperlink>
+    <auro-hyperlink href="#" cta secondary slot="action" target="_blank">More info</auro-hyperlink>
   </auro-card>
 </div>
-  
+
 <auro-accordion lowProfile justifyRight>
 <span slot="trigger">See code</span>
 
@@ -285,8 +538,8 @@ as the primary source of information.
       We’ll explain any additional costs before you book your car rental. More details on what’s included?
       Just check the Ts&Cs of any car.
     </p>
-    <auro-hyperlink href="#" cta secondary slot="cta" target="_blank">More info</auro-hyperlink>
+    <auro-hyperlink href="#" cta secondary slot="action" target="_blank">More info</auro-hyperlink>
   </auro-card>
 ```
 
-</auro-accordion>
+</auro-accordion> -->
