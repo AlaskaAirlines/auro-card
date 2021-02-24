@@ -22,16 +22,20 @@
 // never define layout that would cause effect on element outside the scope of this component
 
 
-:host {
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  flex-direction: column;
-  text-align: center;
-}
+// :host {
+//   display: flex;
+//   align-items: center;
+//   overflow: hidden;
+//   flex-direction: column;
+//   text-align: center;
+// }
 
-:host([alignLeft]) {
-  text-align: left;
+// :host([alignLeft]) {
+//   text-align: left;
+// }
+
+:host {
+  color: white;
 }
 
 .imageWrapper {
@@ -55,6 +59,6 @@
   font-size: var(--auro-text-body-size-xs);
 }
 
-auro-header {
-  max-width: 19rem;
-}
+// auro-header {
+//   max-width: 19rem;
+// }
