@@ -15,11 +15,11 @@ fs.readFile('src/style.css', (err, css) => {
         ':root': '*'
       }
     }))
-    .process(css, { from: 'src/style-hero.css', to: 'src/style-hero.css' })
+    .process(css, { from: 'src/style.css', to: 'src/style.css' })
     .then(result => {
-      fs.writeFile('src/style-hero.css', result.css, () => true)
+      fs.writeFile('src/style.css', result.css, () => true)
       if ( result.map ) {
-        fs.writeFile('src/style-hero.map', result.map, () => true)
+        fs.writeFile('src/style.map', result.map, () => true)
       }
     })
 })

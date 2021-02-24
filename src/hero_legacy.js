@@ -219,7 +219,7 @@ class AuroCard extends LitElement {
   setDetailsPadding() {
     const auroSizes = [
       'none',
-      'xxxs',
+      'xxxs:',
       'xxs',
       'xs',
       'sm',

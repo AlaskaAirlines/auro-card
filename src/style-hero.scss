@@ -1,0 +1,64 @@
+// Copyright (c) 2021 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
+// See LICENSE in the project root for license information.
+
+// ---------------------------------------------------------------------
+
+// Import Auro tokens
+// @import "./node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables";
+@import "./node_modules/@alaskaairux/design-tokens/dist/tokens/SassCustomProperties";
+
+// @import "./node_modules/@alaskaairux/webcorestylesheets/dist/breakpoints";
+@import "./node_modules/@alaskaairux/webcorestylesheets/dist/core";
+
+// Support for auroElement styles
+// @import "./node_modules/@alaskaairux/webcorestylesheets/dist/auroElement/auroElement";
+
+// container styles - defines the look of the outer custom component
+// :host {
+//   ...
+// }
+
+// layout styles - define any layout specifications for UI that is contained WITHIN the component
+// never define layout that would cause effect on element outside the scope of this component
+
+
+// :host {
+//   display: flex;
+//   align-items: center;
+//   overflow: hidden;
+//   flex-direction: column;
+//   text-align: center;
+// }
+
+// :host([alignLeft]) {
+//   text-align: left;
+// }
+
+:host {
+  color: white;
+}
+
+.imageWrapper {
+  width: 19rem; //1rem grid
+  height: 19rem; //1rem grid
+  margin-top: 0;
+
+  ::slotted(img) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.description {
+  max-width: 19rem; //1rem grid
+  display: block;
+}
+
+.disclaimer {
+  color: var(--auro-color-text-secondary-on-light);
+  font-size: var(--auro-text-body-size-xs);
+}
+
+// auro-header {
+//   max-width: 19rem;
+// }
