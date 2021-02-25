@@ -94,5 +94,58 @@ This allows the editor the upmost in image flexibility for cropped images placed
   </auro-hyperlink>
 </auro-card-hero>
 ```
+</auro-accordion>
 
+## Slim / alignRight / onDark
+
+The following example illustrates a series of additional API options available to the `auro-card-hero` element. In this example, this shows how a user can augment the `billboard` theme of the `auro-card-hero`. Also notice the use of the `title` slot versus the `image` slot in the previous example.
+
+<div class="exampleWrapper">
+  <auro-card-hero billboard slim alignRight onDark>
+    <picture slot="background">
+      <source srcset="https://picsum.photos/id/120/1024/600" media="(min-width: 736px)">
+      <source srcset="https://picsum.photos/id/120/736/1400" media="(min-width: 375px)">
+      <source srcset="https://picsum.photos/id/120/320/1200" media="(min-width: 320px)">
+      <img src="https://picsum.photos/id/120/225/550" alt="" />
+    </picture>
+    <span slot="title">Car Rental</span>
+    <p slot="description">
+      We’ll explain any additional costs before you book your car rental. More details on what’s included? Just check the Ts&Cs of any car.
+    </p>
+    <auro-hyperlink
+      cta
+      secondary
+      href="/"
+      slot="action"
+      target="_blank">
+      More info
+    </auro-hyperlink>
+  </auro-card-hero>
+</div>
+
+<auro-accordion lowProfile justifyRight>
+<span slot="trigger">See code</span>
+
+```html
+<auro-card-hero billboard slim alignRight onDark>
+  <picture slot="background">
+    <source srcset="https://picsum.photos/id/120/1024/600" media="(min-width: 736px)">
+    <source srcset="https://picsum.photos/id/120/736/1400" media="(min-width: 375px)">
+    <source srcset="https://picsum.photos/id/120/320/1200" media="(min-width: 320px)">
+    <img src="https://picsum.photos/id/120/225/550" alt="" />
+  </picture>
+  <span slot="title">Car Rental</span>
+  <p slot="description">
+    We’ll explain any additional costs before you book your car rental. More details on what’s included? Just check the Ts&Cs of any car.
+  </p>
+  <auro-hyperlink
+    cta
+    secondary
+    href="/"
+    slot="action"
+    target="_blank">
+    More info
+  </auro-hyperlink>
+</auro-card-hero>
+```
 </auro-accordion>

@@ -33,6 +33,18 @@ class AuroCardHero extends LitElement {
     `;
   }
 
+  // This function removes a CSS selector if the footer slot is empty
+  firstUpdated() {
+    const slot = this.shadowRoot.querySelector("#header"),
+      slotWrapper = this.shadowRoot.querySelector("#headerElement");
+
+    if (!this.unformatted && slot.assignedNodes().length === 0) {
+      return slotWrapper.classList.add("unused");
+    }
+
+    return null;
+  }
+
   // function that renders the HTML and CSS into  the scope of the component
   render() {
 
@@ -42,8 +54,8 @@ class AuroCardHero extends LitElement {
         <slot name="background" class="background"></slot>
 
         <div class="bodyWrapper">
-          <auro-header slot="title" level="2" display="600" margin="top" size="none">
-            <slot name="title"></slot>
+          <auro-header level="2" display="600" margin="both" size="none" id="headerElement">
+            <slot name="title" id="header"></slot>
           </auro-header>
 
           <div class="imageWrapper">
@@ -52,7 +64,7 @@ class AuroCardHero extends LitElement {
 
           <div class="contentWrapper">
             <slot name="description" class="description"></slot>
-            <slot name="action"></slot>
+            <slot name="action" class="action"></slot>
             <slot name="disclaimer" class="disclaimer"></slot>
           </div>
         </div>

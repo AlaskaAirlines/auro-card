@@ -25,13 +25,40 @@ img {
   display: block;
 }
 
-:host([ondark]) {
+.unused {
+  display: none;
+}
+
+:host([onDark]) {
   color: white;
 }
+
+.description {
+  display: block;
+}
+
+.disclaimer {
+  color: var(--auro-color-text-secondary-on-light);
+  font-size: var(--auro-text-body-size-xs);
+}
+
+// =-=-=-=-= billboard -=-=-=-=-=-=
 
 :host([billboard]) {
   .heroWrapper {
     position: relative;
+  }
+
+  .action {
+    display: inline-block;
+  }
+
+  .imageWrapper {
+    max-width: 90%;
+
+    @include auro_breakpoint($min: 414px) {
+      max-width: 80%;
+    }
   }
 
   .background {
@@ -47,11 +74,15 @@ img {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 1rem 1.5rem;
+    padding: 2rem 1rem;
 
     @include auro_breakpoint--sm {
-      min-height: 340px;
-      max-height: 340px;
+      max-height: 24rem;
+    }
+
+    @include auro_breakpoint--md {
+      padding: 1rem;
+      min-height: 24rem;
     }
   }
 
@@ -60,17 +91,40 @@ img {
     margin-bottom: 150px;
 
     @include auro_breakpoint--sm {
-      max-width: 50%;
-      margin: 0;
+      margin-bottom: 0;
+      max-width: 70%;
+    }
+
+    @include auro_breakpoint--md {
+      max-width: 60%;
     }
   }
 }
 
-.description {
-  display: block;
+// =-=-=-=-= slim -=-=-=-=-=-=
+
+:host([slim]) {
+  .bodyWrapper {
+    @include auro_breakpoint--md {
+      min-height: unset;
+      padding: 2rem;
+    }
+  }
 }
 
-.disclaimer {
-  color: var(--auro-color-text-secondary-on-light);
-  font-size: var(--auro-text-body-size-xs);
+// =-=-=-=-= right -=-=-=-=-=-=
+
+:host([alignRight]) {
+  .bodyWrapper {
+    align-items: flex-end;
+    text-align: right;
+    width: 100%;
+  }
+
+  .contentWrapper {
+
+    @include auro_breakpoint--md {
+      max-width: 60%;
+    }
+  }
 }
