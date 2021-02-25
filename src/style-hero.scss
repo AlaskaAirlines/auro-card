@@ -4,10 +4,10 @@
 // ---------------------------------------------------------------------
 
 // Import Auro tokens
-// @import "./node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables";
+@import "./node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables";
 @import "./node_modules/@alaskaairux/design-tokens/dist/tokens/SassCustomProperties";
 
-// @import "./node_modules/@alaskaairux/webcorestylesheets/dist/breakpoints";
+@import "./node_modules/@alaskaairux/webcorestylesheets/dist/breakpoints";
 @import "./node_modules/@alaskaairux/webcorestylesheets/dist/core";
 
 // Support for auroElement styles
@@ -21,36 +21,52 @@
 // layout styles - define any layout specifications for UI that is contained WITHIN the component
 // never define layout that would cause effect on element outside the scope of this component
 
+img {
+  display: block;
+}
 
-// :host {
-//   display: flex;
-//   align-items: center;
-//   overflow: hidden;
-//   flex-direction: column;
-//   text-align: center;
-// }
-
-// :host([alignLeft]) {
-//   text-align: left;
-// }
-
-:host {
+:host([ondark]) {
   color: white;
 }
 
-.imageWrapper {
-  width: 19rem; //1rem grid
-  height: 19rem; //1rem grid
-  margin-top: 0;
+:host([billboard]) {
+  .heroWrapper {
+    position: relative;
+  }
 
-  ::slotted(img) {
+  .background {
     display: block;
-    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .bodyWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 1.5rem;
+
+    @include auro_breakpoint--sm {
+      min-height: 340px;
+      max-height: 340px;
+    }
+  }
+
+  .contentWrapper {
+    max-width: 90%;
+    margin-bottom: 150px;
+
+    @include auro_breakpoint--sm {
+      max-width: 50%;
+      margin: 0;
+    }
   }
 }
 
 .description {
-  max-width: 19rem; //1rem grid
   display: block;
 }
 
@@ -58,7 +74,3 @@
   color: var(--auro-color-text-secondary-on-light);
   font-size: var(--auro-text-body-size-xs);
 }
-
-// auro-header {
-//   max-width: 19rem;
-// }

@@ -15,13 +15,15 @@ import "@alaskaairux/auro-header";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
- * The auro-card element provides users a flexible way to convey a summary of information.
+ * The auro-card-hero element provides users a flexible way to convey a summary of information in various large formats.
  *
- * @slot title - auro-card heading
- * @slot image - card image placement
- * @slot description - main body of text on this card
- * @slot cta - call to action link
- * @slot disclaimer - disclaimer text
+ * @attr {Boolean} billboard - to be used for billboard style configuration
+ * @slot background - placement for `<picture />` element
+ * @slot title - placement for header
+ * @slot image - image placement
+ * @slot description - main body of content
+ * @slot cta - call to action
+ * @slot disclaimer - disclaimer copy
  */
 class AuroCardHero extends LitElement {
 
@@ -35,15 +37,11 @@ class AuroCardHero extends LitElement {
   render() {
 
     return html`
-      <div class="heroWrapper" style="position: relative">
+      <div class="heroWrapper">
 
-        <picture style="display: block; position: absolute; width: 100%; top: 0; left: 0">
-          <source srcset="https://picsum.photos/1000?random=0"
-                  media="(min-width: 800px)">
-          <img src="https://picsum.photos/800?random=0" alt="" />
-        </picture>
+        <slot name="background" class="background"></slot>
 
-        <div style="position: relative; z-index='10'">
+        <div class="bodyWrapper">
           <auro-header slot="title" level="2" display="600" margin="top" size="none">
             <slot name="title"></slot>
           </auro-header>
@@ -52,7 +50,7 @@ class AuroCardHero extends LitElement {
             <slot name="image"></slot>
           </div>
 
-          <div>
+          <div class="contentWrapper">
             <slot name="description" class="description"></slot>
             <slot name="action"></slot>
             <slot name="disclaimer" class="disclaimer"></slot>

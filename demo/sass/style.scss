@@ -25,6 +25,15 @@ body {
   padding: 3rem;
 }
 
+// this needs to be added
+// to WCSS essentials!!!!!
+picture {
+  img {
+    display: block;
+    // max-width: unset;
+  }
+}
+
 pre[class*='language-'] {
   margin-top: 0;
 }
