@@ -21,6 +21,10 @@
 // layout styles - define any layout specifications for UI that is contained WITHIN the component
 // never define layout that would cause effect on element outside the scope of this component
 
+:host {
+  color: var(--auro-color-text-primary-on-light);
+}
+
 img {
   display: block;
 }
