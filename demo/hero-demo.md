@@ -131,8 +131,40 @@ The `picture` element could be used if necessary.
 <span slot="trigger">See code</span>
 
 ```html
-  <auro-banner hero>
-    <img src="https://picsum.photos/id/10/550/550" alt="" slot="imagePlacement" />
+<auro-banner hero>
+  <img src="https://picsum.photos/id/10/550/550" alt="" slot="imagePlacement" />
+  <span slot="prefix">Duis aute irure dolor</span>
+  <span slot="title">Duis aute irure dolor.<br>Excepteur sint occaecat.</span>
+  <p slot="description">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+  <auro-hyperlink
+    cta
+    secondary
+    href="/"
+    slot="action"
+    target="_blank">
+    More info
+  </auro-hyperlink>
+</auro-banner>
+```
+</auro-accordion>
+
+## Marquee
+
+The following example illustrates a `auro-banner` custom element with the `marquee` template style. This template configuration also supports the `slim` and `onDark` attributes.
+
+Notice for the `imagePlacement` slot, this example is using a single `img` element.
+
+```html
+<img src="https://picsum.photos/id/10/550/550" alt="" slot="imagePlacement" />
+```
+
+The `picture` element could be used if necessary.
+
+<div class="exampleWrapper">
+  <auro-banner marquee>
+    <img src="https://picsum.photos/id/80/550/550" alt="" slot="imagePlacement" />
     <span slot="prefix">Duis aute irure dolor</span>
     <span slot="title">Duis aute irure dolor.<br>Excepteur sint occaecat.</span>
     <p slot="description">
@@ -147,12 +179,36 @@ The `picture` element could be used if necessary.
       More info
     </auro-hyperlink>
   </auro-banner>
+</div>
+
+<auro-accordion lowProfile justifyRight>
+<span slot="trigger">See code</span>
+
+```html
+<auro-banner hero>
+  <img src="https://picsum.photos/id/10/550/550" alt="" slot="imagePlacement" />
+  <span slot="prefix">Duis aute irure dolor</span>
+  <span slot="title">Duis aute irure dolor.<br>Excepteur sint occaecat.</span>
+  <p slot="description">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+  <auro-hyperlink
+    cta
+    secondary
+    href="/"
+    slot="action"
+    target="_blank">
+    More info
+  </auro-hyperlink>
+</auro-banner>
 ```
 </auro-accordion>
 
 ## Slim / alignRight / onDark
 
 The following example illustrates a series of additional API options available to the `auro-banner` element. In this example, this shows how a user can augment the `billboard` theme of the `auro-banner`. Also notice the use of the `title` slot versus the `image` slot in the previous example.
+
+For the call-to-action button, see in the example code that it is required to set the `onDark` attribute on the `auro-hyperlink` element itself. This is **not** controlled by the `auro-banner` element.
 
 <div class="exampleWrapper">
   <auro-banner billboard slim alignRight onDark>
@@ -169,6 +225,7 @@ The following example illustrates a series of additional API options available t
     <auro-hyperlink
       cta
       secondary
+      ondark
       href="/"
       slot="action"
       target="_blank">
@@ -195,6 +252,7 @@ The following example illustrates a series of additional API options available t
   <auro-hyperlink
     cta
     secondary
+    ondark
     href="/"
     slot="action"
     target="_blank">
