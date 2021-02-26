@@ -21,6 +21,10 @@ Installing as a direct, dev or peer dependency is up to the user installing the 
 type of dependency you should use, consider reading this answer:
 [stack overflow](https://stackoverflow.com/questions/18875674/whats-the-difference-between-dependencies-devdependencies-and-peerdependencies).
 
+## WCSS dependency
+
+The `auro-card` and the `auro-banner` have an opinion about use of `img` inside the `picture` element. Please [the WCSS docs](https://alaskaairlines.github.io/WebCoreStyleSheets/#core-css-#{$sym}#{$prefix}picture#{$scope}) for additional information for how to install and manage within your project.
+
 ### Design Token CSS Custom Property dependency
 
 The use of any Auro custom element has a dependency on the [Auro Design Tokens](https://auro.alaskaair.com/getting-started/developers/design-tokens).
