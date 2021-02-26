@@ -16,11 +16,15 @@ import "@alaskaairux/auro-header";
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
  * The auro-card-hero element provides users a flexible way to convey a summary of information in various large formats.
- *
  * @attr {Boolean} billboard - to be used for billboard style configuration
  * @attr {Boolean} hero - to be used for hero style configuration
  * @attr {Boolean} marquee - to be used for marquee style configuration
- * @slot background - placement for `<picture />` element
+ * @attr {Boolean} solid - to be used when you want a solid color as opposed to a transparent background
+ * @attr {Boolean} slim - to be used when we want a smaller height to the default banner
+ * @attr {Boolean} alignRight - to be used when we want the text aligned to the right
+ * @attr {Boolean} onDark - to be used when the background image or color is dark and changes the text and cta color
+ * @slot backgroundImage - placement for `<picture />` element
+ * @slot prefix - placement for smaller text above title
  * @slot title - placement for header
  * @slot image - image placement
  * @slot description - main body of content
@@ -53,7 +57,7 @@ class AuroBanner extends LitElement {
     return html`
       <div class="bannerWrapper">
 
-        <slot name="imagePlacement" class="imagePlacement"></slot>
+        <slot name="backgroundImage" class="backgroundImage"></slot>
 
         <div class="bodyWrapper">
           ${this.hero && !this.marquee

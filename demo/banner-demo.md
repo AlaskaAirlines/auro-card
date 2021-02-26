@@ -30,7 +30,7 @@ The `auro-banner` element with the `billboard` property features a single config
 The background image slot is configured to work with the HTML [picture](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) element.
 
 ```html
-<picture slot="imagePlacement">
+<picture slot="backgroundImage">
   <source srcset="https://picsum.photos/id/430/1024/600" media="(min-width: 736px)">
   <source srcset="https://picsum.photos/id/430/736/1400" media="(min-width: 375px)">
   <source srcset="https://picsum.photos/id/430/320/1200" media="(min-width: 320px)">
@@ -42,7 +42,7 @@ This allows the editor the upmost in image flexibility for cropped images placed
 
 <div class="exampleWrapper">
   <auro-banner billboard>
-    <picture slot="imagePlacement">
+    <picture slot="backgroundImage">
       <source srcset="https://picsum.photos/id/430/1024/600" media="(min-width: 736px)">
       <source srcset="https://picsum.photos/id/430/736/1400" media="(min-width: 375px)">
       <source srcset="https://picsum.photos/id/430/320/1200" media="(min-width: 320px)">
@@ -71,7 +71,7 @@ This allows the editor the upmost in image flexibility for cropped images placed
 
 ```html
 <auro-banner billboard>
-  <picture slot="imagePlacement">
+  <picture slot="backgroundImage">
     <source srcset="https://picsum.photos/id/430/1024/600" media="(min-width: 736px)">
     <source srcset="https://picsum.photos/id/430/736/1400" media="(min-width: 375px)">
     <source srcset="https://picsum.photos/id/430/320/1200" media="(min-width: 320px)">
@@ -100,17 +100,17 @@ This allows the editor the upmost in image flexibility for cropped images placed
 
 The following example illustrates a `auro-banner` custom element with the `hero` template style. This template configuration also supports the `slim` and `onDark` attributes.
 
-Notice for the `imagePlacement` slot, this example is using a single `img` element.
+Notice for the `backgroundImage` slot, this example is using a single `img` element.
 
 ```html
-<img src="https://picsum.photos/id/10/550/550" alt="" slot="imagePlacement" />
+<img src="https://picsum.photos/id/10/550/550" alt="" slot="backgroundImage" />
 ```
 
 The `picture` element could be used if necessary.
 
 <div class="exampleWrapper">
   <auro-banner hero>
-    <img src="https://picsum.photos/id/10/550/550" alt="" slot="imagePlacement" />
+    <img src="https://picsum.photos/id/10/550/550" alt="" slot="backgroundImage" />
     <span slot="prefix">Duis aute irure dolor</span>
     <span slot="title">Duis aute irure dolor.<br>Excepteur sint occaecat.</span>
     <p slot="description">
@@ -132,7 +132,7 @@ The `picture` element could be used if necessary.
 
 ```html
 <auro-banner hero>
-  <img src="https://picsum.photos/id/10/550/550" alt="" slot="imagePlacement" />
+  <img src="https://picsum.photos/id/10/550/550" alt="" slot="backgroundImage" />
   <span slot="prefix">Duis aute irure dolor</span>
   <span slot="title">Duis aute irure dolor.<br>Excepteur sint occaecat.</span>
   <p slot="description">
@@ -154,11 +154,11 @@ The `picture` element could be used if necessary.
 
 The following example illustrates a `auro-banner` custom element with the `marquee` template style. This template configuration also supports the `slim` and `onDark` attributes.
 
-Notice for the `imagePlacement` slot, this example is using a single `img` element.
+Notice for the `backgroundImage` slot, this example is using a single `img` element.
 
 <div class="exampleWrapper">
   <auro-banner marquee>
-    <img src="https://picsum.photos/id/82/550/460" alt="" slot="imagePlacement" />
+    <img src="https://picsum.photos/id/82/550/460" alt="" slot="backgroundImage" />
     <span slot="prefix">Duis aute irure dolor</span>
     <span slot="title">Duis aute irure dolor.<br>Excepteur sint occaecat.</span>
     <p slot="description">
@@ -180,7 +180,7 @@ Notice for the `imagePlacement` slot, this example is using a single `img` eleme
 
 ```html
 <auro-banner marquee>
-  <img src="https://picsum.photos/id/82/450/460" alt="" slot="imagePlacement" />
+  <img src="https://picsum.photos/id/82/450/460" alt="" slot="backgroundImage" />
   <span slot="prefix">Duis aute irure dolor</span>
   <span slot="title">Duis aute irure dolor.<br>Excepteur sint occaecat.</span>
   <p slot="description">
@@ -204,7 +204,7 @@ The following example illustrates a `auro-banner` custom element with the `marqu
 
 <div class="exampleWrapper">
   <auro-banner marquee solid slim>
-    <img src="https://picsum.photos/id/1015/550/400" alt="" slot="imagePlacement" />
+    <img src="https://picsum.photos/id/1015/550/400" alt="" slot="backgroundImage" />
     <auro-alaska official ondark style="width: 192px" slot="image"></auro-alaska>
     <p slot="description">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -226,7 +226,7 @@ The following example illustrates a `auro-banner` custom element with the `marqu
 
 ```html
 <auro-banner marquee solid slim>
-  <img src="https://picsum.photos/id/1015/550/460" alt="" slot="imagePlacement" />
+  <img src="https://picsum.photos/id/1015/550/460" alt="" slot="backgroundImage" />
   <auro-alaska official ondark style="width: 192px" slot="image"></auro-alaska>
   <p slot="description">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -252,7 +252,7 @@ For the call-to-action button, see in the example code that it is required to se
 
 <div class="exampleWrapper">
   <auro-banner billboard slim alignRight onDark>
-    <picture slot="imagePlacement">
+    <picture slot="backgroundImage">
       <source srcset="https://picsum.photos/id/120/1024/600" media="(min-width: 736px)">
       <source srcset="https://picsum.photos/id/120/736/1400" media="(min-width: 375px)">
       <source srcset="https://picsum.photos/id/120/320/1200" media="(min-width: 320px)">
@@ -279,7 +279,7 @@ For the call-to-action button, see in the example code that it is required to se
 
 ```html
 <auro-banner billboard slim alignRight onDark>
-  <picture slot="imagePlacement">
+  <picture slot="backgroundImage">
     <source srcset="https://picsum.photos/id/120/1024/600" media="(min-width: 736px)">
     <source srcset="https://picsum.photos/id/120/736/1400" media="(min-width: 375px)">
     <source srcset="https://picsum.photos/id/120/320/1200" media="(min-width: 320px)">
