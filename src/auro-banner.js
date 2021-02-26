@@ -9,7 +9,7 @@ import { LitElement, html, css } from "lit-element";
 
 // Import touch detection lib
 import "focus-visible/dist/focus-visible.min.js";
-import styleCss from "./style-hero-css.js";
+import styleCss from "./style-banner-css.js";
 
 import "@alaskaairux/auro-header";
 

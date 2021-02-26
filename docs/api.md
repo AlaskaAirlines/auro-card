@@ -1,4 +1,4 @@
-# auro-card-hero
+# auro-banner
 
 The auro-card-hero element provides users a flexible way to convey a summary of information in various large formats.
 
@@ -8,12 +8,19 @@ The auro-card-hero element provides users a flexible way to convey a summary of 
 |-------------|-----------|----------------------------------------------|
 | `billboard` | `Boolean` | to be used for billboard style configuration |
 
+## Properties
+
+| Property  | Attribute | Type      | Description                                |
+|-----------|-----------|-----------|--------------------------------------------|
+| `hero`    | `hero`    | `Boolean` | to be used for hero style configuration    |
+| `marquee` | `marquee` | `Boolean` | to be used for marquee style configuration |
+
 ## Slots
 
 | Name          | Description                         |
 |---------------|-------------------------------------|
+| `action`      | call to action                      |
 | `background`  | placement for `<picture />` element |
-| `cta`         | call to action                      |
 | `description` | main body of content                |
 | `disclaimer`  | disclaimer copy                     |
 | `image`       | image placement                     |
