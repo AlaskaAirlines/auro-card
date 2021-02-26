@@ -25,7 +25,7 @@ import "@alaskaairux/auro-header";
  * @slot cta - call to action
  * @slot disclaimer - disclaimer copy
  */
-class AuroCardHero extends LitElement {
+class AuroBanner extends LitElement {
 
   static get styles() {
     return css`
@@ -35,11 +35,15 @@ class AuroCardHero extends LitElement {
 
   // This function removes a CSS selector if the footer slot is empty
   firstUpdated() {
-    const slot = this.shadowRoot.querySelector("#header"),
-      slotWrapper = this.shadowRoot.querySelector("#headerElement");
+    const prefix = this.shadowRoot.querySelector("#prefix"),
+      prefixWrapper = this.shadowRoot.querySelector("#prefixElement"),
+      title = this.shadowRoot.querySelector("#title"),
+      titleWrapper = this.shadowRoot.querySelector("#titleElement");
 
-    if (!this.unformatted && slot.assignedNodes().length === 0) {
-      return slotWrapper.classList.add("unused");
+    if (title.assignedNodes().length === 0) {
+      return titleWrapper.classList.add("unused");
+    } else if (prefix.assignedNodes().length === 0) {
+      return prefixWrapper.classList.add("unused");
     }
 
     return null;
@@ -49,13 +53,17 @@ class AuroCardHero extends LitElement {
   render() {
 
     return html`
-      <div class="heroWrapper">
+      <div class="bannerWrapper">
 
-        <slot name="background" class="background"></slot>
+        <slot name="imagePlacement" class="imagePlacement"></slot>
 
         <div class="bodyWrapper">
-          <auro-header level="2" display="600" margin="both" size="none" id="headerElement">
-            <slot name="title" id="header"></slot>
+          <auro-header level="2" display="300" margin="top" size="none" class="title" id="prefixElement">
+            <slot name="prefix" id="prefix"></slot>
+          </auro-header>
+
+          <auro-header level="2" display="600" margin="both" size="none" id="titleElement" class="title">
+            <slot name="title" id="title"></slot>
           </auro-header>
 
           <div class="imageWrapper">
@@ -75,6 +83,6 @@ class AuroCardHero extends LitElement {
 
 /* istanbul ignore else */
 // define the name of the custom component
-if (!customElements.get("auro-card-hero")) {
-  customElements.define("auro-card-hero", AuroCardHero);
+if (!customElements.get("auro-banner")) {
+  customElements.define("auro-banner", AuroBanner);
 }

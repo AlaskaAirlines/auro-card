@@ -49,7 +49,7 @@ img {
 // =-=-=-=-= billboard -=-=-=-=-=-=
 
 :host([billboard]) {
-  .heroWrapper {
+  .bannerWrapper {
     position: relative;
   }
 
@@ -65,7 +65,7 @@ img {
     }
   }
 
-  .background {
+  .imagePlacement {
     display: block;
     position: absolute;
     bottom: 0;
@@ -129,6 +129,50 @@ img {
 
     @include auro_breakpoint--md {
       max-width: 60%;
+    }
+  }
+}
+
+// =-=-=-=-= hero -=-=-=-=-=-=
+
+:host([hero][ondark]) {
+  .title {
+    color: white;
+  }
+}
+
+:host([hero]) {
+
+  @extend :host([billboard]);
+
+  .title {
+    color: var(--auro-color-brand-midnight-400);
+  }
+
+  .imagePlacement {
+    bottom: unset;
+    position: static;
+  }
+
+  .contentWrapper {
+    margin: 0;
+  }
+
+  @include auro_breakpoint--sm {
+    .imagePlacement {
+      width: 50%;
+      right: 0;
+      position: absolute;
+    }
+
+    .bodyWrapper {
+      align-items: unset;
+      text-align: left;
+      width: 50%;
+    }
+
+    .contentWrapper {
+      max-width: 90%;
     }
   }
 }
