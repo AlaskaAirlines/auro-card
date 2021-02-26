@@ -47,26 +47,6 @@ class AuroBanner extends LitElement {
     `;
   }
 
-  // This function removes a CSS selector if the footer slot is empty
-  firstUpdated() {
-    const marquee = this.shadowRoot.querySelector("#marquee"),
-      marqueeWrapper = this.shadowRoot.querySelector("#marqueeElement"),
-      prefix = this.shadowRoot.querySelector("#prefix"),
-      prefixWrapper = this.shadowRoot.querySelector("#prefixElement"),
-      title = this.shadowRoot.querySelector("#title"),
-      titleWrapper = this.shadowRoot.querySelector("#titleElement");
-
-    if (title.assignedNodes().length === 0) {
-      return titleWrapper.classList.add("unused");
-    } else if (prefix.assignedNodes().length === 0) {
-      return prefixWrapper.classList.add("unused");
-    } else if (marquee.assignedNodes().length === 0) {
-      return marqueeWrapper.classList.add("unused");
-    }
-
-    return null;
-  }
-
   // function that renders the HTML and CSS into  the scope of the component
   render() {
 
@@ -78,28 +58,28 @@ class AuroBanner extends LitElement {
         <div class="bodyWrapper">
           ${this.hero && !this.marquee
             ? html`
-              <auro-header level="2" display="300" margin="top" size="none" class="title prefix" id="prefixElement">
-                <slot name="prefix" id="prefix"></slot>
+              <auro-header level="2" display="300" margin="top" size="none" class="title prefix">
+                <slot name="prefix"></slot>
               </auro-header>
 
-              <auro-header level="2" display="600" margin="both" size="none" id="titleElement" class="title">
-                <slot name="title" id="title"></slot>
+              <auro-header level="2" display="600" margin="both" size="none" class="title">
+                <slot name="title"></slot>
               </auro-header>`
             : html``
           }
 
           ${this.marquee && !this.hero
             ? html`
-              <auro-header level="2" display="400" margin="both" size="none" id="marqueeElement" class="title marquee">
-                <slot name="title" id="marquee"></slot>
+              <auro-header level="2" display="400" margin="both" size="none" class="title marquee">
+                <slot name="title"></slot>
               </auro-header>`
             : html``
           }
 
           ${!this.marquee && !this.hero
             ? html`
-              <auro-header level="2" display="600" margin="both" size="none" id="titleElement" class="title">
-                <slot name="title" id="title"></slot>
+              <auro-header level="2" display="600" margin="both" size="none" class="title">
+                <slot name="title"></slot>
               </auro-header>`
             : html``
           }

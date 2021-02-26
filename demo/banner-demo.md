@@ -156,15 +156,9 @@ The following example illustrates a `auro-banner` custom element with the `marqu
 
 Notice for the `imagePlacement` slot, this example is using a single `img` element.
 
-```html
-<img src="https://picsum.photos/id/10/550/550" alt="" slot="imagePlacement" />
-```
-
-The `picture` element could be used if necessary.
-
 <div class="exampleWrapper">
   <auro-banner marquee>
-    <img src="https://picsum.photos/id/80/550/550" alt="" slot="imagePlacement" />
+    <img src="https://picsum.photos/id/82/550/460" alt="" slot="imagePlacement" />
     <span slot="prefix">Duis aute irure dolor</span>
     <span slot="title">Duis aute irure dolor.<br>Excepteur sint occaecat.</span>
     <p slot="description">
@@ -185,8 +179,8 @@ The `picture` element could be used if necessary.
 <span slot="trigger">See code</span>
 
 ```html
-<auro-banner hero>
-  <img src="https://picsum.photos/id/10/550/550" alt="" slot="imagePlacement" />
+<auro-banner marquee>
+  <img src="https://picsum.photos/id/82/450/460" alt="" slot="imagePlacement" />
   <span slot="prefix">Duis aute irure dolor</span>
   <span slot="title">Duis aute irure dolor.<br>Excepteur sint occaecat.</span>
   <p slot="description">
@@ -195,6 +189,52 @@ The `picture` element could be used if necessary.
   <auro-hyperlink
     cta
     secondary
+    href="/"
+    slot="action"
+    target="_blank">
+    More info
+  </auro-hyperlink>
+</auro-banner>
+```
+</auro-accordion>
+
+## Marquee solid
+
+The following example illustrates a `auro-banner` custom element with the `marquee solid` template style. With this configuration, `onDark` is implied.
+
+<div class="exampleWrapper">
+  <auro-banner marquee solid slim>
+    <img src="https://picsum.photos/id/1015/550/400" alt="" slot="imagePlacement" />
+    <auro-alaska official ondark style="width: 192px" slot="image"></auro-alaska>
+    <p slot="description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+    <auro-hyperlink
+      cta
+      secondary
+      ondark
+      href="/"
+      slot="action"
+      target="_blank">
+      More info
+    </auro-hyperlink>
+  </auro-banner>
+</div>
+
+<auro-accordion lowProfile justifyRight>
+<span slot="trigger">See code</span>
+
+```html
+<auro-banner marquee solid slim>
+  <img src="https://picsum.photos/id/1015/550/460" alt="" slot="imagePlacement" />
+  <auro-alaska official ondark style="width: 192px" slot="image"></auro-alaska>
+  <p slot="description">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+  <auro-hyperlink
+    cta
+    secondary
+    ondark
     href="/"
     slot="action"
     target="_blank">

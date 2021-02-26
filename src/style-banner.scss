@@ -29,12 +29,8 @@ img {
   display: block;
 }
 
-.unused {
-  display: none;
-}
-
 :host([onDark]) {
-  color: white;
+  color: var(--auro-color-base-white);
 }
 
 .description {
@@ -109,6 +105,88 @@ img {
   }
 }
 
+// =-=-=-=-= hero -=-=-=-=-=-=
+
+:host([hero][ondark]) {
+  .title {
+    color: var(--auro-color-base-white);
+  }
+}
+
+:host([hero]) {
+
+  @extend :host([billboard]);
+
+  .title {
+    color: var(--auro-color-brand-midnight-400);
+  }
+
+  .imagePlacement {
+    bottom: unset;
+    position: static;
+  }
+
+  .contentWrapper {
+    margin: 0;
+  }
+
+  @include auro_breakpoint--sm {
+    .imagePlacement {
+      max-width: 50%;
+      right: 0;
+      position: absolute;
+    }
+
+    .bodyWrapper {
+      align-items: unset;
+      text-align: left;
+      width: 50%;
+    }
+
+    .contentWrapper {
+      max-width: 90%;
+    }
+  }
+}
+
+// =-=-=-=-= marquee -=-=-=-=-=-=
+
+:host([marquee][ondark]) {
+  .title {
+    color: var(--auro-color-base-white);
+  }
+}
+
+:host([marquee][solid]) {
+  color: var(--auro-color-base-white);
+
+  .imagePlacement {
+    &::slotted(img) {
+      display: block;
+    }
+  }
+
+  .bannerWrapper {
+    background-color: var(--auro-color-brand-midnight-400);
+  }
+
+  .bodyWrapper {
+
+    @include auro_breakpoint--sm {
+      padding-left: 3rem;
+    }
+  }
+
+  .title {
+    color: var(--auro-color-base-white);
+  }
+}
+
+:host([marquee]) {
+
+  @extend :host([hero]);
+}
+
 // =-=-=-=-= slim -=-=-=-=-=-=
 
 :host([slim]) {
@@ -135,55 +213,4 @@ img {
       max-width: 60%;
     }
   }
-}
-
-// =-=-=-=-= hero -=-=-=-=-=-=
-
-:host([hero][ondark]) {
-  .title {
-    color: white;
-  }
-}
-
-:host([hero]) {
-
-  @extend :host([billboard]);
-
-  .title {
-    color: var(--auro-color-brand-midnight-400);
-  }
-
-  .imagePlacement {
-    bottom: unset;
-    position: static;
-  }
-
-  .contentWrapper {
-    margin: 0;
-  }
-
-  @include auro_breakpoint--sm {
-    .imagePlacement {
-      width: 50%;
-      right: 0;
-      position: absolute;
-    }
-
-    .bodyWrapper {
-      align-items: unset;
-      text-align: left;
-      width: 50%;
-    }
-
-    .contentWrapper {
-      max-width: 90%;
-    }
-  }
-}
-
-// =-=-=-=-= marquee -=-=-=-=-=-=
-
-:host([marquee]) {
-
-  @extend :host([hero]);
 }

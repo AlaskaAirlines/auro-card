@@ -1,6 +1,6 @@
-# auro-card
+# Card
 
-`<auro-card>` is an [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)
+`<auro-card>` and `auro-banner` are [HTML custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)
 for the purpose of providing a flexible way to convey a summary of information.
 
 ## UI development browser support
@@ -45,7 +45,28 @@ import "@alaskaairux/auro-card";
 **Reference component in HTML**
 
 ```html
-<auro-card>Hello World</auro-card>
+<auro-card>
+  <span slot="title">
+    Pri dicat graece abhorreant
+  </span>
+  <img
+    slot="image"
+    src="https://picsum.photos/304?random=0"
+    alt=""/>
+  <p slot="description">
+    Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+  </p>
+  <auro-hyperlink
+    nav
+    href="/"
+    slot="action"
+    target="_blank">
+    More info
+  </auro-hyperlink>
+  <p slot="disclaimer">
+    * Errem tempor eligendi cu eos
+  </p>
+</auro-card>
 ```
 
 ## Install bundled assets from CDN
@@ -53,6 +74,9 @@ import "@alaskaairux/auro-card";
 In cases where the project is not able to process JS assets, there are pre-processed assets available for use.
 Two bundles are available -- `auro-card__bundled.js` for modern browsers and `auro-card__bundled.es5.js` for legacy
 browsers (including IE11).
+
+For `auro-banner` see `auro-banner__bundled.js` for modern browsers and `auro-banner__bundled.es5.js` for legacy
+browsers (including IE11)
 
 Since the legacy bundle includes many polyfills that are not needed by modern browsers, we recommend you load these
 bundles using [differential serving](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/) so
@@ -68,16 +92,10 @@ MAJOR releases, use at your own risk.
 
 <script src="https://unpkg.com/@alaskaairux/auro-card@latest/dist/auro-card__bundled.js" type="module"></script>
 <script src="https://unpkg.com/@alaskaairux/auro-card@latest/dist/auro-card__bundled.es5.js" nomodule></script>
+
+<script src="https://unpkg.com/@alaskaairux/auro-card@latest/dist/auro-banner__bundled.js" type="module"></script>
+<script src="https://unpkg.com/@alaskaairux/auro-card@latest/dist/auro-banner__bundled.es5.js" nomodule></script>
 ```
-
-## auro-card use cases
-
-For a collection of use cases and sample code, please refer to [demo.md](./demo/demo.md).
-
-## API Code Examples
-
-Many variations can be seen in the code examples of [demo.md](./demo/demo.md). For a full list of properties see
-[api.md](/docs/api.md).
 
 ## Development
 
@@ -103,7 +121,8 @@ $ npm run serve
 Open [localhost:8000](http://localhost:8000/)
 
 ### Testing
-Automated tests are required for every Auro component. See `.\test\auro-card.test.js` for the tests for this component.
+
+Automated tests are required for every Auro component. See `./test/auro-card.test.js` for the tests for this component.
 Run `npm test` to run the tests and check code coverage. Tests must pass and meet a certain coverage threshold to
 commit. See [the testing documentation](https://auro.alaskaair.com/support/tests) for more details.
 
