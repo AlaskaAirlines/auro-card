@@ -65,7 +65,7 @@ img {
     }
   }
 
-  .backgroundImage {
+  .displayImage {
     display: block;
     position: absolute;
     bottom: 0;
@@ -121,7 +121,7 @@ img {
     color: var(--auro-color-brand-midnight-400);
   }
 
-  .backgroundImage {
+  .displayImage {
     bottom: unset;
     position: static;
   }
@@ -131,7 +131,7 @@ img {
   }
 
   @include auro_breakpoint--sm {
-    .backgroundImage {
+    .displayImage {
       max-width: 50%;
       right: 0;
       position: absolute;
@@ -160,7 +160,7 @@ img {
 :host([marquee][solid]) {
   color: var(--auro-color-base-white);
 
-  .backgroundImage {
+  .displayImage {
     &::slotted(img) {
       display: block;
     }

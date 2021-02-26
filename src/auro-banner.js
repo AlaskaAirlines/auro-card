@@ -23,10 +23,10 @@ import "@alaskaairux/auro-header";
  * @attr {Boolean} slim - to be used when we want a smaller height to the default banner
  * @attr {Boolean} alignRight - to be used when we want the text aligned to the right
  * @attr {Boolean} onDark - to be used when the background image or color is dark and changes the text and cta color
- * @slot backgroundImage - placement for `<picture />` element
+ * @slot displayImage - placement for `<picture />` or `<img>` elements
  * @slot prefix - placement for smaller text above title
  * @slot title - placement for header
- * @slot image - image placement
+ * @slot contentImage - image placement
  * @slot description - main body of content
  * @slot action - call to action
  * @slot disclaimer - disclaimer copy
@@ -57,7 +57,7 @@ class AuroBanner extends LitElement {
     return html`
       <div class="bannerWrapper">
 
-        <slot name="backgroundImage" class="backgroundImage"></slot>
+        <slot name="displayImage" class="displayImage"></slot>
 
         <div class="bodyWrapper">
           ${this.hero && !this.marquee
@@ -89,7 +89,7 @@ class AuroBanner extends LitElement {
           }
 
           <div class="imageWrapper">
-            <slot name="image"></slot>
+            <slot name="contentImage"></slot>
           </div>
 
           <div class="contentWrapper">

@@ -1,8 +1,8 @@
 # Banner
 
-The `auro-banner` element provides users a flexible way to convey a summary of information. The primary elements of a card include an image, and details.
+The `auro-banner` element provides users a flexible way to convey a summary of information. The primary elements of a banner include an image, and details.
 
-The details are broken down into `title`, `description`, `action`, and `disclaimer`.
+The details are broken down into `prefix`, `title`, `description`, `action`, and `disclaimer`.
 
 ## Component use cases
 
@@ -17,20 +17,20 @@ Use `auro-banner` as the primary source of information.
 
 ## Default element
 
-The default `auro-banner` element features a single configuration using the `background`, `image`, `description`, `action` and `disclaimer` slots for structured content placement.
+The default `auro-banner` element features configuration options when using using the `displayImage`, `contentImage`, `prefix`, `title`, `description`, `action` and `disclaimer` slots for structured content placement.
 
 Notice the use of the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink) element and the `action` slot in the following examples. All the [properties](https://auro.alaskaair.com/components/auro/hyperlink/api) of the Hyperlink element are directly applicable.
 
 ## Billboard
 
-The `auro-banner` element with the `billboard` property features a single configuration using the `background`, `image`, `description`, `action` and `disclaimer` slots for structured content placement.
+The `auro-banner` element with the `billboard` property features a single configuration using the `displayImage`, `contentImage`, `description`, `action` and `disclaimer` slots for structured content placement.
 
 ### Background image slot
 
 The background image slot is configured to work with the HTML [picture](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) element.
 
 ```html
-<picture slot="backgroundImage">
+<picture slot="displayImage">
   <source srcset="https://picsum.photos/id/430/1024/600" media="(min-width: 736px)">
   <source srcset="https://picsum.photos/id/430/736/1400" media="(min-width: 375px)">
   <source srcset="https://picsum.photos/id/430/320/1200" media="(min-width: 320px)">
@@ -42,14 +42,14 @@ This allows the editor the upmost in image flexibility for cropped images placed
 
 <div class="exampleWrapper">
   <auro-banner billboard>
-    <picture slot="backgroundImage">
+    <picture slot="displayImage">
       <source srcset="https://picsum.photos/id/430/1024/600" media="(min-width: 736px)">
       <source srcset="https://picsum.photos/id/430/736/1400" media="(min-width: 375px)">
       <source srcset="https://picsum.photos/id/430/320/1200" media="(min-width: 320px)">
       <img src="https://picsum.photos/id/430/225/550" alt="" />
     </picture>
     <img
-      slot="image"
+      slot="contentImage"
       src="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/oneworld-travel-bright-Horizontal-300.png"
       alt="Random insert 0"/>
     <p slot="description">
@@ -71,14 +71,14 @@ This allows the editor the upmost in image flexibility for cropped images placed
 
 ```html
 <auro-banner billboard>
-  <picture slot="backgroundImage">
+  <picture slot="displayImage">
     <source srcset="https://picsum.photos/id/430/1024/600" media="(min-width: 736px)">
     <source srcset="https://picsum.photos/id/430/736/1400" media="(min-width: 375px)">
     <source srcset="https://picsum.photos/id/430/320/1200" media="(min-width: 320px)">
     <img src="https://picsum.photos/id/430/225/550" alt="" />
   </picture>
   <img
-    slot="image"
+    slot="contentImage"
     src="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/oneworld-travel-bright-Horizontal-300.png"
     alt="Random insert 0"/>
   <p slot="description">
@@ -98,19 +98,19 @@ This allows the editor the upmost in image flexibility for cropped images placed
 
 ## Hero
 
-The following example illustrates a `auro-banner` custom element with the `hero` template style. This template configuration also supports the `slim` and `onDark` attributes.
+The following example illustrates a `auro-banner` custom element with the `hero` template style. This template configuration also supports the `slim` and `onDark` attributes. This example also illustrates the use of the `prefix` slot.
 
-Notice for the `backgroundImage` slot, this example is using a single `img` element.
+Notice for the `displayImage` slot, this example is using a single `img` element.
 
 ```html
-<img src="https://picsum.photos/id/10/550/550" alt="" slot="backgroundImage" />
+<img src="https://picsum.photos/id/10/550/550" alt="" slot="displayImage" />
 ```
 
 The `picture` element could be used if necessary.
 
 <div class="exampleWrapper">
   <auro-banner hero>
-    <img src="https://picsum.photos/id/10/550/550" alt="" slot="backgroundImage" />
+    <img src="https://picsum.photos/id/10/550/550" alt="" slot="displayImage" />
     <span slot="prefix">Duis aute irure dolor</span>
     <span slot="title">Duis aute irure dolor.<br>Excepteur sint occaecat.</span>
     <p slot="description">
@@ -132,7 +132,7 @@ The `picture` element could be used if necessary.
 
 ```html
 <auro-banner hero>
-  <img src="https://picsum.photos/id/10/550/550" alt="" slot="backgroundImage" />
+  <img src="https://picsum.photos/id/10/550/550" alt="" slot="displayImage" />
   <span slot="prefix">Duis aute irure dolor</span>
   <span slot="title">Duis aute irure dolor.<br>Excepteur sint occaecat.</span>
   <p slot="description">
@@ -154,11 +154,11 @@ The `picture` element could be used if necessary.
 
 The following example illustrates a `auro-banner` custom element with the `marquee` template style. This template configuration also supports the `slim` and `onDark` attributes.
 
-Notice for the `backgroundImage` slot, this example is using a single `img` element.
+Notice for the `displayImage` slot, this example is using a single `img` element.
 
 <div class="exampleWrapper">
   <auro-banner marquee>
-    <img src="https://picsum.photos/id/82/550/460" alt="" slot="backgroundImage" />
+    <img src="https://picsum.photos/id/82/550/460" alt="" slot="displayImage" />
     <span slot="prefix">Duis aute irure dolor</span>
     <span slot="title">Duis aute irure dolor.<br>Excepteur sint occaecat.</span>
     <p slot="description">
@@ -180,7 +180,7 @@ Notice for the `backgroundImage` slot, this example is using a single `img` elem
 
 ```html
 <auro-banner marquee>
-  <img src="https://picsum.photos/id/82/450/460" alt="" slot="backgroundImage" />
+  <img src="https://picsum.photos/id/82/450/460" alt="" slot="displayImage" />
   <span slot="prefix">Duis aute irure dolor</span>
   <span slot="title">Duis aute irure dolor.<br>Excepteur sint occaecat.</span>
   <p slot="description">
@@ -204,8 +204,8 @@ The following example illustrates a `auro-banner` custom element with the `marqu
 
 <div class="exampleWrapper">
   <auro-banner marquee solid slim>
-    <img src="https://picsum.photos/id/1015/550/400" alt="" slot="backgroundImage" />
-    <auro-alaska official ondark style="width: 192px" slot="image"></auro-alaska>
+    <img src="https://picsum.photos/id/1015/550/400" alt="" slot="displayImage" />
+    <auro-alaska official ondark style="width: 192px" slot="contentImage"></auro-alaska>
     <p slot="description">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </p>
@@ -226,8 +226,8 @@ The following example illustrates a `auro-banner` custom element with the `marqu
 
 ```html
 <auro-banner marquee solid slim>
-  <img src="https://picsum.photos/id/1015/550/460" alt="" slot="backgroundImage" />
-  <auro-alaska official ondark style="width: 192px" slot="image"></auro-alaska>
+  <img src="https://picsum.photos/id/1015/550/460" alt="" slot="displayImage" />
+  <auro-alaska official ondark style="width: 192px" slot="contentImage"></auro-alaska>
   <p slot="description">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   </p>
@@ -252,7 +252,7 @@ For the call-to-action button, see in the example code that it is required to se
 
 <div class="exampleWrapper">
   <auro-banner billboard slim alignRight onDark>
-    <picture slot="backgroundImage">
+    <picture slot="displayImage">
       <source srcset="https://picsum.photos/id/120/1024/600" media="(min-width: 736px)">
       <source srcset="https://picsum.photos/id/120/736/1400" media="(min-width: 375px)">
       <source srcset="https://picsum.photos/id/120/320/1200" media="(min-width: 320px)">
@@ -279,7 +279,7 @@ For the call-to-action button, see in the example code that it is required to se
 
 ```html
 <auro-banner billboard slim alignRight onDark>
-  <picture slot="backgroundImage">
+  <picture slot="displayImage">
     <source srcset="https://picsum.photos/id/120/1024/600" media="(min-width: 736px)">
     <source srcset="https://picsum.photos/id/120/736/1400" media="(min-width: 375px)">
     <source srcset="https://picsum.photos/id/120/320/1200" media="(min-width: 320px)">
