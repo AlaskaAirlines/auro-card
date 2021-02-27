@@ -1,4 +1,4 @@
-# Card
+# Card and Banner
 
 `<auro-card>` and `auro-banner` are [HTML custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)
 for the purpose of providing a flexible way to convey a summary of information.
@@ -44,9 +44,8 @@ Defining the component dependency within each component using `<auro-card>` comp
 
 ```javascript
 import "@alaskaairux/auro-card";
+import "@alaskaairux/auro-card/dist/auro-banner";
 ```
-
-**Reference component in HTML**
 
 ```html
 <auro-card>
@@ -71,6 +70,32 @@ import "@alaskaairux/auro-card";
     * Errem tempor eligendi cu eos
   </p>
 </auro-card>
+```
+
+```html
+<auro-banner billboard>
+  <picture slot="displayImage">
+    <source srcset="https://picsum.photos/id/430/1024/600" media="(min-width: 736px)">
+    <source srcset="https://picsum.photos/id/430/736/1400" media="(min-width: 375px)">
+    <source srcset="https://picsum.photos/id/430/320/1200" media="(min-width: 320px)">
+    <img src="https://picsum.photos/id/430/225/550" alt="" />
+  </picture>
+  <img
+    slot="contentImage"
+    src="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/oneworld-travel-bright-Horizontal-300.png"
+    alt="Random insert 0"/>
+  <p slot="description">
+    Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+  </p>
+  <auro-hyperlink
+    cta
+    secondary
+    href="/"
+    slot="action"
+    target="_blank">
+    More info
+  </auro-hyperlink>
+</auro-banner>
 ```
 
 ## Install bundled assets from CDN
