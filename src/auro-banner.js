@@ -38,35 +38,45 @@ import "@alaskaairux/auro-header";
  * @slot disclaimer - disclaimer copy
  */
 class AuroBanner extends LitElement {
+  constructor() {
+    super();
+    this.hero = false;
+    this.iconic = false;
+    this.marquee = false;
+    this.roundedBorder = false;
+  }
 
+  // This function removes a CSS selector if the footer slot is empty
+  firstUpdated() {
+    const slotNodes = this.shadowRoot.querySelectorAll(`.bannerWrapper slot`);
 
-    // This function removes a CSS selector if the footer slot is empty
-    firstUpdated() {
-      const slotNodes = this.shadowRoot.querySelectorAll(`.bannerWrapper slot`);
-
-      for (const item of slotNodes) {
-        this.slt = item.assignedNodes();
-        // eslint-disable-next-line no-magic-numbers
-        if (this.slt.length === 0) {
-          item.removeAttribute("class");
-        }
+    for (const item of slotNodes) {
+      this.slt = item.assignedNodes();
+      // eslint-disable-next-line no-magic-numbers
+      if (this.slt.length === 0) {
+        item.removeAttribute("class");
       }
     }
+  }
 
   static get properties() {
     return {
       ...super.properties,
       hero: {
-        type: Boolean
+        type: Boolean,
+        reflect: true
       },
       iconic: {
-        type: Boolean
+        type: Boolean,
+        reflect: true
       },
       marquee: {
-        type: Boolean
+        type: Boolean,
+        reflect: true
       },
       roundedBorder: {
-        type: Boolean
+        type: Boolean,
+        reflect: true
       },
       iconbg: {
         type: String
