@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.3.1](https://github.com/AlaskaAirlines/auro-card/compare/v1.3.0...v1.3.1) (2021-05-27)
+
+
+### Bug Fixes
+
+* reflect attributes used for styling [#26](https://github.com/AlaskaAirlines/auro-card/issues/26) ([216f25f](https://github.com/AlaskaAirlines/auro-card/commit/216f25fdc3695671c58155817cd79d16ca07a342))
+
 # [1.3.0](https://github.com/AlaskaAirlines/auro-card/compare/v1.2.2...v1.3.0) (2021-05-18)
 
 
