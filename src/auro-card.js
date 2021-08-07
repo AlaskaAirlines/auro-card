@@ -9,6 +9,8 @@ import { LitElement, html, css } from "lit-element";
 
 // Import touch detection lib
 import "focus-visible/dist/focus-visible.min.js";
+// Import lazy loading lib
+import 'lazysizes'
 import styleCss from "./style-css.js";
 
 import "@alaskaairux/auro-header";
@@ -17,6 +19,7 @@ import "@alaskaairux/auro-header";
 /**
  * The auro-card element provides users a flexible way to convey a summary of information.
  *
+ * @attr {Boolean} lazyLoad - to be used to lazy load a card image
  * @slot title - card heading
  * @slot image - card image placement
  * @slot description - main body of copy
@@ -25,13 +28,49 @@ import "@alaskaairux/auro-header";
  */
 class AuroCard extends LitElement {
 
+  constructor() {
+    super();
+
+    /**
+     * @private Boolean value to determine if card images are lazy loaded
+     */
+    this.lazyLoad = false;
+  }
+
+  static get properties() {
+    return {
+      ...super.properties,
+      lazyLoad: { type: Boolean }
+    };
+  }
+
   static get styles() {
     return css`
       ${styleCss}
     `;
   }
 
-  // function that renders the HTML and CSS into  the scope of the component
+  connectedCallback() {
+    super.connectedCallback();
+
+    if (this.lazyLoad) {
+      this.addLazyLoad();
+    }
+  }
+
+  addLazyLoad() {
+    const image = this.querySelector('img');
+
+    // check if browser supports native lazy loading
+    if ('loading' in HTMLImageElement.prototype) {
+      image.setAttribute('loading', 'lazy');
+      image.src = image.src || image.dataset.src;
+    } else {
+      image.classList.add('lazyload')
+    }
+  }
+
+  // function that renders the HTML and CSS into the scope of the component
   render() {
 
     return html`

@@ -1,4 +1,4 @@
-/* eslint-disable no-undef, sort-vars, no-implicit-coercion */
+/* eslint-disable no-undef, sort-vars, no-implicit-coercion, one-var */
 
 import { fixture, html, expect } from '@open-wc/testing';
 // import sinon from 'sinon';
@@ -33,6 +33,28 @@ describe('auro-card', () => {
 
     await expect(el).to.be.accessible();
   });
+
+  it('lazyLoad attribute works', async () => {
+    const el = await fixture(html`
+      <auro-card lazyLoad>
+        <span slot="title">
+          A title
+        </span>
+        <img
+          slot="image"
+          data-src="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png"
+          alt="This is an image" />
+      </auro-card>
+    `);
+
+    const image = el.querySelector('img');
+
+    await expect(image.getAttribute('loading')).to.equal('lazy');
+    await expect(image.getAttribute('src')).to.not.be.empty;
+
+    Reflect.deleteProperty(HTMLImageElement.prototype, 'loading');
+    await expect(image.classList.contains('lazyload'));
+  })
 
   it('auro-card custom element is defined', async () => {
     const el = await !!customElements.get("auro-card");
