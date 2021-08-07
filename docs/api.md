@@ -40,6 +40,11 @@ The auro-card-hero element provides users a flexible way to convey a summary of 
 
 The auro-card element provides users a flexible way to convey a summary of information.
 
+## Attributes
+| Attribute  | Type      | Description                                               |
+|------------|-----------|-----------------------------------------------------------|
+| `lazyLoad` | `Boolean` | to be used when supporting lazy loading of the card image |
+
 ## Slots
 
 | Name          | Description          |
