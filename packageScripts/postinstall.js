@@ -30,10 +30,10 @@ console.log(chalk.hex('#f26135')(`
 
         =>  DEPRECATION ALERT! DEPRECATION ALERT! <=`) + chalk.hex('#f26135')(`
 
-        The next major release of auro-card will not
+        The next major release of auro-card will NOT
         include auro-banner. Auro-banner will be a
         stand-alone component with the upcoming
-        release of `) + chalk.hex('#ffd200').bold(`@aurolabs/auro-banner v2.0`)
+        major release of `) + chalk.hex('#ffd200').bold(`@aurodesignsystem/auro-banner`)
         + chalk.hex('#f26135')(`.
 
 ╰─────────────────────────────── ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─╯
