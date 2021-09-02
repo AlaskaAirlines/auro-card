@@ -27,8 +27,7 @@ const getSharedPlugins = (isLegacy) => [
 
 const modernConfig = {
   input: {
-    ['auro-card__bundled']: './src/auro-card.js',
-    ['auro-banner__bundled']: './src/auro-banner.js'
+    ['auro-card__bundled']: './src/auro-card.js'
   },
   output: {
     format: 'esm',
@@ -63,13 +62,4 @@ const cardConfig = {
   plugins: getSharedPlugins(true)
 };
 
-const bannerConfig = {
-  input: 'src/es5.js',
-  output: {
-    format: 'iife',
-    file: 'dist/auro-banner__bundled.es5.js'
-  },
-  plugins: getSharedPlugins(true)
-};
-
-export default [modernConfig, cardConfig, bannerConfig];
+export default [modernConfig, cardConfig];
