@@ -21,7 +21,7 @@
     "chalk": "^4.1.0",
     "lit-element": "^2.4.0",
     "focus-visible": "^5.2.0",
-    "@alaskaairux/auro-header": "^1.5.1"
+    "@alaskaairux/auro-header": "^1.5.4"
   },
   "peerDependencies": {
     "@alaskaairux/design-tokens": "^3.1.0",
