@@ -285,14 +285,14 @@ The following example illustrates a `<auro-banner>` custom element with the `her
 The following example illustrates a `<auro-banner>` custom element with the `iconic` template style.  The `iconic` template style hides the `displayImage` on small screen sizes and only shows the icon.  This examples also shows how to customize the icon background color using `iconbg`.
 
 <div class="exampleWrapper">
-  <auro-banner iconic iconbg="var(--auro-color-brand-neutral-400)">
+  <auro-banner iconic iconbg="var(--ds-color-brand-neutral-400)">
     <picture slot="displayImage">
       <source srcset="https://picsum.photos/id/452/2800/2000.jpg" media="(min-width: 1054px)">
       <source srcset="https://picsum.photos/id/452/1500/2000" media="(min-width:660px)">
       <img src="https://picsum.photos/id/452/2800/2000.jpg" alt="">
     </picture>
     <span slot="icon">
-      <auro-icon category="social" name="instagram" customSize customColor style="color: var(--auro-color-base-white); width: 5rem"></auro-icon>
+      <auro-icon category="social" name="instagram" customSize customColor style="color: var(--ds-color-base-white); width: 5rem"></auro-icon>
     </span>
     <span slot="title">
       <auro-header level="2" display="800" margin="both" size="none">Lorem ipsum title</auro-header>
@@ -308,14 +308,14 @@ The following example illustrates a `<auro-banner>` custom element with the `ico
 <span slot="trigger">See code</span>
 
 ```html
-<auro-banner iconic iconbg="var(--auro-color-brand-neutral-400)">
+<auro-banner iconic iconbg="var(--ds-color-brand-neutral-400)">
   <picture slot="displayImage">
     <source srcset="https://picsum.photos/id/452/2800/2000.jpg" media="(min-width: 1054px)">
     <source srcset="https://picsum.photos/id/452/1500/2000" media="(min-width:660px)">
     <img src="https://picsum.photos/id/452/2800/2000.jpg" alt="">
   </picture>
   <span slot="icon">
-    <auro-icon category="social" name="instagram" customSize customColor style="color: var(--auro-color-base-white); width: 5rem"></auro-icon>
+    <auro-icon category="social" name="instagram" customSize customColor style="color: var(--ds-color-base-white); width: 5rem"></auro-icon>
   </span>
   <span slot="title">
     <auro-header level="2" display="800" margin="both" size="none">Lorem ipsum title</auro-header>
