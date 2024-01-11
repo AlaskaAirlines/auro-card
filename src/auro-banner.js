@@ -12,7 +12,7 @@ import { ifDefined } from 'lit/directives/if-defined.js';
 // Import touch detection lib
 import styleCss from "./style-banner-css.js";
 
-import "@alaskaairux/auro-header";
+import "@aurodesignsystem/auro-header";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
