@@ -1,24 +1,15 @@
-// Copyright (c) 2021 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
+// Copyright (c) 2024 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
 // See LICENSE in the project root for license information.
 
 // ---------------------------------------------------------------------
 
+/* stylelint-disable order/properties-order, scss/double-slash-comment-whitespace-inside */
+
 // Import Auro tokens
-@import "./node_modules/@alaskaairux/design-tokens/dist/tokens/SassCustomProperties";
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+@import "./../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SassCustomProperties";
 
-@import "./node_modules/@alaskaairux/webcorestylesheets/dist/core";
-
-// Support for auroElement styles
-// @import "./node_modules/@alaskaairux/webcorestylesheets/dist/auroElement/auroElement";
-
-// container styles - defines the look of the outer custom component
-// :host {
-//   ...
-// }
-
-// layout styles - define any layout specifications for UI that is contained WITHIN the component
-// never define layout that would cause effect on element outside the scope of this component
-
+@import "./../node_modules/@aurodesignsystem/webcorestylesheets/src/core";
 
 :host {
   display: flex;
@@ -50,8 +41,8 @@
 }
 
 .disclaimer {
-  color: var(--auro-color-text-secondary-on-light);
-  font-size: var(--auro-text-body-size-xs);
+  color: var(--ds-color-text-secondary-default, $ds-color-text-secondary-default);
+  font-size: var(--ds-text-body-size-xs, $ds-text-body-size-xs);
 }
 
 auro-header {
