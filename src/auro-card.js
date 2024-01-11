@@ -5,10 +5,9 @@
 
 // ---------------------------------------------------------------------
 
-import { LitElement, html, css } from "lit-element";
+import { LitElement, html, css } from "lit";
 
 // Import touch detection lib
-import "focus-visible/dist/focus-visible.min.js";
 import styleCss from "./style-css.js";
 
 import "@alaskaairux/auro-header";
@@ -23,7 +22,7 @@ import "@alaskaairux/auro-header";
  * @slot cta - call to action
  * @slot disclaimer - disclaimer copy
  */
-class AuroCard extends LitElement {
+export class AuroCard extends LitElement {
 
   static get styles() {
     return css`
