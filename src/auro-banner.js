@@ -7,10 +7,9 @@
 // ---------------------------------------------------------------------
 
 import { LitElement, html, css } from "lit-element";
-import { ifDefined } from 'lit-html/directives/if-defined.js';
+import { ifDefined } from 'lit/directives/if-defined.js';
 
 // Import touch detection lib
-import "focus-visible/dist/focus-visible.min.js";
 import styleCss from "./style-banner-css.js";
 
 import "@alaskaairux/auro-header";
@@ -37,7 +36,7 @@ import "@alaskaairux/auro-header";
  * @slot action - call to action
  * @slot disclaimer - disclaimer copy
  */
-class AuroBanner extends LitElement {
+export class AuroBanner extends LitElement {
   constructor() {
     super();
     this.hero = false;
