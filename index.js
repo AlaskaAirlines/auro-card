@@ -1,18 +1,13 @@
-import { AuroCard } from './src/auro-card';
-import { AuroBanner } from './src/auro-banner';
+import { AuroCard } from './src/auro-card.js';
 
 /**
  * Register Custom Element.
- * @param {String} name - Name to use for custom element.
- * @param {Function} className - Class name to use for custom element.
+ * @param {Object} name - Name to use for custom element.
  * @returns {void}
  */
-export function registerComponent(name, className) {
+export function registerComponent(name) {
   // alias definition
   if (!customElements.get(name)) {
-    customElements.define(name, class extends className {});
+    customElements.define(name, class extends AuroCard {});
   }
 }
-
-registerComponent*('auro-card', AuroCard);
-registerComponent*('auro-banner', AuroBanner);
