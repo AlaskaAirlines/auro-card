@@ -2,6 +2,12 @@
 
 The auro-card element provides users a flexible way to convey a summary of information.
 
+## Attributes
+
+| Attribute   | Type      | Description                                      |
+|-------------|-----------|--------------------------------------------------|
+| `alignLeft` | `Boolean` | When present, the card content will be aligned to the left. |
+
 ## Slots
 
 | Name          | Description          |

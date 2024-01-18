@@ -16,6 +16,7 @@ import "@aurodesignsystem/auro-header";
 /**
  * The auro-card element provides users a flexible way to convey a summary of information.
  *
+ * @attribute {Boolean} alignLeft - When present, the card content will be aligned to the left.
  * @slot title - card heading
  * @slot image - card image placement
  * @slot description - main body of copy
