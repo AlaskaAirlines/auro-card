@@ -47,7 +47,6 @@ Notice the use of the [auro-hyperlink](https://auro.alaskaair.com/components/aur
     </p>
   </auro-card>
 </div>
-
 <auro-accordion lowProfile justifyRight>
 <span slot="trigger">See code</span>
 
@@ -106,7 +105,6 @@ For card content to `align-left` within the context of the custom element, use t
     </p>
   </auro-card>
 </div>
-
 <auro-accordion lowProfile justifyRight>
 <span slot="trigger">See code</span>
 
@@ -149,7 +147,6 @@ When placing multiple `<auro-card>` elements within a single parent container, t
     }
   }
 </style>
-
 <div class="exampleWrapper flexLayout">
   <auro-card>
     <span slot="title">
@@ -173,7 +170,6 @@ When placing multiple `<auro-card>` elements within a single parent container, t
       * Errem tempor eligendi cu eos
     </p>
   </auro-card>
-
   <auro-card>
     <span slot="title">
       Pri dicat graece abhorreant
@@ -196,7 +192,6 @@ When placing multiple `<auro-card>` elements within a single parent container, t
       * Errem tempor eligendi cu eos
     </p>
   </auro-card>
-
   <auro-card>
     <span slot="title">
       Pri dicat graece abhorreant
@@ -220,7 +215,6 @@ When placing multiple `<auro-card>` elements within a single parent container, t
     </p>
   </auro-card>
 </div>
-
 <auro-accordion lowProfile justifyRight>
 <span slot="trigger">See code</span>
 
@@ -233,7 +227,6 @@ When placing multiple `<auro-card>` elements within a single parent container, t
     }
   }
 </style>
-
 <div class="flexLayout">
   <auro-card>
     <span slot="title">
@@ -257,7 +250,6 @@ When placing multiple `<auro-card>` elements within a single parent container, t
       * Errem tempor eligendi cu eos
     </p>
   </auro-card>
-
   <auro-card>
     <span slot="title">
       Pri dicat graece abhorreant
@@ -280,7 +272,6 @@ When placing multiple `<auro-card>` elements within a single parent container, t
       * Errem tempor eligendi cu eos
     </p>
   </auro-card>
-
   <auro-card>
     <span slot="title">
       Pri dicat graece abhorreant
