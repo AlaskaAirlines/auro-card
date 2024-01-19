@@ -1,7 +1,9 @@
-const path = require('path');
-const markdownMagic = require('markdown-magic');
-const fs = require('fs');
-const https = require('https');
+import path from 'path';
+import markdownMagic from 'markdown-magic';
+import fs from 'fs';
+import https from 'https';
+
+const __dirname = new URL('.', import.meta.url).pathname;
 
 const readmeTemplateUrl = 'https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/README.md';
 const dirDocTemplates = './docTemplates';
@@ -18,7 +20,7 @@ const readmeFilePath = dirDocTemplates + '/README.md';
     }
   })
 
-  pName = JSON.parse(packageJson).name;
+  let pName = JSON.parse(packageJson).name;
 
   let npmStart = pName.indexOf('@');
   let namespaceStart = pName.indexOf('/');
