@@ -53,7 +53,7 @@ The auro-card element provides users a flexible way to convey a summary of infor
   </auro-card>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
@@ -118,7 +118,7 @@ For card content to `align-left` within the context of the custom element, use t
   </auro-card>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/alignLeft.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/alignLeft.html -->
@@ -235,7 +235,7 @@ When placing multiple `<auro-card>` elements within a single parent container, t
   </div>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/multiCard.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/multiCard.html -->
