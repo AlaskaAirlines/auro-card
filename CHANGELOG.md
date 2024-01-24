@@ -1,5 +1,33 @@
 # Semantic Release Automated Changelog
 
+# [2.0.0](https://github.com/AlaskaAirlines/auro-card/compare/v1.3.1...v2.0.0) (2024-01-24)
+
+
+### Bug Fixes
+
+* **deps:** update auro component dependencies and versions ([4f4854d](https://github.com/AlaskaAirlines/auro-card/commit/4f4854d7366ccdeb780939e52eee3f23bfb10508))
+
+
+### Features
+
+* **modernize:** rebuild component repo using generator [#51](https://github.com/AlaskaAirlines/auro-card/issues/51) ([2e10664](https://github.com/AlaskaAirlines/auro-card/commit/2e1066404354fed6424c1c43092cc68f72bbbe44))
+* **ssr:** add support for SSR projects [#50](https://github.com/AlaskaAirlines/auro-card/issues/50) ([e55f1ff](https://github.com/AlaskaAirlines/auro-card/commit/e55f1ff966f24376c5366d72215844023af37575))
+
+
+### Performance Improvements
+
+* **accordion:** update doc accordion attributes ([49a02ba](https://github.com/AlaskaAirlines/auro-card/commit/49a02baf6b176de76283d64a366efe38463c7049))
+* **banner:** remove auro-banner from repo ([d53dafb](https://github.com/AlaskaAirlines/auro-card/commit/d53dafb89a1afb8d2d79007b9eb37ad92b32fe1e))
+* **cdn:** update cdn references ([dd5b2a8](https://github.com/AlaskaAirlines/auro-card/commit/dd5b2a8b38687dd5de1efb8e443900c5cc992a6e))
+* **husky:** add commit scripts ([3cc377a](https://github.com/AlaskaAirlines/auro-card/commit/3cc377ab9a8a4f9218bc8d270cef4ba483d69d90))
+* **tokens:** update to use new design tokens [#47](https://github.com/AlaskaAirlines/auro-card/issues/47) ([6373e3f](https://github.com/AlaskaAirlines/auro-card/commit/6373e3f82e988c7cb1ba9b9dce884857cd58d16d))
+
+
+### BREAKING CHANGES
+
+* **banner:** auro-banner has been removed from auro-card repo and into it's own repo
+* **modernize:** the namespace was updated from @alaskaairux to @aurodesignsystem
+
 ## [1.3.1](https://github.com/AlaskaAirlines/auro-card/compare/v1.3.0...v1.3.1) (2021-05-27)
 
 
