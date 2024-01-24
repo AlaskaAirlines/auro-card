@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.0.1](https://github.com/AlaskaAirlines/auro-card/compare/v2.0.0...v2.0.1) (2024-01-24)
+
+
+### Performance Improvements
+
+* remove inclusion of tokens ([424aeb4](https://github.com/AlaskaAirlines/auro-card/commit/424aeb483ee34283afbb0a4902c410879e8ddba6))
+
 # [2.0.0](https://github.com/AlaskaAirlines/auro-card/compare/v1.3.1...v2.0.0) (2024-01-24)
 
 
