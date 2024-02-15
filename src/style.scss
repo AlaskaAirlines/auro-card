@@ -9,7 +9,74 @@
 @import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
 @import "./../node_modules/@aurodesignsystem/webcorestylesheets/src/core";
 
+
+// Component: card
+
 :host {
-  display: flex;
-  width: var(--ds-size-800, $ds-size-800)
+  display: inline-flex;
+  flex-direction: column;
+
+  ::slotted(*) {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &::part(imageWrapper) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content {
+    padding: var(--ds-size-200, $ds-size-200);
+  }
+}
+
+:host([variant="inset-content"]) {
+  &::part(content) {
+    padding: var(--ds-size-200, $ds-size-200);
+  }
+}
+
+:host([variant="inset-container"]) {
+  padding: var(--ds-size-400, $ds-size-400) var(--ds-size-200, $ds-size-200);
+}
+
+:host([border]) {
+  border: 1px solid var(--ds-color-border-divider-default, $ds-color-border-divider-default);
+  border-radius: var(--ds-border-radius, $ds-border-radius);
+  overflow: hidden;
+}
+
+// Navigation Card
+
+:host([href])  {
+  auro-hyperlink {
+    border-radius: var(--ds-border-radius, $ds-border-radius);
+    overflow: hidden;
+    box-shadow: var(--ds-elevation-100, $ds-elevation-100);
+
+    &::part(link) {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    &:focus {
+      outline: 1px solid var(--ds-color-border-active-default, $ds-color-border-active-default);
+      border-radius: var(--ds-border-radius, $ds-border-radius);
+      color: inherit;
+    }
+
+    &:hover {
+      box-shadow: var(--ds-elevation-200, $ds-elevation-100);
+      color: inherit;
+    }
+  }
 }
