@@ -11,38 +11,4 @@
 
 :host {
   display: flex;
-  align-items: center;
-  overflow: hidden;
-  flex-direction: column;
-  text-align: center;
-}
-
-:host([alignLeft]) {
-  text-align: left;
-}
-
-.imageWrapper {
-  width: 19rem; //1rem grid
-  height: 19rem; //1rem grid
-  margin-top: 0;
-  margin-bottom: 1rem;
-
-  ::slotted(img) {
-    display: block;
-    width: 100%;
-  }
-}
-
-.description {
-  max-width: 19rem; //1rem grid
-  display: block;
-}
-
-.disclaimer {
-  color: var(--ds-color-text-secondary-default, $ds-color-text-secondary-default);
-  font-size: var(--ds-text-body-size-xs, $ds-text-body-size-xs);
-}
-
-auro-header {
-  max-width: 19rem;
 }
