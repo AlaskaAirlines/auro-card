@@ -5,7 +5,7 @@
 
 // ---------------------------------------------------------------------
 
-import { LitElement, html, css } from "lit";
+import { LitElement, html } from "lit";
 
 // Import touch detection lib
 import styleCss from "./style-css.js";
@@ -19,9 +19,7 @@ import styleCss from "./style-css.js";
 export class AuroCard extends LitElement {
 
   static get styles() {
-    return css`
-      ${styleCss}
-    `;
+    return [styleCss];
   }
 
   // function that renders the HTML and CSS into  the scope of the component
