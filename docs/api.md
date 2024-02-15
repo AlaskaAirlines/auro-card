@@ -4,6 +4,6 @@ The auro-card element provides users a flexible way to convey a summary of infor
 
 ## Attributes
 
-| Attribute | Type      | Description |
-|-----------|-----------|-------------|
-| `thing`   | `Boolean` | description |
+| Attribute   | Type      | Description |
+|-------------|-----------|-------------|
+| `hasBorder` | `Boolean` | description |

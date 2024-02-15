@@ -10,6 +10,52 @@
 @import "./../node_modules/@aurodesignsystem/webcorestylesheets/src/core";
 
 :host {
-  display: flex;
-  width: var(--ds-size-800, $ds-size-800)
+  display: inline-flex;
+  flex-direction: column;
+
+  ::slotted([slot="image"]) {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .content {
+    padding: var(--ds-size-300) 0 var(--ds-size-300);
+  }
+}
+
+:host([variant="bordered"]) {
+  overflow: hidden; // hide image corners
+  // TODO: Is px appropriate here
+  border: 1px solid var(--ds-color-border-divider-default);
+
+  // TODO: If border radius is = 6px, then the border width would be 0.0625. Does this value exist? Is this appropriate.
+  border-radius: var(--ds-border-radius);
+
+  .content {
+    padding: var(--ds-size-200);
+  }
+}
+
+:host([variant="icon"]) { // FIXME: Attribute or it knows if icon?
+  padding: var(--ds-size-400) var(--ds-size-200);
+
+  .imageWrapper {
+    margin-bottom: var(--ds-size-300);
+  }
+
+  ::slotted([slot="image"]) {
+    display: block;
+    object-fit: unset;
+    width: unset;
+    margin: 0 auto;
+  }
+
+  .content {
+    padding: unset;
+  }
+
+  ::slotted([slot="description"]) {
+    margin-bottom: var(--ds-size-300);
+  }
 }

@@ -14,7 +14,7 @@ import styleCss from "./style-css.js";
 /**
  * The auro-card element provides users a flexible way to convey a summary of information.
  *
- * @attribute {Boolean} thing - description
+ * @attr {"bordered" | "icon"} variant - description
  */
 export class AuroCard extends LitElement {
 
@@ -24,9 +24,15 @@ export class AuroCard extends LitElement {
 
   // function that renders the HTML and CSS into  the scope of the component
   render() {
-
     return html`
-      hello world
+        <div class="imageWrapper">
+          <slot name="image"></slot>
+        </div>
+        <div class="content">
+          <slot name="header"></slot>
+          <slot name="description"></slot>
+          <slot name="cta"></slot>
+        </div>
     `;
   }
 }

@@ -7,9 +7,9 @@ The auro-card element provides users a flexible way to convey a summary of infor
 
 ## Attributes
 
-| Attribute | Type      | Description |
-|-----------|-----------|-------------|
-| [thing](#thing)   | `Boolean` | description |
+| Attribute   | Type      | Description |
+|-------------|-----------|-------------|
+| [hasBorder](#hasBorder) | `Boolean` | description |
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## API Examples
@@ -19,26 +19,26 @@ The auro-card element provides users a flexible way to convey a summary of infor
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-card>
-    <span slot="title">
-      Pri dicat graece abhorreant
-    </span>
+  <auro-card style="max-width: 375px" variant="icon">
     <img
       slot="image"
-      src="https://picsum.photos/304?random=0"
+      src="https://picsum.photos/100/50"
       alt="Random insert 0"/>
-    <p slot="description">
-      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-    </p>
-    <auro-hyperlink
-      nav
-      href="/"
-      slot="action"
-      target="_blank">
-      More info
-    </auro-hyperlink>
+    <auro-header slot="header" level="3" display="600">
+      Pri dicat graece abhorreant
+    </auro-header>
     <p slot="disclaimer">
       * Errem tempor eligendi cu eos
+    </p>
+    <div slot="description">
+      <p>
+        Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+      </p>
+    </div>
+    <p slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
     </p>
   </auro-card>
   <!-- AURO-GENERATED-CONTENT:END -->
@@ -49,26 +49,26 @@ The auro-card element provides users a flexible way to convey a summary of infor
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-card>
-  <span slot="title">
-    Pri dicat graece abhorreant
-  </span>
+<auro-card style="max-width: 375px" variant="icon">
   <img
     slot="image"
-    src="https://picsum.photos/304?random=0"
+    src="https://picsum.photos/100/50"
     alt="Random insert 0"/>
-  <p slot="description">
-    Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-  </p>
-  <auro-hyperlink
-    nav
-    href="/"
-    slot="action"
-    target="_blank">
-    More info
-  </auro-hyperlink>
+  <auro-header slot="header" level="3" display="600">
+    Pri dicat graece abhorreant
+  </auro-header>
   <p slot="disclaimer">
     * Errem tempor eligendi cu eos
+  </p>
+  <div slot="description">
+    <p>
+      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+    </p>
+  </div>
+  <p slot="cta">
+    <auro-hyperlink href="/" nav target="_blank">
+      More info
+    </auro-hyperlink>
   </p>
 </auro-card>
 ```
@@ -83,26 +83,26 @@ Explanation and use description.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-card>
-    <span slot="title">
-      Pri dicat graece abhorreant
-    </span>
+  <auro-card style="max-width: 375px" variant="icon">
     <img
       slot="image"
-      src="https://picsum.photos/304?random=0"
+      src="https://picsum.photos/100/50"
       alt="Random insert 0"/>
-    <p slot="description">
-      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-    </p>
-    <auro-hyperlink
-      nav
-      href="/"
-      slot="action"
-      target="_blank">
-      More info
-    </auro-hyperlink>
+    <auro-header slot="header" level="3" display="600">
+      Pri dicat graece abhorreant
+    </auro-header>
     <p slot="disclaimer">
       * Errem tempor eligendi cu eos
+    </p>
+    <div slot="description">
+      <p>
+        Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+      </p>
+    </div>
+    <p slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
     </p>
   </auro-card>
   <!-- AURO-GENERATED-CONTENT:END -->
@@ -113,26 +113,26 @@ Explanation and use description.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-card>
-  <span slot="title">
-    Pri dicat graece abhorreant
-  </span>
+<auro-card style="max-width: 375px" variant="icon">
   <img
     slot="image"
-    src="https://picsum.photos/304?random=0"
+    src="https://picsum.photos/100/50"
     alt="Random insert 0"/>
-  <p slot="description">
-    Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-  </p>
-  <auro-hyperlink
-    nav
-    href="/"
-    slot="action"
-    target="_blank">
-    More info
-  </auro-hyperlink>
+  <auro-header slot="header" level="3" display="600">
+    Pri dicat graece abhorreant
+  </auro-header>
   <p slot="disclaimer">
     * Errem tempor eligendi cu eos
+  </p>
+  <div slot="description">
+    <p>
+      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+    </p>
+  </div>
+  <p slot="cta">
+    <auro-hyperlink href="/" nav target="_blank">
+      More info
+    </auro-hyperlink>
   </p>
 </auro-card>
 ```
@@ -147,26 +147,26 @@ Explanation and use description.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-card>
-    <span slot="title">
-      Pri dicat graece abhorreant
-    </span>
+  <auro-card style="max-width: 375px" variant="icon">
     <img
       slot="image"
-      src="https://picsum.photos/304?random=0"
+      src="https://picsum.photos/100/50"
       alt="Random insert 0"/>
-    <p slot="description">
-      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-    </p>
-    <auro-hyperlink
-      nav
-      href="/"
-      slot="action"
-      target="_blank">
-      More info
-    </auro-hyperlink>
+    <auro-header slot="header" level="3" display="600">
+      Pri dicat graece abhorreant
+    </auro-header>
     <p slot="disclaimer">
       * Errem tempor eligendi cu eos
+    </p>
+    <div slot="description">
+      <p>
+        Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+      </p>
+    </div>
+    <p slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
     </p>
   </auro-card>
   <!-- AURO-GENERATED-CONTENT:END -->
@@ -177,26 +177,26 @@ Explanation and use description.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-card>
-  <span slot="title">
-    Pri dicat graece abhorreant
-  </span>
+<auro-card style="max-width: 375px" variant="icon">
   <img
     slot="image"
-    src="https://picsum.photos/304?random=0"
+    src="https://picsum.photos/100/50"
     alt="Random insert 0"/>
-  <p slot="description">
-    Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-  </p>
-  <auro-hyperlink
-    nav
-    href="/"
-    slot="action"
-    target="_blank">
-    More info
-  </auro-hyperlink>
+  <auro-header slot="header" level="3" display="600">
+    Pri dicat graece abhorreant
+  </auro-header>
   <p slot="disclaimer">
     * Errem tempor eligendi cu eos
+  </p>
+  <div slot="description">
+    <p>
+      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+    </p>
+  </div>
+  <p slot="cta">
+    <auro-hyperlink href="/" nav target="_blank">
+      More info
+    </auro-hyperlink>
   </p>
 </auro-card>
 ```
@@ -211,26 +211,26 @@ Explanation and use description.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-card>
-    <span slot="title">
-      Pri dicat graece abhorreant
-    </span>
+  <auro-card style="max-width: 375px" variant="icon">
     <img
       slot="image"
-      src="https://picsum.photos/304?random=0"
+      src="https://picsum.photos/100/50"
       alt="Random insert 0"/>
-    <p slot="description">
-      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-    </p>
-    <auro-hyperlink
-      nav
-      href="/"
-      slot="action"
-      target="_blank">
-      More info
-    </auro-hyperlink>
+    <auro-header slot="header" level="3" display="600">
+      Pri dicat graece abhorreant
+    </auro-header>
     <p slot="disclaimer">
       * Errem tempor eligendi cu eos
+    </p>
+    <div slot="description">
+      <p>
+        Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+      </p>
+    </div>
+    <p slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
     </p>
   </auro-card>
   <!-- AURO-GENERATED-CONTENT:END -->
@@ -241,26 +241,26 @@ Explanation and use description.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-card>
-  <span slot="title">
-    Pri dicat graece abhorreant
-  </span>
+<auro-card style="max-width: 375px" variant="icon">
   <img
     slot="image"
-    src="https://picsum.photos/304?random=0"
+    src="https://picsum.photos/100/50"
     alt="Random insert 0"/>
-  <p slot="description">
-    Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-  </p>
-  <auro-hyperlink
-    nav
-    href="/"
-    slot="action"
-    target="_blank">
-    More info
-  </auro-hyperlink>
+  <auro-header slot="header" level="3" display="600">
+    Pri dicat graece abhorreant
+  </auro-header>
   <p slot="disclaimer">
     * Errem tempor eligendi cu eos
+  </p>
+  <div slot="description">
+    <p>
+      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+    </p>
+  </div>
+  <p slot="cta">
+    <auro-hyperlink href="/" nav target="_blank">
+      More info
+    </auro-hyperlink>
   </p>
 </auro-card>
 ```
@@ -275,26 +275,26 @@ Explanation and use description.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-card>
-    <span slot="title">
-      Pri dicat graece abhorreant
-    </span>
+  <auro-card style="max-width: 375px" variant="icon">
     <img
       slot="image"
-      src="https://picsum.photos/304?random=0"
+      src="https://picsum.photos/100/50"
       alt="Random insert 0"/>
-    <p slot="description">
-      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-    </p>
-    <auro-hyperlink
-      nav
-      href="/"
-      slot="action"
-      target="_blank">
-      More info
-    </auro-hyperlink>
+    <auro-header slot="header" level="3" display="600">
+      Pri dicat graece abhorreant
+    </auro-header>
     <p slot="disclaimer">
       * Errem tempor eligendi cu eos
+    </p>
+    <div slot="description">
+      <p>
+        Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+      </p>
+    </div>
+    <p slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
     </p>
   </auro-card>
   <!-- AURO-GENERATED-CONTENT:END -->
@@ -305,26 +305,26 @@ Explanation and use description.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-card>
-  <span slot="title">
-    Pri dicat graece abhorreant
-  </span>
+<auro-card style="max-width: 375px" variant="icon">
   <img
     slot="image"
-    src="https://picsum.photos/304?random=0"
+    src="https://picsum.photos/100/50"
     alt="Random insert 0"/>
-  <p slot="description">
-    Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-  </p>
-  <auro-hyperlink
-    nav
-    href="/"
-    slot="action"
-    target="_blank">
-    More info
-  </auro-hyperlink>
+  <auro-header slot="header" level="3" display="600">
+    Pri dicat graece abhorreant
+  </auro-header>
   <p slot="disclaimer">
     * Errem tempor eligendi cu eos
+  </p>
+  <div slot="description">
+    <p>
+      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+    </p>
+  </div>
+  <p slot="cta">
+    <auro-hyperlink href="/" nav target="_blank">
+      More info
+    </auro-hyperlink>
   </p>
 </auro-card>
 ```
@@ -339,26 +339,26 @@ Explanation and use description.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-card>
-    <span slot="title">
-      Pri dicat graece abhorreant
-    </span>
+  <auro-card style="max-width: 375px" variant="icon">
     <img
       slot="image"
-      src="https://picsum.photos/304?random=0"
+      src="https://picsum.photos/100/50"
       alt="Random insert 0"/>
-    <p slot="description">
-      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-    </p>
-    <auro-hyperlink
-      nav
-      href="/"
-      slot="action"
-      target="_blank">
-      More info
-    </auro-hyperlink>
+    <auro-header slot="header" level="3" display="600">
+      Pri dicat graece abhorreant
+    </auro-header>
     <p slot="disclaimer">
       * Errem tempor eligendi cu eos
+    </p>
+    <div slot="description">
+      <p>
+        Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+      </p>
+    </div>
+    <p slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
     </p>
   </auro-card>
   <!-- AURO-GENERATED-CONTENT:END -->
@@ -369,26 +369,26 @@ Explanation and use description.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-card>
-  <span slot="title">
-    Pri dicat graece abhorreant
-  </span>
+<auro-card style="max-width: 375px" variant="icon">
   <img
     slot="image"
-    src="https://picsum.photos/304?random=0"
+    src="https://picsum.photos/100/50"
     alt="Random insert 0"/>
-  <p slot="description">
-    Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-  </p>
-  <auro-hyperlink
-    nav
-    href="/"
-    slot="action"
-    target="_blank">
-    More info
-  </auro-hyperlink>
+  <auro-header slot="header" level="3" display="600">
+    Pri dicat graece abhorreant
+  </auro-header>
   <p slot="disclaimer">
     * Errem tempor eligendi cu eos
+  </p>
+  <div slot="description">
+    <p>
+      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+    </p>
+  </div>
+  <p slot="cta">
+    <auro-hyperlink href="/" nav target="_blank">
+      More info
+    </auro-hyperlink>
   </p>
 </auro-card>
 ```
