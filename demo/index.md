@@ -1,27 +1,60 @@
 <!--
-The index.md file is a compiled document. No edits should be made directly to this file.
+The demo.md file is a compiled document. No edits should be made directly to this file.
 README.md is created by running `npm run build:docs`.
-This file is generated based on a template fetched from `./docs/partials/index.md`
+This file is generated based on a template fetched from `./docs/partials/demo.md`
 -->
 
 # Card
 
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./description.md) -->
 <!-- The below content is automatically added from ./description.md -->
-The `<auro-card>` element provides users a flexible way to convey a summary of information. The primary elements of a card include an image, and details.
+`<auro-card>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of ...
 
-The details are broken down into `title`, `description`, `cta`, and `disclaimer`.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis in tellus nec pellentesque. Integer bibendum ligula sit amet vehicula gravida. Maecenas accumsan, ligula vitae molestie iaculis, tellus mi laoreet ex [install instructions](https://auro.alaskaair.com/components/auro/button/install), ac malesuada velit dolor vel mi. Cras et rutrum urna. Sed mattis mi eu tortor ullamcorper, egestas bibendum mauris cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus viverra eros eget neque commodo vulputate. In tempus eu velit at dictum.
+
+Nulla at augue facilisis `odio lobortis` molestie vitae a nulla.
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## auro-card use cases
 
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./useCases.md) -->
 <!-- The below content is automatically added from ./useCases.md -->
-Use the `<auro-card>` element to:
+The `<auro-card>` element should be used in situations where users may:
 
-* Grab the attention of a user
-* Direct your user to another resource for further information
+* ...
+* ...
+* ...
 <!-- AURO-GENERATED-CONTENT:END -->
+
+## Additional Information
+
+> Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam fermentum libero ipsum, ac tempor sapien blandit in. Nam tincidunt non felis molestie varius.
+
+|convallis|tristique|nisl dignissim|eleifend|
+|---|---|---|---|
+|√|√|||
+|||√|√|
+
+Aenean at blandit lorem. Fusce imperdiet mi nec gravida maximus. Quisque nisl libero, condimentum in nisi a, imperdiet lacinia arcu.
+
+```javascript
+toggleDialog = (elName) => {
+  let dialog = document.querySelector(elName);
+  const html = document.querySelector('html');
+
+  html.style.overflow = 'hidden';
+  dialog.removeAttribute("open");
+  dialog.setAttribute("open", true);
+}
+
+toggleDialogClose = (elName) => {
+  let dialog = document.querySelector(elName);
+  const html = document.querySelector('html');
+
+  html.style.overflow = '';
+  dialog.removeAttribute("open");
+}
+```
 
 ## Example(s)
 
@@ -83,6 +116,7 @@ Use the `<auro-card>` element to:
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
+Having a closing statement about your example helps to really complete the thought with your reader.
 
 ## Recommended Use and Version Control
 
@@ -98,60 +132,12 @@ registerComponent('custom-card');
 This will create a new custom element that you can use in your HTML that will function identically to the `auro-card` element.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/custom.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/custom.html -->
-  <custom-card>
-    <span slot="title">
-      Pri dicat graece abhorreant
-    </span>
-    <img
-      slot="image"
-      src="https://picsum.photos/304?random=0"
-      alt="Random insert 0"/>
-    <p slot="description">
-      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-    </p>
-    <auro-hyperlink
-      nav
-      href="/"
-      slot="action"
-      target="_blank">
-      More info
-    </auro-hyperlink>
-    <p slot="disclaimer">
-      * Errem tempor eligendi cu eos
-    </p>
-  </custom-card>
-  <!-- AURO-GENERATED-CONTENT:END -->
+  <custom-card display="display">Salutations World!</custom-card>
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/custom.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/custom.html -->
+  ```html
+  <custom-card display="display">Salutations World!</custom-card>
+  ```
 
-```html
-<custom-card>
-  <span slot="title">
-    Pri dicat graece abhorreant
-  </span>
-  <img
-    slot="image"
-    src="https://picsum.photos/304?random=0"
-    alt="Random insert 0"/>
-  <p slot="description">
-    Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-  </p>
-  <auro-hyperlink
-    nav
-    href="/"
-    slot="action"
-    target="_blank">
-    More info
-  </auro-hyperlink>
-  <p slot="disclaimer">
-    * Errem tempor eligendi cu eos
-  </p>
-</custom-card>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
