@@ -10,18 +10,11 @@ import { LitElement, html, css } from "lit";
 // Import touch detection lib
 import styleCss from "./style-css.js";
 
-import "@aurodesignsystem/auro-header";
-
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
  * The auro-card element provides users a flexible way to convey a summary of information.
  *
- * @attribute {Boolean} alignLeft - When present, the card content will be aligned to the left.
- * @slot title - card heading
- * @slot image - card image placement
- * @slot description - main body of copy
- * @slot cta - call to action
- * @slot disclaimer - disclaimer copy
+ * @attribute {Boolean} thing - description
  */
 export class AuroCard extends LitElement {
 
@@ -35,24 +28,11 @@ export class AuroCard extends LitElement {
   render() {
 
     return html`
-      <auro-header slot="title" level="2" display="600">
-        <slot name="title"></slot>
-      </auro-header>
-
-      <div class="imageWrapper">
-        <slot name="image"></slot>
-      </div>
-
-      <div>
-        <slot name="description" class="description"></slot>
-        <slot name="action"></slot>
-        <slot name="disclaimer" class="disclaimer"></slot>
-      </div>
+      hello world
     `;
   }
 }
 
-/* istanbul ignore else */
 // define the name of the custom component
 if (!customElements.get("auro-card")) {
   customElements.define("auro-card", AuroCard);
