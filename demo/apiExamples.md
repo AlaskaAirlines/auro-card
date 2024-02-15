@@ -5,11 +5,15 @@
 
 The auro-card element provides users a flexible way to convey a summary of information.
 
-## Attributes
+## Properties
 
-| Attribute | Type      | Description |
-|-----------|-----------|-------------|
-| [thing](#thing)   | `Boolean` | description |
+| Property  | Attribute | Type     | Description                                      |
+|-----------|-----------|----------|--------------------------------------------------|
+| [href](#href)    | `href`    | `String` | Sets the card to function as a hyperlink to the provided href value & disables the default CTA slot. |
+| [rel](#rel)     | `rel`     | `String` | Sets rel attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#rel). |
+| [role](#role)    | `role`    | `String` | Sets role attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#role). |
+| [target](#target)  | `target`  | `String` | Sets target attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#target). |
+| [variant](#variant) | `variant` | `String` | Sets the variant of the card. Options include: "inset" or "flush". |
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## API Examples
@@ -19,28 +23,53 @@ The auro-card element provides users a flexible way to convey a summary of infor
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-card>
-    <span slot="title">
-      Pri dicat graece abhorreant
-    </span>
-    <img
-      slot="image"
-      src="https://picsum.photos/304?random=0"
-      alt="Random insert 0"/>
-    <p slot="description">
-      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-    </p>
-    <auro-hyperlink
-      nav
-      href="/"
-      slot="action"
-      target="_blank">
-      More info
-    </auro-hyperlink>
-    <p slot="disclaimer">
-      * Errem tempor eligendi cu eos
-    </p>
-  </auro-card>
+  <div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
+    <auro-card>
+      <img
+        slot="image"
+        src="https://picsum.photos/300/300?random=0"
+        alt="Random insert"/>
+      <h3 slot="header">Card Title</h3>
+      <p slot="description">
+        Context goes here.
+      </p>
+      <div slot="cta">
+        <auro-hyperlink href="/" nav target="_blank">
+          More info
+        </auro-hyperlink>
+      </div>
+    </auro-card>
+    <auro-card style="max-width: 300px">
+      <img
+        slot="image"
+        src="https://picsum.photos/300/200?random=1"
+        alt="Random insert"/>
+      <h3 slot="header">Card Title</h3>
+      <p slot="description">
+        Context goes here. Use this area to communicate more information to your users.
+      </p>
+      <div slot="cta">
+        <auro-hyperlink href="/" nav target="_blank">
+          More info
+        </auro-hyperlink>
+      </div>
+    </auro-card>
+    <auro-card style="max-width: 100px">
+      <img
+        slot="image"
+        src="https://picsum.photos/100/300?random=1"
+        alt="Random insert"/>
+      <h3 slot="header">Title</h3>
+      <p slot="description">
+        Context goes here.
+      </p>
+      <div slot="cta">
+        <auro-hyperlink href="/" nav target="_blank">
+          More info
+        </auro-hyperlink>
+      </div>
+    </auro-card>
+  </div>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
@@ -49,26 +78,181 @@ The auro-card element provides users a flexible way to convey a summary of infor
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-card>
-  <span slot="title">
-    Pri dicat graece abhorreant
-  </span>
+<div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
+  <auro-card>
+    <img
+      slot="image"
+      src="https://picsum.photos/300/300?random=0"
+      alt="Random insert"/>
+    <h3 slot="header">Card Title</h3>
+    <p slot="description">
+      Context goes here.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+  <auro-card style="max-width: 300px">
+    <img
+      slot="image"
+      src="https://picsum.photos/300/200?random=1"
+      alt="Random insert"/>
+    <h3 slot="header">Card Title</h3>
+    <p slot="description">
+      Context goes here. Use this area to communicate more information to your users.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+  <auro-card style="max-width: 100px">
+    <img
+      slot="image"
+      src="https://picsum.photos/100/300?random=1"
+      alt="Random insert"/>
+    <h3 slot="header">Title</h3>
+    <p slot="description">
+      Context goes here.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+</div>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+### Icon
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/icon.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/icon.html -->
+  <auro-card style="max-width: 375px; text-align: center" variant="inset-container">
+    <img
+      slot="image"
+      alt="Random insert 0"
+      class="inset-container-image"
+      src="https://picsum.photos/100/50"
+      style="
+        width: unset;
+        flex-grow: 0;
+        margin-bottom: var(--ds-size-300);
+      "
+    />
+    <auro-header slot="header" level="3" display="600">
+      Card Title
+    </auro-header>
+    <div slot="description" style="margin-bottom: var(--ds-size-300);">
+      <p>
+        Context goes here. Describe the page this card represents.
+      </p>
+    </div>
+    <p slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </p>
+  </auro-card>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/icon.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/icon.html -->
+
+```html
+<auro-card style="max-width: 375px; text-align: center" variant="inset-container">
   <img
     slot="image"
-    src="https://picsum.photos/304?random=0"
-    alt="Random insert 0"/>
-  <p slot="description">
-    Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+    alt="Random insert 0"
+    class="inset-container-image"
+    src="https://picsum.photos/100/50"
+    style="
+      width: unset;
+      flex-grow: 0;
+      margin-bottom: var(--ds-size-300);
+    "
+  />
+  <auro-header slot="header" level="3" display="600">
+    Card Title
+  </auro-header>
+  <div slot="description" style="margin-bottom: var(--ds-size-300);">
+    <p>
+      Context goes here. Describe the page this card represents.
+    </p>
+  </div>
+  <p slot="cta">
+    <auro-hyperlink href="/" nav target="_blank">
+      More info
+    </auro-hyperlink>
   </p>
-  <auro-hyperlink
-    nav
-    href="/"
-    slot="action"
-    target="_blank">
-    More info
-  </auro-hyperlink>
-  <p slot="disclaimer">
-    * Errem tempor eligendi cu eos
+</auro-card>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+### Rounded
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/round-image.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/round-image.html -->
+  <auro-card>
+    <!-- Image set to 134px -->
+    <img
+      slot="image"
+      src="https://picsum.photos/134/134"
+      alt="Random insert 0"
+      style="border-radius: 50%; overflow: hidden; width: unset; margin: 0 auto;"
+    />
+    <auro-header slot="header" level="3" display="600">
+      Header
+    </auro-header>
+    <div slot="description">
+      <p>
+        Context goes here. Describe the page this card represents.
+      </p>
+    </div>
+    <p slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </p>
+  </auro-card>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/round-image.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/round-image.html -->
+
+```html
+<auro-card>
+  <!-- Image set to 134px -->
+  <img
+    slot="image"
+    src="https://picsum.photos/134/134"
+    alt="Random insert 0"
+    style="border-radius: 50%; overflow: hidden; width: unset; margin: 0 auto;"
+  />
+  <auro-header slot="header" level="3" display="600">
+    Header
+  </auro-header>
+  <div slot="description">
+    <p>
+      Context goes here. Describe the page this card represents.
+    </p>
+  </div>
+  <p slot="cta">
+    <auro-hyperlink href="/" nav target="_blank">
+      More info
+    </auro-hyperlink>
   </p>
 </auro-card>
 ```
@@ -83,28 +267,53 @@ Explanation and use description.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-card>
-    <span slot="title">
-      Pri dicat graece abhorreant
-    </span>
-    <img
-      slot="image"
-      src="https://picsum.photos/304?random=0"
-      alt="Random insert 0"/>
-    <p slot="description">
-      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-    </p>
-    <auro-hyperlink
-      nav
-      href="/"
-      slot="action"
-      target="_blank">
-      More info
-    </auro-hyperlink>
-    <p slot="disclaimer">
-      * Errem tempor eligendi cu eos
-    </p>
-  </auro-card>
+  <div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
+    <auro-card>
+      <img
+        slot="image"
+        src="https://picsum.photos/300/300?random=0"
+        alt="Random insert"/>
+      <h3 slot="header">Card Title</h3>
+      <p slot="description">
+        Context goes here.
+      </p>
+      <div slot="cta">
+        <auro-hyperlink href="/" nav target="_blank">
+          More info
+        </auro-hyperlink>
+      </div>
+    </auro-card>
+    <auro-card style="max-width: 300px">
+      <img
+        slot="image"
+        src="https://picsum.photos/300/200?random=1"
+        alt="Random insert"/>
+      <h3 slot="header">Card Title</h3>
+      <p slot="description">
+        Context goes here. Use this area to communicate more information to your users.
+      </p>
+      <div slot="cta">
+        <auro-hyperlink href="/" nav target="_blank">
+          More info
+        </auro-hyperlink>
+      </div>
+    </auro-card>
+    <auro-card style="max-width: 100px">
+      <img
+        slot="image"
+        src="https://picsum.photos/100/300?random=1"
+        alt="Random insert"/>
+      <h3 slot="header">Title</h3>
+      <p slot="description">
+        Context goes here.
+      </p>
+      <div slot="cta">
+        <auro-hyperlink href="/" nav target="_blank">
+          More info
+        </auro-hyperlink>
+      </div>
+    </auro-card>
+  </div>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
@@ -113,28 +322,53 @@ Explanation and use description.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-card>
-  <span slot="title">
-    Pri dicat graece abhorreant
-  </span>
-  <img
-    slot="image"
-    src="https://picsum.photos/304?random=0"
-    alt="Random insert 0"/>
-  <p slot="description">
-    Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-  </p>
-  <auro-hyperlink
-    nav
-    href="/"
-    slot="action"
-    target="_blank">
-    More info
-  </auro-hyperlink>
-  <p slot="disclaimer">
-    * Errem tempor eligendi cu eos
-  </p>
-</auro-card>
+<div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
+  <auro-card>
+    <img
+      slot="image"
+      src="https://picsum.photos/300/300?random=0"
+      alt="Random insert"/>
+    <h3 slot="header">Card Title</h3>
+    <p slot="description">
+      Context goes here.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+  <auro-card style="max-width: 300px">
+    <img
+      slot="image"
+      src="https://picsum.photos/300/200?random=1"
+      alt="Random insert"/>
+    <h3 slot="header">Card Title</h3>
+    <p slot="description">
+      Context goes here. Use this area to communicate more information to your users.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+  <auro-card style="max-width: 100px">
+    <img
+      slot="image"
+      src="https://picsum.photos/100/300?random=1"
+      alt="Random insert"/>
+    <h3 slot="header">Title</h3>
+    <p slot="description">
+      Context goes here.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+</div>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
@@ -147,28 +381,53 @@ Explanation and use description.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-card>
-    <span slot="title">
-      Pri dicat graece abhorreant
-    </span>
-    <img
-      slot="image"
-      src="https://picsum.photos/304?random=0"
-      alt="Random insert 0"/>
-    <p slot="description">
-      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-    </p>
-    <auro-hyperlink
-      nav
-      href="/"
-      slot="action"
-      target="_blank">
-      More info
-    </auro-hyperlink>
-    <p slot="disclaimer">
-      * Errem tempor eligendi cu eos
-    </p>
-  </auro-card>
+  <div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
+    <auro-card>
+      <img
+        slot="image"
+        src="https://picsum.photos/300/300?random=0"
+        alt="Random insert"/>
+      <h3 slot="header">Card Title</h3>
+      <p slot="description">
+        Context goes here.
+      </p>
+      <div slot="cta">
+        <auro-hyperlink href="/" nav target="_blank">
+          More info
+        </auro-hyperlink>
+      </div>
+    </auro-card>
+    <auro-card style="max-width: 300px">
+      <img
+        slot="image"
+        src="https://picsum.photos/300/200?random=1"
+        alt="Random insert"/>
+      <h3 slot="header">Card Title</h3>
+      <p slot="description">
+        Context goes here. Use this area to communicate more information to your users.
+      </p>
+      <div slot="cta">
+        <auro-hyperlink href="/" nav target="_blank">
+          More info
+        </auro-hyperlink>
+      </div>
+    </auro-card>
+    <auro-card style="max-width: 100px">
+      <img
+        slot="image"
+        src="https://picsum.photos/100/300?random=1"
+        alt="Random insert"/>
+      <h3 slot="header">Title</h3>
+      <p slot="description">
+        Context goes here.
+      </p>
+      <div slot="cta">
+        <auro-hyperlink href="/" nav target="_blank">
+          More info
+        </auro-hyperlink>
+      </div>
+    </auro-card>
+  </div>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
@@ -177,28 +436,53 @@ Explanation and use description.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-card>
-  <span slot="title">
-    Pri dicat graece abhorreant
-  </span>
-  <img
-    slot="image"
-    src="https://picsum.photos/304?random=0"
-    alt="Random insert 0"/>
-  <p slot="description">
-    Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-  </p>
-  <auro-hyperlink
-    nav
-    href="/"
-    slot="action"
-    target="_blank">
-    More info
-  </auro-hyperlink>
-  <p slot="disclaimer">
-    * Errem tempor eligendi cu eos
-  </p>
-</auro-card>
+<div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
+  <auro-card>
+    <img
+      slot="image"
+      src="https://picsum.photos/300/300?random=0"
+      alt="Random insert"/>
+    <h3 slot="header">Card Title</h3>
+    <p slot="description">
+      Context goes here.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+  <auro-card style="max-width: 300px">
+    <img
+      slot="image"
+      src="https://picsum.photos/300/200?random=1"
+      alt="Random insert"/>
+    <h3 slot="header">Card Title</h3>
+    <p slot="description">
+      Context goes here. Use this area to communicate more information to your users.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+  <auro-card style="max-width: 100px">
+    <img
+      slot="image"
+      src="https://picsum.photos/100/300?random=1"
+      alt="Random insert"/>
+    <h3 slot="header">Title</h3>
+    <p slot="description">
+      Context goes here.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+</div>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
@@ -211,28 +495,53 @@ Explanation and use description.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-card>
-    <span slot="title">
-      Pri dicat graece abhorreant
-    </span>
-    <img
-      slot="image"
-      src="https://picsum.photos/304?random=0"
-      alt="Random insert 0"/>
-    <p slot="description">
-      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-    </p>
-    <auro-hyperlink
-      nav
-      href="/"
-      slot="action"
-      target="_blank">
-      More info
-    </auro-hyperlink>
-    <p slot="disclaimer">
-      * Errem tempor eligendi cu eos
-    </p>
-  </auro-card>
+  <div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
+    <auro-card>
+      <img
+        slot="image"
+        src="https://picsum.photos/300/300?random=0"
+        alt="Random insert"/>
+      <h3 slot="header">Card Title</h3>
+      <p slot="description">
+        Context goes here.
+      </p>
+      <div slot="cta">
+        <auro-hyperlink href="/" nav target="_blank">
+          More info
+        </auro-hyperlink>
+      </div>
+    </auro-card>
+    <auro-card style="max-width: 300px">
+      <img
+        slot="image"
+        src="https://picsum.photos/300/200?random=1"
+        alt="Random insert"/>
+      <h3 slot="header">Card Title</h3>
+      <p slot="description">
+        Context goes here. Use this area to communicate more information to your users.
+      </p>
+      <div slot="cta">
+        <auro-hyperlink href="/" nav target="_blank">
+          More info
+        </auro-hyperlink>
+      </div>
+    </auro-card>
+    <auro-card style="max-width: 100px">
+      <img
+        slot="image"
+        src="https://picsum.photos/100/300?random=1"
+        alt="Random insert"/>
+      <h3 slot="header">Title</h3>
+      <p slot="description">
+        Context goes here.
+      </p>
+      <div slot="cta">
+        <auro-hyperlink href="/" nav target="_blank">
+          More info
+        </auro-hyperlink>
+      </div>
+    </auro-card>
+  </div>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
@@ -241,28 +550,53 @@ Explanation and use description.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-card>
-  <span slot="title">
-    Pri dicat graece abhorreant
-  </span>
-  <img
-    slot="image"
-    src="https://picsum.photos/304?random=0"
-    alt="Random insert 0"/>
-  <p slot="description">
-    Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-  </p>
-  <auro-hyperlink
-    nav
-    href="/"
-    slot="action"
-    target="_blank">
-    More info
-  </auro-hyperlink>
-  <p slot="disclaimer">
-    * Errem tempor eligendi cu eos
-  </p>
-</auro-card>
+<div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
+  <auro-card>
+    <img
+      slot="image"
+      src="https://picsum.photos/300/300?random=0"
+      alt="Random insert"/>
+    <h3 slot="header">Card Title</h3>
+    <p slot="description">
+      Context goes here.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+  <auro-card style="max-width: 300px">
+    <img
+      slot="image"
+      src="https://picsum.photos/300/200?random=1"
+      alt="Random insert"/>
+    <h3 slot="header">Card Title</h3>
+    <p slot="description">
+      Context goes here. Use this area to communicate more information to your users.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+  <auro-card style="max-width: 100px">
+    <img
+      slot="image"
+      src="https://picsum.photos/100/300?random=1"
+      alt="Random insert"/>
+    <h3 slot="header">Title</h3>
+    <p slot="description">
+      Context goes here.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+</div>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
@@ -275,28 +609,53 @@ Explanation and use description.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-card>
-    <span slot="title">
-      Pri dicat graece abhorreant
-    </span>
-    <img
-      slot="image"
-      src="https://picsum.photos/304?random=0"
-      alt="Random insert 0"/>
-    <p slot="description">
-      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-    </p>
-    <auro-hyperlink
-      nav
-      href="/"
-      slot="action"
-      target="_blank">
-      More info
-    </auro-hyperlink>
-    <p slot="disclaimer">
-      * Errem tempor eligendi cu eos
-    </p>
-  </auro-card>
+  <div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
+    <auro-card>
+      <img
+        slot="image"
+        src="https://picsum.photos/300/300?random=0"
+        alt="Random insert"/>
+      <h3 slot="header">Card Title</h3>
+      <p slot="description">
+        Context goes here.
+      </p>
+      <div slot="cta">
+        <auro-hyperlink href="/" nav target="_blank">
+          More info
+        </auro-hyperlink>
+      </div>
+    </auro-card>
+    <auro-card style="max-width: 300px">
+      <img
+        slot="image"
+        src="https://picsum.photos/300/200?random=1"
+        alt="Random insert"/>
+      <h3 slot="header">Card Title</h3>
+      <p slot="description">
+        Context goes here. Use this area to communicate more information to your users.
+      </p>
+      <div slot="cta">
+        <auro-hyperlink href="/" nav target="_blank">
+          More info
+        </auro-hyperlink>
+      </div>
+    </auro-card>
+    <auro-card style="max-width: 100px">
+      <img
+        slot="image"
+        src="https://picsum.photos/100/300?random=1"
+        alt="Random insert"/>
+      <h3 slot="header">Title</h3>
+      <p slot="description">
+        Context goes here.
+      </p>
+      <div slot="cta">
+        <auro-hyperlink href="/" nav target="_blank">
+          More info
+        </auro-hyperlink>
+      </div>
+    </auro-card>
+  </div>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
@@ -305,28 +664,53 @@ Explanation and use description.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-card>
-  <span slot="title">
-    Pri dicat graece abhorreant
-  </span>
-  <img
-    slot="image"
-    src="https://picsum.photos/304?random=0"
-    alt="Random insert 0"/>
-  <p slot="description">
-    Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-  </p>
-  <auro-hyperlink
-    nav
-    href="/"
-    slot="action"
-    target="_blank">
-    More info
-  </auro-hyperlink>
-  <p slot="disclaimer">
-    * Errem tempor eligendi cu eos
-  </p>
-</auro-card>
+<div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
+  <auro-card>
+    <img
+      slot="image"
+      src="https://picsum.photos/300/300?random=0"
+      alt="Random insert"/>
+    <h3 slot="header">Card Title</h3>
+    <p slot="description">
+      Context goes here.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+  <auro-card style="max-width: 300px">
+    <img
+      slot="image"
+      src="https://picsum.photos/300/200?random=1"
+      alt="Random insert"/>
+    <h3 slot="header">Card Title</h3>
+    <p slot="description">
+      Context goes here. Use this area to communicate more information to your users.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+  <auro-card style="max-width: 100px">
+    <img
+      slot="image"
+      src="https://picsum.photos/100/300?random=1"
+      alt="Random insert"/>
+    <h3 slot="header">Title</h3>
+    <p slot="description">
+      Context goes here.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+</div>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
@@ -339,28 +723,53 @@ Explanation and use description.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-card>
-    <span slot="title">
-      Pri dicat graece abhorreant
-    </span>
-    <img
-      slot="image"
-      src="https://picsum.photos/304?random=0"
-      alt="Random insert 0"/>
-    <p slot="description">
-      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-    </p>
-    <auro-hyperlink
-      nav
-      href="/"
-      slot="action"
-      target="_blank">
-      More info
-    </auro-hyperlink>
-    <p slot="disclaimer">
-      * Errem tempor eligendi cu eos
-    </p>
-  </auro-card>
+  <div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
+    <auro-card>
+      <img
+        slot="image"
+        src="https://picsum.photos/300/300?random=0"
+        alt="Random insert"/>
+      <h3 slot="header">Card Title</h3>
+      <p slot="description">
+        Context goes here.
+      </p>
+      <div slot="cta">
+        <auro-hyperlink href="/" nav target="_blank">
+          More info
+        </auro-hyperlink>
+      </div>
+    </auro-card>
+    <auro-card style="max-width: 300px">
+      <img
+        slot="image"
+        src="https://picsum.photos/300/200?random=1"
+        alt="Random insert"/>
+      <h3 slot="header">Card Title</h3>
+      <p slot="description">
+        Context goes here. Use this area to communicate more information to your users.
+      </p>
+      <div slot="cta">
+        <auro-hyperlink href="/" nav target="_blank">
+          More info
+        </auro-hyperlink>
+      </div>
+    </auro-card>
+    <auro-card style="max-width: 100px">
+      <img
+        slot="image"
+        src="https://picsum.photos/100/300?random=1"
+        alt="Random insert"/>
+      <h3 slot="header">Title</h3>
+      <p slot="description">
+        Context goes here.
+      </p>
+      <div slot="cta">
+        <auro-hyperlink href="/" nav target="_blank">
+          More info
+        </auro-hyperlink>
+      </div>
+    </auro-card>
+  </div>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
@@ -369,28 +778,53 @@ Explanation and use description.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-card>
-  <span slot="title">
-    Pri dicat graece abhorreant
-  </span>
-  <img
-    slot="image"
-    src="https://picsum.photos/304?random=0"
-    alt="Random insert 0"/>
-  <p slot="description">
-    Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-  </p>
-  <auro-hyperlink
-    nav
-    href="/"
-    slot="action"
-    target="_blank">
-    More info
-  </auro-hyperlink>
-  <p slot="disclaimer">
-    * Errem tempor eligendi cu eos
-  </p>
-</auro-card>
+<div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
+  <auro-card>
+    <img
+      slot="image"
+      src="https://picsum.photos/300/300?random=0"
+      alt="Random insert"/>
+    <h3 slot="header">Card Title</h3>
+    <p slot="description">
+      Context goes here.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+  <auro-card style="max-width: 300px">
+    <img
+      slot="image"
+      src="https://picsum.photos/300/200?random=1"
+      alt="Random insert"/>
+    <h3 slot="header">Card Title</h3>
+    <p slot="description">
+      Context goes here. Use this area to communicate more information to your users.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+  <auro-card style="max-width: 100px">
+    <img
+      slot="image"
+      src="https://picsum.photos/100/300?random=1"
+      alt="Random insert"/>
+    <h3 slot="header">Title</h3>
+    <p slot="description">
+      Context goes here.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+</div>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
