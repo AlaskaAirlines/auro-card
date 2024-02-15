@@ -11,4 +11,5 @@
 
 :host {
   display: flex;
+  width: var(--ds-size-800, $ds-size-800)
 }
