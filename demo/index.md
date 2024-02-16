@@ -61,21 +61,18 @@ toggleDialogClose = (elName) => {
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-card style="max-width: 375px;" variant="round-image">
+  <auro-card style="max-width: 375px;">
+    <!-- Image set to 134px -->
     <img
       slot="image"
-      src="https://picsum.photos/50/50"
-      style="width: 134px; height: 134px;"
+      src="https://picsum.photos/134/134"
       alt="Random insert 0"/>
     <auro-header slot="header" level="3" display="600">
-      Pri dicat graece abhorreant
+      Header
     </auro-header>
-    <p slot="disclaimer">
-      * Errem tempor eligendi cu eos
-    </p>
     <div slot="description">
       <p>
-        Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+        Context goes here. Describe the page this card represents.
       </p>
     </div>
     <p slot="cta">
@@ -92,21 +89,18 @@ toggleDialogClose = (elName) => {
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-card style="max-width: 375px;" variant="round-image">
+<auro-card style="max-width: 375px;">
+  <!-- Image set to 134px -->
   <img
     slot="image"
-    src="https://picsum.photos/50/50"
-    style="width: 134px; height: 134px;"
+    src="https://picsum.photos/134/134"
     alt="Random insert 0"/>
   <auro-header slot="header" level="3" display="600">
-    Pri dicat graece abhorreant
+    Header
   </auro-header>
-  <p slot="disclaimer">
-    * Errem tempor eligendi cu eos
-  </p>
   <div slot="description">
     <p>
-      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+      Context goes here. Describe the page this card represents.
     </p>
   </div>
   <p slot="cta">

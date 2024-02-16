@@ -14,7 +14,8 @@ import styleCss from "./style-css.js";
 /**
  * The auro-card element provides users a flexible way to convey a summary of information.
  *
- * @attr {"bordered" | "icon"} variant - description
+ * @attr {String} variant - Sets the variant of the card. Options include: bordered, icon, round-image.
+ * @attr {String} navigationLink - Sets the card to function as a hyperlink and disables the default CTA slot.
  */
 export class AuroCard extends LitElement {
 
@@ -22,17 +23,36 @@ export class AuroCard extends LitElement {
     return [styleCss];
   }
 
-  // function that renders the HTML and CSS into  the scope of the component
+  static get properties() {
+    return {
+      variant: {
+        type: String,
+        reflect: true,
+      },
+      navigationLink: {
+        type: String,
+        reflect: true,
+      }
+    };
+  }
+
+  // function that renders the HTML and CSS into the scope of the component
   render() {
-    return html`
+    const innerHtml = html`
         <slot name="image"></slot>
-<!--        <div class="imageWrapper">-->
-<!--        </div>-->
-        <div class="content">
+        <!-- TODO: Expose CSS part for div.content -->
+        <div id="content-within" class="content" part="content">
           <slot name="header"></slot>
           <slot name="description"></slot>
-          <slot name="cta"></slot>
+          ${this.navigationLink ? '' : html`<slot name="cta"></slot>`}
         </div>
+    `;
+
+    return html`
+      ${this.navigationLink
+        ? html`<auro-hyperlink aria-labelledby="content-within" href="${this.navigationLink}">${innerHtml}</auro-hyperlink>`
+        : innerHtml
+      }
     `;
   }
 }

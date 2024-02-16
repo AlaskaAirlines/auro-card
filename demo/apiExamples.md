@@ -5,11 +5,14 @@
 
 The auro-card element provides users a flexible way to convey a summary of information.
 
-## Attributes
+// TODO: Verify if the below type declaration is correct
 
-| Attribute   | Type      | Description |
-|-------------|-----------|-------------|
-| [hasBorder](#hasBorder) | `Boolean` | description |
+## Properties
+
+| Property         | Attribute        | Type     | Description                                      |
+|------------------|------------------|----------|--------------------------------------------------|
+| [navigationLink](#navigationLink) | `navigationLink` | `String` | Sets the card to function as a hyperlink and disables the default CTA slot. |
+| [variant](#variant)        | `variant`        | `String` | Sets the variant of the card. Options include: bordered, icon, round-image. |
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## API Examples
@@ -19,21 +22,18 @@ The auro-card element provides users a flexible way to convey a summary of infor
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-card style="max-width: 375px;" variant="round-image">
+  <auro-card style="max-width: 375px;">
+    <!-- Image set to 134px -->
     <img
       slot="image"
-      src="https://picsum.photos/50/50"
-      style="width: 134px; height: 134px;"
+      src="https://picsum.photos/134/134"
       alt="Random insert 0"/>
     <auro-header slot="header" level="3" display="600">
-      Pri dicat graece abhorreant
+      Header
     </auro-header>
-    <p slot="disclaimer">
-      * Errem tempor eligendi cu eos
-    </p>
     <div slot="description">
       <p>
-        Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+        Context goes here. Describe the page this card represents.
       </p>
     </div>
     <p slot="cta">
@@ -50,21 +50,18 @@ The auro-card element provides users a flexible way to convey a summary of infor
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-card style="max-width: 375px;" variant="round-image">
+<auro-card style="max-width: 375px;">
+  <!-- Image set to 134px -->
   <img
     slot="image"
-    src="https://picsum.photos/50/50"
-    style="width: 134px; height: 134px;"
+    src="https://picsum.photos/134/134"
     alt="Random insert 0"/>
   <auro-header slot="header" level="3" display="600">
-    Pri dicat graece abhorreant
+    Header
   </auro-header>
-  <p slot="disclaimer">
-    * Errem tempor eligendi cu eos
-  </p>
   <div slot="description">
     <p>
-      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+      Context goes here. Describe the page this card represents.
     </p>
   </div>
   <p slot="cta">
@@ -85,21 +82,18 @@ Explanation and use description.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-card style="max-width: 375px;" variant="round-image">
+  <auro-card style="max-width: 375px;">
+    <!-- Image set to 134px -->
     <img
       slot="image"
-      src="https://picsum.photos/50/50"
-      style="width: 134px; height: 134px;"
+      src="https://picsum.photos/134/134"
       alt="Random insert 0"/>
     <auro-header slot="header" level="3" display="600">
-      Pri dicat graece abhorreant
+      Header
     </auro-header>
-    <p slot="disclaimer">
-      * Errem tempor eligendi cu eos
-    </p>
     <div slot="description">
       <p>
-        Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+        Context goes here. Describe the page this card represents.
       </p>
     </div>
     <p slot="cta">
@@ -116,21 +110,18 @@ Explanation and use description.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-card style="max-width: 375px;" variant="round-image">
+<auro-card style="max-width: 375px;">
+  <!-- Image set to 134px -->
   <img
     slot="image"
-    src="https://picsum.photos/50/50"
-    style="width: 134px; height: 134px;"
+    src="https://picsum.photos/134/134"
     alt="Random insert 0"/>
   <auro-header slot="header" level="3" display="600">
-    Pri dicat graece abhorreant
+    Header
   </auro-header>
-  <p slot="disclaimer">
-    * Errem tempor eligendi cu eos
-  </p>
   <div slot="description">
     <p>
-      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+      Context goes here. Describe the page this card represents.
     </p>
   </div>
   <p slot="cta">
@@ -151,21 +142,18 @@ Explanation and use description.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-card style="max-width: 375px;" variant="round-image">
+  <auro-card style="max-width: 375px;">
+    <!-- Image set to 134px -->
     <img
       slot="image"
-      src="https://picsum.photos/50/50"
-      style="width: 134px; height: 134px;"
+      src="https://picsum.photos/134/134"
       alt="Random insert 0"/>
     <auro-header slot="header" level="3" display="600">
-      Pri dicat graece abhorreant
+      Header
     </auro-header>
-    <p slot="disclaimer">
-      * Errem tempor eligendi cu eos
-    </p>
     <div slot="description">
       <p>
-        Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+        Context goes here. Describe the page this card represents.
       </p>
     </div>
     <p slot="cta">
@@ -182,21 +170,18 @@ Explanation and use description.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-card style="max-width: 375px;" variant="round-image">
+<auro-card style="max-width: 375px;">
+  <!-- Image set to 134px -->
   <img
     slot="image"
-    src="https://picsum.photos/50/50"
-    style="width: 134px; height: 134px;"
+    src="https://picsum.photos/134/134"
     alt="Random insert 0"/>
   <auro-header slot="header" level="3" display="600">
-    Pri dicat graece abhorreant
+    Header
   </auro-header>
-  <p slot="disclaimer">
-    * Errem tempor eligendi cu eos
-  </p>
   <div slot="description">
     <p>
-      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+      Context goes here. Describe the page this card represents.
     </p>
   </div>
   <p slot="cta">
@@ -217,21 +202,18 @@ Explanation and use description.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-card style="max-width: 375px;" variant="round-image">
+  <auro-card style="max-width: 375px;">
+    <!-- Image set to 134px -->
     <img
       slot="image"
-      src="https://picsum.photos/50/50"
-      style="width: 134px; height: 134px;"
+      src="https://picsum.photos/134/134"
       alt="Random insert 0"/>
     <auro-header slot="header" level="3" display="600">
-      Pri dicat graece abhorreant
+      Header
     </auro-header>
-    <p slot="disclaimer">
-      * Errem tempor eligendi cu eos
-    </p>
     <div slot="description">
       <p>
-        Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+        Context goes here. Describe the page this card represents.
       </p>
     </div>
     <p slot="cta">
@@ -248,21 +230,18 @@ Explanation and use description.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-card style="max-width: 375px;" variant="round-image">
+<auro-card style="max-width: 375px;">
+  <!-- Image set to 134px -->
   <img
     slot="image"
-    src="https://picsum.photos/50/50"
-    style="width: 134px; height: 134px;"
+    src="https://picsum.photos/134/134"
     alt="Random insert 0"/>
   <auro-header slot="header" level="3" display="600">
-    Pri dicat graece abhorreant
+    Header
   </auro-header>
-  <p slot="disclaimer">
-    * Errem tempor eligendi cu eos
-  </p>
   <div slot="description">
     <p>
-      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+      Context goes here. Describe the page this card represents.
     </p>
   </div>
   <p slot="cta">
@@ -283,21 +262,18 @@ Explanation and use description.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-card style="max-width: 375px;" variant="round-image">
+  <auro-card style="max-width: 375px;">
+    <!-- Image set to 134px -->
     <img
       slot="image"
-      src="https://picsum.photos/50/50"
-      style="width: 134px; height: 134px;"
+      src="https://picsum.photos/134/134"
       alt="Random insert 0"/>
     <auro-header slot="header" level="3" display="600">
-      Pri dicat graece abhorreant
+      Header
     </auro-header>
-    <p slot="disclaimer">
-      * Errem tempor eligendi cu eos
-    </p>
     <div slot="description">
       <p>
-        Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+        Context goes here. Describe the page this card represents.
       </p>
     </div>
     <p slot="cta">
@@ -314,21 +290,18 @@ Explanation and use description.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-card style="max-width: 375px;" variant="round-image">
+<auro-card style="max-width: 375px;">
+  <!-- Image set to 134px -->
   <img
     slot="image"
-    src="https://picsum.photos/50/50"
-    style="width: 134px; height: 134px;"
+    src="https://picsum.photos/134/134"
     alt="Random insert 0"/>
   <auro-header slot="header" level="3" display="600">
-    Pri dicat graece abhorreant
+    Header
   </auro-header>
-  <p slot="disclaimer">
-    * Errem tempor eligendi cu eos
-  </p>
   <div slot="description">
     <p>
-      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+      Context goes here. Describe the page this card represents.
     </p>
   </div>
   <p slot="cta">
@@ -349,21 +322,18 @@ Explanation and use description.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-card style="max-width: 375px;" variant="round-image">
+  <auro-card style="max-width: 375px;">
+    <!-- Image set to 134px -->
     <img
       slot="image"
-      src="https://picsum.photos/50/50"
-      style="width: 134px; height: 134px;"
+      src="https://picsum.photos/134/134"
       alt="Random insert 0"/>
     <auro-header slot="header" level="3" display="600">
-      Pri dicat graece abhorreant
+      Header
     </auro-header>
-    <p slot="disclaimer">
-      * Errem tempor eligendi cu eos
-    </p>
     <div slot="description">
       <p>
-        Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+        Context goes here. Describe the page this card represents.
       </p>
     </div>
     <p slot="cta">
@@ -380,21 +350,18 @@ Explanation and use description.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-card style="max-width: 375px;" variant="round-image">
+<auro-card style="max-width: 375px;">
+  <!-- Image set to 134px -->
   <img
     slot="image"
-    src="https://picsum.photos/50/50"
-    style="width: 134px; height: 134px;"
+    src="https://picsum.photos/134/134"
     alt="Random insert 0"/>
   <auro-header slot="header" level="3" display="600">
-    Pri dicat graece abhorreant
+    Header
   </auro-header>
-  <p slot="disclaimer">
-    * Errem tempor eligendi cu eos
-  </p>
   <div slot="description">
     <p>
-      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+      Context goes here. Describe the page this card represents.
     </p>
   </div>
   <p slot="cta">

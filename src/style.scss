@@ -9,6 +9,9 @@
 @import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
 @import "./../node_modules/@aurodesignsystem/webcorestylesheets/src/core";
 
+
+// Component: card
+
 :host {
   display: inline-flex;
   flex-direction: column;
@@ -24,6 +27,8 @@
   }
 }
 
+// Variant: bordered
+
 :host([variant="bordered"]) {
   overflow: hidden; // hide image corners
   // TODO: Is px appropriate here
@@ -37,7 +42,9 @@
   }
 }
 
-:host([variant="icon"]) { // FIXME: Attribute or it knows if icon?
+// Variant: icon
+
+:host([variant="icon"]) {
   padding: var(--ds-size-400) var(--ds-size-200);
 
   ::slotted([slot="image"]) {
@@ -55,6 +62,8 @@
     margin-bottom: var(--ds-size-300);
   }
 }
+
+// Variant: round-image
 
 :host([variant="round-image"]) {
   padding: 0 var(--ds-size-200);
@@ -79,3 +88,58 @@
   }
 }
 
+// Variant: navigationLink
+
+:host([navigationLink])  {
+  .content {
+    padding: var(--ds-size-200);
+  }
+
+  ::slotted([slot="header"]) {
+    margin: 0 0 var(--ds-size-150);
+  }
+
+  auro-hyperlink {
+    border-radius: var(--ds-border-radius);
+    overflow: hidden;
+    box-shadow: var(--ds-elevation-100);
+
+    &::part(link) {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    &:focus {
+      outline: 1px solid var(--ds-color-border-active-default);
+      border-radius: var(--ds-border-radius);
+      color: inherit;
+    }
+
+    &:hover {
+      box-shadow: var(--ds-elevation-200);
+      color: inherit;
+    }
+  }
+}
+
+// Variant: navigationLink icon
+
+:host([navigationLink][variant="icon"]) {
+  padding: unset;
+
+  auro-hyperlink {
+    padding: var(--ds-size-400) var(--ds-size-300);
+  }
+
+  .content {
+    padding: unset;
+  }
+
+  ::slotted([slot="image"]) {
+    margin-bottom: var(--ds-size-200);
+  }
+
+  ::slotted([slot="header"]) {
+    margin: 0 0 var(--ds-size-150);
+  }
+}
