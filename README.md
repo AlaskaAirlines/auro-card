@@ -88,10 +88,11 @@ import "@aurodesignsystem/auro-card";
 <!-- The below code snippet is automatically added from ./../apiExamples/basic.html -->
 
 ```html
-<auro-card style="max-width: 375px" variant="icon">
+<auro-card style="max-width: 375px;" variant="round-image">
   <img
     slot="image"
-    src="https://picsum.photos/100/50"
+    src="https://picsum.photos/50/50"
+    style="width: 134px; height: 134px;"
     alt="Random insert 0"/>
   <auro-header slot="header" level="3" display="600">
     Pri dicat graece abhorreant
@@ -153,10 +154,11 @@ The `<auro-card>` element should be used in situations where users may:
 <!-- The below code snippet is automatically added from ./../apiExamples/basic.html -->
 
 ```html
-<auro-card style="max-width: 375px" variant="icon">
+<auro-card style="max-width: 375px;" variant="round-image">
   <img
     slot="image"
-    src="https://picsum.photos/100/50"
+    src="https://picsum.photos/50/50"
+    style="width: 134px; height: 134px;"
     alt="Random insert 0"/>
   <auro-header slot="header" level="3" display="600">
     Pri dicat graece abhorreant

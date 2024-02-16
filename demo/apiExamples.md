@@ -19,10 +19,11 @@ The auro-card element provides users a flexible way to convey a summary of infor
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-card style="max-width: 375px" variant="icon">
+  <auro-card style="max-width: 375px;" variant="round-image">
     <img
       slot="image"
-      src="https://picsum.photos/100/50"
+      src="https://picsum.photos/50/50"
+      style="width: 134px; height: 134px;"
       alt="Random insert 0"/>
     <auro-header slot="header" level="3" display="600">
       Pri dicat graece abhorreant
@@ -49,10 +50,11 @@ The auro-card element provides users a flexible way to convey a summary of infor
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-card style="max-width: 375px" variant="icon">
+<auro-card style="max-width: 375px;" variant="round-image">
   <img
     slot="image"
-    src="https://picsum.photos/100/50"
+    src="https://picsum.photos/50/50"
+    style="width: 134px; height: 134px;"
     alt="Random insert 0"/>
   <auro-header slot="header" level="3" display="600">
     Pri dicat graece abhorreant
@@ -83,10 +85,11 @@ Explanation and use description.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-card style="max-width: 375px" variant="icon">
+  <auro-card style="max-width: 375px;" variant="round-image">
     <img
       slot="image"
-      src="https://picsum.photos/100/50"
+      src="https://picsum.photos/50/50"
+      style="width: 134px; height: 134px;"
       alt="Random insert 0"/>
     <auro-header slot="header" level="3" display="600">
       Pri dicat graece abhorreant
@@ -113,10 +116,11 @@ Explanation and use description.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-card style="max-width: 375px" variant="icon">
+<auro-card style="max-width: 375px;" variant="round-image">
   <img
     slot="image"
-    src="https://picsum.photos/100/50"
+    src="https://picsum.photos/50/50"
+    style="width: 134px; height: 134px;"
     alt="Random insert 0"/>
   <auro-header slot="header" level="3" display="600">
     Pri dicat graece abhorreant
@@ -147,10 +151,11 @@ Explanation and use description.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-card style="max-width: 375px" variant="icon">
+  <auro-card style="max-width: 375px;" variant="round-image">
     <img
       slot="image"
-      src="https://picsum.photos/100/50"
+      src="https://picsum.photos/50/50"
+      style="width: 134px; height: 134px;"
       alt="Random insert 0"/>
     <auro-header slot="header" level="3" display="600">
       Pri dicat graece abhorreant
@@ -177,10 +182,11 @@ Explanation and use description.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-card style="max-width: 375px" variant="icon">
+<auro-card style="max-width: 375px;" variant="round-image">
   <img
     slot="image"
-    src="https://picsum.photos/100/50"
+    src="https://picsum.photos/50/50"
+    style="width: 134px; height: 134px;"
     alt="Random insert 0"/>
   <auro-header slot="header" level="3" display="600">
     Pri dicat graece abhorreant
@@ -211,10 +217,11 @@ Explanation and use description.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-card style="max-width: 375px" variant="icon">
+  <auro-card style="max-width: 375px;" variant="round-image">
     <img
       slot="image"
-      src="https://picsum.photos/100/50"
+      src="https://picsum.photos/50/50"
+      style="width: 134px; height: 134px;"
       alt="Random insert 0"/>
     <auro-header slot="header" level="3" display="600">
       Pri dicat graece abhorreant
@@ -241,10 +248,11 @@ Explanation and use description.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-card style="max-width: 375px" variant="icon">
+<auro-card style="max-width: 375px;" variant="round-image">
   <img
     slot="image"
-    src="https://picsum.photos/100/50"
+    src="https://picsum.photos/50/50"
+    style="width: 134px; height: 134px;"
     alt="Random insert 0"/>
   <auro-header slot="header" level="3" display="600">
     Pri dicat graece abhorreant
@@ -275,10 +283,11 @@ Explanation and use description.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-card style="max-width: 375px" variant="icon">
+  <auro-card style="max-width: 375px;" variant="round-image">
     <img
       slot="image"
-      src="https://picsum.photos/100/50"
+      src="https://picsum.photos/50/50"
+      style="width: 134px; height: 134px;"
       alt="Random insert 0"/>
     <auro-header slot="header" level="3" display="600">
       Pri dicat graece abhorreant
@@ -305,10 +314,11 @@ Explanation and use description.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-card style="max-width: 375px" variant="icon">
+<auro-card style="max-width: 375px;" variant="round-image">
   <img
     slot="image"
-    src="https://picsum.photos/100/50"
+    src="https://picsum.photos/50/50"
+    style="width: 134px; height: 134px;"
     alt="Random insert 0"/>
   <auro-header slot="header" level="3" display="600">
     Pri dicat graece abhorreant
@@ -339,10 +349,11 @@ Explanation and use description.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-card style="max-width: 375px" variant="icon">
+  <auro-card style="max-width: 375px;" variant="round-image">
     <img
       slot="image"
-      src="https://picsum.photos/100/50"
+      src="https://picsum.photos/50/50"
+      style="width: 134px; height: 134px;"
       alt="Random insert 0"/>
     <auro-header slot="header" level="3" display="600">
       Pri dicat graece abhorreant
@@ -369,10 +380,11 @@ Explanation and use description.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-card style="max-width: 375px" variant="icon">
+<auro-card style="max-width: 375px;" variant="round-image">
   <img
     slot="image"
-    src="https://picsum.photos/100/50"
+    src="https://picsum.photos/50/50"
+    style="width: 134px; height: 134px;"
     alt="Random insert 0"/>
   <auro-header slot="header" level="3" display="600">
     Pri dicat graece abhorreant

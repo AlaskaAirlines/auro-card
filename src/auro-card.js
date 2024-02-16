@@ -25,9 +25,9 @@ export class AuroCard extends LitElement {
   // function that renders the HTML and CSS into  the scope of the component
   render() {
     return html`
-        <div class="imageWrapper">
-          <slot name="image"></slot>
-        </div>
+        <slot name="image"></slot>
+<!--        <div class="imageWrapper">-->
+<!--        </div>-->
         <div class="content">
           <slot name="header"></slot>
           <slot name="description"></slot>

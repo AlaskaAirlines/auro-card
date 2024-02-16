@@ -40,15 +40,11 @@
 :host([variant="icon"]) { // FIXME: Attribute or it knows if icon?
   padding: var(--ds-size-400) var(--ds-size-200);
 
-  .imageWrapper {
-    margin-bottom: var(--ds-size-300);
-  }
-
   ::slotted([slot="image"]) {
     display: block;
     object-fit: unset;
     width: unset;
-    margin: 0 auto;
+    margin: 0 auto var(--ds-size-300);
   }
 
   .content {
@@ -59,3 +55,27 @@
     margin-bottom: var(--ds-size-300);
   }
 }
+
+:host([variant="round-image"]) {
+  padding: 0 var(--ds-size-200);
+
+  ::slotted([slot="image"]) {
+    border-radius: 50%;
+    overflow: hidden;
+    width: unset;
+    margin: 0 auto;
+  }
+
+  .content {
+    padding: unset;
+  }
+
+  ::slotted([slot="header"]) {
+    margin-bottom: var(--ds-size-50);
+  }
+
+  ::slotted([slot="description"]) {
+    margin-bottom: var(--ds-size-300);
+  }
+}
+
