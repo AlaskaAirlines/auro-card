@@ -2,8 +2,6 @@
 
 The auro-card element provides users a flexible way to convey a summary of information.
 
-// TODO: Verify if the below type declaration is correct
-
 ## Properties
 
 | Property         | Attribute        | Type     | Description                                      |

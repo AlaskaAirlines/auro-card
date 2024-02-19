@@ -102,11 +102,11 @@ import "@aurodesignsystem/auro-card";
       Context goes here. Describe the page this card represents.
     </p>
   </div>
-  <p slot="cta">
+  <div slot="cta">
     <auro-hyperlink href="/" nav target="_blank">
       More info
     </auro-hyperlink>
-  </p>
+  </div>
 </auro-card>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
@@ -165,11 +165,11 @@ The `<auro-card>` element should be used in situations where users may:
       Context goes here. Describe the page this card represents.
     </p>
   </div>
-  <p slot="cta">
+  <div slot="cta">
     <auro-hyperlink href="/" nav target="_blank">
       More info
     </auro-hyperlink>
-  </p>
+  </div>
 </auro-card>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
