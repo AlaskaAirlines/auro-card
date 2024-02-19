@@ -188,6 +188,7 @@ The auro-card element provides users a flexible way to convey a summary of infor
 </auro-card>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
 
 ### Attribute Examples
 

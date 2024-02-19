@@ -43,6 +43,8 @@
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/round-image.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
+</auro-accordion>
+
 ### Attribute Examples
 
 #### `attributeName`
