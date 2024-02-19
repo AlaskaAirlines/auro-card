@@ -25,6 +25,10 @@
   .content {
     padding: var(--ds-size-300) 0 var(--ds-size-300);
   }
+
+  ::slotted([slot="cta"]) {
+    margin-top: var(--ds-size-300)
+  }
 }
 
 // Variant: bordered
@@ -39,6 +43,10 @@
 
   .content {
     padding: var(--ds-size-200);
+  }
+
+  ::slotted([slot="cta"]) {
+    margin-top: var(--ds-size-200)
   }
 }
 
