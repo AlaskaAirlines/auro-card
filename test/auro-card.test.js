@@ -6,8 +6,8 @@ import '../src/auro-card.js';
 
 describe('auro-card', () => {
 
-  const fixWebComponent = async (navigationLink) =>  await fixture(html`
-      <auro-card style="max-width: 375px;" navigationLink="${navigationLink}">
+  const fixWebComponent = async (href) => await fixture(html`
+    <auro-card style="max-width: 375px;" href="${href}">
           <!-- Image set to 134px -->
         <img
           slot="image"
@@ -22,9 +22,7 @@ describe('auro-card', () => {
           </p>
         </div>
         <p slot="cta">
-          <auro-hyperlink href="/" nav target="_blank">
-            More info
-          </auro-hyperlink>
+          Non Link CTA
         </p>
       </auro-card>
     `);
@@ -41,25 +39,11 @@ describe('auro-card', () => {
     await expect(el).to.be.true;
   });
 
-  it('auro-hyperlink is rendered when `navigationLink` attribute is present', async () => {
+  it('auro-hyperlink is rendered when `href` attribute is present', async () => {
     const el = await fixWebComponent( "/");
     const link = el.shadowRoot.querySelectorAll('auro-hyperlink');
 
     await expect(link.length).to.equal(1);
-  });
-
-  it('auro-hyperlink is NOT rendered when `navigationLink` attribute is NOT present', async () => {
-    const el = await fixWebComponent( undefined)
-    const link = el.shadowRoot.querySelector('auro-hyperlink');
-
-    await expect(link).to.be.null;
-  });
-
-  it('CTA is NOT rendered when `navigationLink` attribute is present', async () => {
-    const el = await fixWebComponent( "/")
-    const link = el.shadowRoot.querySelector(`slot[name="cta"]`);
-
-    await expect(link).to.be.null;
   });
 
   it('CTA is rendered when `navigationLink` attribute is NOT present', async () => {

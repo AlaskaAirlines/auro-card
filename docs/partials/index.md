@@ -14,36 +14,6 @@ This file is generated based on a template fetched from `./docs/partials/demo.md
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./useCases.md) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
-## Additional Information
-
-> Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam fermentum libero ipsum, ac tempor sapien blandit in. Nam tincidunt non felis molestie varius.
-
-|convallis|tristique|nisl dignissim|eleifend|
-|---|---|---|---|
-|√|√|||
-|||√|√|
-
-Aenean at blandit lorem. Fusce imperdiet mi nec gravida maximus. Quisque nisl libero, condimentum in nisi a, imperdiet lacinia arcu.
-
-```javascript
-toggleDialog = (elName) => {
-  let dialog = document.querySelector(elName);
-  const html = document.querySelector('html');
-
-  html.style.overflow = 'hidden';
-  dialog.removeAttribute("open");
-  dialog.setAttribute("open", true);
-}
-
-toggleDialogClose = (elName) => {
-  let dialog = document.querySelector(elName);
-  const html = document.querySelector('html');
-
-  html.style.overflow = '';
-  dialog.removeAttribute("open");
-}
-```
-
 ## Example(s)
 
 ### Basic
@@ -57,6 +27,34 @@ toggleDialogClose = (elName) => {
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
+</auro-accordion>
+
+### Inset *Container*
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/inset-container.html) -->
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/inset-container.html) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
+</auro-accordion>
+
+### Inset *Content*
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/inset-content.html) -->
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/inset-content.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -76,6 +74,8 @@ toggleDialogClose = (elName) => {
 </auro-accordion>
 
 ### Icon
+
+- **Note**: The width set on container to enable centering of image.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/icon.html) -->
@@ -103,7 +103,19 @@ toggleDialogClose = (elName) => {
 
 </auro-accordion>
 
-Having a closing statement about your example helps to really complete the thought with your reader.
+### Navigation
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/navigation.html) -->
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/navigation.html) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
+</auro-accordion>
 
 ## Recommended Use and Version Control
 
@@ -119,14 +131,45 @@ registerComponent('custom-card');
 This will create a new custom element that you can use in your HTML that will function identically to the `auro-card` element.
 
 <div class="exampleWrapper">
-  <custom-card display="display">Salutations World!</custom-card>
+  <auro-card variant="inset-content">
+    <!-- Note the image set to 375px, this determines your card width by default -->
+    <img
+      slot="image"
+      src="https://picsum.photos/375/375"
+      alt="Random insert 0"/>
+    <h3 slot="header">Inset Container</h3>
+    <p slot="description">
+      Context goes here. Describe the page this card represents.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
 </div>
 
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
-  <custom-card display="display">Salutations World!</custom-card>
+
+<custom-card variant="inset-content">
+  <!-- Note the image set to 375px, this determines your card width by default -->
+  <img
+    slot="image"
+    src="https://picsum.photos/375/375"
+    alt="Random insert 0"/>
+  <h3 slot="header">Inset Container</h3>
+  <p slot="description">
+    Context goes here. Describe the page this card represents.
+  </p>
+  <div slot="cta">
+    <auro-hyperlink href="/" nav target="_blank">
+      More info
+    </auro-hyperlink>
+  </div>
+</custom-card>
   ```
 
 </auro-accordion>

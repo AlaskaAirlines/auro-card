@@ -1,18 +1,21 @@
-<auro-card style="max-width: 375px" variant="icon">
+<auro-card style="max-width: 375px; text-align: center" variant="inset-container">
   <img
     slot="image"
+    alt="Random insert 0"
+    class="inset-container-image"
     src="https://picsum.photos/100/50"
-    alt="Random insert 0"/>
+    style="
+      width: unset;
+      flex-grow: 0;
+      margin-bottom: var(--ds-size-300);
+    "
+  />
   <auro-header slot="header" level="3" display="600">
-    Pri dicat graece abhorreant
+    Card Title
   </auro-header>
-  <p slot="disclaimer">
-    * Errem tempor eligendi cu eos
-  </p>
-  <div slot="description">
+  <div slot="description" style="margin-bottom: var(--ds-size-300);">
     <p>
-
-      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+      Context goes here. Describe the page this card represents.
     </p>
   </div>
   <p slot="cta">

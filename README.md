@@ -21,11 +21,13 @@ The following sections are editable by making changes to the following files:
 
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/description.md) -->
 <!-- The below content is automatically added from ./../docs/partials/description.md -->
-`<auro-card>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of ...
+`<auro-card>` is
+an [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements).
+It is a customizable container that can hold many different forms of text or image content.
+Consider it a refined framework for presenting images and accompanying blurbs, ideally suited for (but not limited to)
+showcasing a curated collection containing an `image`, `title`, `text`, and a `cta` (call to action).
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis in tellus nec pellentesque. Integer bibendum ligula sit amet vehicula gravida. Maecenas accumsan, ligula vitae molestie iaculis, tellus mi laoreet ex [install instructions](https://auro.alaskaair.com/components/auro/button/install), ac malesuada velit dolor vel mi. Cras et rutrum urna. Sed mattis mi eu tortor ullamcorper, egestas bibendum mauris cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus viverra eros eget neque commodo vulputate. In tempus eu velit at dictum.
-
-Nulla at augue facilisis `odio lobortis` molestie vitae a nulla.
+The card details are broken down into `title`, `description`, `cta`, and `disclaimer`.
 <!-- AURO-GENERATED-CONTENT:END -->
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/readmeAddlInfo.md) -->
 <!-- The below content is automatically added from ./../docs/partials/readmeAddlInfo.md -->
@@ -88,20 +90,16 @@ import "@aurodesignsystem/auro-card";
 <!-- The below code snippet is automatically added from ./../apiExamples/basic.html -->
 
 ```html
-<auro-card style="max-width: 375px;">
-  <!-- Image set to 134px -->
+<auro-card>
+  <!-- Note the image set to 375px, this determines your card width by default -->
   <img
     slot="image"
-    src="https://picsum.photos/134/134"
+    src="https://picsum.photos/375/375"
     alt="Random insert 0"/>
-  <auro-header slot="header" level="3" display="600">
-    Header
-  </auro-header>
-  <div slot="description">
-    <p>
-      Context goes here. Describe the page this card represents.
-    </p>
-  </div>
+  <h3 slot="header">Card Title</h3>
+  <p slot="description">
+    Context goes here. Describe the page this card represents.
+  </p>
   <div slot="cta">
     <auro-hyperlink href="/" nav target="_blank">
       More info
@@ -136,11 +134,20 @@ In cases where the project is not able to process JS assets, there are pre-proce
 
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/useCases.md) -->
 <!-- The below content is automatically added from ./../docs/partials/useCases.md -->
-The `<auro-card>` element should be used in situations where users may:
+The `<auro-card>` element can be use in a variety of ways, including:
 
-* ...
-* ...
-* ...
+- Content Preview: Cards can be used to provide a preview of content. For example, on a blog, each card could represent
+  a post with a title, an excerpt, and a link to read more.
+- Navigation: Cards can also serve as navigation elements. Each card could represent a different page or section of the
+  website, and clicking on the card would take the user to that section.
+- Interactive Elements: Cards can be interactive, with elements like buttons, links, or forms. For example, a card could
+  contain a short survey or a sign-up form.
+- Product Display: In e-commerce, cards can be used to display products. Each card could contain an image of the
+  product, its name, price, and a button to add it to the cart.
+- User Profiles: On social media or team pages, cards can be used to display user or team member profiles. Each card
+  could contain a photo, name, role, and a brief bio or description.
+- Informational Cards: Cards can be used to display information in a more structured way. For example, on a weather app,
+  each card could represent a day of the week with the day's weather conditions and temperature.
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## API Code Examples
@@ -151,20 +158,16 @@ The `<auro-card>` element should be used in situations where users may:
 <!-- The below code snippet is automatically added from ./../apiExamples/basic.html -->
 
 ```html
-<auro-card style="max-width: 375px;">
-  <!-- Image set to 134px -->
+<auro-card>
+  <!-- Note the image set to 375px, this determines your card width by default -->
   <img
     slot="image"
-    src="https://picsum.photos/134/134"
+    src="https://picsum.photos/375/375"
     alt="Random insert 0"/>
-  <auro-header slot="header" level="3" display="600">
-    Header
-  </auro-header>
-  <div slot="description">
-    <p>
-      Context goes here. Describe the page this card represents.
-    </p>
-  </div>
+  <h3 slot="header">Card Title</h3>
+  <p slot="description">
+    Context goes here. Describe the page this card represents.
+  </p>
   <div slot="cta">
     <auro-hyperlink href="/" nav target="_blank">
       More info

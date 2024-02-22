@@ -14,8 +14,11 @@ import styleCss from "./style-css.js";
 /**
  * The auro-card element provides users a flexible way to convey a summary of information.
  *
- * @attr {String} variant - Sets the variant of the card. Options include: bordered, icon, round-image.
- * @attr {String} navigationLink - Sets the card to function as a hyperlink and disables the default CTA slot.
+ * @attr {String} variant - Sets the variant of the card. Options include: "inset" or "flush".
+ * @attr {String} href - Sets the card to function as a hyperlink to the provided href value & disables the default CTA slot.
+ * @attr {String} rel - Sets rel attribute on the {@link https://auro.alaskaair.com/components/auro/hyperlink/api#rel|auro-hyperlink}.
+ * @attr {String} role - Sets role attribute on the {@link https://auro.alaskaair.com/components/auro/hyperlink/api#role|auro-hyperlink}
+ * @attr {String} target - Sets target attribute on the {@link https://auro.alaskaair.com/components/auro/hyperlink/api#target|auro-hyperlink}
  */
 export class AuroCard extends LitElement {
 
@@ -29,7 +32,19 @@ export class AuroCard extends LitElement {
         type: String,
         reflect: true,
       },
-      navigationLink: {
+      href: {
+        type: String,
+        reflect: true,
+      },
+      rel: {
+        type: String,
+        reflect: true,
+      },
+      role: {
+        type: String,
+        reflect: true,
+      },
+      target: {
         type: String,
         reflect: true,
       }
@@ -39,18 +54,28 @@ export class AuroCard extends LitElement {
   // function that renders the HTML and CSS into the scope of the component
   render() {
     const innerHtml = html`
-        <slot name="image"></slot>
-        <!-- TODO: Expose CSS part for div.content -->
+        <div part="imageWrapper">
+            <slot name="image" part="image"></slot>
+        </div>
         <div id="content-within" class="content" part="content">
-          <slot name="header"></slot>
-          <slot name="description"></slot>
-          ${this.navigationLink ? '' : html`<slot name="cta"></slot>`}
+          <slot name="header" part="header"></slot>
+          <slot name="description" part="description"></slot>
+          <slot name="cta" part="cta"></slot>
         </div>
     `;
 
     return html`
-      ${this.navigationLink
-        ? html`<auro-hyperlink aria-labelledby="content-within" href="${this.navigationLink}">${innerHtml}</auro-hyperlink>`
+      ${this.href
+        ? html`
+          <auro-hyperlink
+            aria-labelledby="content-within"
+            href="${this.href}"
+            rel="${this.rel}"
+            role="${this.role}"
+            target="${this.target}"
+        >
+          ${innerHtml}
+        </auro-hyperlink>`
         : innerHtml
       }
     `;

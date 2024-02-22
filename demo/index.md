@@ -8,53 +8,34 @@ This file is generated based on a template fetched from `./docs/partials/demo.md
 
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./description.md) -->
 <!-- The below content is automatically added from ./description.md -->
-`<auro-card>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of ...
+`<auro-card>` is
+an [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements).
+It is a customizable container that can hold many different forms of text or image content.
+Consider it a refined framework for presenting images and accompanying blurbs, ideally suited for (but not limited to)
+showcasing a curated collection containing an `image`, `title`, `text`, and a `cta` (call to action).
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis in tellus nec pellentesque. Integer bibendum ligula sit amet vehicula gravida. Maecenas accumsan, ligula vitae molestie iaculis, tellus mi laoreet ex [install instructions](https://auro.alaskaair.com/components/auro/button/install), ac malesuada velit dolor vel mi. Cras et rutrum urna. Sed mattis mi eu tortor ullamcorper, egestas bibendum mauris cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus viverra eros eget neque commodo vulputate. In tempus eu velit at dictum.
-
-Nulla at augue facilisis `odio lobortis` molestie vitae a nulla.
+The card details are broken down into `title`, `description`, `cta`, and `disclaimer`.
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## auro-card use cases
 
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./useCases.md) -->
 <!-- The below content is automatically added from ./useCases.md -->
-The `<auro-card>` element should be used in situations where users may:
+The `<auro-card>` element can be use in a variety of ways, including:
 
-* ...
-* ...
-* ...
+- Content Preview: Cards can be used to provide a preview of content. For example, on a blog, each card could represent
+  a post with a title, an excerpt, and a link to read more.
+- Navigation: Cards can also serve as navigation elements. Each card could represent a different page or section of the
+  website, and clicking on the card would take the user to that section.
+- Interactive Elements: Cards can be interactive, with elements like buttons, links, or forms. For example, a card could
+  contain a short survey or a sign-up form.
+- Product Display: In e-commerce, cards can be used to display products. Each card could contain an image of the
+  product, its name, price, and a button to add it to the cart.
+- User Profiles: On social media or team pages, cards can be used to display user or team member profiles. Each card
+  could contain a photo, name, role, and a brief bio or description.
+- Informational Cards: Cards can be used to display information in a more structured way. For example, on a weather app,
+  each card could represent a day of the week with the day's weather conditions and temperature.
 <!-- AURO-GENERATED-CONTENT:END -->
-
-## Additional Information
-
-> Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam fermentum libero ipsum, ac tempor sapien blandit in. Nam tincidunt non felis molestie varius.
-
-|convallis|tristique|nisl dignissim|eleifend|
-|---|---|---|---|
-|√|√|||
-|||√|√|
-
-Aenean at blandit lorem. Fusce imperdiet mi nec gravida maximus. Quisque nisl libero, condimentum in nisi a, imperdiet lacinia arcu.
-
-```javascript
-toggleDialog = (elName) => {
-  let dialog = document.querySelector(elName);
-  const html = document.querySelector('html');
-
-  html.style.overflow = 'hidden';
-  dialog.removeAttribute("open");
-  dialog.setAttribute("open", true);
-}
-
-toggleDialogClose = (elName) => {
-  let dialog = document.querySelector(elName);
-  const html = document.querySelector('html');
-
-  html.style.overflow = '';
-  dialog.removeAttribute("open");
-}
-```
 
 ## Example(s)
 
@@ -63,20 +44,16 @@ toggleDialogClose = (elName) => {
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-card style="max-width: 375px;">
-    <!-- Image set to 134px -->
+  <auro-card>
+    <!-- Note the image set to 375px, this determines your card width by default -->
     <img
       slot="image"
-      src="https://picsum.photos/134/134"
+      src="https://picsum.photos/375/375"
       alt="Random insert 0"/>
-    <auro-header slot="header" level="3" display="600">
-      Header
-    </auro-header>
-    <div slot="description">
-      <p>
-        Context goes here. Describe the page this card represents.
-      </p>
-    </div>
+    <h3 slot="header">Card Title</h3>
+    <p slot="description">
+      Context goes here. Describe the page this card represents.
+    </p>
     <div slot="cta">
       <auro-hyperlink href="/" nav target="_blank">
         More info
@@ -91,20 +68,16 @@ toggleDialogClose = (elName) => {
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-card style="max-width: 375px;">
-  <!-- Image set to 134px -->
+<auro-card>
+  <!-- Note the image set to 375px, this determines your card width by default -->
   <img
     slot="image"
-    src="https://picsum.photos/134/134"
+    src="https://picsum.photos/375/375"
     alt="Random insert 0"/>
-  <auro-header slot="header" level="3" display="600">
-    Header
-  </auro-header>
-  <div slot="description">
-    <p>
-      Context goes here. Describe the page this card represents.
-    </p>
-  </div>
+  <h3 slot="header">Card Title</h3>
+  <p slot="description">
+    Context goes here. Describe the page this card represents.
+  </p>
   <div slot="cta">
     <auro-hyperlink href="/" nav target="_blank">
       More info
@@ -115,27 +88,121 @@ toggleDialogClose = (elName) => {
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
+### Inset *Container*
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/inset-container.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/inset-container.html -->
+  <auro-card variant="inset-container">
+    <!-- Note the image set to 375px, this determines your card width by default -->
+    <img
+      slot="image"
+      src="https://picsum.photos/375/375"
+      alt="Random insert 0"/>
+    <h3 slot="header">Inset Container</h3>
+    <p slot="description">
+      Context goes here. Describe the page this card represents.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/inset-container.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/inset-container.html -->
+
+```html
+<auro-card variant="inset-container">
+  <!-- Note the image set to 375px, this determines your card width by default -->
+  <img
+    slot="image"
+    src="https://picsum.photos/375/375"
+    alt="Random insert 0"/>
+  <h3 slot="header">Inset Container</h3>
+  <p slot="description">
+    Context goes here. Describe the page this card represents.
+  </p>
+  <div slot="cta">
+    <auro-hyperlink href="/" nav target="_blank">
+      More info
+    </auro-hyperlink>
+  </div>
+</auro-card>
+```
+
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+### Inset *Content*
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/inset-content.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/inset-content.html -->
+  <auro-card variant="inset-content">
+    <!-- Note the image set to 375px, this determines your card width by default -->
+    <img
+      slot="image"
+      src="https://picsum.photos/375/375"
+      alt="Random insert 0"/>
+    <h3 slot="header">Inset Content</h3>
+    <p slot="description">
+      Context goes here. Describe the page this card represents.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/inset-content.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/inset-content.html -->
+
+```html
+<auro-card variant="inset-content">
+  <!-- Note the image set to 375px, this determines your card width by default -->
+  <img
+    slot="image"
+    src="https://picsum.photos/375/375"
+    alt="Random insert 0"/>
+  <h3 slot="header">Inset Content</h3>
+  <p slot="description">
+    Context goes here. Describe the page this card represents.
+  </p>
+  <div slot="cta">
+    <auro-hyperlink href="/" nav target="_blank">
+      More info
+    </auro-hyperlink>
+  </div>
+</auro-card>
+```
+
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
 ### Bordered
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/bordered.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/bordered.html -->
-  <auro-card style="max-width: 375px" variant="bordered">
+  <auro-card variant="inset-content" border>
+    <!-- Note the image set to 375px, this determines your card width by default -->
     <img
       slot="image"
-      src="https://picsum.photos/100/50"
+      src="https://picsum.photos/375/375"
       alt="Random insert 0"/>
-    <auro-header slot="header" level="3" display="600">
-      Pri dicat graece abhorreant
-    </auro-header>
-    <p slot="disclaimer">
-      * Errem tempor eligendi cu eos
+    <h3 slot="header">Card Title</h3>
+    <p slot="description">
+      Context goes here. Describe the page this card represents.
     </p>
-    <div slot="description">
-      <p>
-        Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-      </p>
-    </div>
     <div slot="cta">
       <auro-hyperlink href="/" nav target="_blank">
         More info
@@ -150,22 +217,16 @@ toggleDialogClose = (elName) => {
 <!-- The below code snippet is automatically added from ./../../apiExamples/bordered.html -->
 
 ```html
-<auro-card style="max-width: 375px" variant="bordered">
+<auro-card variant="inset-content" border>
+  <!-- Note the image set to 375px, this determines your card width by default -->
   <img
     slot="image"
-    src="https://picsum.photos/100/50"
+    src="https://picsum.photos/375/375"
     alt="Random insert 0"/>
-  <auro-header slot="header" level="3" display="600">
-    Pri dicat graece abhorreant
-  </auro-header>
-  <p slot="disclaimer">
-    * Errem tempor eligendi cu eos
+  <h3 slot="header">Card Title</h3>
+  <p slot="description">
+    Context goes here. Describe the page this card represents.
   </p>
-  <div slot="description">
-    <p>
-      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
-    </p>
-  </div>
   <div slot="cta">
     <auro-hyperlink href="/" nav target="_blank">
       More info
@@ -178,23 +239,29 @@ toggleDialogClose = (elName) => {
 
 ### Icon
 
+- **Note**: The width set on container to enable centering of image.
+
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/icon.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/icon.html -->
-  <auro-card style="max-width: 375px" variant="icon">
+  <auro-card style="max-width: 375px; text-align: center" variant="inset-container">
     <img
       slot="image"
+      alt="Random insert 0"
+      class="inset-container-image"
       src="https://picsum.photos/100/50"
-      alt="Random insert 0"/>
+      style="
+        width: unset;
+        flex-grow: 0;
+        margin-bottom: var(--ds-size-300);
+      "
+    />
     <auro-header slot="header" level="3" display="600">
-      Pri dicat graece abhorreant
+      Card Title
     </auro-header>
-    <p slot="disclaimer">
-      * Errem tempor eligendi cu eos
-    </p>
-    <div slot="description">
+    <div slot="description" style="margin-bottom: var(--ds-size-300);">
       <p>
-        Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+        Context goes here. Describe the page this card represents.
       </p>
     </div>
     <p slot="cta">
@@ -211,20 +278,24 @@ toggleDialogClose = (elName) => {
 <!-- The below code snippet is automatically added from ./../../apiExamples/icon.html -->
 
 ```html
-<auro-card style="max-width: 375px" variant="icon">
+<auro-card style="max-width: 375px; text-align: center" variant="inset-container">
   <img
     slot="image"
+    alt="Random insert 0"
+    class="inset-container-image"
     src="https://picsum.photos/100/50"
-    alt="Random insert 0"/>
+    style="
+      width: unset;
+      flex-grow: 0;
+      margin-bottom: var(--ds-size-300);
+    "
+  />
   <auro-header slot="header" level="3" display="600">
-    Pri dicat graece abhorreant
+    Card Title
   </auro-header>
-  <p slot="disclaimer">
-    * Errem tempor eligendi cu eos
-  </p>
-  <div slot="description">
+  <div slot="description" style="margin-bottom: var(--ds-size-300);">
     <p>
-      Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+      Context goes here. Describe the page this card represents.
     </p>
   </div>
   <p slot="cta">
@@ -242,12 +313,14 @@ toggleDialogClose = (elName) => {
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/round-image.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/round-image.html -->
-  <auro-card style="max-width: 375px;" variant="round-image" >
+  <auro-card>
     <!-- Image set to 134px -->
     <img
       slot="image"
       src="https://picsum.photos/134/134"
-      alt="Random insert 0"/>
+      alt="Random insert 0"
+      style="border-radius: 50%; overflow: hidden; width: unset; margin: 0 auto;"
+    />
     <auro-header slot="header" level="3" display="600">
       Header
     </auro-header>
@@ -270,12 +343,14 @@ toggleDialogClose = (elName) => {
 <!-- The below code snippet is automatically added from ./../../apiExamples/round-image.html -->
 
 ```html
-<auro-card style="max-width: 375px;" variant="round-image" >
+<auro-card>
   <!-- Image set to 134px -->
   <img
     slot="image"
     src="https://picsum.photos/134/134"
-    alt="Random insert 0"/>
+    alt="Random insert 0"
+    style="border-radius: 50%; overflow: hidden; width: unset; margin: 0 auto;"
+  />
   <auro-header slot="header" level="3" display="600">
     Header
   </auro-header>
@@ -293,7 +368,57 @@ toggleDialogClose = (elName) => {
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
-Having a closing statement about your example helps to really complete the thought with your reader.
+
+### Navigation
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/navigation.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/navigation.html -->
+  <auro-card href="/">
+    <img
+      slot="image"
+      src="https://picsum.photos/400/400"
+      alt="Random insert 0"/>
+    <auro-header slot="header" level="3" display="600">
+      Header
+    </auro-header>
+    <div slot="description">
+      <p>
+        Context goes here. Describe the page this card represents.
+      </p>
+    </div>
+    <p slot="cta">
+      More info
+    </p>
+  </auro-card>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/navigation.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/navigation.html -->
+
+```html
+<auro-card href="/">
+  <img
+    slot="image"
+    src="https://picsum.photos/400/400"
+    alt="Random insert 0"/>
+  <auro-header slot="header" level="3" display="600">
+    Header
+  </auro-header>
+  <div slot="description">
+    <p>
+      Context goes here. Describe the page this card represents.
+    </p>
+  </div>
+  <p slot="cta">
+    More info
+  </p>
+</auro-card>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
 
 ## Recommended Use and Version Control
 
@@ -309,12 +434,42 @@ registerComponent('custom-card');
 This will create a new custom element that you can use in your HTML that will function identically to the `auro-card` element.
 
 <div class="exampleWrapper">
-  <custom-card display="display">Salutations World!</custom-card>
+  <auro-card variant="inset-container">
+    <!-- Note the image set to 375px, this determines your card width by default -->
+    <img
+      slot="image"
+      src="https://picsum.photos/375/375"
+      alt="Random insert 0"/>
+    <h3 slot="header">Inset Container</h3>
+    <p slot="description">
+      Context goes here. Describe the page this card represents.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
   ```html
-  <custom-card display="display">Salutations World!</custom-card>
+    <custom-card variant="inset-container">
+      <!-- Note the image set to 375px, this determines your card width by default -->
+      <img
+        slot="image"
+        src="https://picsum.photos/375/375"
+        alt="Random insert 0"/>
+      <h3 slot="header">Inset Container</h3>
+      <p slot="description">
+        Context goes here. Describe the page this card represents.
+      </p>
+      <div slot="cta">
+        <auro-hyperlink href="/" nav target="_blank">
+          More info
+        </auro-hyperlink>
+      </div>
+    </custom-card>
   ```
 
 </auro-accordion>
