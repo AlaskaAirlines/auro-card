@@ -117,6 +117,23 @@ This file is generated based on a template fetched from `./docs/partials/demo.md
 
 </auro-accordion>
 
+### Centered Content
+
+Text can be centered by assigning the `text-align: center` attribute to the `auro-card` element.
+Similarly, elements within `auro-card` can be centered with the `justify-content:center` and/or `align-items:center`
+attributes to use flexbox to vertically and horizontally center the content within the `auro-card` container. That said, the centering options are not limited to these
+examples and can be acheived by a number of means.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/center.html) -->
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+  <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/center.html) -->
+  <!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
 ## Recommended Use and Version Control
 
 There are two important parts of every Auro component. The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">class</a> and the custom clement. The class is exported and then used as part of defining the Web Component. When importing this component as described in the <a href="#install">install</a> section, the class is imported and the `auro-card` custom element is defined automatically.
