@@ -134,7 +134,6 @@ The `<auro-card>` element can be use in a variety of ways, including:
   </div>
 </auro-card>
 ```
-
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
@@ -184,7 +183,6 @@ The `<auro-card>` element can be use in a variety of ways, including:
   </div>
 </auro-card>
 ```
-
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
@@ -420,6 +418,81 @@ The `<auro-card>` element can be use in a variety of ways, including:
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
+### Centered Content
+
+Content can be centered by assigning the `text-align: center` attribute to the `auro-card` element.
+Similarly, the `auro-card` element can be assigned a `justify-content:center` and `align-items:center`
+attributes to use flexbox to vertically and horizontally center the content within the `auro-card` container. That said, the centering options are not limited to these
+examples and can be acheived by a number of means.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/center.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/center.html -->
+  <auro-card
+    style="
+      text-align:center;
+      justify-content:center;
+      align-items:center;
+      width: 400px;
+    "
+    variant="inset-container"
+  >
+    <!-- Note the image set to 375px, this determines your card width by default -->
+    <img
+      slot="image"
+      src="https://picsum.photos/200/200"
+      alt="Random insert 0"
+      style="max-width: 200px; overflow: hidden; width: unset; margin: 0 auto;"
+    />
+    <h3 slot="header">Centered Content</h3>
+    <p slot="description" style="max-width: 200px;">
+      This is centered description content. Also, notice the CTA and image are
+      centered.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+  <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/center.html) -->
+  <!-- The below code snippet is automatically added from ./../../apiExamples/center.html -->
+  ```html
+  <auro-card
+    style="
+      text-align:center;
+      justify-content:center;
+      align-items:center;
+      width: 400px;
+    "
+    variant="inset-container"
+  >
+    <!-- Note the image set to 375px, this determines your card width by default -->
+    <img
+      slot="image"
+      src="https://picsum.photos/200/200"
+      alt="Random insert 0"
+      style="max-width: 200px; overflow: hidden; width: unset; margin: 0 auto;"
+    />
+    <h3 slot="header">Centered Content</h3>
+    <p slot="description" style="max-width: 200px;">
+      This is centered description content. Also, notice the CTA and image are
+      centered.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+  ```
+  <!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
 ## Recommended Use and Version Control
 
 There are two important parts of every Auro component. The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">class</a> and the custom clement. The class is exported and then used as part of defining the Web Component. When importing this component as described in the <a href="#install">install</a> section, the class is imported and the `auro-card` custom element is defined automatically.
@@ -434,7 +507,7 @@ registerComponent('custom-card');
 This will create a new custom element that you can use in your HTML that will function identically to the `auro-card` element.
 
 <div class="exampleWrapper">
-  <auro-card variant="inset-container">
+  <auro-card variant="inset-content">
     <!-- Note the image set to 375px, this determines your card width by default -->
     <img
       slot="image"
@@ -454,22 +527,23 @@ This will create a new custom element that you can use in your HTML that will fu
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
   ```html
-    <custom-card variant="inset-container">
-      <!-- Note the image set to 375px, this determines your card width by default -->
-      <img
-        slot="image"
-        src="https://picsum.photos/375/375"
-        alt="Random insert 0"/>
-      <h3 slot="header">Inset Container</h3>
-      <p slot="description">
-        Context goes here. Describe the page this card represents.
-      </p>
-      <div slot="cta">
-        <auro-hyperlink href="/" nav target="_blank">
-          More info
-        </auro-hyperlink>
-      </div>
-    </custom-card>
+
+<custom-card variant="inset-content">
+  <!-- Note the image set to 375px, this determines your card width by default -->
+  <img
+    slot="image"
+    src="https://picsum.photos/375/375"
+    alt="Random insert 0"/>
+  <h3 slot="header">Inset Container</h3>
+  <p slot="description">
+    Context goes here. Describe the page this card represents.
+  </p>
+  <div slot="cta">
+    <auro-hyperlink href="/" nav target="_blank">
+      More info
+    </auro-hyperlink>
+  </div>
+</custom-card>
   ```
 
 </auro-accordion>
