@@ -122,7 +122,7 @@ This file is generated based on a template fetched from `./docs/partials/demo.md
 Text can be centered by assigning the `text-align: center` attribute to the `auro-card` element.
 Similarly, elements within `auro-card` can be centered with the `justify-content:center` and/or `align-items:center`
 attributes to use flexbox to vertically and horizontally center the content within the `auro-card` container. That said, the centering options are not limited to these
-examples and can be acheived by a number of means.
+examples and can be achieved by a number of means.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/center.html) -->
@@ -130,8 +130,31 @@ examples and can be acheived by a number of means.
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-  <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/center.html) -->
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/center.html) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
+</auro-accordion>
+
+### Complex cards
+
+These cards are loosely based on the "Typography" example images [here](https://alaskaair.com) and serve as a way to
+show
+that complex card-like layouts are possible with `auro-card` beyond what we show here.
+
+Note that this example also uses a `style` tag to set most of the styles - this is to show that you don't have to use
+inline styles and can generally use whatever styling solution you prefer.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/typography-cards.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/typography-cards.html) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
 </auro-accordion>
 
 ## Recommended Use and Version Control

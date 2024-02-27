@@ -420,10 +420,10 @@ The `<auro-card>` element can be use in a variety of ways, including:
 
 ### Centered Content
 
-Content can be centered by assigning the `text-align: center` attribute to the `auro-card` element.
-Similarly, the `auro-card` element can be assigned a `justify-content:center` and `align-items:center`
+Text can be centered by assigning the `text-align: center` attribute to the `auro-card` element.
+Similarly, elements within `auro-card` can be centered with the `justify-content:center` and/or `align-items:center`
 attributes to use flexbox to vertically and horizontally center the content within the `auro-card` container. That said, the centering options are not limited to these
-examples and can be acheived by a number of means.
+examples and can be achieved by a number of means.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/center.html) -->
@@ -437,7 +437,6 @@ examples and can be acheived by a number of means.
     "
     variant="inset-container"
   >
-    <!-- Note the image set to 375px, this determines your card width by default -->
     <img
       slot="image"
       src="https://picsum.photos/200/200"
@@ -459,38 +458,192 @@ examples and can be acheived by a number of means.
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-  <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/center.html) -->
-  <!-- The below code snippet is automatically added from ./../../apiExamples/center.html -->
-  ```html
-  <auro-card
-    style="
-      text-align:center;
-      justify-content:center;
-      align-items:center;
-      width: 400px;
-    "
-    variant="inset-container"
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/center.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/center.html -->
+
+```html
+<auro-card
+  style="
+    text-align:center;
+    justify-content:center;
+    align-items:center;
+    width: 400px;
+  "
+  variant="inset-container"
+>
+  <img
+    slot="image"
+    src="https://picsum.photos/200/200"
+    alt="Random insert 0"
+    style="max-width: 200px; overflow: hidden; width: unset; margin: 0 auto;"
+  />
+  <h3 slot="header">Centered Content</h3>
+  <p slot="description" style="max-width: 200px;">
+    This is centered description content. Also, notice the CTA and image are
+    centered.
+  </p>
+  <div slot="cta">
+    <auro-hyperlink href="/" nav target="_blank">
+      More info
+    </auro-hyperlink>
+  </div>
+</auro-card>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+### Complex cards
+
+These cards are loosely based on the "Typography" example images [here](https://alaskaair.com) and serve as a way to
+show
+that complex card-like layouts are possible with `auro-card` beyond what we show here.
+
+Note that this example also uses a `style` tag to set most of the styles - this is to show that you don't have to use
+inline styles and can generally use whatever styling solution you prefer.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/typography-cards.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/typography-cards.html -->
+  <style>
+    .complex-card-wrapper {
+      display: flex;
+      padding: 2rem;
+    }
+    .white-card-example {
+      background: var(--ds-color-background-lightest, #ffffff);
+    }
+    .blue-card-example {
+      background: var(--ds-color-background-darker, #01426a);
+      color: #fff;
+    }
+    .white-card-example, .blue-card-example {
+      flex: 1;
+      padding: 2rem 1.5rem;
+    }
+    .white-card-example::part(content), .blue-card-example::part(content) {
+      padding: 2rem 3rem 0;
+    }
+    .white-card-example::part(cta), .blue-card-example::part(cta) {
+      display: flex;
+      justify-content: center;
+    }
+    .white-card-example::part(header), .blue-card-example::part(header) {
+      font-size: 1.5rem;
+    }
+  </style>
+  <div
+    class="complex-card-wrapper"
   >
-    <!-- Note the image set to 375px, this determines your card width by default -->
-    <img
-      slot="image"
-      src="https://picsum.photos/200/200"
-      alt="Random insert 0"
-      style="max-width: 200px; overflow: hidden; width: unset; margin: 0 auto;"
-    />
-    <h3 slot="header">Centered Content</h3>
-    <p slot="description" style="max-width: 200px;">
-      This is centered description content. Also, notice the CTA and image are
-      centered.
+    <auro-card
+      class="white-card-example"
+    >
+      <div slot="header" style="margin-bottom: 1.5rem;">
+        <span>Seattle, WA (SEA) to</span>
+        <p>Los Angeles (LAX)</p>
+      </div>
+      <p slot="description">
+        Los Angeles is a sprawling Southern California city and the center of
+        the nation’s film and television industry.
+      </p>
+      <div slot="cta">
+        <auro-hyperlink type="cta" href="/" nav>
+          Book a Flight
+        </auro-hyperlink>
+      </div>
+    </auro-card>
+    <auro-card
+      class="blue-card-example"
+    >
+      <div slot="header" style="margin-bottom: 1.5rem;">
+        <span>Seattle, WA (SEA) to</span>
+        <p>Los Angeles (LAX)</p>
+      </div>
+      <p slot="description">
+        Los Angeles is a sprawling Southern California city and the center of
+        the nation’s film and television industry.
+      </p>
+      <div slot="cta">
+        <auro-hyperlink type="cta" href="/" nav>
+          Book a Flight
+        </auro-hyperlink>
+      </div>
+    </auro-card>
+  </div>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/typography-cards.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/typography-cards.html -->
+
+```html
+<style>
+  .complex-card-wrapper {
+    display: flex;
+    padding: 2rem;
+  }
+  .white-card-example {
+    background: var(--ds-color-background-lightest, #ffffff);
+  }
+  .blue-card-example {
+    background: var(--ds-color-background-darker, #01426a);
+    color: #fff;
+  }
+  .white-card-example, .blue-card-example {
+    flex: 1;
+    padding: 2rem 1.5rem;
+  }
+  .white-card-example::part(content), .blue-card-example::part(content) {
+    padding: 2rem 3rem 0;
+  }
+  .white-card-example::part(cta), .blue-card-example::part(cta) {
+    display: flex;
+    justify-content: center;
+  }
+  .white-card-example::part(header), .blue-card-example::part(header) {
+    font-size: 1.5rem;
+  }
+</style>
+<div
+  class="complex-card-wrapper"
+>
+  <auro-card
+    class="white-card-example"
+  >
+    <div slot="header" style="margin-bottom: 1.5rem;">
+      <span>Seattle, WA (SEA) to</span>
+      <p>Los Angeles (LAX)</p>
+    </div>
+    <p slot="description">
+      Los Angeles is a sprawling Southern California city and the center of
+      the nation’s film and television industry.
     </p>
     <div slot="cta">
-      <auro-hyperlink href="/" nav target="_blank">
-        More info
+      <auro-hyperlink type="cta" href="/" nav>
+        Book a Flight
       </auro-hyperlink>
     </div>
   </auro-card>
-  ```
-  <!-- AURO-GENERATED-CONTENT:END -->
+  <auro-card
+    class="blue-card-example"
+  >
+    <div slot="header" style="margin-bottom: 1.5rem;">
+      <span>Seattle, WA (SEA) to</span>
+      <p>Los Angeles (LAX)</p>
+    </div>
+    <p slot="description">
+      Los Angeles is a sprawling Southern California city and the center of
+      the nation’s film and television industry.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink type="cta" href="/" nav>
+        Book a Flight
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+</div>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
 ## Recommended Use and Version Control
