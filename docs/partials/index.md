@@ -16,7 +16,13 @@ This file is generated based on a template fetched from `./docs/partials/demo.md
 
 ## Example(s)
 
-### Basic
+### Default
+
+The following `default` example, illustrates using the `image`, `description` and `cta` content slots. the `default` card has no restrictions or definition of containing layout, all widths are 100% to allow for flexibility of presentation. Width of the image and/or width of the `description` content will determine the overall width of the element in its parental container.
+
+Notice in the second example, there is a CSS constraint of `max-width: 300px` to allow the text in the `description` to wrap at the desired width.
+
+As illustrated there is a lot of layout flexibility afforded to users.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
@@ -31,35 +37,25 @@ This file is generated based on a template fetched from `./docs/partials/demo.md
 
 </auro-accordion>
 
-### Inset *Container*
+### Inset *Container* or *Content*
+
+The following examples make use of the `inset-container` or `inset-content` variants. As the name implies, the inset variants will add inner padding either on the whole card or only in the `description` and `cta` content slots.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/inset-container.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/inset.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/inset-container.html) -->
-<!-- AURO-GENERATED-CONTENT:END -->
-
-</auro-accordion>
-
-### Inset *Content*
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/inset-content.html) -->
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-<auro-accordion alignRight>
-  <span slot="trigger">See code</span>
-
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/inset-content.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/inset.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
 
 ### Bordered
+
+Illustrated below is the `border` attribute. This feature defines a single boarder around the whole `<auro-card>` element with a pre-defined rounded corner.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/bordered.html) -->
@@ -72,6 +68,41 @@ This file is generated based on a template fetched from `./docs/partials/demo.md
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
+
+### Navigation
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/navigation.html) -->
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/navigation.html) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
+</auro-accordion>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- this content should be repurposed as alternatives to explore the various types of content supported. -->
 
 ### Icon
 
@@ -100,76 +131,5 @@ This file is generated based on a template fetched from `./docs/partials/demo.md
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/round-image.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
-
-</auro-accordion>
-
-### Navigation
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/navigation.html) -->
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-<auro-accordion alignRight>
-  <span slot="trigger">See code</span>
-
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/navigation.html) -->
-<!-- AURO-GENERATED-CONTENT:END -->
-
-</auro-accordion>
-
-## Recommended Use and Version Control
-
-There are two important parts of every Auro component. The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">class</a> and the custom clement. The class is exported and then used as part of defining the Web Component. When importing this component as described in the <a href="#install">install</a> section, the class is imported and the `auro-card` custom element is defined automatically.
-
-To protect from versioning conflicts with other instances of the component being loaded, it is recommended to use our `registerComponent(name)` method and pass in a unique name.
-
-```js
-import './node_modules/@aurodesignsystem/auro-card';
-registerComponent('custom-card');
-```
-
-This will create a new custom element that you can use in your HTML that will function identically to the `auro-card` element.
-
-<div class="exampleWrapper">
-  <auro-card variant="inset-content">
-    <!-- Note the image set to 375px, this determines your card width by default -->
-    <img
-      slot="image"
-      src="https://picsum.photos/375/375"
-      alt="Random insert 0"/>
-    <h3 slot="header">Inset Container</h3>
-    <p slot="description">
-      Context goes here. Describe the page this card represents.
-    </p>
-    <div slot="cta">
-      <auro-hyperlink href="/" nav target="_blank">
-        More info
-      </auro-hyperlink>
-    </div>
-  </auro-card>
-</div>
-
-<auro-accordion alignRight>
-  <span slot="trigger">See code</span>
-
-  ```html
-
-<custom-card variant="inset-content">
-  <!-- Note the image set to 375px, this determines your card width by default -->
-  <img
-    slot="image"
-    src="https://picsum.photos/375/375"
-    alt="Random insert 0"/>
-  <h3 slot="header">Inset Container</h3>
-  <p slot="description">
-    Context goes here. Describe the page this card represents.
-  </p>
-  <div slot="cta">
-    <auro-hyperlink href="/" nav target="_blank">
-      More info
-    </auro-hyperlink>
-  </div>
-</custom-card>
-  ```
 
 </auro-accordion>

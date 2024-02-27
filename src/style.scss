@@ -16,16 +16,10 @@
   display: inline-flex;
   flex-direction: column;
 
-  ::slotted([slot="image"]) {
+  ::slotted(*) {
     display: block;
     object-fit: cover;
     width: 100%;
-  }
-
-  &::part(imageWrapper) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
 
@@ -48,6 +42,10 @@
 // Navigation Card
 
 :host([href])  {
+  &::part(content) {
+    padding: var(--ds-size-200, $ds-size-200);
+  }
+
   auro-hyperlink {
     border-radius: var(--ds-border-radius, $ds-border-radius);
     overflow: hidden;
@@ -69,4 +67,12 @@
       color: inherit;
     }
   }
+}
+
+// general styles
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

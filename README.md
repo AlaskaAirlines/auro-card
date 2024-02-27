@@ -21,13 +21,7 @@ The following sections are editable by making changes to the following files:
 
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/description.md) -->
 <!-- The below content is automatically added from ./../docs/partials/description.md -->
-`<auro-card>` is
-an [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements).
-It is a customizable container that can hold many different forms of text or image content.
-Consider it a refined framework for presenting images and accompanying blurbs, ideally suited for (but not limited to)
-showcasing a curated collection containing an `image`, `title`, `text`, and a `cta` (call to action).
-
-The card details are broken down into `title`, `description`, `cta`, and `disclaimer`.
+`<auro-card>` is highly customizable [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) is a type of UI design component that display content and actions about a single topic.
 <!-- AURO-GENERATED-CONTENT:END -->
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/readmeAddlInfo.md) -->
 <!-- The below content is automatically added from ./../docs/partials/readmeAddlInfo.md -->
@@ -90,22 +84,53 @@ import "@aurodesignsystem/auro-card";
 <!-- The below code snippet is automatically added from ./../apiExamples/basic.html -->
 
 ```html
-<auro-card>
-  <!-- Note the image set to 375px, this determines your card width by default -->
-  <img
-    slot="image"
-    src="https://picsum.photos/375/375"
-    alt="Random insert 0"/>
-  <h3 slot="header">Card Title</h3>
-  <p slot="description">
-    Context goes here. Describe the page this card represents.
-  </p>
-  <div slot="cta">
-    <auro-hyperlink href="/" nav target="_blank">
-      More info
-    </auro-hyperlink>
-  </div>
-</auro-card>
+<div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
+  <auro-card>
+    <img
+      slot="image"
+      src="https://picsum.photos/300/300?random=0"
+      alt="Random insert"/>
+    <h3 slot="header">Card Title</h3>
+    <p slot="description">
+      Context goes here.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+  <auro-card style="max-width: 300px">
+    <img
+      slot="image"
+      src="https://picsum.photos/300/200?random=1"
+      alt="Random insert"/>
+    <h3 slot="header">Card Title</h3>
+    <p slot="description">
+      Context goes here. Use this area to communicate more information to your users.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+  <auro-card style="max-width: 100px">
+    <img
+      slot="image"
+      src="https://picsum.photos/100/300?random=1"
+      alt="Random insert"/>
+    <h3 slot="header">Title</h3>
+    <p slot="description">
+      Context goes here.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+</div>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 
@@ -136,18 +161,13 @@ In cases where the project is not able to process JS assets, there are pre-proce
 <!-- The below content is automatically added from ./../docs/partials/useCases.md -->
 The `<auro-card>` element can be use in a variety of ways, including:
 
-- Content Preview: Cards can be used to provide a preview of content. For example, on a blog, each card could represent
-  a post with a title, an excerpt, and a link to read more.
-- Navigation: Cards can also serve as navigation elements. Each card could represent a different page or section of the
-  website, and clicking on the card would take the user to that section.
-- Interactive Elements: Cards can be interactive, with elements like buttons, links, or forms. For example, a card could
-  contain a short survey or a sign-up form.
-- Product Display: In e-commerce, cards can be used to display products. Each card could contain an image of the
-  product, its name, price, and a button to add it to the cart.
-- User Profiles: On social media or team pages, cards can be used to display user or team member profiles. Each card
-  could contain a photo, name, role, and a brief bio or description.
-- Informational Cards: Cards can be used to display information in a more structured way. For example, on a weather app,
-  each card could represent a day of the week with the day's weather conditions and temperature.
+- **Navigation**: Cards can be used for navigation purposes.
+- **Featured information**: Cards can be used to display featured information or related content.
+- **Content containers**: Cards can be used to organize information consistently within a page.
+- **Grouping information**: Cards can be used to group information.
+- **Providing a visual hierarchy**: Cards can provide a clear visual hierarchy, organizing information into brief, self-contained units.
+- **Providing an overview**: Cards can serve as an overview and an entry point for more detailed information.
+- **Providing a summary:** Cards can present a summary and link to additional details.
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## API Code Examples
@@ -158,22 +178,53 @@ The `<auro-card>` element can be use in a variety of ways, including:
 <!-- The below code snippet is automatically added from ./../apiExamples/basic.html -->
 
 ```html
-<auro-card>
-  <!-- Note the image set to 375px, this determines your card width by default -->
-  <img
-    slot="image"
-    src="https://picsum.photos/375/375"
-    alt="Random insert 0"/>
-  <h3 slot="header">Card Title</h3>
-  <p slot="description">
-    Context goes here. Describe the page this card represents.
-  </p>
-  <div slot="cta">
-    <auro-hyperlink href="/" nav target="_blank">
-      More info
-    </auro-hyperlink>
-  </div>
-</auro-card>
+<div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
+  <auro-card>
+    <img
+      slot="image"
+      src="https://picsum.photos/300/300?random=0"
+      alt="Random insert"/>
+    <h3 slot="header">Card Title</h3>
+    <p slot="description">
+      Context goes here.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+  <auro-card style="max-width: 300px">
+    <img
+      slot="image"
+      src="https://picsum.photos/300/200?random=1"
+      alt="Random insert"/>
+    <h3 slot="header">Card Title</h3>
+    <p slot="description">
+      Context goes here. Use this area to communicate more information to your users.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+  <auro-card style="max-width: 100px">
+    <img
+      slot="image"
+      src="https://picsum.photos/100/300?random=1"
+      alt="Random insert"/>
+    <h3 slot="header">Title</h3>
+    <p slot="description">
+      Context goes here.
+    </p>
+    <div slot="cta">
+      <auro-hyperlink href="/" nav target="_blank">
+        More info
+      </auro-hyperlink>
+    </div>
+  </auro-card>
+</div>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 
