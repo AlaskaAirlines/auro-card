@@ -16,7 +16,7 @@
   display: inline-flex;
   flex-direction: column;
 
-  ::slotted([slot="image"]) {
+  ::slotted(*) {
     display: block;
     object-fit: cover;
     width: 100%;
@@ -26,6 +26,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .imageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content {
+    padding: var(--ds-size-200, $ds-size-200);
   }
 }
 

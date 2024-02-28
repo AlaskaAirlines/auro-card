@@ -8,6 +8,7 @@
 import { LitElement, html } from "lit";
 
 // Import touch detection lib
+import { ifDefined } from 'lit/directives/if-defined.js';
 import styleCss from "./style-css.js";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
@@ -16,11 +17,18 @@ import styleCss from "./style-css.js";
  *
  * @attr {String} variant - Sets the variant of the card. Options include: "inset" or "flush".
  * @attr {String} href - Sets the card to function as a hyperlink to the provided href value & disables the default CTA slot.
- * @attr {String} rel - Sets rel attribute on the {@link https://auro.alaskaair.com/components/auro/hyperlink/api#rel|auro-hyperlink}.
- * @attr {String} role - Sets role attribute on the {@link https://auro.alaskaair.com/components/auro/hyperlink/api#role|auro-hyperlink}
- * @attr {String} target - Sets target attribute on the {@link https://auro.alaskaair.com/components/auro/hyperlink/api#target|auro-hyperlink}
+ * @attr {String} rel - Sets rel attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#rel).
+ * @attr {String} role - Sets role attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#role).
+ * @attr {String} target - Sets target attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#target).
  */
+
 export class AuroCard extends LitElement {
+  constructor () {
+    super();
+
+    // Properly defines the role of this new custom element for screen readers.
+    this.setAttribute('role', 'article');
+  }
 
   static get styles() {
     return [styleCss];
@@ -53,8 +61,8 @@ export class AuroCard extends LitElement {
 
   // function that renders the HTML and CSS into the scope of the component
   render() {
-    const innerHtml = html`
-        <div part="imageWrapper">
+    const cardContent = html`
+        <div class="imageWrapper" part="imageWrapper">
             <slot name="image" part="image"></slot>
         </div>
         <div id="content-within" class="content" part="content">
@@ -69,14 +77,14 @@ export class AuroCard extends LitElement {
         ? html`
           <auro-hyperlink
             aria-labelledby="content-within"
-            href="${this.href}"
-            rel="${this.rel}"
-            role="${this.role}"
-            target="${this.target}"
+            href="${ifDefined(this.href ? this.href : undefined)}"
+            rel="${ifDefined(this.rel ? this.rel : undefined)}"
+            role="${ifDefined(this.role ? this.role : undefined)}"
+            target="${ifDefined(this.target ? this.target : undefined)}"
         >
-          ${innerHtml}
+          ${cardContent}
         </auro-hyperlink>`
-        : innerHtml
+      : cardContent
       }
     `;
   }
