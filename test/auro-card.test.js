@@ -46,6 +46,18 @@ describe('auro-card', () => {
     await expect(link.length).to.equal(1);
   });
 
+  it('verify that attributes are passed down to auro-hyperlink ', async () => {
+    const el = await fixture(html`
+      <auro-card href="/auro" rel="hyperlink" role="button" target="parent"></auro-card>
+    `);
+
+    const anchor = el.shadowRoot.querySelector('auro-hyperlink');
+
+    expect(anchor).to.have.attribute('rel', 'hyperlink');
+    expect(anchor).to.have.attribute('role', 'button');
+    expect(anchor).to.have.attribute('target', 'parent');
+  });
+
   it('CTA is rendered when `navigationLink` attribute is NOT present', async () => {
     const el = await fixWebComponent( undefined)
     const link = el.shadowRoot.querySelector(`slot[name="cta"]`);
