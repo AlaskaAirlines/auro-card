@@ -1,17 +1,72 @@
-<auro-card href="/" style="max-width: 300px">
-  <img
-    slot="image"
-    src="https://picsum.photos/300/100"
-    alt="Random insert 0"/>
-  <auro-header slot="header" level="3" display="600">
-    Header
-  </auro-header>
-  <div slot="description">
-    <p>
-      Context goes here. Describe the page this card represents.
+<div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 3rem;">
+  <!-- -->
+  <!-- baseline navigation style auro-card -->
+  <!-- -->
+  <auro-card href="/" style="max-width: 300px" center>
+    <img
+      slot="image"
+      src="https://picsum.photos/300/100?random=1"
+      alt="Random insert 0"/>
+    <auro-header slot="header" level="3" display="600">
+      Header
+    </auro-header>
+    <div slot="description">
+      <p>
+        Context goes here. Describe the page this card represents.
+      </p>
+    </div>
+    <p slot="cta">
+      More info
     </p>
-  </div>
-  <p slot="cta">
-    More info
+  </auro-card>
+  <!-- -->
+  <!-- baseline navigation style auro-card with external link icon -->
+  <!-- -->
+  <auro-card href="/" target="_blank" style="max-width: 300px" center>
+    <img
+      slot="image"
+      src="https://picsum.photos/300/100?random=2"
+      alt="Random insert 0"/>
+    <auro-header slot="header" level="3" display="600">
+      Header
+    </auro-header>
+    <div slot="description">
+      <p>
+        Context goes here. Describe the page this card represents.
+      </p>
+    </div>
+    <p slot="cta">
+      More info
+    </p>
+  </auro-card>
+  <!-- -->
+  <!-- navigation card centered style with auro-icon -->
+  <!-- -->
+  <style>
+    /* This selector uses the `imageWrapper` CSS part attributed to the `image` content slot */
+    .icon-card::part(imageWrapper) {
+      margin-top: var(--ds-size-400, 2rem)
+    }
+  </style>
+  <auro-card
+    center
+    class="icon-card"
+    href="/"
+    style="max-width: 300px;"
+    variant="inset-content">
+  <auro-icon
+    slot="image"
+    category="interface"
+    name="qr-code-stroke"
+    customColor
+    customSize
+    style="color: var(--ds-color-brand-breeze-400, #00cff0); width: 60px;">
+  </auro-icon>
+  <auro-header slot="header" level="3" display="600">
+    Card Title
+  </auro-header>
+  <p slot="description">
+    Context goes here. Describe the page this card represents.
   </p>
 </auro-card>
+</div>
