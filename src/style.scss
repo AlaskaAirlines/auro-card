@@ -16,7 +16,7 @@
   display: inline-flex;
   flex-direction: column;
 
-  ::slotted(*) {
+  ::slotted(img) {
     display: block;
     object-fit: cover;
     width: 100%;
@@ -35,13 +35,20 @@
   }
 
   .content {
-    padding: var(--ds-size-200, $ds-size-200);
+    padding: var(--ds-size-200, $ds-size-200) 0;
+    padding-top: 0;
   }
 }
 
-:host([variant="inset-content"]) {
+:host([center]) {
+  text-align: center;
+}
+
+:host([variant="inset-content"]),
+:host([href]) {
   &::part(content) {
     padding: var(--ds-size-200, $ds-size-200);
+    padding-top: 0;
   }
 }
 
@@ -62,6 +69,7 @@
     border-radius: var(--ds-border-radius, $ds-border-radius);
     overflow: hidden;
     box-shadow: var(--ds-elevation-100, $ds-elevation-100);
+    position: relative;
 
     &::part(link) {
       text-decoration: none;
