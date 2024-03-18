@@ -37,8 +37,8 @@ Notice in the second example, there is a CSS constraint of `max-width: 300px` to
 As illustrated there is a lot of layout flexibility afforded to users.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/default.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/default.html -->
   <div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
     <auro-card>
       <img
@@ -70,10 +70,10 @@ As illustrated there is a lot of layout flexibility afforded to users.
         </auro-hyperlink>
       </div>
     </auro-card>
-    <auro-card style="max-width: 100px">
+    <auro-card style="max-width: 150px">
       <img
         slot="image"
-        src="https://picsum.photos/100/300?random=1"
+        src="https://picsum.photos/150/250?random=1"
         alt="Random insert"/>
       <h3 slot="header">Title</h3>
       <p slot="description">
@@ -90,8 +90,8 @@ As illustrated there is a lot of layout flexibility afforded to users.
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/default.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/default.html -->
 
 ```html
 <div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
@@ -125,10 +125,10 @@ As illustrated there is a lot of layout flexibility afforded to users.
       </auro-hyperlink>
     </div>
   </auro-card>
-  <auro-card style="max-width: 100px">
+  <auro-card style="max-width: 150px">
     <img
       slot="image"
-      src="https://picsum.photos/100/300?random=1"
+      src="https://picsum.photos/150/250?random=1"
       alt="Random insert"/>
     <h3 slot="header">Title</h3>
     <p slot="description">
@@ -156,9 +156,9 @@ The following examples make use of the `inset-container` or `inset-content` vari
   <auro-card variant="inset-container" style="max-width: 300px">
     <img
       slot="image"
-      src="https://picsum.photos/200/300?random=0"
+      src="https://picsum.photos/200/200?random=0"
       alt="Random insert"/>
-    <h3 slot="header">Inset Container</h3>
+    <h3 slot="header">Inset 'Container'</h3>
     <p slot="description">
       Context goes here. Describe the page this card represents.
     </p>
@@ -171,9 +171,9 @@ The following examples make use of the `inset-container` or `inset-content` vari
   <auro-card variant="inset-content" style="max-width: 300px">
     <img
       slot="image"
-      src="https://picsum.photos/200/300?random=1"
+      src="https://picsum.photos/200/200?random=1"
       alt="Random insert"/>
-    <h3 slot="header">Inset Content</h3>
+    <h3 slot="header">Inset 'Content'</h3>
     <p slot="description">
       Context goes here. Describe the page this card represents.
     </p>
@@ -196,9 +196,9 @@ The following examples make use of the `inset-container` or `inset-content` vari
   <auro-card variant="inset-container" style="max-width: 300px">
     <img
       slot="image"
-      src="https://picsum.photos/200/300?random=0"
+      src="https://picsum.photos/200/200?random=0"
       alt="Random insert"/>
-    <h3 slot="header">Inset Container</h3>
+    <h3 slot="header">Inset 'Container'</h3>
     <p slot="description">
       Context goes here. Describe the page this card represents.
     </p>
@@ -211,9 +211,9 @@ The following examples make use of the `inset-container` or `inset-content` vari
   <auro-card variant="inset-content" style="max-width: 300px">
     <img
       slot="image"
-      src="https://picsum.photos/200/300?random=1"
+      src="https://picsum.photos/200/200?random=1"
       alt="Random insert"/>
-    <h3 slot="header">Inset Content</h3>
+    <h3 slot="header">Inset 'Content'</h3>
     <p slot="description">
       Context goes here. Describe the page this card represents.
     </p>
@@ -313,139 +313,22 @@ Illustrated below is the `border` attribute. This feature defines a single board
 
 ### Navigation
 
+The `auro-card` custom element, with its `href` attribute, creates a `auro-hyperlink` element to web pages, files, email addresses, locations in the same page, or anything else a URL can address. The second example illustrates the accessible icon when using the `target` attribute.
+
+Additionally notice the navigation card with the QR code icon. See in this example how the CSS part of `imageWrapper` was used to add additional margin spacing to the top of the icon placement.
+
 <div class="exampleWrapper">
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/navigation.html) -->
 <!-- The below content is automatically added from ./../../apiExamples/navigation.html -->
-<auro-card href="/" style="max-width: 300px">
-  <img
-    slot="image"
-    src="https://picsum.photos/300/100"
-    alt="Random insert 0"/>
-  <auro-header slot="header" level="3" display="600">
-    Header
-  </auro-header>
-  <div slot="description">
-    <p>
-      Context goes here. Describe the page this card represents.
-    </p>
-  </div>
-  <p slot="cta">
-    More info
-  </p>
-</auro-card>
-<!-- AURO-GENERATED-CONTENT:END -->
-</div>
-<auro-accordion alignRight>
-  <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/navigation.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/navigation.html -->
-
-```html
-<auro-card href="/" style="max-width: 300px">
-  <img
-    slot="image"
-    src="https://picsum.photos/300/100"
-    alt="Random insert 0"/>
-  <auro-header slot="header" level="3" display="600">
-    Header
-  </auro-header>
-  <div slot="description">
-    <p>
-      Context goes here. Describe the page this card represents.
-    </p>
-  </div>
-  <p slot="cta">
-    More info
-  </p>
-</auro-card>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
-
-### Icon
-
-- **Note**: The width set on container to enable centering of image.
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/icon.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/icon.html -->
-  <auro-card style="max-width: 375px; text-align: center" variant="inset-container">
+<div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 3rem;">
+  <!-- -->
+  <!-- baseline navigation style auro-card -->
+  <!-- -->
+  <auro-card href="/" style="max-width: 300px" center>
     <img
       slot="image"
-      alt="Random insert 0"
-      class="inset-container-image"
-      src="https://picsum.photos/100/50"
-      style="
-        width: unset;
-        flex-grow: 0;
-        margin-bottom: var(--ds-size-300);
-      "
-    />
-    <auro-header slot="header" level="3" display="600">
-      Card Title
-    </auro-header>
-    <div slot="description" style="margin-bottom: var(--ds-size-300);">
-      <p>
-        Context goes here. Describe the page this card represents.
-      </p>
-    </div>
-    <p slot="cta">
-      <auro-hyperlink href="/" nav target="_blank">
-        More info
-      </auro-hyperlink>
-    </p>
-  </auro-card>
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-<auro-accordion alignRight>
-  <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/icon.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/icon.html -->
-
-```html
-<auro-card style="max-width: 375px; text-align: center" variant="inset-container">
-  <img
-    slot="image"
-    alt="Random insert 0"
-    class="inset-container-image"
-    src="https://picsum.photos/100/50"
-    style="
-      width: unset;
-      flex-grow: 0;
-      margin-bottom: var(--ds-size-300);
-    "
-  />
-  <auro-header slot="header" level="3" display="600">
-    Card Title
-  </auro-header>
-  <div slot="description" style="margin-bottom: var(--ds-size-300);">
-    <p>
-      Context goes here. Describe the page this card represents.
-    </p>
-  </div>
-  <p slot="cta">
-    <auro-hyperlink href="/" nav target="_blank">
-      More info
-    </auro-hyperlink>
-  </p>
-</auro-card>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
-
-### Rounded
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/round-image.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/round-image.html -->
-  <auro-card>
-    <!-- Image set to 134px -->
-    <img
-      slot="image"
-      src="https://picsum.photos/134/134"
-      alt="Random insert 0"
-      style="border-radius: 50%; overflow: hidden; width: unset; margin: 0 auto;"
-    />
+      src="https://picsum.photos/300/100?random=1"
+      alt="Random insert 0"/>
     <auro-header slot="header" level="3" display="600">
       Header
     </auro-header>
@@ -455,81 +338,218 @@ Illustrated below is the `border` attribute. This feature defines a single board
       </p>
     </div>
     <p slot="cta">
-      <auro-hyperlink href="/" nav target="_blank">
-        More info
-      </auro-hyperlink>
+      More info
     </p>
   </auro-card>
-  <!-- AURO-GENERATED-CONTENT:END -->
+  <!-- -->
+  <!-- baseline navigation style auro-card with external link icon -->
+  <!-- -->
+  <auro-card href="/" target="_blank" style="max-width: 300px" center>
+    <img
+      slot="image"
+      src="https://picsum.photos/300/100?random=2"
+      alt="Random insert 0"/>
+    <auro-header slot="header" level="3" display="600">
+      Header
+    </auro-header>
+    <div slot="description">
+      <p>
+        Context goes here. Describe the page this card represents.
+      </p>
+    </div>
+    <p slot="cta">
+      More info
+    </p>
+  </auro-card>
+  <!-- -->
+  <!-- navigation card centered style with auro-icon -->
+  <!-- -->
+  <style>
+    /* This selector uses the `imageWrapper` CSS part attributed to the `image` content slot */
+    .icon-card::part(imageWrapper) {
+      margin-top: var(--ds-size-400, 2rem)
+    }
+  </style>
+  <auro-card
+    center
+    class="icon-card"
+    href="/"
+    style="max-width: 300px;"
+    variant="inset-content">
+  <auro-icon
+    slot="image"
+    category="interface"
+    name="qr-code-stroke"
+    customColor
+    customSize
+    style="color: var(--ds-color-brand-breeze-400, #00cff0); width: 60px;">
+  </auro-icon>
+  <auro-header slot="header" level="3" display="600">
+    Card Title
+  </auro-header>
+  <p slot="description">
+    Context goes here. Describe the page this card represents.
+  </p>
+</auro-card>
+</div>
+<!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/round-image.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/round-image.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/navigation.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/navigation.html -->
 
 ```html
-<auro-card>
-  <!-- Image set to 134px -->
-  <img
-    slot="image"
-    src="https://picsum.photos/134/134"
-    alt="Random insert 0"
-    style="border-radius: 50%; overflow: hidden; width: unset; margin: 0 auto;"
-  />
-  <auro-header slot="header" level="3" display="600">
-    Header
-  </auro-header>
-  <div slot="description">
-    <p>
-      Context goes here. Describe the page this card represents.
-    </p>
-  </div>
-  <p slot="cta">
-    <auro-hyperlink href="/" nav target="_blank">
+<div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 3rem;">
+  <!-- -->
+  <!-- baseline navigation style auro-card -->
+  <!-- -->
+  <auro-card href="/" style="max-width: 300px" center>
+    <img
+      slot="image"
+      src="https://picsum.photos/300/100?random=1"
+      alt="Random insert 0"/>
+    <auro-header slot="header" level="3" display="600">
+      Header
+    </auro-header>
+    <div slot="description">
+      <p>
+        Context goes here. Describe the page this card represents.
+      </p>
+    </div>
+    <p slot="cta">
       More info
-    </auro-hyperlink>
+    </p>
+  </auro-card>
+  <!-- -->
+  <!-- baseline navigation style auro-card with external link icon -->
+  <!-- -->
+  <auro-card href="/" target="_blank" style="max-width: 300px" center>
+    <img
+      slot="image"
+      src="https://picsum.photos/300/100?random=2"
+      alt="Random insert 0"/>
+    <auro-header slot="header" level="3" display="600">
+      Header
+    </auro-header>
+    <div slot="description">
+      <p>
+        Context goes here. Describe the page this card represents.
+      </p>
+    </div>
+    <p slot="cta">
+      More info
+    </p>
+  </auro-card>
+  <!-- -->
+  <!-- navigation card centered style with auro-icon -->
+  <!-- -->
+  <style>
+    /* This selector uses the `imageWrapper` CSS part attributed to the `image` content slot */
+    .icon-card::part(imageWrapper) {
+      margin-top: var(--ds-size-400, 2rem)
+    }
+  </style>
+  <auro-card
+    center
+    class="icon-card"
+    href="/"
+    style="max-width: 300px;"
+    variant="inset-content">
+  <auro-icon
+    slot="image"
+    category="interface"
+    name="qr-code-stroke"
+    customColor
+    customSize
+    style="color: var(--ds-color-brand-breeze-400, #00cff0); width: 60px;">
+  </auro-icon>
+  <auro-header slot="header" level="3" display="600">
+    Card Title
+  </auro-header>
+  <p slot="description">
+    Context goes here. Describe the page this card represents.
   </p>
 </auro-card>
+</div>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
 ### Centered Content
 
-Text can be centered by assigning the `text-align: center` attribute to the `auro-card` element.
-Similarly, elements within `auro-card` can be centered with the `justify-content:center` and/or `align-items:center`
-attributes to use flexbox to vertically and horizontally center the content within the `auro-card` container. That said, the centering options are not limited to these
-examples and can be achieved by a number of means.
+Text can be centered by assigning the `text-align: center` attribute to the `auro-card` element. Similarly, elements within `auro-card` can be centered with the `justify-content:center` and/or `align-items:center` attributes to use flexbox to vertically and horizontally center the content within the `auro-card` container.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/center.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/center.html -->
-  <auro-card
-    style="
-      text-align:center;
-      justify-content:center;
-      align-items:center;
-      width: 400px;
-    "
-    variant="inset-container"
-  >
-    <img
-      slot="image"
-      src="https://picsum.photos/200/200"
-      alt="Random insert 0"
-      style="max-width: 200px; overflow: hidden; width: unset; margin: 0 auto;"
-    />
-    <h3 slot="header">Centered Content</h3>
-    <p slot="description" style="max-width: 200px;">
-      This is centered description content. Also, notice the CTA and image are
-      centered.
-    </p>
-    <div slot="cta">
-      <auro-hyperlink href="/" nav target="_blank">
+  <div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
+    <!--
+      Small image option
+    -->
+    <auro-card
+      center
+      style="
+        justify-content:center;
+        align-items:center;
+        width: 350px;
+      ">
+      <img
+        slot="image"
+        src="https://picsum.photos/300/100?random=1"
+        alt="Random insert 0"
+        style="max-width: 200px; overflow: hidden; width: unset; margin: 0 auto;"
+      />
+      <h3 slot="header" style="max-width: 250px;">Centered Content</h3>
+      <p slot="description" style="max-width: 250px;">
+        This is centered description content. Also, notice the CTA and image are
+        centered.
+      </p>
+      <auro-hyperlink href="/" nav target="_blank" slot="cta">
         More info
       </auro-hyperlink>
-    </div>
-  </auro-card>
+    </auro-card>
+    <!--
+      Avatar image option
+    -->
+    <auro-card style="max-width: 250px;" center>
+      <auro-avatar slot="image" code="pdx" ariaVisible alt="iconic image of Portland, OR"></auro-avatar>
+      <auro-header slot="header" level="3" display="600">
+        Header
+      </auro-header>
+      <p slot="description">
+        Context goes here. Describe the page this card represents.
+      </p>
+      <auro-hyperlink href="/" nav target="_blank" slot="cta">
+        More info
+      </auro-hyperlink>
+    </auro-card>
+    <!--
+      Icon size image option using variant="inset-container"
+    -->
+    <auro-card
+      center
+      style="max-width: 280px;"
+      variant="inset-container">
+      <auro-icon
+        slot="image"
+        category="interface"
+        name="qr-code-stroke"
+        customColor
+        customSize
+        style="color: var(--ds-color-brand-breeze-400, #00cff0); width: 60px;">
+      </auro-icon>
+      <auro-header slot="header" level="3" display="600">
+        Card Title
+      </auro-header>
+      <p slot="description">
+        Context goes here. Describe the page this card represents.
+      </p>
+      <auro-hyperlink href="/" nav target="_blank" slot="cta">
+        More info
+      </auro-hyperlink>
+    </auro-card>
+  </div>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
@@ -538,44 +558,82 @@ examples and can be achieved by a number of means.
 <!-- The below code snippet is automatically added from ./../../apiExamples/center.html -->
 
 ```html
-<auro-card
-  style="
-    text-align:center;
-    justify-content:center;
-    align-items:center;
-    width: 400px;
-  "
-  variant="inset-container"
->
-  <img
-    slot="image"
-    src="https://picsum.photos/200/200"
-    alt="Random insert 0"
-    style="max-width: 200px; overflow: hidden; width: unset; margin: 0 auto;"
-  />
-  <h3 slot="header">Centered Content</h3>
-  <p slot="description" style="max-width: 200px;">
-    This is centered description content. Also, notice the CTA and image are
-    centered.
-  </p>
-  <div slot="cta">
-    <auro-hyperlink href="/" nav target="_blank">
+<div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
+  <!--
+    Small image option
+  -->
+  <auro-card
+    center
+    style="
+      justify-content:center;
+      align-items:center;
+      width: 350px;
+    ">
+    <img
+      slot="image"
+      src="https://picsum.photos/300/100?random=1"
+      alt="Random insert 0"
+      style="max-width: 200px; overflow: hidden; width: unset; margin: 0 auto;"
+    />
+    <h3 slot="header" style="max-width: 250px;">Centered Content</h3>
+    <p slot="description" style="max-width: 250px;">
+      This is centered description content. Also, notice the CTA and image are
+      centered.
+    </p>
+    <auro-hyperlink href="/" nav target="_blank" slot="cta">
       More info
     </auro-hyperlink>
-  </div>
-</auro-card>
+  </auro-card>
+  <!--
+    Avatar image option
+  -->
+  <auro-card style="max-width: 250px;" center>
+    <auro-avatar slot="image" code="pdx" ariaVisible alt="iconic image of Portland, OR"></auro-avatar>
+    <auro-header slot="header" level="3" display="600">
+      Header
+    </auro-header>
+    <p slot="description">
+      Context goes here. Describe the page this card represents.
+    </p>
+    <auro-hyperlink href="/" nav target="_blank" slot="cta">
+      More info
+    </auro-hyperlink>
+  </auro-card>
+  <!--
+    Icon size image option using variant="inset-container"
+  -->
+  <auro-card
+    center
+    style="max-width: 280px;"
+    variant="inset-container">
+    <auro-icon
+      slot="image"
+      category="interface"
+      name="qr-code-stroke"
+      customColor
+      customSize
+      style="color: var(--ds-color-brand-breeze-400, #00cff0); width: 60px;">
+    </auro-icon>
+    <auro-header slot="header" level="3" display="600">
+      Card Title
+    </auro-header>
+    <p slot="description">
+      Context goes here. Describe the page this card represents.
+    </p>
+    <auro-hyperlink href="/" nav target="_blank" slot="cta">
+      More info
+    </auro-hyperlink>
+  </auro-card>
+</div>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
 ### Complex cards
 
-These cards are loosely based on the "Typography" example images [here](https://alaskaair.com) and serve as a way to
-show
-that complex card-like layouts are possible with `auro-card` beyond what we show here.
+These cards are loosely based on the "Typography" example images from [alaskaair.com](https://alaskaair.com) and serve as a way to show that complex card-like layouts are possible with `auro-card` beyond what we show here.
 
-Note that this example also uses a `style` tag to set most of the styles - this is to show that you don't have to use
-inline styles and can generally use whatever styling solution you prefer.
+Note that this example also uses a `style` tag to set most of the styles - this is to show that you don't have to use inline styles and can generally use whatever styling solution you prefer.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/typography-cards.html) -->
@@ -583,28 +641,28 @@ inline styles and can generally use whatever styling solution you prefer.
   <style>
     .complex-card-wrapper {
       display: flex;
-      padding: 2rem;
+      padding: var(--ds-size-400, 2rem);
     }
     .white-card-example {
       background: var(--ds-color-background-lightest, #ffffff);
     }
     .blue-card-example {
       background: var(--ds-color-background-darker, #01426a);
-      color: #fff;
+      color: var(--ds-color-base-white, #ffffff);
     }
     .white-card-example, .blue-card-example {
       flex: 1;
-      padding: 2rem 1.5rem;
+      padding: var(--ds-size-400, 2rem) var(--ds-size-300, 1.5rem);
     }
     .white-card-example::part(content), .blue-card-example::part(content) {
-      padding: 2rem 3rem 0;
+      padding: var(--ds-size-400, 2rem) var(--ds-size-600, 3rem) 0;
     }
     .white-card-example::part(cta), .blue-card-example::part(cta) {
       display: flex;
       justify-content: center;
     }
     .white-card-example::part(header), .blue-card-example::part(header) {
-      font-size: 1.5rem;
+      font-size: var(--ds-size-300, 1.5rem);
     }
   </style>
   <div
@@ -613,7 +671,7 @@ inline styles and can generally use whatever styling solution you prefer.
     <auro-card
       class="white-card-example"
     >
-      <div slot="header" style="margin-bottom: 1.5rem;">
+      <div slot="header" style="margin-bottom: var(--ds-size-300, 1.5rem);">
         <span>Seattle, WA (SEA) to</span>
         <p>Los Angeles (LAX)</p>
       </div>
@@ -630,7 +688,7 @@ inline styles and can generally use whatever styling solution you prefer.
     <auro-card
       class="blue-card-example"
     >
-      <div slot="header" style="margin-bottom: 1.5rem;">
+      <div slot="header" style="margin-bottom: var(--ds-size-300, 1.5rem);">
         <span>Seattle, WA (SEA) to</span>
         <p>Los Angeles (LAX)</p>
       </div>
@@ -656,28 +714,28 @@ inline styles and can generally use whatever styling solution you prefer.
 <style>
   .complex-card-wrapper {
     display: flex;
-    padding: 2rem;
+    padding: var(--ds-size-400, 2rem);
   }
   .white-card-example {
     background: var(--ds-color-background-lightest, #ffffff);
   }
   .blue-card-example {
     background: var(--ds-color-background-darker, #01426a);
-    color: #fff;
+    color: var(--ds-color-base-white, #ffffff);
   }
   .white-card-example, .blue-card-example {
     flex: 1;
-    padding: 2rem 1.5rem;
+    padding: var(--ds-size-400, 2rem) var(--ds-size-300, 1.5rem);
   }
   .white-card-example::part(content), .blue-card-example::part(content) {
-    padding: 2rem 3rem 0;
+    padding: var(--ds-size-400, 2rem) var(--ds-size-600, 3rem) 0;
   }
   .white-card-example::part(cta), .blue-card-example::part(cta) {
     display: flex;
     justify-content: center;
   }
   .white-card-example::part(header), .blue-card-example::part(header) {
-    font-size: 1.5rem;
+    font-size: var(--ds-size-300, 1.5rem);
   }
 </style>
 <div
@@ -686,7 +744,7 @@ inline styles and can generally use whatever styling solution you prefer.
   <auro-card
     class="white-card-example"
   >
-    <div slot="header" style="margin-bottom: 1.5rem;">
+    <div slot="header" style="margin-bottom: var(--ds-size-300, 1.5rem);">
       <span>Seattle, WA (SEA) to</span>
       <p>Los Angeles (LAX)</p>
     </div>
@@ -703,7 +761,7 @@ inline styles and can generally use whatever styling solution you prefer.
   <auro-card
     class="blue-card-example"
   >
-    <div slot="header" style="margin-bottom: 1.5rem;">
+    <div slot="header" style="margin-bottom: var(--ds-size-300, 1.5rem);">
       <span>Seattle, WA (SEA) to</span>
       <p>Los Angeles (LAX)</p>
     </div>

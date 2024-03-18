@@ -1,26 +1,67 @@
-<auro-card
-  style="
-    text-align:center;
-    justify-content:center;
-    align-items:center;
-    width: 400px;
-  "
-  variant="inset-container"
->
-  <img
-    slot="image"
-    src="https://picsum.photos/200/200"
-    alt="Random insert 0"
-    style="max-width: 200px; overflow: hidden; width: unset; margin: 0 auto;"
-  />
-  <h3 slot="header">Centered Content</h3>
-  <p slot="description" style="max-width: 200px;">
-    This is centered description content. Also, notice the CTA and image are
-    centered.
-  </p>
-  <div slot="cta">
-    <auro-hyperlink href="/" nav target="_blank">
+<div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
+  <!--
+    Small image option
+  -->
+  <auro-card
+    center
+    style="
+      justify-content:center;
+      align-items:center;
+      width: 350px;
+    ">
+    <img
+      slot="image"
+      src="https://picsum.photos/300/100?random=1"
+      alt="Random insert 0"
+      style="max-width: 200px; overflow: hidden; width: unset; margin: 0 auto;"
+    />
+    <h3 slot="header" style="max-width: 250px;">Centered Content</h3>
+    <p slot="description" style="max-width: 250px;">
+      This is centered description content. Also, notice the CTA and image are
+      centered.
+    </p>
+    <auro-hyperlink href="/" nav target="_blank" slot="cta">
       More info
     </auro-hyperlink>
-  </div>
-</auro-card>
+  </auro-card>
+  <!--
+    Avatar image option
+  -->
+  <auro-card style="max-width: 250px;" center>
+    <auro-avatar slot="image" code="pdx" ariaVisible alt="iconic image of Portland, OR"></auro-avatar>
+    <auro-header slot="header" level="3" display="600">
+      Header
+    </auro-header>
+    <p slot="description">
+      Context goes here. Describe the page this card represents.
+    </p>
+    <auro-hyperlink href="/" nav target="_blank" slot="cta">
+      More info
+    </auro-hyperlink>
+  </auro-card>
+  <!--
+    Icon size image option using variant="inset-container"
+  -->
+  <auro-card
+    center
+    style="max-width: 280px;"
+    variant="inset-container">
+    <auro-icon
+      slot="image"
+      category="interface"
+      name="qr-code-stroke"
+      customColor
+      customSize
+      style="color: var(--ds-color-brand-breeze-400, #00cff0); width: 60px;">
+    </auro-icon>
+    <auro-header slot="header" level="3" display="600">
+      Card Title
+    </auro-header>
+    <p slot="description">
+      Context goes here. Describe the page this card represents.
+    </p>
+    <auro-hyperlink href="/" nav target="_blank" slot="cta">
+      More info
+    </auro-hyperlink>
+  </auro-card>
+</div>

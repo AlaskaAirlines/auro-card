@@ -25,14 +25,14 @@ Notice in the second example, there is a CSS constraint of `max-width: 300px` to
 As illustrated there is a lot of layout flexibility afforded to users.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/default.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/default.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -71,6 +71,10 @@ Illustrated below is the `border` attribute. This feature defines a single board
 
 ### Navigation
 
+The `auro-card` custom element, with its `href` attribute, creates a `auro-hyperlink` element to web pages, files, email addresses, locations in the same page, or anything else a URL can address. The second example illustrates the accessible icon when using the `target` attribute.
+
+Additionally notice the navigation card with the QR code icon. See in this example how the CSS part of `imageWrapper` was used to add additional margin spacing to the top of the icon placement.
+
 <div class="exampleWrapper">
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/navigation.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
@@ -83,42 +87,9 @@ Illustrated below is the `border` attribute. This feature defines a single board
 
 </auro-accordion>
 
-### Icon
-
-- **Note**: The width set on container to enable centering of image.
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/icon.html) -->
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-<auro-accordion alignRight>
-  <span slot="trigger">See code</span>
-
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/icon.html) -->
-<!-- AURO-GENERATED-CONTENT:END -->
-
-</auro-accordion>
-
-### Rounded
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/round-image.html) -->
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-<auro-accordion alignRight>
-  <span slot="trigger">See code</span>
-
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/round-image.html) -->
-<!-- AURO-GENERATED-CONTENT:END -->
-
-</auro-accordion>
-
 ### Centered Content
 
-Text can be centered by assigning the `text-align: center` attribute to the `auro-card` element.
-Similarly, elements within `auro-card` can be centered with the `justify-content:center` and/or `align-items:center`
-attributes to use flexbox to vertically and horizontally center the content within the `auro-card` container. That said, the centering options are not limited to these
-examples and can be achieved by a number of means.
+Text can be centered by assigning the `text-align: center` attribute to the `auro-card` element. Similarly, elements within `auro-card` can be centered with the `justify-content:center` and/or `align-items:center` attributes to use flexbox to vertically and horizontally center the content within the `auro-card` container.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/center.html) -->
@@ -134,12 +105,9 @@ examples and can be achieved by a number of means.
 
 ### Complex cards
 
-These cards are loosely based on the "Typography" example images [here](https://alaskaair.com) and serve as a way to
-show
-that complex card-like layouts are possible with `auro-card` beyond what we show here.
+These cards are loosely based on the "Typography" example images from [alaskaair.com](https://alaskaair.com) and serve as a way to show that complex card-like layouts are possible with `auro-card` beyond what we show here.
 
-Note that this example also uses a `style` tag to set most of the styles - this is to show that you don't have to use
-inline styles and can generally use whatever styling solution you prefer.
+Note that this example also uses a `style` tag to set most of the styles - this is to show that you don't have to use inline styles and can generally use whatever styling solution you prefer.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/typography-cards.html) -->

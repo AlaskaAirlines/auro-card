@@ -1,28 +1,28 @@
 <style>
   .complex-card-wrapper {
     display: flex;
-    padding: 2rem;
+    padding: var(--ds-size-400, 2rem);
   }
   .white-card-example {
     background: var(--ds-color-background-lightest, #ffffff);
   }
   .blue-card-example {
     background: var(--ds-color-background-darker, #01426a);
-    color: #fff;
+    color: var(--ds-color-base-white, #ffffff);
   }
   .white-card-example, .blue-card-example {
     flex: 1;
-    padding: 2rem 1.5rem;
+    padding: var(--ds-size-400, 2rem) var(--ds-size-300, 1.5rem);
   }
   .white-card-example::part(content), .blue-card-example::part(content) {
-    padding: 2rem 3rem 0;
+    padding: var(--ds-size-400, 2rem) var(--ds-size-600, 3rem) 0;
   }
   .white-card-example::part(cta), .blue-card-example::part(cta) {
     display: flex;
     justify-content: center;
   }
   .white-card-example::part(header), .blue-card-example::part(header) {
-    font-size: 1.5rem;
+    font-size: var(--ds-size-300, 1.5rem);
   }
 </style>
 
@@ -32,7 +32,7 @@
   <auro-card
     class="white-card-example"
   >
-    <div slot="header" style="margin-bottom: 1.5rem;">
+    <div slot="header" style="margin-bottom: var(--ds-size-300, 1.5rem);">
       <span>Seattle, WA (SEA) to</span>
       <p>Los Angeles (LAX)</p>
     </div>
@@ -49,7 +49,7 @@
   <auro-card
     class="blue-card-example"
   >
-    <div slot="header" style="margin-bottom: 1.5rem;">
+    <div slot="header" style="margin-bottom: var(--ds-size-300, 1.5rem);">
       <span>Seattle, WA (SEA) to</span>
       <p>Los Angeles (LAX)</p>
     </div>
