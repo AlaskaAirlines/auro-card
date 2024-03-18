@@ -15,11 +15,24 @@ import styleCss from "./style-css.js";
 /**
  * The auro-card element provides users a flexible way to convey a summary of information.
  *
- * @attr {String} variant - Sets the variant of the card. Options include: "inset" or "flush".
+ * @attr {String} variant - Sets the variant of the card. Options `inset-content`, `inset-container`.
+ * @attr {Boolean} border - Adds desired UI border to the `auro-card` element.
+ * @attr {Boolean} center - Centers content within the scope of the `auro-card`.
  * @attr {String} href - Sets the card to function as a hyperlink to the provided href value & disables the default CTA slot.
  * @attr {String} rel - Sets rel attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#rel).
  * @attr {String} role - Sets role attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#role).
  * @attr {String} target - Sets target attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#target).
+ * @slot image - Content slot for image content.
+ * @slot header - Content slot for string text header content.
+ * @slot description - Content slot for string text description content.
+ * @slot cta - Content slot for call-to-action content.
+ * @csspart content - Apply styles to the outer string text container.
+ * @csspart link - Apply styles to the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#link) element.
+ * @csspart imageWrapper - Apply styles to the outer image slot container.
+ * @csspart image - Apply styles to the named image slot container.
+ * @csspart header - Apply styles to the named header slot container.
+ * @csspart description - Apply styles to the named description slot container.
+ * @csspart cta - Apply styles to the named cta slot container.
  */
 
 export class AuroCard extends LitElement {
