@@ -1,6 +1,6 @@
 # auro-card
 
-The auro-card element provides users a flexible way to convey a summary of information.
+The `<auro-card>` element provides users a flexible way to convey a summary of information.
 
 ## Attributes
 
@@ -17,7 +17,7 @@ The auro-card element provides users a flexible way to convey a summary of infor
 | `rel`     | `rel`     | `String` | Sets rel attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#rel). |
 | `role`    | `role`    | `String` | Sets role attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#role). |
 | `target`  | `target`  | `String` | Sets target attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#target). |
-| `variant` | `variant` | `String` | Sets the variant of the card. Options `inset-content`, `inset-container`. |
+| `variant` | `variant` | `String` | Sets the variant of the card. Options `inset-content`, `inset-container`, `inset-stretch`. |
 
 ## Slots
 

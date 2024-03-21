@@ -1,4 +1,4 @@
-<div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 3rem;">
+<div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 1.8rem;">
   <!-- -->
   <!-- baseline navigation style auro-card -->
   <!-- -->
@@ -7,7 +7,7 @@
       slot="image"
       src="https://picsum.photos/300/100?random=1"
       alt="Random insert 0"/>
-    <auro-header slot="header" level="3" display="600">
+    <auro-header slot="header" level="2" display="500">
       Header
     </auro-header>
     <div slot="description">
@@ -27,7 +27,7 @@
       slot="image"
       src="https://picsum.photos/300/100?random=2"
       alt="Random insert 0"/>
-    <auro-header slot="header" level="3" display="600">
+    <auro-header slot="header" level="2" display="500">
       Header
     </auro-header>
     <div slot="description">
@@ -42,18 +42,12 @@
   <!-- -->
   <!-- navigation card centered style with auro-icon -->
   <!-- -->
-  <style>
-    /* This selector uses the `imageWrapper` CSS part attributed to the `image` content slot */
-    .icon-card::part(imageWrapper) {
-      margin-top: var(--ds-size-400, 2rem)
-    }
-  </style>
   <auro-card
     center
     class="icon-card"
     href="/"
     style="max-width: 300px;"
-    variant="inset-content">
+    variant="inset-stretch">
   <auro-icon
     slot="image"
     category="interface"
@@ -62,7 +56,7 @@
     customSize
     style="color: var(--ds-color-brand-breeze-400, #00cff0); width: 60px;">
   </auro-icon>
-  <auro-header slot="header" level="3" display="600">
+  <auro-header slot="header" level="2" display="500">
     Card Title
   </auro-header>
   <p slot="description">

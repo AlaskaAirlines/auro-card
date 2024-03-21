@@ -22,7 +22,7 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism.css"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@template/demo/api.html/design-tokens@latest/dist/tokens/CSSCustomProperties.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/design-tokens@latest/dist/tokens/CSSCustomProperties.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@latest/dist/demoWrapper.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@latest/dist/elementDemoStyles.css" />
   </head>
@@ -32,7 +32,7 @@
     <script type="module">
       import 'https://cdn.jsdelivr.net/npm/marked@latest/marked.min.js';
       import 'https://cdn.jsdelivr.net/npm/prismjs@latest/prism.js';
-      fetch('/demo/apiExamples.md')
+      fetch('/demo/api.md')
         .then((response) => response.text())
         .then((text) => {
           const rawHtml = marked.parse(text);

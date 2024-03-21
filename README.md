@@ -37,10 +37,11 @@ For the most up to date information on [UI development browser support](https://
 
 ## Install
 
-<!-- AURO-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/usage/componentInstall.md) -->
+<!-- AURO-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/usage/componentInstall_esm.md) -->
 [![Build Status](https://img.shields.io/github/actions/workflow/status/AlaskaAirlines/auro-card/testPublish.yml?style=for-the-badge)](https://github.com/AlaskaAirlines/auro-card/actions/workflows/testPublish.yml)
 [![See it on NPM!](https://img.shields.io/npm/v/@aurodesignsystem/auro-card?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@aurodesignsystem/auro-card)
 [![License](https://img.shields.io/npm/l/@aurodesignsystem/auro-card?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
+![ESM supported](https://img.shields.io/badge/ESM-compatible-FFE900?style=for-the-badge)
 
 ```shell
 $ npm i @aurodesignsystem/auro-card
@@ -117,7 +118,7 @@ In cases where the project is not able to process JS assets, there are pre-proce
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/design-tokens@4.3.1/dist/tokens/CSSCustomProperties.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@5.0.8/dist/bundled/essentials.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@5.1.0/dist/bundled/essentials.css" />
 <script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-card@0.0.0/dist/auro-card__bundled.js" type="module"></script>
 ```
 
@@ -129,13 +130,13 @@ In cases where the project is not able to process JS assets, there are pre-proce
 <!-- The below content is automatically added from ./../docs/partials/useCases.md -->
 The `<auro-card>` element can be use in a variety of ways, including:
 
-- **Navigation**: Cards can be used for navigation purposes.
-- **Featured information**: Cards can be used to display featured information or related content.
-- **Content containers**: Cards can be used to organize information consistently within a page.
-- **Grouping information**: Cards can be used to group information.
-- **Providing a visual hierarchy**: Cards can provide a clear visual hierarchy, organizing information into brief, self-contained units.
-- **Providing an overview**: Cards can serve as an overview and an entry point for more detailed information.
-- **Providing a summary:** Cards can present a summary and link to additional details.
+- Navigation: Cards can be used for navigation purposes.
+- Featured information: Cards can be used to display featured information or related content.
+- Content containers: Cards can be used to organize information consistently within a page.
+- Grouping information: Cards can be used to group information.
+- Providing a visual hierarchy: Cards can provide a clear visual hierarchy, organizing information into brief, self-contained units.
+- Providing an overview: Cards can serve as an overview and an entry point for more detailed information.
+- Providing a summary: Cards can present a summary and link to additional details.
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## API Code Examples
