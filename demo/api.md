@@ -3,7 +3,7 @@
 
 # auro-card
 
-The auro-card element provides users a flexible way to convey a summary of information.
+The `<auro-card>` element provides users a flexible way to convey a summary of information.
 
 ## Attributes
 
@@ -20,7 +20,7 @@ The auro-card element provides users a flexible way to convey a summary of infor
 | [rel](#rel)     | `rel`     | `String` | Sets rel attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#rel). |
 | [role](#role)    | `role`    | `String` | Sets role attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#role). |
 | [target](#target)  | `target`  | `String` | Sets target attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#target). |
-| [variant](#variant) | `variant` | `String` | Sets the variant of the card. Options `inset-content`, `inset-container`. |
+| [variant](#variant) | `variant` | `String` | Sets the variant of the card. Options `inset-content`, `inset-container`, `inset-stretch`. |
 
 ## Slots
 
@@ -48,7 +48,7 @@ The auro-card element provides users a flexible way to convey a summary of infor
 
 ### Default
 
-The following example illustrates a default UI for the `auro-card` element.
+The following example illustrates a default UI for the `<auro-card>` element.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/default.html) -->
@@ -59,7 +59,7 @@ The following example illustrates a default UI for the `auro-card` element.
         slot="image"
         src="https://picsum.photos/300/300?random=0"
         alt="Random insert"/>
-      <h3 slot="header">Card Title</h3>
+      <auro-header slot="header" level="2" display="500">Display card title here</auro-header>
       <p slot="description">
         Context goes here.
       </p>
@@ -74,12 +74,12 @@ The following example illustrates a default UI for the `auro-card` element.
         slot="image"
         src="https://picsum.photos/300/200?random=1"
         alt="Random insert"/>
-      <h3 slot="header">Card Title</h3>
+      <auro-header slot="header" level="2" display="500">Display card title here</auro-header>
       <p slot="description">
         Context goes here. Use this area to communicate more information to your users.
       </p>
       <div slot="cta">
-        <auro-hyperlink href="/" nav target="_blank">
+        <auro-hyperlink href="/" nav target="_blank" type="cta">
           More info
         </auro-hyperlink>
       </div>
@@ -89,7 +89,7 @@ The following example illustrates a default UI for the `auro-card` element.
         slot="image"
         src="https://picsum.photos/150/250?random=1"
         alt="Random insert"/>
-      <h3 slot="header">Title</h3>
+      <auro-header slot="header" level="2" display="500">Display title</auro-header>
       <p slot="description">
         Context goes here.
       </p>
@@ -114,7 +114,7 @@ The following example illustrates a default UI for the `auro-card` element.
       slot="image"
       src="https://picsum.photos/300/300?random=0"
       alt="Random insert"/>
-    <h3 slot="header">Card Title</h3>
+    <auro-header slot="header" level="2" display="500">Display card title here</auro-header>
     <p slot="description">
       Context goes here.
     </p>
@@ -129,12 +129,12 @@ The following example illustrates a default UI for the `auro-card` element.
       slot="image"
       src="https://picsum.photos/300/200?random=1"
       alt="Random insert"/>
-    <h3 slot="header">Card Title</h3>
+    <auro-header slot="header" level="2" display="500">Display card title here</auro-header>
     <p slot="description">
       Context goes here. Use this area to communicate more information to your users.
     </p>
     <div slot="cta">
-      <auro-hyperlink href="/" nav target="_blank">
+      <auro-hyperlink href="/" nav target="_blank" type="cta">
         More info
       </auro-hyperlink>
     </div>
@@ -144,7 +144,7 @@ The following example illustrates a default UI for the `auro-card` element.
       slot="image"
       src="https://picsum.photos/150/250?random=1"
       alt="Random insert"/>
-    <h3 slot="header">Title</h3>
+    <auro-header slot="header" level="2" display="500">Display title</auro-header>
     <p slot="description">
       Context goes here.
     </p>
@@ -172,7 +172,7 @@ The following examples make use of the `inset-container` or `inset-content` vari
       slot="image"
       src="https://picsum.photos/200/200?random=0"
       alt="Random insert"/>
-    <h3 slot="header">Inset 'Container'</h3>
+    <auro-header slot="header" level="2" display="500">Inset 'Container'</auro-header>
     <p slot="description">
       Context goes here. Describe the page this card represents.
     </p>
@@ -187,7 +187,7 @@ The following examples make use of the `inset-container` or `inset-content` vari
       slot="image"
       src="https://picsum.photos/200/200?random=1"
       alt="Random insert"/>
-    <h3 slot="header">Inset 'Content'</h3>
+    <auro-header slot="header" level="2" display="500">Inset 'Content'</auro-header>
     <p slot="description">
       Context goes here. Describe the page this card represents.
     </p>
@@ -212,7 +212,7 @@ The following examples make use of the `inset-container` or `inset-content` vari
       slot="image"
       src="https://picsum.photos/200/200?random=0"
       alt="Random insert"/>
-    <h3 slot="header">Inset 'Container'</h3>
+    <auro-header slot="header" level="2" display="500">Inset 'Container'</auro-header>
     <p slot="description">
       Context goes here. Describe the page this card represents.
     </p>
@@ -227,7 +227,7 @@ The following examples make use of the `inset-container` or `inset-content` vari
       slot="image"
       src="https://picsum.photos/200/200?random=1"
       alt="Random insert"/>
-    <h3 slot="header">Inset 'Content'</h3>
+    <auro-header slot="header" level="2" display="500">Inset 'Content'</auro-header>
     <p slot="description">
       Context goes here. Describe the page this card represents.
     </p>
@@ -255,7 +255,7 @@ Illustrated below is the `border` attribute. This feature defines a single board
       slot="image"
       src="https://picsum.photos/200/300?random=3"
       alt="Random insert"/>
-    <h3 slot="header">Inset Container</h3>
+    <auro-header slot="header" level="2" display="500">Inset Container</auro-header>
     <p slot="description">
       Context goes here. Describe the page this card represents.
     </p>
@@ -270,7 +270,7 @@ Illustrated below is the `border` attribute. This feature defines a single board
       slot="image"
       src="https://picsum.photos/200/300?random=4"
       alt="Random insert"/>
-    <h3 slot="header">Inset Content</h3>
+      <auro-header slot="header" level="2" display="500">Inset Content</auro-header>
     <p slot="description">
       Context goes here. Describe the page this card represents.
     </p>
@@ -295,7 +295,7 @@ Illustrated below is the `border` attribute. This feature defines a single board
       slot="image"
       src="https://picsum.photos/200/300?random=3"
       alt="Random insert"/>
-    <h3 slot="header">Inset Container</h3>
+    <auro-header slot="header" level="2" display="500">Inset Container</auro-header>
     <p slot="description">
       Context goes here. Describe the page this card represents.
     </p>
@@ -310,7 +310,7 @@ Illustrated below is the `border` attribute. This feature defines a single board
       slot="image"
       src="https://picsum.photos/200/300?random=4"
       alt="Random insert"/>
-    <h3 slot="header">Inset Content</h3>
+      <auro-header slot="header" level="2" display="500">Inset Content</auro-header>
     <p slot="description">
       Context goes here. Describe the page this card represents.
     </p>
@@ -327,14 +327,14 @@ Illustrated below is the `border` attribute. This feature defines a single board
 
 ### Navigation
 
-The `auro-card` custom element, with its `href` attribute, creates a `auro-hyperlink` element to web pages, files, email addresses, locations in the same page, or anything else a URL can address. The second example illustrates the accessible icon when using the `target` attribute.
+The `<auro-card>` custom element, with its `href` attribute, creates a `auro-hyperlink` element to web pages, files, email addresses, locations in the same page, or anything else a URL can address. The second example illustrates the accessible icon when using the `target` attribute.
 
-Additionally notice the navigation card with the QR code icon. See in this example how the CSS part of `imageWrapper` was used to add additional margin spacing to the top of the icon placement.
+Additionally notice the navigation card with the QR code icon. See in this example how the `variant="inset-stretch"` was used to add additional margin spacing to the top and bottom of the content placement in the card.
 
 <div class="exampleWrapper">
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/navigation.html) -->
 <!-- The below content is automatically added from ./../../apiExamples/navigation.html -->
-<div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 3rem;">
+<div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 1.8rem;">
   <!-- -->
   <!-- baseline navigation style auro-card -->
   <!-- -->
@@ -343,7 +343,7 @@ Additionally notice the navigation card with the QR code icon. See in this examp
       slot="image"
       src="https://picsum.photos/300/100?random=1"
       alt="Random insert 0"/>
-    <auro-header slot="header" level="3" display="600">
+    <auro-header slot="header" level="2" display="500">
       Header
     </auro-header>
     <div slot="description">
@@ -363,7 +363,7 @@ Additionally notice the navigation card with the QR code icon. See in this examp
       slot="image"
       src="https://picsum.photos/300/100?random=2"
       alt="Random insert 0"/>
-    <auro-header slot="header" level="3" display="600">
+    <auro-header slot="header" level="2" display="500">
       Header
     </auro-header>
     <div slot="description">
@@ -378,18 +378,12 @@ Additionally notice the navigation card with the QR code icon. See in this examp
   <!-- -->
   <!-- navigation card centered style with auro-icon -->
   <!-- -->
-  <style>
-    /* This selector uses the `imageWrapper` CSS part attributed to the `image` content slot */
-    .icon-card::part(imageWrapper) {
-      margin-top: var(--ds-size-400, 2rem)
-    }
-  </style>
   <auro-card
     center
     class="icon-card"
     href="/"
     style="max-width: 300px;"
-    variant="inset-content">
+    variant="inset-stretch">
   <auro-icon
     slot="image"
     category="interface"
@@ -398,7 +392,7 @@ Additionally notice the navigation card with the QR code icon. See in this examp
     customSize
     style="color: var(--ds-color-brand-breeze-400, #00cff0); width: 60px;">
   </auro-icon>
-  <auro-header slot="header" level="3" display="600">
+  <auro-header slot="header" level="2" display="500">
     Card Title
   </auro-header>
   <p slot="description">
@@ -414,7 +408,7 @@ Additionally notice the navigation card with the QR code icon. See in this examp
 <!-- The below code snippet is automatically added from ./../../apiExamples/navigation.html -->
 
 ```html
-<div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 3rem;">
+<div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 1.8rem;">
   <!-- -->
   <!-- baseline navigation style auro-card -->
   <!-- -->
@@ -423,7 +417,7 @@ Additionally notice the navigation card with the QR code icon. See in this examp
       slot="image"
       src="https://picsum.photos/300/100?random=1"
       alt="Random insert 0"/>
-    <auro-header slot="header" level="3" display="600">
+    <auro-header slot="header" level="2" display="500">
       Header
     </auro-header>
     <div slot="description">
@@ -443,7 +437,7 @@ Additionally notice the navigation card with the QR code icon. See in this examp
       slot="image"
       src="https://picsum.photos/300/100?random=2"
       alt="Random insert 0"/>
-    <auro-header slot="header" level="3" display="600">
+    <auro-header slot="header" level="2" display="500">
       Header
     </auro-header>
     <div slot="description">
@@ -458,18 +452,12 @@ Additionally notice the navigation card with the QR code icon. See in this examp
   <!-- -->
   <!-- navigation card centered style with auro-icon -->
   <!-- -->
-  <style>
-    /* This selector uses the `imageWrapper` CSS part attributed to the `image` content slot */
-    .icon-card::part(imageWrapper) {
-      margin-top: var(--ds-size-400, 2rem)
-    }
-  </style>
   <auro-card
     center
     class="icon-card"
     href="/"
     style="max-width: 300px;"
-    variant="inset-content">
+    variant="inset-stretch">
   <auro-icon
     slot="image"
     category="interface"
@@ -478,7 +466,7 @@ Additionally notice the navigation card with the QR code icon. See in this examp
     customSize
     style="color: var(--ds-color-brand-breeze-400, #00cff0); width: 60px;">
   </auro-icon>
-  <auro-header slot="header" level="3" display="600">
+  <auro-header slot="header" level="2" display="500">
     Card Title
   </auro-header>
   <p slot="description">

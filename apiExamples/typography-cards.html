@@ -8,20 +8,24 @@
   }
   .blue-card-example {
     background: var(--ds-color-background-darker, #01426a);
-    color: var(--ds-color-base-white, #ffffff);
+    color: var(--ds-color-text-primary-inverse, #ffffff);
   }
-  .white-card-example, .blue-card-example {
+  .white-card-example,
+  .blue-card-example {
     flex: 1;
     padding: var(--ds-size-400, 2rem) var(--ds-size-300, 1.5rem);
   }
-  .white-card-example::part(content), .blue-card-example::part(content) {
+  .white-card-example::part(content),
+  .blue-card-example::part(content) {
     padding: var(--ds-size-400, 2rem) var(--ds-size-600, 3rem) 0;
   }
-  .white-card-example::part(cta), .blue-card-example::part(cta) {
+  .white-card-example::part(cta),
+  .blue-card-example::part(cta) {
     display: flex;
     justify-content: center;
   }
-  .white-card-example::part(header), .blue-card-example::part(header) {
+  .white-card-example::part(header),
+  .blue-card-example::part(header) {
     font-size: var(--ds-size-300, 1.5rem);
   }
 </style>
@@ -32,16 +36,16 @@
   <auro-card
     class="white-card-example"
   >
-    <div slot="header" style="margin-bottom: var(--ds-size-300, 1.5rem);">
-      <span>Seattle, WA (SEA) to</span>
-      <p>Los Angeles (LAX)</p>
-    </div>
+    <auro-header slot="header" level="2" display="500" style="margin-top: -1rem; display: inline-block">
+      Seattle, WA (SEA) to<br>
+      Los Angeles (LAX)
+    </auro-header>
     <p slot="description">
       Los Angeles is a sprawling Southern California city and the center of
       the nation’s film and television industry.
     </p>
     <div slot="cta">
-      <auro-hyperlink type="cta" href="/" nav>
+      <auro-hyperlink type="cta" href="/">
         Book a Flight
       </auro-hyperlink>
     </div>
@@ -49,10 +53,10 @@
   <auro-card
     class="blue-card-example"
   >
-    <div slot="header" style="margin-bottom: var(--ds-size-300, 1.5rem);">
-      <span>Seattle, WA (SEA) to</span>
-      <p>Los Angeles (LAX)</p>
-    </div>
+    <auro-header slot="header" level="2" display="500" style="margin-top: -1rem; display: inline-block">
+      Seattle, WA (SEA) to<br>
+      Los Angeles (LAX)
+    </auro-header>
     <p slot="description">
       Los Angeles is a sprawling Southern California city and the center of
       the nation’s film and television industry.

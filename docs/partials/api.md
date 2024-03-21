@@ -5,7 +5,7 @@
 
 ### Default
 
-The following example illustrates a default UI for the `auro-card` element.
+The following example illustrates a default UI for the `<auro-card>` element.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/default.html) -->
@@ -53,9 +53,9 @@ Illustrated below is the `border` attribute. This feature defines a single board
 
 ### Navigation
 
-The `auro-card` custom element, with its `href` attribute, creates a `auro-hyperlink` element to web pages, files, email addresses, locations in the same page, or anything else a URL can address. The second example illustrates the accessible icon when using the `target` attribute.
+The `<auro-card>` custom element, with its `href` attribute, creates a `auro-hyperlink` element to web pages, files, email addresses, locations in the same page, or anything else a URL can address. The second example illustrates the accessible icon when using the `target` attribute.
 
-Additionally notice the navigation card with the QR code icon. See in this example how the CSS part of `imageWrapper` was used to add additional margin spacing to the top of the icon placement.
+Additionally notice the navigation card with the QR code icon. See in this example how the `variant="inset-stretch"` was used to add additional margin spacing to the top and bottom of the content placement in the card.
 
 <div class="exampleWrapper">
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/navigation.html) -->

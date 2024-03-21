@@ -13,9 +13,9 @@ import styleCss from "./style-css.js";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
- * The auro-card element provides users a flexible way to convey a summary of information.
+ * The `<auro-card>` element provides users a flexible way to convey a summary of information.
  *
- * @attr {String} variant - Sets the variant of the card. Options `inset-content`, `inset-container`.
+ * @attr {String} variant - Sets the variant of the card. Options `inset-content`, `inset-container`, `inset-stretch`.
  * @attr {Boolean} border - Adds desired UI border to the `auro-card` element.
  * @attr {Boolean} center - Centers content within the scope of the `auro-card`.
  * @attr {String} href - Sets the card to function as a hyperlink to the provided href value & disables the default CTA slot.
