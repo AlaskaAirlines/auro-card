@@ -21,9 +21,7 @@ The following sections are editable by making changes to the following files:
 
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/description.md) -->
 <!-- The below content is automatically added from ./../docs/partials/description.md -->
-The `<auro-card>` element provides users a flexible way to convey a summary of information. The primary elements of a card include an image, and details.
-
-The details are broken down into `title`, `description`, `cta`, and `disclaimer`.
+`<auro-card>` is highly customizable [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) is a type of UI design component that display content and actions about a single topic.
 <!-- AURO-GENERATED-CONTENT:END -->
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/readmeAddlInfo.md) -->
 <!-- The below content is automatically added from ./../docs/partials/readmeAddlInfo.md -->
@@ -88,26 +86,19 @@ import "@aurodesignsystem/auro-card";
 
 ```html
 <auro-card>
-  <span slot="title">
-    Pri dicat graece abhorreant
-  </span>
   <img
     slot="image"
-    src="https://picsum.photos/304?random=0"
-    alt="Random insert 0"/>
+    src="https://picsum.photos/300/300?random=0"
+    alt="Random insert"/>
+  <h3 slot="header">Card Title</h3>
   <p slot="description">
-    Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+    Context goes here.
   </p>
-  <auro-hyperlink
-    nav
-    href="/"
-    slot="action"
-    target="_blank">
-    More info
-  </auro-hyperlink>
-  <p slot="disclaimer">
-    * Errem tempor eligendi cu eos
-  </p>
+  <div slot="cta">
+    <auro-hyperlink href="/" nav target="_blank">
+      More info
+    </auro-hyperlink>
+  </div>
 </auro-card>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
@@ -126,9 +117,9 @@ In cases where the project is not able to process JS assets, there are pre-proce
 <!-- AURO-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/usage/bundleUseModBrowsers.md) -->
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/design-tokens@4.3.0/dist/tokens/CSSCustomProperties.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@5.0.5/dist/bundled/essentials.css" />
-<script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-card@2.0.4/dist/auro-card__bundled.js" type="module"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/design-tokens@4.3.1/dist/tokens/CSSCustomProperties.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@5.0.8/dist/bundled/essentials.css" />
+<script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-card@0.0.0/dist/auro-card__bundled.js" type="module"></script>
 ```
 
 <!-- AURO-GENERATED-CONTENT:END -->
@@ -137,10 +128,15 @@ In cases where the project is not able to process JS assets, there are pre-proce
 
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/useCases.md) -->
 <!-- The below content is automatically added from ./../docs/partials/useCases.md -->
-Use the `<auro-card>` element to:
+The `<auro-card>` element can be use in a variety of ways, including:
 
-* Grab the attention of a user
-* Direct your user to another resource for further information
+- **Navigation**: Cards can be used for navigation purposes.
+- **Featured information**: Cards can be used to display featured information or related content.
+- **Content containers**: Cards can be used to organize information consistently within a page.
+- **Grouping information**: Cards can be used to group information.
+- **Providing a visual hierarchy**: Cards can provide a clear visual hierarchy, organizing information into brief, self-contained units.
+- **Providing an overview**: Cards can serve as an overview and an entry point for more detailed information.
+- **Providing a summary:** Cards can present a summary and link to additional details.
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## API Code Examples
@@ -152,26 +148,19 @@ Use the `<auro-card>` element to:
 
 ```html
 <auro-card>
-  <span slot="title">
-    Pri dicat graece abhorreant
-  </span>
   <img
     slot="image"
-    src="https://picsum.photos/304?random=0"
-    alt="Random insert 0"/>
+    src="https://picsum.photos/300/300?random=0"
+    alt="Random insert"/>
+  <h3 slot="header">Card Title</h3>
   <p slot="description">
-    Ei est detracto fabellas convenire, vivendo accusata intellegebat ex mei. Pri dicat graece abhorreant ut, sea ei vidit omnes, errem tempor eligendi cu eos.
+    Context goes here.
   </p>
-  <auro-hyperlink
-    nav
-    href="/"
-    slot="action"
-    target="_blank">
-    More info
-  </auro-hyperlink>
-  <p slot="disclaimer">
-    * Errem tempor eligendi cu eos
-  </p>
+  <div slot="cta">
+    <auro-hyperlink href="/" nav target="_blank">
+      More info
+    </auro-hyperlink>
+  </div>
 </auro-card>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->

@@ -1,3 +1,1 @@
-The `<auro-card>` element provides users a flexible way to convey a summary of information. The primary elements of a card include an image, and details.
-
-The details are broken down into `title`, `description`, `cta`, and `disclaimer`.
+`<auro-card>` is highly customizable [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) is a type of UI design component that display content and actions about a single topic.
