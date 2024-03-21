@@ -115,8 +115,8 @@
             "./CHANGELOG.md",
             "./README.md",
             "./docs/api.md",
-            "./demo/demo.md",
-            "./demo/apiExamples.md"
+            "./demo/index.md",
+            "./demo/api.md"
           ]
         }
       ],
@@ -136,7 +136,7 @@
     "build": "npm-run-all build:sass sass:render",
     "build:test": "npm-run-all test linters",
     "build:release": "npm-run-all build:sass sass:render build:api build:docs bundler types postinstall",
-    "build:ci": "npm-run-all sweep build",
+    "build:ci": "npm-run-all sweep build:release",
     "build:api": "wca analyze 'src/auro-card.js' --outFiles docs/api.md",
     "build:dev:assets": "npm-run-all build:sass:component postCss:component sass:render build:docs",
     "build:docs": "node scripts/generateDocs.mjs",
