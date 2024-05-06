@@ -14,7 +14,7 @@ describe('auro-card', () => {
         </span>
         <img
           slot="image"
-          src="https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/blue.png"
+          src="https://images.contentstack.io/v3/assets/blt2cefe12c88e9dd91/bltab511d45f1fb699d/6633f79881836880d9fc1424/blue.png"
           alt="This is an image of a logo" />
         <p slot="description">
           <b>one</b>world Explorer fare makes it easy to travel from city to city, and continent to continent. And, for every dot you connect, you earn more miles and points to spend across the <b>one</b>world Alliance.
