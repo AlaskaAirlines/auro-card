@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.0.4](https://github.com/AlaskaAirlines/auro-card/compare/v2.0.3...v2.0.4) (2024-02-13)
+
+
+### Performance Improvements
+
+* update auro dependencies ([64aa834](https://github.com/AlaskaAirlines/auro-card/commit/64aa834cff41c12a50e53fe9d05c4ce1f9f13d2f))
+
 ## [2.0.3](https://github.com/AlaskaAirlines/auro-card/compare/v2.0.2...v2.0.3) (2024-02-01)
 
 
