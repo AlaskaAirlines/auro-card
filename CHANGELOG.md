@@ -1,5 +1,51 @@
 # Semantic Release Automated Changelog
 
+# [3.0.0](https://github.com/AlaskaAirlines/auro-card/compare/v2.0.4...v3.0.0) (2024-05-09)
+
+
+### Features
+
+* add `center` attribute ([a3242f9](https://github.com/AlaskaAirlines/auro-card/commit/a3242f9aa021a3434afbbfd4a5cb162d72dc99d9))
+* new component development [#44](https://github.com/AlaskaAirlines/auro-card/issues/44) ([08f1ca8](https://github.com/AlaskaAirlines/auro-card/commit/08f1ca8aaad331762133a3f21ef4c9c94b92fc85))
+
+
+### BREAKING CHANGES
+
+* this is a complete rewrite and is incompatible
+with the old auro-card even if some slots have the same name.
+
+Changes to be committed:
+modified:   .gitignore
+modified:   README.md
+new file:   apiExamples/advanced.html
+deleted:    apiExamples/alignLeft.html
+modified:   apiExamples/basic.html
+new file:   apiExamples/bordered.html
+new file:   apiExamples/center.html
+deleted:    apiExamples/custom.html
+new file:   apiExamples/icon.html
+new file:   apiExamples/inset-container.html
+new file:   apiExamples/inset-content.html
+new file:   apiExamples/inset.html
+deleted:    apiExamples/multiCard.html
+new file:   apiExamples/navigation.html
+new file:   apiExamples/round-image.html
+new file:   apiExamples/typography-cards.html
+modified:   demo/apiExamples.md
+modified:   demo/index.html
+modified:   demo/index.md
+modified:   docs/api.md
+modified:   docs/partials/apiExamples.md
+deleted:    docs/partials/demo.md
+modified:   docs/partials/description.md
+new file:   docs/partials/index.md
+modified:   docs/partials/useCases.md
+modified:   package-lock.json
+modified:   package.json
+modified:   src/auro-card.js
+modified:   src/style.scss
+modified:   test/auro-card.test.js
+
 ## [2.0.4](https://github.com/AlaskaAirlines/auro-card/compare/v2.0.3...v2.0.4) (2024-02-13)
 
 
