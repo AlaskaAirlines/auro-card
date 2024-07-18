@@ -10,6 +10,8 @@ import { LitElement, html } from "lit";
 // Import touch detection lib
 import { ifDefined } from 'lit/directives/if-defined.js';
 import styleCss from "./style-css.js";
+import tokensCss from "./tokens-css.js";
+import colorCss from "./color-css.js";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
@@ -44,7 +46,11 @@ export class AuroCard extends LitElement {
   }
 
   static get styles() {
-    return [styleCss];
+    return [
+      styleCss,
+      tokensCss,
+      colorCss
+    ];
   }
 
   static get properties() {
