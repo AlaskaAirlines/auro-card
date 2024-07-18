@@ -1,0 +1,6 @@
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+
+:host {
+  --ds-auro-card-border-color: var(--ds-color-border-divider-default, #{$ds-color-border-divider-default});
+  --ds-auro-card-link-border-color: transparent;
+}
