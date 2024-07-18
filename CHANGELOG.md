@@ -1,5 +1,19 @@
 # Semantic Release Automated Changelog
 
+# [3.1.0-beta.1](https://github.com/AlaskaAirlines/auro-card/compare/v3.0.0...v3.1.0-beta.1) (2024-07-18)
+
+
+### Features
+
+* **themes:** support component themes [#64](https://github.com/AlaskaAirlines/auro-card/issues/64) ([fcd9c4f](https://github.com/AlaskaAirlines/auro-card/commit/fcd9c4f21bad924c7fa11815f0177b8ea4ef70ee))
+
+
+### Performance Improvements
+
+* add messaging script back in ([3ce103b](https://github.com/AlaskaAirlines/auro-card/commit/3ce103b130e37512b298a0b643b37dc78a801508))
+* update commit message path ([46e689c](https://github.com/AlaskaAirlines/auro-card/commit/46e689cd56b8abb3bbdebd2365b357b9de43568b))
+* Update pre-commit hook and husky prepare command. ([6213ee2](https://github.com/AlaskaAirlines/auro-card/commit/6213ee2b79fb85ca531536149ee4db344a973fdd))
+
 # [3.0.0](https://github.com/AlaskaAirlines/auro-card/compare/v2.0.4...v3.0.0) (2024-05-09)
 
 
