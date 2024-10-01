@@ -1,5 +1,3 @@
-/* eslint-disable no-underscore-dangle, no-magic-numbers, max-statements */
-
 // Copyright (c) 2021 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
 // See LICENSE in the project root for license information.
 
