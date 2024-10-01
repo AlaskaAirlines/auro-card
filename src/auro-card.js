@@ -3,11 +3,19 @@
 
 // ---------------------------------------------------------------------
 
-import { LitElement, html } from "lit";
+/* eslint-disable lit/no-invalid-html, lit/binding-positions */
+
+import { LitElement} from "lit";
+import { html } from 'lit/static-html.js';
 
 import { ifDefined } from 'lit/directives/if-defined.js';
 
 import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
+
+import { AuroDependencyVersioning } from '@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs';
+
+import { AuroHyperlink } from '@aurodesignsystem/auro-hyperlink/src/auro-hyperlink.js';
+import hyperlinkVersion from './hyperlinkVersion';
 
 import styleCss from "./style-css.js";
 import tokensCss from "./tokens-css.js";
@@ -48,6 +56,13 @@ export class AuroCard extends LitElement {
      * @private
      */
     this.runtimeUtils = new AuroLibraryRuntimeUtils();
+
+    const versioning = new AuroDependencyVersioning();
+
+    /**
+     * @private
+     */
+    this.hyperlinkTag = versioning.generateTag('auro-hyperlink', hyperlinkVersion, AuroHyperlink);
   }
 
   static get styles() {
@@ -104,15 +119,15 @@ export class AuroCard extends LitElement {
     return html`
       ${this.href
         ? html`
-          <auro-hyperlink
+          <${this.hyperlinkTag}
             aria-labelledby="content-within"
             href="${ifDefined(this.href ? this.href : undefined)}"
             rel="${ifDefined(this.rel ? this.rel : undefined)}"
             role="${ifDefined(this.role ? this.role : undefined)}"
             target="${ifDefined(this.target ? this.target : undefined)}"
-        >
-          ${cardContent}
-        </auro-hyperlink>`
+          >
+            ${cardContent}
+          </${this.hyperlinkTag}>`
       : cardContent
       }
     `;
