@@ -1,5 +1,29 @@
 # Semantic Release Automated Changelog
 
+# [4.0.0](https://github.com/AlaskaAirlines/auro-card/compare/v3.0.0...v4.0.0) (2024-10-01)
+
+
+### Features
+
+* add tag name as attribute when custom registered ([fd68035](https://github.com/AlaskaAirlines/auro-card/commit/fd680350c9931f1334726f2ac93f416811fcea01))
+* **themes:** support component themes [#64](https://github.com/AlaskaAirlines/auro-card/issues/64) ([c639330](https://github.com/AlaskaAirlines/auro-card/commit/c639330aac698acf8222108530a31d7b33343706))
+
+
+### Performance Improvements
+
+* add messaging script back in ([bd35040](https://github.com/AlaskaAirlines/auro-card/commit/bd35040aff225ae1cce277a5a68c8fd2c0796795))
+* **label:** remove github label colors ([0cd5590](https://github.com/AlaskaAirlines/auro-card/commit/0cd5590ccc9ce8f821d0b398755685b964f82004))
+* refactor custom component registration config ([5663e82](https://github.com/AlaskaAirlines/auro-card/commit/5663e8283a2cdd742b5a3031d9b92171a0b8fc85))
+* update commit message path ([acb4a09](https://github.com/AlaskaAirlines/auro-card/commit/acb4a09d71b5bb0870b811e00f88cd10ecb7aade))
+* update dependencies and lint configuration ([0fe766b](https://github.com/AlaskaAirlines/auro-card/commit/0fe766bb915ffede0c1409a0595752bbce5150e9))
+* Update pre-commit hook and husky prepare command. ([7ed75e2](https://github.com/AlaskaAirlines/auro-card/commit/7ed75e23ea54f5ceb832dd736873f1b86c03959c))
+* use custom registered version of hyperlink [#70](https://github.com/AlaskaAirlines/auro-card/issues/70) ([59df951](https://github.com/AlaskaAirlines/auro-card/commit/59df951fd9a96a5b6bb743bd518e058a70ac1932))
+
+
+### BREAKING CHANGES
+
+* trigger major release for color theme support #64
+
 # [3.0.0](https://github.com/AlaskaAirlines/auro-card/compare/v2.0.4...v3.0.0) (2024-05-09)
 
 
