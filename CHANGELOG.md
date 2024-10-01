@@ -1,5 +1,25 @@
 # Semantic Release Automated Changelog
 
+# [4.0.0-beta.1](https://github.com/AlaskaAirlines/auro-card/compare/v3.1.0-beta.1...v4.0.0-beta.1) (2024-10-01)
+
+
+### Features
+
+* add tag name as attribute when custom registered ([847e67f](https://github.com/AlaskaAirlines/auro-card/commit/847e67f4467d04029a0605014a8f97bae1d8509c))
+
+
+### Performance Improvements
+
+* **label:** remove github label colors ([62f7c1d](https://github.com/AlaskaAirlines/auro-card/commit/62f7c1d0c5cad7e20a5d4a4732685c9abca2bab7))
+* refactor custom component registration config ([87acf80](https://github.com/AlaskaAirlines/auro-card/commit/87acf802769dcbf424993f924b8f37b802800a47))
+* update dependencies and lint configuration ([7bf221f](https://github.com/AlaskaAirlines/auro-card/commit/7bf221f8e050238bcc0aff0ba312fe170c4cecaf))
+* use custom registered version of hyperlink [#70](https://github.com/AlaskaAirlines/auro-card/issues/70) ([5208525](https://github.com/AlaskaAirlines/auro-card/commit/52085257c17436bb057b48304f072f35d6c5834b))
+
+
+### BREAKING CHANGES
+
+* trigger major release for color theme support #64
+
 # [3.1.0-beta.1](https://github.com/AlaskaAirlines/auro-card/compare/v3.0.0...v3.1.0-beta.1) (2024-07-18)
 
 
