@@ -23,7 +23,7 @@
     color: inherit;
 
     &:focus {
-      --ds-auro-card-link-border-color: var(--ds-color-border-active-default, #{$ds-color-border-active-default});
+      --ds-auro-card-link-border-color: var(--ds-color-border-ui-active-default, #{$ds-color-border-ui-active-default});
     }
   }
 }
