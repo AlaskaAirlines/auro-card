@@ -18,7 +18,7 @@
 // Navigation Card
 
 :host([href])  {
-  auro-hyperlink {
+  [auro-hyperlink] {
     outline-color: var(--ds-auro-card-link-border-color);
     color: inherit;
 
