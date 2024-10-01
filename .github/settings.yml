@@ -126,7 +126,8 @@ labels:
     aliases:
     - wontfix
     - invalid
-  - name: 'Type: Bug'   description: Bug or Bug fixes
+  - name: 'Type: Bug'
+    description: Bug or Bug fixes
     aliases:
     - bug
   - name: 'Type: Feature'
