@@ -5,8 +5,10 @@
 
 import { LitElement, html } from "lit";
 
-// Import touch detection lib
 import { ifDefined } from 'lit/directives/if-defined.js';
+
+import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
+
 import styleCss from "./style-css.js";
 import tokensCss from "./tokens-css.js";
 import colorCss from "./color-css.js";
@@ -41,6 +43,11 @@ export class AuroCard extends LitElement {
 
     // Properly defines the role of this new custom element for screen readers.
     this.setAttribute('role', 'article');
+
+    /**
+     * @private
+     */
+    this.runtimeUtils = new AuroLibraryRuntimeUtils();
   }
 
   static get styles() {
@@ -74,6 +81,11 @@ export class AuroCard extends LitElement {
         reflect: true,
       }
     };
+  }
+
+  firstUpdated() {
+    // Add the tag name as an attribute if it is different than the component name
+    this.runtimeUtils.handleComponentTagRename(this, 'auro-card');
   }
 
   // function that renders the HTML and CSS into the scope of the component
