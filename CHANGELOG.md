@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.0.1](https://github.com/AlaskaAirlines/auro-card/compare/v4.0.0...v4.0.1) (2024-10-08)
+
+
+### Bug Fixes
+
+* moves auro library to dependencies in package.json [#75](https://github.com/AlaskaAirlines/auro-card/issues/75) ([23e4594](https://github.com/AlaskaAirlines/auro-card/commit/23e459432b0260d30d09c736e3a38c90fbd3f8d7))
+
 # [4.0.0](https://github.com/AlaskaAirlines/auro-card/compare/v3.0.0...v4.0.0) (2024-10-01)
 
 
