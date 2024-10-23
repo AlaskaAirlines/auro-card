@@ -2,7 +2,7 @@
 
 import { fixture, html, expect } from '@open-wc/testing';
 // import sinon from 'sinon';
-import '../src/auro-card.js';
+import '../index';
 
 describe('auro-card', () => {
 
@@ -49,6 +49,7 @@ describe('auro-card', () => {
   it('does not render auro-hyperlink when href attribute is undefined', async () => {
     const el = await fixWebComponent(undefined);
     const link = el.shadowRoot.querySelector('[auro-hyperlink]');
+    console.log
 
     expect(link).to.be.null;
   });
