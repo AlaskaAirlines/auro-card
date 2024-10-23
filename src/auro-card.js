@@ -15,7 +15,7 @@ import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/util
 import { AuroDependencyVersioning } from '@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs';
 
 import { AuroHyperlink } from '@aurodesignsystem/auro-hyperlink/src/auro-hyperlink.js';
-import hyperlinkVersion from './hyperlinkVersion';
+import hyperlinkVersion from './hyperlinkVersion.js';
 
 import styleCss from "./style-css.js";
 import tokensCss from "./tokens-css.js";
