@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+# [4.1.0](https://github.com/AlaskaAirlines/auro-card/compare/v4.0.1...v4.1.0) (2024-10-24)
+
+
+### Bug Fixes
+
+* add file extension for proper ESM support ([0233fb6](https://github.com/AlaskaAirlines/auro-card/commit/0233fb68899dbe86fc423ffcb83adafa1fedc6e5))
+
+
+### Features
+
+* **api:** add register static method [#77](https://github.com/AlaskaAirlines/auro-card/issues/77) ([3c780ff](https://github.com/AlaskaAirlines/auro-card/commit/3c780ffb2eb5103660b32fb3d14a30018f4c206e))
+
 ## [4.0.1](https://github.com/AlaskaAirlines/auro-card/compare/v4.0.0...v4.0.1) (2024-10-08)
 
 
