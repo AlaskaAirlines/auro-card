@@ -6,15 +6,15 @@ This file is generated based on a template fetched from `./docs/partials/index.m
 
 # Card
 
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./description.md) -->
-<!-- The below content is automatically added from ./description.md -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=../docs/partials/description.md) -->
+<!-- The below content is automatically added from ../docs/partials/description.md -->
 `<auro-card>` is highly customizable [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) is a type of UI design component that display content and actions about a single topic.
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## auro-card use cases
 
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./useCases.md) -->
-<!-- The below content is automatically added from ./useCases.md -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=../docs/partials/useCases.md) -->
+<!-- The below content is automatically added from ../docs/partials/useCases.md -->
 The `<auro-card>` element can be use in a variety of ways, including:
 
 - Navigation: Cards can be used for navigation purposes.
@@ -37,8 +37,8 @@ For `<auro-card>` content, while there is flexibility with use, the default pref
 Notice in the second example, there is a CSS constraint of `max-width: 300px` to allow the text in the `description` to wrap at the desired width. Similarly the third example has a constraint of `max-width: 150px`. As illustrated there is a lot of layout flexibility afforded to users.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/default.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/default.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/default.html) -->
+  <!-- The below content is automatically added from ../apiExamples/default.html -->
   <div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
     <auro-card>
       <img
@@ -90,8 +90,8 @@ Notice in the second example, there is a CSS constraint of `max-width: 300px` to
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/default.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/default.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/default.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/default.html -->
 
 ```html
 <div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
@@ -150,8 +150,8 @@ Notice in the second example, there is a CSS constraint of `max-width: 300px` to
 The following examples make use of the `inset-container` or `inset-content` variants. As the name implies, the inset variants will add inner padding either on the whole card or only in the `description` and `cta` content slots.
 
 <div class="exampleWrapper">
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/inset.html) -->
-<!-- The below content is automatically added from ./../../apiExamples/inset.html -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/inset.html) -->
+<!-- The below content is automatically added from ../apiExamples/inset.html -->
 <div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
   <auro-card variant="inset-container" style="max-width: 300px">
     <img
@@ -188,8 +188,8 @@ The following examples make use of the `inset-container` or `inset-content` vari
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/inset.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/inset.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/inset.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/inset.html -->
 
 ```html
 <div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
@@ -233,8 +233,8 @@ The following examples make use of the `inset-container` or `inset-content` vari
 Illustrated below is the `border` attribute. This feature defines a single boarder around the whole `<auro-card>` element with a pre-defined rounded corner.
 
 <div class="exampleWrapper">
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/bordered.html) -->
-<!-- The below content is automatically added from ./../../apiExamples/bordered.html -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/bordered.html) -->
+<!-- The below content is automatically added from ../apiExamples/bordered.html -->
 <div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
   <auro-card variant="inset-container" style="max-width: 300px" border>
     <img
@@ -271,8 +271,8 @@ Illustrated below is the `border` attribute. This feature defines a single board
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/bordered.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/bordered.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/bordered.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/bordered.html -->
 
 ```html
 <div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
@@ -318,8 +318,8 @@ The `<auro-card>` custom element, with its `href` attribute, creates a `<auro-hy
 Additionally notice the navigation card with the QR code icon. See in this example how the `variant="inset-stretch"` was used to add additional margin spacing to the top and bottom of the content placement in the card.
 
 <div class="exampleWrapper">
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/navigation.html) -->
-<!-- The below content is automatically added from ./../../apiExamples/navigation.html -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/navigation.html) -->
+<!-- The below content is automatically added from ../apiExamples/navigation.html -->
 <div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 1.8rem;">
   <!-- -->
   <!-- baseline navigation style auro-card -->
@@ -390,8 +390,8 @@ Additionally notice the navigation card with the QR code icon. See in this examp
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/navigation.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/navigation.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/navigation.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/navigation.html -->
 
 ```html
 <div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 1.8rem;">
@@ -469,8 +469,8 @@ Additionally notice the navigation card with the QR code icon. See in this examp
 Text can be centered by assigning the `text-align: center` attribute to the `<auro-card>` element. Similarly, elements within `<auro-card>` can be centered with the `justify-content:center` and/or `align-items:center` attributes to use flexbox to vertically and horizontally center the content within the `<auro-card>` container.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/center.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/center.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/center.html) -->
+  <!-- The below content is automatically added from ../apiExamples/center.html -->
   <div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 2rem;">
     <!--
       Small image option
@@ -542,8 +542,8 @@ Text can be centered by assigning the `text-align: center` attribute to the `<au
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/center.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/center.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/center.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/center.html -->
 
 ```html
 <div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 2rem;">
@@ -624,8 +624,8 @@ These cards are loosely based on the "Typography" example images from [alaskaair
 Note that this example also uses a `style` tag to set most of the styles - this is to show that you don't have to use inline styles and can generally use whatever styling solution you prefer.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/typography-cards.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/typography-cards.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/typography-cards.html) -->
+  <!-- The below content is automatically added from ../apiExamples/typography-cards.html -->
   <style>
     .complex-card-wrapper {
       display: flex;
@@ -699,8 +699,8 @@ Note that this example also uses a `style` tag to set most of the styles - this 
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/typography-cards.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/typography-cards.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/typography-cards.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/typography-cards.html -->
 
 ```html
 <style>
@@ -791,8 +791,8 @@ AuroCard.register('custom-card');
 This will create a new custom element that you can use in your HTML that will function identically to the `auro-card` element.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/custom.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/custom.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/custom.html) -->
+  <!-- The below content is automatically added from ../apiExamples/custom.html -->
   <custom-card>
     <img
       slot="image"
@@ -812,8 +812,8 @@ This will create a new custom element that you can use in your HTML that will fu
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/custom.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/custom.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/custom.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/custom.html -->
 
 ```html
 <custom-card>
