@@ -1,5 +1,20 @@
 # Semantic Release Automated Changelog
 
+# [5.0.0](https://github.com/AlaskaAirlines/auro-card/compare/v4.1.3...v5.0.0) (2025-02-28)
+
+
+* feat!: move peer dependencies to "real" dependencies ([87bc059](https://github.com/AlaskaAirlines/auro-card/commit/87bc059348afc28645f2379e0c5b5ad615654082))
+
+
+### BREAKING CHANGES
+
+* last change was breaking _on a patch version_ because of peer dependencies
+
+Summary:
+  Our current build process relies on peer dependencies being present, but
+  the peer dependency pipeline is causing far more issues than it's worth.
+  Why not just make them regular dependencies? This is what this PR does :)
+
 ## [4.1.3](https://github.com/AlaskaAirlines/auro-card/compare/v4.1.2...v4.1.3) (2025-02-08)
 
 
