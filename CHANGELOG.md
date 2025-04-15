@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [5.0.1](https://github.com/AlaskaAirlines/auro-card/compare/v5.0.0...v5.0.1) (2025-04-15)
+
+
+### Performance Improvements
+
+* add wca script for docs api ([d5765a9](https://github.com/AlaskaAirlines/auro-card/commit/d5765a96d92b8846deccb8e4bf8b15145e55baf4))
+
 # [5.0.0](https://github.com/AlaskaAirlines/auro-card/compare/v4.1.3...v5.0.0) (2025-02-28)
 
 
