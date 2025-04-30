@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [5.1.0](https://github.com/AlaskaAirlines/auro-card/compare/v5.0.1...v5.1.0) (2025-04-30)
+
+
+### Features
+
+* update colors for new theme support [#89](https://github.com/AlaskaAirlines/auro-card/issues/89) ([6277d03](https://github.com/AlaskaAirlines/auro-card/commit/6277d03da223fafecb202605d45600cdfff456cf))
+
 ## [5.0.1](https://github.com/AlaskaAirlines/auro-card/compare/v5.0.0...v5.0.1) (2025-04-15)
 
 
