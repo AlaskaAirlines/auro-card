@@ -1,6 +1,8 @@
-@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/auro-classic/SCSSVariables';
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/alaska/SCSSVariables--alaska';
 
 :host {
-  --ds-auro-card-border-color: var(--ds-color-border-divider-default, #{$ds-color-border-divider-default});
-  --ds-auro-card-link-border-color: transparent;
+  --ds-auro-card-border-color: transparent;
+  --ds-auro-card-background-color: transparent;
+  --ds-auro-card-texticon-color: inherit;
 }
