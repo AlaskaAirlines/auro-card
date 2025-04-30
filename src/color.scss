@@ -6,24 +6,39 @@
 /* stylelint-disable order/properties-order, scss/double-slash-comment-whitespace-inside */
 
 // Import Auro tokens
-@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/auro-classic/SCSSVariables';
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/alaska/SCSSVariables--alaska';
 
 
 // Component: card
 
+:host {
+  background-color: var(--ds-auro-card-background-color);
+}
+
 :host([border]) {
+  --ds-auro-card-border-color: var(--ds-basic-color-border-subtle, #{$ds-basic-color-border-subtle});
+
   border-color: var(--ds-auro-card-border-color);
+}
+
+:host([border]),
+:host([href]) {
+  --ds-auro-card-background-color: var(--ds-basic-color-surface-default, #{$ds-basic-color-surface-default});
 }
 
 // Navigation Card
 
-:host([href])  {
+:host([href]) {
   [auro-hyperlink] {
-    outline-color: var(--ds-auro-card-link-border-color);
-    color: inherit;
+    --ds-auro-hyperlink-focus-outline-color-default: transparent;
+    --ds-auro-hyperlink-hover-outline-color-default: transparent;
 
+    outline-color: var(--ds-auro-card-border-color);
+
+    &:hover,
     &:focus {
-      --ds-auro-card-link-border-color: var(--ds-color-border-ui-active-default, #{$ds-color-border-ui-active-default});
+      --ds-auro-card-border-color: var(--ds-advanced-color-state-focused, #{$ds-advanced-color-state-focused});
     }
   }
 }

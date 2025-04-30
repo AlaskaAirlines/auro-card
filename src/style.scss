@@ -6,7 +6,8 @@
 /* stylelint-disable order/properties-order, scss/double-slash-comment-whitespace-inside */
 
 // Import Auro tokens
-@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/auro-classic/SCSSVariables';
+
 @import "./../node_modules/@aurodesignsystem/webcorestylesheets/src/core";
 
 
@@ -84,6 +85,8 @@
     overflow: hidden;
     box-shadow: var(--ds-elevation-100, $ds-elevation-100);
     position: relative;
+    outline-width: 1px;
+    outline-style: solid;
 
     &::part(link) {
       text-decoration: none;
@@ -98,17 +101,13 @@
     }
 
     &:focus {
-      outline-width: 1px;
-      outline-style: solid;
       border-radius: var(--ds-border-radius, $ds-border-radius);
       color: inherit;
     }
 
     &:hover {
-      outline-width: 1px;
-      outline-style: solid;
       outline-offset: -1px;
-      box-shadow: var(--ds-elevation-200, $ds-elevation-100);
+      box-shadow: var(--ds-elevation-200, $ds-elevation-200);
       color: inherit;
     }
   }
