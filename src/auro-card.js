@@ -50,7 +50,7 @@ export class AuroCard extends LitElement {
     super();
 
     // Properly defines the role of this new custom element for screen readers.
-    this.setAttribute('role', 'article');
+    this.role = "article";
 
     /**
      * @private
