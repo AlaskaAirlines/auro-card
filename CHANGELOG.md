@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [5.1.1](https://github.com/AlaskaAirlines/auro-card/compare/v5.1.0...v5.1.1) (2025-05-02)
+
+
+### Bug Fixes
+
+* resolve issue with attribute by leveraging the framework instead of setting it directly ([15425bc](https://github.com/AlaskaAirlines/auro-card/commit/15425bc07406bdc5adc79502460717a287bb27ef)), closes [#91](https://github.com/AlaskaAirlines/auro-card/issues/91)
+
 # [5.1.0](https://github.com/AlaskaAirlines/auro-card/compare/v5.0.1...v5.1.0) (2025-04-30)
 
 
