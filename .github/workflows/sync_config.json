@@ -1,5 +1,5 @@
 {
-    "log_level": "debug",
+    "log_level": "verbose",
     "ado": {
         "organization": "https://dev.azure.com/itsals/",
         "project": "E_Retain_Content\\Auro Design System",
