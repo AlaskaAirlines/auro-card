@@ -1,0 +1,30 @@
+{
+    "log_level": "debug",
+    "ado": {
+        "organization": "itsals",
+        "project": "E_Retain_Content\\Auro Design System",
+        "wit": "User Story",
+        "states": {
+            "new": "New",
+            "new": "Triage",
+            "Accepted": "Backlog",
+            "Approved": "Ready To Work",
+            "Active": "Work In Progress",
+            "Blocked": "Blocked",
+            "Ready For Acceptance": "Review Needed",
+            "Ready For Acceptance": "Revision Needed",
+            "Ready For Acceptance": "Release Pending",
+            "Resolved": "Pre-release",
+            "Done": "Done",
+            "Removed": "Rejected/Won't Do",
+            "Closed": "Closed"
+        },
+        "bypassRules": false,
+        "autoCreate": true,
+        "areaPath": "my_project\\A Path",
+        "handles": {
+            "jason-capsule42": "jason.baker@alaskaair.com",
+            "pothiejo": "joshua.pothier@alaskaair.com"
+        }
+    }
+}
