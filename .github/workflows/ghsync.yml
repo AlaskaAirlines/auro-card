@@ -18,6 +18,3 @@ jobs:
       env:     
         ado_token: '${{ secrets.ADO_PERSONAL_ACCESS_TOKEN }}'
         github_token: '${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}'
-        config_file: './.github/workflows/sync_config.json'
-      with:
-          ado: ${{ secrets.ADO_CONFIG }}

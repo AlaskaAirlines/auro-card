@@ -18,13 +18,6 @@
             "Done": "Done",
             "Removed": "Rejected/Won't Do",
             "Closed": "Closed"
-        },
-        "bypassRules": false,
-        "autoCreate": true,
-        "areaPath": "my_project\\A Path",
-        "handles": {
-            "jason-capsule42": "jason.baker@alaskaair.com",
-            "pothiejo": "joshua.pothier@alaskaair.com"
         }
     }
 }
