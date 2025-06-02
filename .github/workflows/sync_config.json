@@ -2,8 +2,9 @@
     "log_level": "debug",
     "ado": {
         "organization": "itsals",
-        "project": "E_Retain_Content\\Auro Design System",
+        "project": "E_Retain_Content",
         "wit": "User Story",
+        "area_path": "Auro Design System",
         "states": {
             "new": "New",
             "new": "Triage",
