@@ -1,7 +1,7 @@
 {
     "log_level": "verbose",
     "ado": {
-        "organization": "https://dev.azure.com/itsals/",
+        "organization": "https://dev.azure.com/itsals",
         "project": "E_Retain_Content\\Auro Design System",
         "wit": "User Story",
         "states": {
@@ -15,7 +15,7 @@
             "Ready For Acceptance": "Revision Needed",
             "Ready For Acceptance": "Release Pending",
             "Resolved": "Pre-release",
-            "Done": "Done",
+            "Done": "Resolved",
             "Removed": "Rejected/Won't Do",
             "Closed": "Closed"
         }
