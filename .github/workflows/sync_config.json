@@ -1,7 +1,7 @@
 {
     "log_level": "verbose",
     "ado": {
-        "organization": "https://dev.azure.com/itsals",
+        "organization": "itsals",
         "project": "E_Retain_Content\\Auro Design System",
         "wit": "User Story",
         "states": {
