@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [5.1.2](https://github.com/AlaskaAirlines/auro-card/compare/v5.1.1...v5.1.2) (2025-06-23)
+
+
+### Bug Fixes
+
+* address broken nav cards [#102](https://github.com/AlaskaAirlines/auro-card/issues/102) ([938585e](https://github.com/AlaskaAirlines/auro-card/commit/938585ebb6a470bae25280239827fdbfd610b7de))
+
 ## [5.1.1](https://github.com/AlaskaAirlines/auro-card/compare/v5.1.0...v5.1.1) (2025-05-02)
 
 
