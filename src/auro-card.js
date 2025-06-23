@@ -115,7 +115,7 @@ export class AuroCard extends LitElement {
   }
 
   /**
-   * Sets the role attribute for the component
+   * Sets the role attribute for the component.
    * @private
    * @returns {void}
    */
@@ -126,6 +126,7 @@ export class AuroCard extends LitElement {
       this.role = 'article';
     }
   }
+
   // function that renders the HTML and CSS into the scope of the component
   render() {
     const cardContent = html`
