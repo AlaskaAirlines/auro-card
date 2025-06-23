@@ -49,9 +49,6 @@ export class AuroCard extends LitElement {
   constructor () {
     super();
 
-    // Properly defines the role of this new custom element for screen readers.
-    this.role = "article";
-
     /**
      * @private
      */
@@ -113,8 +110,22 @@ export class AuroCard extends LitElement {
   firstUpdated() {
     // Add the tag name as an attribute if it is different than the component name
     this.runtimeUtils.handleComponentTagRename(this, 'auro-card');
+
+    this.setRole();
   }
 
+  /**
+   * Sets the role attribute for the component
+   * @private
+   * @returns {void}
+   */
+  setRole() {
+    if (this.href) {
+      this.role = this.role || undefined;
+    } else {
+      this.role = 'article';
+    }
+  }
   // function that renders the HTML and CSS into the scope of the component
   render() {
     const cardContent = html`
