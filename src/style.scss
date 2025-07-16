@@ -6,10 +6,9 @@
 /* stylelint-disable order/properties-order, scss/double-slash-comment-whitespace-inside */
 
 // Import Auro tokens
-@import './../node_modules/@aurodesignsystem/design-tokens/dist/legacy/auro-classic/SCSSVariables';
+@use '@aurodesignsystem/design-tokens/dist/legacy/auro-classic/SCSSVariables' as vac;
 
-@import "./../node_modules/@aurodesignsystem/webcorestylesheets/src/core";
-
+@use "@aurodesignsystem/webcorestylesheets/src/core";
 
 // Component: card
 
@@ -36,7 +35,7 @@
   }
 
   .content {
-    padding: var(--ds-size-200, $ds-size-200) 0;
+    padding: var(--ds-size-200, vac.$ds-size-200) 0;
     padding-top: 0;
   }
 }
@@ -48,7 +47,7 @@
 :host([variant="inset-content"]),
 :host([href]) {
   &::part(content) {
-    padding: var(--ds-size-200, $ds-size-200);
+    padding: var(--ds-size-200, vac.$ds-size-200);
     padding-top: 0;
     overflow: hidden;
     text-wrap: wrap;
@@ -56,16 +55,16 @@
 }
 
 :host([variant="inset-container"]) {
-  padding: var(--ds-size-400, $ds-size-400) var(--ds-size-200, $ds-size-200);
+  padding: var(--ds-size-400, vac.$ds-size-400) var(--ds-size-200, vac.$ds-size-200);
 }
 
 :host([variant="inset-stretch"]) {
   &::part(imageWrapper) {
-    margin-top: var(--ds-size-400, $ds-size-400)
+    margin-top: var(--ds-size-400, vac.$ds-size-400);
   }
 
   &::part(content) {
-    margin-bottom: var(--ds-size-400, $ds-size-400);
+    margin-bottom: var(--ds-size-400, vac.$ds-size-400);
     padding-bottom: 0;
   }
 }
@@ -73,7 +72,7 @@
 :host([border]) {
   border-width: 1px;
   border-style: solid;
-  border-radius: var(--ds-border-radius, $ds-border-radius);
+  border-radius: var(--ds-border-radius, vac.$ds-border-radius);
   overflow: hidden;
 }
 
@@ -81,9 +80,9 @@
 
 :host([href])  {
   [auro-hyperlink] {
-    border-radius: var(--ds-border-radius, $ds-border-radius);
+    border-radius: var(--ds-border-radius, vac.$ds-border-radius);
     overflow: hidden;
-    box-shadow: var(--ds-elevation-100, $ds-elevation-100);
+    box-shadow: var(--ds-elevation-100, vac.$ds-elevation-100);
     position: relative;
     outline-width: 1px;
     outline-style: solid;
@@ -96,18 +95,18 @@
     &::part(targetIcon) {
       position: absolute;
       top: unset;
-      bottom: var(--ds-size-50, $ds-size-50);
-      right: var(--ds-size-50, $ds-size-50);
+      bottom: var(--ds-size-50, vac.$ds-size-50);
+      right: var(--ds-size-50, vac.$ds-size-50);
     }
 
     &:focus {
-      border-radius: var(--ds-border-radius, $ds-border-radius);
+      border-radius: var(--ds-border-radius, vac.$ds-border-radius);
       color: inherit;
     }
 
     &:hover {
       outline-offset: -1px;
-      box-shadow: var(--ds-elevation-200, $ds-elevation-200);
+      box-shadow: var(--ds-elevation-200, vac.$ds-elevation-200);
       color: inherit;
     }
   }
