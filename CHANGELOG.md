@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+## [5.1.3](https://github.com/AlaskaAirlines/auro-card/compare/v5.1.2...v5.1.3) (2025-07-16)
+
+
+### Bug Fixes
+
+* update deps/pkgs, restructure styles files ([c10289e](https://github.com/AlaskaAirlines/auro-card/commit/c10289eff50214c816f2c28c4bd10dcc47947caf))
+* update docs head content ([b45cee8](https://github.com/AlaskaAirlines/auro-card/commit/b45cee82e14808d1ee7554a5651b4f46f6b6fb4f))
+
 ## [5.1.2](https://github.com/AlaskaAirlines/auro-card/compare/v5.1.1...v5.1.2) (2025-06-23)
 
 
