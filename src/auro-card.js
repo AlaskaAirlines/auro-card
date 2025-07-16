@@ -149,6 +149,7 @@ export class AuroCard extends LitElement {
             rel="${ifDefined(this.rel ? this.rel : undefined)}"
             role="${ifDefined(this.role ? this.role : undefined)}"
             target="${ifDefined(this.target ? this.target : undefined)}"
+            part="link"
           >
             ${cardContent}
           </${this.hyperlinkTag}>`
