@@ -669,7 +669,7 @@ Note that this example also uses a `style` tag to set most of the styles - this 
       </auro-header>
       <p slot="description">
         Los Angeles is a sprawling Southern California city and the center of
-        the nation’s film and television industry.
+        the nation's film and television industry.
       </p>
       <div slot="cta">
         <auro-hyperlink type="cta" href="/">
@@ -686,10 +686,10 @@ Note that this example also uses a `style` tag to set most of the styles - this 
       </auro-header>
       <p slot="description">
         Los Angeles is a sprawling Southern California city and the center of
-        the nation’s film and television industry.
+        the nation's film and television industry.
       </p>
       <div slot="cta">
-        <auro-hyperlink type="cta" href="/" nav>
+        <auro-hyperlink type="cta" href="/" nav ondark>
           Book a Flight
         </auro-hyperlink>
       </div>
@@ -746,7 +746,7 @@ Note that this example also uses a `style` tag to set most of the styles - this 
     </auro-header>
     <p slot="description">
       Los Angeles is a sprawling Southern California city and the center of
-      the nation’s film and television industry.
+      the nation's film and television industry.
     </p>
     <div slot="cta">
       <auro-hyperlink type="cta" href="/">
@@ -763,10 +763,10 @@ Note that this example also uses a `style` tag to set most of the styles - this 
     </auro-header>
     <p slot="description">
       Los Angeles is a sprawling Southern California city and the center of
-      the nation’s film and television industry.
+      the nation's film and television industry.
     </p>
     <div slot="cta">
-      <auro-hyperlink type="cta" href="/" nav>
+      <auro-hyperlink type="cta" href="/" nav ondark>
         Book a Flight
       </auro-hyperlink>
     </div>
