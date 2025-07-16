@@ -6,7 +6,7 @@
 /* stylelint-disable order/properties-order, scss/double-slash-comment-whitespace-inside */
 
 // Import Auro tokens
-@import './../node_modules/@aurodesignsystem/design-tokens/dist/themes/alaska/SCSSVariables--alaska';
+@use '@aurodesignsystem/design-tokens/dist/themes/alaska/SCSSVariables--alaska' as v;
 
 
 // Component: card
@@ -16,14 +16,14 @@
 }
 
 :host([border]) {
-  --ds-auro-card-border-color: var(--ds-basic-color-border-subtle, #{$ds-basic-color-border-subtle});
+  --ds-auro-card-border-color: var(--ds-basic-color-border-subtle, #{v.$ds-basic-color-border-subtle});
 
   border-color: var(--ds-auro-card-border-color);
 }
 
 :host([border]),
 :host([href]) {
-  --ds-auro-card-background-color: var(--ds-basic-color-surface-default, #{$ds-basic-color-surface-default});
+  --ds-auro-card-background-color: var(--ds-basic-color-surface-default, #{v.$ds-basic-color-surface-default});
 }
 
 // Navigation Card
@@ -37,7 +37,7 @@
 
     &:hover,
     &:focus {
-      --ds-auro-card-border-color: var(--ds-advanced-color-state-focused, #{$ds-advanced-color-state-focused});
+      --ds-auro-card-border-color: var(--ds-advanced-color-state-focused, #{v.$ds-advanced-color-state-focused});
     }
   }
 }

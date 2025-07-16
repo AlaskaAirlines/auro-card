@@ -17,9 +17,9 @@ import { AuroDependencyVersioning } from '@aurodesignsystem/auro-library/scripts
 import { AuroHyperlink } from '@aurodesignsystem/auro-hyperlink/src/auro-hyperlink.js';
 import hyperlinkVersion from './hyperlinkVersion.js';
 
-import styleCss from "./style-css.js";
-import tokensCss from "./tokens-css.js";
-import colorCss from "./color-css.js";
+import styleCss from "./styles/style-css.js";
+import tokensCss from "./styles/tokens-css.js";
+import colorCss from "./styles/color-css.js";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
