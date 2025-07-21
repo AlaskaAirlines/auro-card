@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [5.1.4](https://github.com/AlaskaAirlines/auro-card/compare/v5.1.3...v5.1.4) (2025-07-21)
+
+
+### Bug Fixes
+
+* add part(link) to hyoperlink ([b7506a3](https://github.com/AlaskaAirlines/auro-card/commit/b7506a332dd83bf38346c6b3086e2d2b3b94caa4))
+
 ## [5.1.3](https://github.com/AlaskaAirlines/auro-card/compare/v5.1.2...v5.1.3) (2025-07-16)
 
 
