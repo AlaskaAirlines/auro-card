@@ -151,7 +151,7 @@ export class AuroCard extends LitElement {
             aria-labelledby="content-within"
             href="${ifDefined(this.href ? this.href : undefined)}"
             rel="${ifDefined(this.rel ? this.rel : undefined)}"
-            relative="${ifDefined(this.relative ? this.relative : undefined)}"
+            relative="${ifDefined(this.relative || undefined)}"
             role="${ifDefined(this.role ? this.role : undefined)}"
             target="${ifDefined(this.target ? this.target : undefined)}"
             part="link"
