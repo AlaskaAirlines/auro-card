@@ -56,12 +56,13 @@ describe('auro-card', () => {
 
   it('verify that attributes are passed down to auro-hyperlink ', async () => {
     const el = await fixture(html`
-      <auro-card href="/auro" rel="hyperlink" role="button" target="parent"></auro-card>
+      <auro-card href="/auro" rel="hyperlink" relative="" role="button" target="parent"></auro-card>
     `);
 
     const anchor = el.shadowRoot.querySelector('[auro-hyperlink]');
 
     expect(anchor).to.have.attribute('rel', 'hyperlink');
+    expect(anchor).to.have.attribute('relative', '');
     expect(anchor).to.have.attribute('role', 'button');
     expect(anchor).to.have.attribute('target', 'parent');
   });
