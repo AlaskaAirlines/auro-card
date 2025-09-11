@@ -84,8 +84,11 @@ export class AuroCard extends LitElement {
         type: String,
         reflect: true,
       },
+      /**
+       * If true, the auto URL re-write feature will be disabled.
+       */
       relative: {
-        type: String,
+        type: Boolean,
         reflect: true,
       },
       role: {
