@@ -30,6 +30,7 @@ import colorCss from "./styles/color-css.js";
  * @attr {Boolean} center - Centers content within the scope of the `auro-card`.
  * @attr {String} href - Sets the card to function as a hyperlink to the provided href value & disables the default CTA slot.
  * @attr {String} rel - Sets rel attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#rel).
+ * @attr {Boolean} relative - If true, the auto URL re-write feature will be disabled.https://auro.alaskaair.com/components/auro/hyperlink/api#relative
  * @attr {String} role - Sets role attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#role).
  * @attr {String} target - Sets target attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#target).
  * @slot image - Content slot for image content.
@@ -84,9 +85,6 @@ export class AuroCard extends LitElement {
         type: String,
         reflect: true,
       },
-      /**
-       * If true, the auto URL re-write feature will be disabled.
-       */
       relative: {
         type: Boolean,
         reflect: true,
