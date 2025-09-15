@@ -18,6 +18,7 @@ The `<auro-card>` element provides users a flexible way to convey a summary of i
 |-----------|-----------|----------|--------------------------------------------------|
 | [href](#href)    | `href`    | `String` | Sets the card to function as a hyperlink to the provided href value & disables the default CTA slot. |
 | [rel](#rel)     | `rel`     | `String` | Sets rel attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#rel). |
+| [relative](#relative) | `relative` | `Boolean` | Sets relative attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#relative). |
 | [role](#role)    | `role`    | `String` | Sets role attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#role). |
 | [target](#target)  | `target`  | `String` | Sets target attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#target). |
 | [variant](#variant) | `variant` | `String` | Sets the variant of the card. Options `inset-content`, `inset-container`, `inset-stretch`. |
