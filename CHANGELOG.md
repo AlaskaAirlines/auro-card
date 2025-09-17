@@ -1,5 +1,20 @@
 # Semantic Release Automated Changelog
 
+# [5.2.0](https://github.com/AlaskaAirlines/auro-card/compare/v5.1.4...v5.2.0) (2025-09-17)
+
+
+### Bug Fixes
+
+* removed unneeded ternary statements ([667bbb5](https://github.com/AlaskaAirlines/auro-card/commit/667bbb5df665df38bffd69ed73e35cea79f6bb93))
+
+
+### Features
+
+* api doc updated, and comments moved to comment ection ([4f134a3](https://github.com/AlaskaAirlines/auro-card/commit/4f134a34ce187cd3e9e1fff56a3426170988fc5f))
+* changed relative type from string to boolean and add test updated ([e4d32da](https://github.com/AlaskaAirlines/auro-card/commit/e4d32da59a5cfe5bc1af9e9f3b3cd7c16fcd23e6))
+* provide support for relative hyperlinks ([82465b0](https://github.com/AlaskaAirlines/auro-card/commit/82465b0171d45b411f4b24ace0942f531dda112d))
+* test updated ([6e7af5d](https://github.com/AlaskaAirlines/auro-card/commit/6e7af5dcd65f1fc56b1e2d59045087fda6fa6e88))
+
 ## [5.1.4](https://github.com/AlaskaAirlines/auro-card/compare/v5.1.3...v5.1.4) (2025-07-21)
 
 
