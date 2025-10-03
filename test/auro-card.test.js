@@ -1,8 +1,5 @@
-/* eslint-disable no-undef, sort-vars, no-implicit-coercion */
-
 import { expect, fixture, html } from "@open-wc/testing";
-// import sinon from 'sinon';
-import "../index";
+import "../src/registered";
 
 describe("auro-card", () => {
   const fixWebComponent = async (href) =>
@@ -59,11 +56,12 @@ describe("auro-card", () => {
       <auro-card href="/auro" rel="hyperlink" relative role="button" target="parent"></auro-card>
     `);
 
-    const anchor = el.shadowRoot.querySelector("[auro-hyperlink]");
+    const AuroHyperlink = el.shadowRoot.querySelector("[auro-hyperlink]");
+    const anchor = AuroHyperlink.shadowRoot.querySelector(".hyperlink");
 
-    expect(anchor).to.have.attribute("rel", "hyperlink");
-    expect(anchor).to.have.attribute("relative", "");
+    expect(AuroHyperlink).to.have.attribute("rel", "hyperlink");
+    expect(AuroHyperlink).to.have.attribute("relative");
     expect(anchor).to.have.attribute("role", "button");
-    expect(anchor).to.have.attribute("target", "parent");
+    expect(AuroHyperlink).to.have.attribute("target", "parent");
   });
 });
