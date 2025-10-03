@@ -1,3 +1,3 @@
-import { AuroCard } from './src/auro-card.js';
+import { AuroCard } from "./src/auro-card.js";
 
 AuroCard.register();
