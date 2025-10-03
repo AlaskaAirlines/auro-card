@@ -5,21 +5,16 @@
 
 /* eslint-disable lit/no-invalid-html, lit/binding-positions */
 
-import { LitElement} from "lit";
-import { html } from 'lit/static-html.js';
-
-import { ifDefined } from 'lit/directives/if-defined.js';
-
-import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
-
-import { AuroDependencyVersioning } from '@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs';
-
-import { AuroHyperlink } from '@aurodesignsystem/auro-hyperlink/src/auro-hyperlink.js';
-import hyperlinkVersion from './hyperlinkVersion.js';
-
+import { AuroHyperlink } from "@aurodesignsystem/auro-hyperlink/src/auro-hyperlink.js";
+import { AuroDependencyVersioning } from "@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs";
+import AuroLibraryRuntimeUtils from "@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs";
+import { LitElement } from "lit";
+import { ifDefined } from "lit/directives/if-defined.js";
+import { html } from "lit/static-html.js";
+import hyperlinkVersion from "./hyperlinkVersion.js";
+import colorCss from "./styles/color-css.js";
 import styleCss from "./styles/style-css.js";
 import tokensCss from "./styles/tokens-css.js";
-import colorCss from "./styles/color-css.js";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
@@ -47,7 +42,7 @@ import colorCss from "./styles/color-css.js";
  */
 
 export class AuroCard extends LitElement {
-  constructor () {
+  constructor() {
     super();
 
     /**
@@ -60,15 +55,15 @@ export class AuroCard extends LitElement {
     /**
      * @private
      */
-    this.hyperlinkTag = versioning.generateTag('auro-hyperlink', hyperlinkVersion, AuroHyperlink);
+    this.hyperlinkTag = versioning.generateTag(
+      "auro-hyperlink",
+      hyperlinkVersion,
+      AuroHyperlink,
+    );
   }
 
   static get styles() {
-    return [
-      styleCss,
-      tokensCss,
-      colorCss
-    ];
+    return [styleCss, tokensCss, colorCss];
   }
 
   static get properties() {
@@ -96,7 +91,7 @@ export class AuroCard extends LitElement {
       target: {
         type: String,
         reflect: true,
-      }
+      },
     };
   }
 
@@ -114,7 +109,7 @@ export class AuroCard extends LitElement {
 
   firstUpdated() {
     // Add the tag name as an attribute if it is different than the component name
-    this.runtimeUtils.handleComponentTagRename(this, 'auro-card');
+    this.runtimeUtils.handleComponentTagRename(this, "auro-card");
 
     this.setRole();
   }
@@ -128,7 +123,7 @@ export class AuroCard extends LitElement {
     if (this.href) {
       this.role = this.role || undefined;
     } else {
-      this.role = 'article';
+      this.role = "article";
     }
   }
 
@@ -146,8 +141,9 @@ export class AuroCard extends LitElement {
     `;
 
     return html`
-      ${this.href
-        ? html`
+      ${
+        this.href
+          ? html`
           <${this.hyperlinkTag}
             aria-labelledby="content-within"
             href="${ifDefined(this.href ? this.href : undefined)}"
@@ -159,7 +155,7 @@ export class AuroCard extends LitElement {
           >
             ${cardContent}
           </${this.hyperlinkTag}>`
-      : cardContent
+          : cardContent
       }
     `;
   }
