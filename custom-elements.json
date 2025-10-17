@@ -1,0 +1,649 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/auro-card.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The `<auro-card>` element provides users a flexible way to convey a summary of information.",
+          "name": "AuroCard",
+          "cssParts": [
+            {
+              "description": "Apply styles to the outer string text container.",
+              "name": "content"
+            },
+            {
+              "description": "Apply styles to the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#link) element.",
+              "name": "link"
+            },
+            {
+              "description": "Apply styles to the outer image slot container.",
+              "name": "imageWrapper"
+            },
+            {
+              "description": "Apply styles to the named image slot container.",
+              "name": "image"
+            },
+            {
+              "description": "Apply styles to the named header slot container.",
+              "name": "header"
+            },
+            {
+              "description": "Apply styles to the named description slot container.",
+              "name": "description"
+            },
+            {
+              "description": "Apply styles to the named cta slot container.",
+              "name": "cta"
+            }
+          ],
+          "slots": [
+            {
+              "description": "Content slot for image content.",
+              "name": "image"
+            },
+            {
+              "description": "Content slot for string text header content.",
+              "name": "header"
+            },
+            {
+              "description": "Content slot for string text description content.",
+              "name": "description"
+            },
+            {
+              "description": "Content slot for call-to-action content.",
+              "name": "cta"
+            }
+          ],
+          "members": [
+            {
+              "kind": "method",
+              "name": "register",
+              "static": true,
+              "parameters": [
+                {
+                  "name": "name",
+                  "default": "\"auro-card\"",
+                  "description": "The name of element that you want to register to.",
+                  "optional": true,
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ],
+              "description": "This will register this element with the browser."
+            },
+            {
+              "kind": "method",
+              "name": "setRole",
+              "description": "Sets the role attribute for the component.",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "runtimeUtils",
+              "privacy": "private",
+              "default": "new AuroLibraryRuntimeUtils()"
+            },
+            {
+              "kind": "field",
+              "name": "hyperlinkTag",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "variant",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "description": "Sets the variant of the card. Options `inset-content`, `inset-container`, `inset-stretch`.",
+              "attribute": "variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "href",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "description": "Sets the card to function as a hyperlink to the provided href value & disables the default CTA slot.",
+              "attribute": "href",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "rel",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "description": "Sets rel attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#rel).",
+              "attribute": "rel",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "relative",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the auto URL re-write feature will be disabled. [see here for hyperlink relative](https://auro.alaskaair.com/components/auro/hyperlink/api#relative)",
+              "attribute": "relative",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "role",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "description": "Sets role attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#role).",
+              "attribute": "role",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "target",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "description": "Sets target attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#target).",
+              "attribute": "target",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "type": {
+                "text": "string"
+              },
+              "description": "Sets the variant of the card. Options `inset-content`, `inset-container`, `inset-stretch`.",
+              "name": "variant",
+              "fieldName": "variant"
+            },
+            {
+              "type": {
+                "text": "Boolean"
+              },
+              "description": "Adds desired UI border to the `auro-card` element.",
+              "name": "border"
+            },
+            {
+              "type": {
+                "text": "Boolean"
+              },
+              "description": "Centers content within the scope of the `auro-card`.",
+              "name": "center"
+            },
+            {
+              "type": {
+                "text": "string"
+              },
+              "description": "Sets the card to function as a hyperlink to the provided href value & disables the default CTA slot.",
+              "name": "href",
+              "fieldName": "href"
+            },
+            {
+              "type": {
+                "text": "string"
+              },
+              "description": "Sets rel attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#rel).",
+              "name": "rel",
+              "fieldName": "rel"
+            },
+            {
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the auto URL re-write feature will be disabled. [see here for hyperlink relative](https://auro.alaskaair.com/components/auro/hyperlink/api#relative)",
+              "name": "relative",
+              "fieldName": "relative"
+            },
+            {
+              "type": {
+                "text": "string"
+              },
+              "description": "Sets role attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#role).",
+              "name": "role",
+              "fieldName": "role"
+            },
+            {
+              "type": {
+                "text": "string"
+              },
+              "description": "Sets target attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#target).",
+              "name": "target",
+              "fieldName": "target"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "AuroCard",
+          "declaration": {
+            "name": "AuroCard",
+            "module": "src/auro-card.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/hyperlinkVersion.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "7.1.0",
+            "module": "src/hyperlinkVersion.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "AuroCard",
+          "declaration": {
+            "name": "AuroCard",
+            "module": "src/index.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/registered.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "scripts/wca/auro-card.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The `<auro-card>` element provides users a flexible way to convey a summary of information.",
+          "name": "AuroCardWCA",
+          "superclass": {
+            "name": "AuroCard",
+            "module": "/src/auro-card.js"
+          },
+          "tagName": "auro-card",
+          "customElement": true,
+          "slots": [
+            {
+              "description": "Content slot for image content.",
+              "name": "image",
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            },
+            {
+              "description": "Content slot for string text header content.",
+              "name": "header",
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            },
+            {
+              "description": "Content slot for string text description content.",
+              "name": "description",
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            },
+            {
+              "description": "Content slot for call-to-action content.",
+              "name": "cta",
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "Apply styles to the outer string text container.",
+              "name": "content",
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            },
+            {
+              "description": "Apply styles to the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#link) element.",
+              "name": "link",
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            },
+            {
+              "description": "Apply styles to the outer image slot container.",
+              "name": "imageWrapper",
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            },
+            {
+              "description": "Apply styles to the named image slot container.",
+              "name": "image",
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            },
+            {
+              "description": "Apply styles to the named header slot container.",
+              "name": "header",
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            },
+            {
+              "description": "Apply styles to the named description slot container.",
+              "name": "description",
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            },
+            {
+              "description": "Apply styles to the named cta slot container.",
+              "name": "cta",
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "type": {
+                "text": "string"
+              },
+              "description": "Sets the variant of the card. Options `inset-content`, `inset-container`, `inset-stretch`.",
+              "name": "variant",
+              "fieldName": "variant",
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            },
+            {
+              "type": {
+                "text": "Boolean"
+              },
+              "description": "Adds desired UI border to the `auro-card` element.",
+              "name": "border",
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            },
+            {
+              "type": {
+                "text": "Boolean"
+              },
+              "description": "Centers content within the scope of the `auro-card`.",
+              "name": "center",
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            },
+            {
+              "type": {
+                "text": "string"
+              },
+              "description": "Sets the card to function as a hyperlink to the provided href value & disables the default CTA slot.",
+              "name": "href",
+              "fieldName": "href",
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            },
+            {
+              "type": {
+                "text": "string"
+              },
+              "description": "Sets rel attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#rel).",
+              "name": "rel",
+              "fieldName": "rel",
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            },
+            {
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the auto URL re-write feature will be disabled. [see here for hyperlink relative](https://auro.alaskaair.com/components/auro/hyperlink/api#relative)",
+              "name": "relative",
+              "fieldName": "relative",
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            },
+            {
+              "type": {
+                "text": "string"
+              },
+              "description": "Sets role attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#role).",
+              "name": "role",
+              "fieldName": "role",
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            },
+            {
+              "type": {
+                "text": "string"
+              },
+              "description": "Sets target attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#target).",
+              "name": "target",
+              "fieldName": "target",
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            }
+          ],
+          "members": [
+            {
+              "kind": "method",
+              "name": "register",
+              "static": true,
+              "parameters": [
+                {
+                  "name": "name",
+                  "default": "\"auro-card\"",
+                  "description": "The name of element that you want to register to.",
+                  "optional": true,
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ],
+              "description": "This will register this element with the browser.",
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "setRole",
+              "description": "Sets the role attribute for the component.",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "runtimeUtils",
+              "privacy": "private",
+              "default": "new AuroLibraryRuntimeUtils()",
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "hyperlinkTag",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "variant",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "description": "Sets the variant of the card. Options `inset-content`, `inset-container`, `inset-stretch`.",
+              "attribute": "variant",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "href",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "description": "Sets the card to function as a hyperlink to the provided href value & disables the default CTA slot.",
+              "attribute": "href",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "rel",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "description": "Sets rel attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#rel).",
+              "attribute": "rel",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "relative",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the auto URL re-write feature will be disabled. [see here for hyperlink relative](https://auro.alaskaair.com/components/auro/hyperlink/api#relative)",
+              "attribute": "relative",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "role",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "description": "Sets role attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#role).",
+              "attribute": "role",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "target",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "description": "Sets target attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#target).",
+              "attribute": "target",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "AuroCard",
+                "module": "src/auro-card.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "auro-card",
+          "declaration": {
+            "name": "AuroCardWCA",
+            "module": "scripts/wca/auro-card.js"
+          }
+        }
+      ]
+    }
+  ]
+}

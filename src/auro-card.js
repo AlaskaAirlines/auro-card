@@ -3,7 +3,7 @@
 
 // ---------------------------------------------------------------------
 
-import { AuroHyperlink } from "@aurodesignsystem/auro-hyperlink/src/auro-hyperlink.js";
+import { AuroHyperlink } from "@aurodesignsystem/auro-hyperlink/class";
 import { AuroDependencyVersioning } from "@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs";
 import AuroLibraryRuntimeUtils from "@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs";
 import { LitElement } from "lit";
@@ -66,26 +66,49 @@ export class AuroCard extends LitElement {
 
   static get properties() {
     return {
+      /**
+       * Sets the variant of the card. Options `inset-content`, `inset-container`, `inset-stretch`.
+       */
       variant: {
         type: String,
         reflect: true,
       },
+
+      /**
+       * Sets the card to function as a hyperlink to the provided href value & disables the default CTA slot.
+       */
       href: {
         type: String,
         reflect: true,
       },
+
+      /**
+       * Sets rel attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#rel).
+       */
       rel: {
         type: String,
         reflect: true,
       },
+
+      /**
+       * If true, the auto URL re-write feature will be disabled. [see here for hyperlink relative](https://auro.alaskaair.com/components/auro/hyperlink/api#relative)
+       */
       relative: {
         type: Boolean,
         reflect: true,
       },
+
+      /**
+       * Sets role attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#role).
+       */
       role: {
         type: String,
         reflect: true,
       },
+
+      /**
+       * Sets target attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#target).
+       */
       target: {
         type: String,
         reflect: true,
