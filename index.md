@@ -783,7 +783,7 @@ There are two important parts of every Auro component. The <a href="https://deve
 To protect from versioning conflicts with other instances of the component being loaded, it is recommended to use our `AuroCard.register(name)` method and pass in a unique name.
 
 ```js
-import { AuroCard } from './src/auro-card.js';
+import { AuroCard } from '@aurodesignsystem/auro-card/class';
 
 AuroCard.register('custom-card');
 ```
