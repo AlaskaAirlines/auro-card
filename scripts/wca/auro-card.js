@@ -1,5 +1,4 @@
-
-import { AuroCard } from '../../src/auro-card.js';
+import { AuroCard } from "../../src/auro-card.js";
 
 /**
  * The `<auro-card>` element provides users a flexible way to convey a summary of information.

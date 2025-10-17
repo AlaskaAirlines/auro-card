@@ -3,23 +3,16 @@
 
 // ---------------------------------------------------------------------
 
-/* eslint-disable lit/no-invalid-html, lit/binding-positions */
-
-import { LitElement} from "lit";
-import { html } from 'lit/static-html.js';
-
-import { ifDefined } from 'lit/directives/if-defined.js';
-
-import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
-
-import { AuroDependencyVersioning } from '@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs';
-
-import { AuroHyperlink } from '@aurodesignsystem/auro-hyperlink/src/auro-hyperlink.js';
-import hyperlinkVersion from './hyperlinkVersion.js';
-
-import styleCss from "./styles/style-css.js";
-import tokensCss from "./styles/tokens-css.js";
-import colorCss from "./styles/color-css.js";
+import { AuroHyperlink } from "@aurodesignsystem/auro-hyperlink/class";
+import { AuroDependencyVersioning } from "@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs";
+import AuroLibraryRuntimeUtils from "@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs";
+import { LitElement } from "lit";
+import { ifDefined } from "lit/directives/if-defined.js";
+import { html } from "lit/static-html.js";
+import hyperlinkVersion from "./hyperlinkVersion.js";
+import colorCss from "./styles/color.scss";
+import styleCss from "./styles/style.scss";
+import tokensCss from "./styles/tokens.scss";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
@@ -47,7 +40,7 @@ import colorCss from "./styles/color-css.js";
  */
 
 export class AuroCard extends LitElement {
-  constructor () {
+  constructor() {
     super();
 
     /**
@@ -60,43 +53,66 @@ export class AuroCard extends LitElement {
     /**
      * @private
      */
-    this.hyperlinkTag = versioning.generateTag('auro-hyperlink', hyperlinkVersion, AuroHyperlink);
+    this.hyperlinkTag = versioning.generateTag(
+      "auro-hyperlink",
+      hyperlinkVersion,
+      AuroHyperlink,
+    );
   }
 
   static get styles() {
-    return [
-      styleCss,
-      tokensCss,
-      colorCss
-    ];
+    return [styleCss, tokensCss, colorCss];
   }
 
   static get properties() {
     return {
+      /**
+       * Sets the variant of the card. Options `inset-content`, `inset-container`, `inset-stretch`.
+       */
       variant: {
         type: String,
         reflect: true,
       },
+
+      /**
+       * Sets the card to function as a hyperlink to the provided href value & disables the default CTA slot.
+       */
       href: {
         type: String,
         reflect: true,
       },
+
+      /**
+       * Sets rel attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#rel).
+       */
       rel: {
         type: String,
         reflect: true,
       },
+
+      /**
+       * If true, the auto URL re-write feature will be disabled. [see here for hyperlink relative](https://auro.alaskaair.com/components/auro/hyperlink/api#relative)
+       */
       relative: {
         type: Boolean,
         reflect: true,
       },
+
+      /**
+       * Sets role attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#role).
+       */
       role: {
         type: String,
         reflect: true,
       },
+
+      /**
+       * Sets target attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#target).
+       */
       target: {
         type: String,
         reflect: true,
-      }
+      },
     };
   }
 
@@ -114,7 +130,7 @@ export class AuroCard extends LitElement {
 
   firstUpdated() {
     // Add the tag name as an attribute if it is different than the component name
-    this.runtimeUtils.handleComponentTagRename(this, 'auro-card');
+    this.runtimeUtils.handleComponentTagRename(this, "auro-card");
 
     this.setRole();
   }
@@ -128,7 +144,7 @@ export class AuroCard extends LitElement {
     if (this.href) {
       this.role = this.role || undefined;
     } else {
-      this.role = 'article';
+      this.role = "article";
     }
   }
 
@@ -146,8 +162,9 @@ export class AuroCard extends LitElement {
     `;
 
     return html`
-      ${this.href
-        ? html`
+      ${
+        this.href
+          ? html`
           <${this.hyperlinkTag}
             aria-labelledby="content-within"
             href="${ifDefined(this.href ? this.href : undefined)}"
@@ -159,7 +176,7 @@ export class AuroCard extends LitElement {
           >
             ${cardContent}
           </${this.hyperlinkTag}>`
-      : cardContent
+          : cardContent
       }
     `;
   }
