@@ -1,4 +1,4 @@
-// Copyright (c) 2021 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
+// Copyright (c) 2025 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
 // See LICENSE in the project root for license information.
 
 // ---------------------------------------------------------------------
@@ -17,15 +17,8 @@ import tokensCss from "./styles/tokens.scss";
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
  * The `<auro-card>` element provides users a flexible way to convey a summary of information.
+ * @customElement auro-card
  *
- * @attr {String} variant - Sets the variant of the card. Options `inset-content`, `inset-container`, `inset-stretch`.
- * @attr {Boolean} border - Adds desired UI border to the `auro-card` element.
- * @attr {Boolean} center - Centers content within the scope of the `auro-card`.
- * @attr {String} href - Sets the card to function as a hyperlink to the provided href value & disables the default CTA slot.
- * @attr {String} rel - Sets rel attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#rel).
- * @attr {Boolean} relative - If true, the auto URL re-write feature will be disabled.https://auro.alaskaair.com/components/auro/hyperlink/api#relative
- * @attr {String} role - Sets role attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#role).
- * @attr {String} target - Sets target attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#target).
  * @slot image - Content slot for image content.
  * @slot header - Content slot for string text header content.
  * @slot description - Content slot for string text description content.
@@ -43,6 +36,10 @@ export class AuroCard extends LitElement {
   constructor() {
     super();
 
+    this._initializeDefaults();
+  }
+
+  _initializeDefaults() {
     /**
      * @private
      */
@@ -67,11 +64,19 @@ export class AuroCard extends LitElement {
   static get properties() {
     return {
       /**
-       * Sets the variant of the card. Options `inset-content`, `inset-container`, `inset-stretch`.
+       * Adds desired UI border to the `auro-card` element.
        */
-      variant: {
-        type: String,
-        reflect: true,
+      border: {
+        type: Boolean,
+        reflect: true
+      },
+
+      /**
+       * Centers content within the scope of the `auro-card`.
+       */
+      center: {
+        type: Boolean,
+        reflect: true
       },
 
       /**
@@ -79,7 +84,7 @@ export class AuroCard extends LitElement {
        */
       href: {
         type: String,
-        reflect: true,
+        reflect: true
       },
 
       /**
@@ -87,15 +92,15 @@ export class AuroCard extends LitElement {
        */
       rel: {
         type: String,
-        reflect: true,
+        reflect: true
       },
 
       /**
-       * If true, the auto URL re-write feature will be disabled. [see here for hyperlink relative](https://auro.alaskaair.com/components/auro/hyperlink/api#relative)
+       * If true, the auto URL re-write feature will be disabled. [See here for info about hyperlink relative attribute](https://auro.alaskaair.com/components/auro/hyperlink/api#relative).
        */
       relative: {
         type: Boolean,
-        reflect: true,
+        reflect: true
       },
 
       /**
@@ -103,7 +108,7 @@ export class AuroCard extends LitElement {
        */
       role: {
         type: String,
-        reflect: true,
+        reflect: true
       },
 
       /**
@@ -111,14 +116,23 @@ export class AuroCard extends LitElement {
        */
       target: {
         type: String,
-        reflect: true,
+        reflect: true
       },
+
+      /**
+       * Sets the variant of the card.
+       * @type {'inset-content' | 'inset-container' | 'inset-stretch'}
+       */
+      variant: {
+        type: String,
+        reflect: true
+      }
     };
   }
 
   /**
    * This will register this element with the browser.
-   * @param {string} [name="auro-card"] - The name of element that you want to register to.
+   * @param {string} [name="auro-card"] - The name of the element that you want to register.
    *
    * @example
    * AuroCard.register("custom-card") // this will register this element to <custom-card/>
