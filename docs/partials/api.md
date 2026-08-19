@@ -104,6 +104,24 @@ Note that this example also uses a `style` tag to set most of the styles - this 
 
 </auro-accordion>
 
+### Grid
+
+When cards are placed together in a row or grid, each card's `cta` slot drops to the bottom of the card so the call-to-action buttons line up across the row regardless of how much content each card holds.
+
+This requires no extra configuration: place the cards in a CSS `grid` or `flex` row, both of which stretch their items to equal height by default, and the alignment happens automatically.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/grid.html) -->
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/grid.html) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
+</auro-accordion>
+
 ## Restyle Component with CSS Variables
 
 The component may be restyled by changing the values of the following token(s).
