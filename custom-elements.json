@@ -274,6 +274,20 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/color-css.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/color-css.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/hyperlinkVersion.js",
       "declarations": [],
       "exports": [
@@ -307,6 +321,34 @@
       "path": "src/registered.js",
       "declarations": [],
       "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/style-css.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/style-css.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/tokens-css.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/tokens-css.js"
+          }
+        }
+      ]
     }
   ]
 }

@@ -18,14 +18,14 @@
 
 ### Basic
 
-The basic example demonstrates the `image`, `description`, and `cta` content slots. The default card has 100% width for flexible presentation within its container.
+The basic example demonstrates the `image`, `description`, and `cta` content slots on a single standalone card. The default card has 100% width for flexible presentation within its container.
 
 **Content recommendations:**
 - Use `<auro-header>` with `display="500"` for headings
 - Use `<p>` elements for body text  
 - Use `<auro-hyperlink>` or `<auro-hyperlink type="cta">` for the `cta` slot
 
-Apply CSS constraints like `max-width` to control text wrapping and layout as needed, as illustrated in the second example.
+Apply CSS constraints like `max-width` (as shown here) to control text wrapping and layout as needed.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/basic.html) -->
@@ -39,4 +39,5 @@ Apply CSS constraints like `max-width` to control text wrapping and layout as ne
 <!-- AURO-GENERATED-CONTENT:END -->
  
 </auro-accordion>
+ 
  
