@@ -30,121 +30,55 @@ The `<auro-card>` element can be use in a variety of ways, including:
 
 ### Basic
 
-The basic example demonstrates the `image`, `description`, and `cta` content slots. The default card has 100% width for flexible presentation within its container.
+The basic example demonstrates the `image`, `description`, and `cta` content slots on a single standalone card. The default card has 100% width for flexible presentation within its container.
 
 **Content recommendations:**
 - Use `<auro-header>` with `display="500"` for headings
 - Use `<p>` elements for body text  
 - Use `<auro-hyperlink>` or `<auro-hyperlink type="cta">` for the `cta` slot
 
-Apply CSS constraints like `max-width` to control text wrapping and layout as needed, as illustrated in the second example.
+Apply CSS constraints like `max-width` to control text wrapping and layout as needed.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/basic.html) -->
-  <!-- The below content is automatically added from ./../apiExamples/basic.html -->
-  <div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
-    <auro-card>
-      <img
-        slot="image"
-        src="https://picsum.photos/300/300?random=0"
-        alt="Random insert"/>
-      <auro-header slot="header" level="2" display="500">Display card title here</auro-header>
-      <p slot="description">
-        Context goes here.
-      </p>
-      <div slot="cta">
-        <auro-hyperlink href="/" type="nav" target="_blank">
-          More info
-        </auro-hyperlink>
-      </div>
-    </auro-card>
-    <auro-card style="max-width: 300px">
-      <img
-        slot="image"
-        src="https://picsum.photos/300/200?random=1"
-        alt="Random insert"/>
-      <auro-header slot="header" level="2" display="500">Display card title here</auro-header>
-      <p slot="description">
-        Context goes here. Use this area to communicate more information to your users.
-      </p>
-      <div slot="cta">
-        <auro-hyperlink href="/" nav target="_blank" type="cta">
-          More info
-        </auro-hyperlink>
-      </div>
-    </auro-card>
-    <auro-card style="max-width: 150px">
-      <img
-        slot="image"
-        src="https://picsum.photos/150/250?random=1"
-        alt="Random insert"/>
-      <auro-header slot="header" level="2" display="500">Display title</auro-header>
-      <p slot="description">
-        Context goes here.
-      </p>
-      <div slot="cta">
-        <auro-hyperlink href="/" type="nav" target="_blank">
-          More info
-        </auro-hyperlink>
-      </div>
-    </auro-card>
-  </div>
-  <!-- AURO-GENERATED-CONTENT:END -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/basic.html) -->
+<!-- The below content is automatically added from ./../apiExamples/basic.html -->
+<auro-card>
+<img
+      slot="image"
+      src="https://picsum.photos/300/200?random=0"
+      alt=""/>
+<auro-header slot="header" level="2" display="500">Display card title here</auro-header>
+<p slot="description">
+      Context goes here. Use this area to communicate more information to your users.
+</p>
+<div slot="cta">
+<auro-hyperlink href="/" type="nav" target="_blank">
+        More info
+</auro-hyperlink>
+</div>
+</auro-card>
+<!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
-  <span slot="trigger">See code</span>
+<span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/basic.html) -->
 <!-- The below code snippet is automatically added from ./../apiExamples/basic.html -->
 
-```html
-<div style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 4rem;">
-  <auro-card>
-    <img
-      slot="image"
-      src="https://picsum.photos/300/300?random=0"
-      alt="Random insert"/>
-    <auro-header slot="header" level="2" display="500">Display card title here</auro-header>
-    <p slot="description">
-      Context goes here.
-    </p>
-    <div slot="cta">
-      <auro-hyperlink href="/" type="nav" target="_blank">
-        More info
-      </auro-hyperlink>
-    </div>
-  </auro-card>
-  <auro-card style="max-width: 300px">
-    <img
-      slot="image"
-      src="https://picsum.photos/300/200?random=1"
-      alt="Random insert"/>
-    <auro-header slot="header" level="2" display="500">Display card title here</auro-header>
-    <p slot="description">
-      Context goes here. Use this area to communicate more information to your users.
-    </p>
-    <div slot="cta">
-      <auro-hyperlink href="/" nav target="_blank" type="cta">
-        More info
-      </auro-hyperlink>
-    </div>
-  </auro-card>
-  <auro-card style="max-width: 150px">
-    <img
-      slot="image"
-      src="https://picsum.photos/150/250?random=1"
-      alt="Random insert"/>
-    <auro-header slot="header" level="2" display="500">Display title</auro-header>
-    <p slot="description">
-      Context goes here.
-    </p>
-    <div slot="cta">
-      <auro-hyperlink href="/" type="nav" target="_blank">
-        More info
-      </auro-hyperlink>
-    </div>
-  </auro-card>
-</div>
-```
+<pre class="language-html"><code class="language-html">&lt;auro-card&gt;
+  &lt;img
+    slot="image"
+    src="https://picsum.photos/300/200?random=0"
+    alt=""/&gt;
+  &lt;auro-header slot="header" level="2" display="500"&gt;Display card title here&lt;/auro-header&gt;
+  &lt;p slot="description"&gt;
+    Context goes here. Use this area to communicate more information to your users.
+  &lt;/p&gt;
+  &lt;div slot="cta"&gt;
+    &lt;auro-hyperlink href="/" type="nav" target="_blank"&gt;
+      More info
+    &lt;/auro-hyperlink&gt;
+  &lt;/div&gt;
+&lt;/auro-card&gt;</code></pre>
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
  
