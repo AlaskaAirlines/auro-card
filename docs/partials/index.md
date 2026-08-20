@@ -40,4 +40,3 @@ Apply CSS constraints like `max-width` to control text wrapping and layout as ne
  
 </auro-accordion>
  
- 
