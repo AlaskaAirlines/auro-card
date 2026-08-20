@@ -64,4 +64,36 @@ describe("auro-card", () => {
     expect(anchor).to.have.attribute("role", "button");
     expect(AuroHyperlink).to.have.attribute("target", "parent");
   });
+
+  it("drops the cta to the card bottom when stretched taller than its content", async () => {
+    const wrapper = await fixture(html`
+      <div style="display: flex; align-items: stretch; height: 600px;">
+        <auro-card>
+          <h1 slot="header">Header</h1>
+          <p slot="description">Short.</p>
+          <div slot="cta">More info</div>
+        </auro-card>
+      </div>
+    `);
+    const cta = wrapper.querySelector('[slot="cta"]');
+
+    // In a stretched card the content column grows to fill the extra height
+    // and the slotted cta's auto top-margin resolves to the distributed free
+    // space, pushing it to the bottom. Guards both `.content { flex: 1 1 auto }`
+    // and the `::slotted([slot="cta"]) { margin-top: auto }` selector.
+    expect(parseFloat(getComputedStyle(cta).marginTop)).to.be.greaterThan(0);
+  });
+
+  it("keeps the cta below content when the card is not stretched", async () => {
+    const el = await fixture(html`
+      <auro-card>
+        <h1 slot="header">Header</h1>
+        <p slot="description">Short.</p>
+        <div slot="cta">More info</div>
+      </auro-card>
+    `);
+    const cta = el.querySelector('[slot="cta"]');
+
+    expect(parseFloat(getComputedStyle(cta).marginTop)).to.equal(0);
+  });
 });

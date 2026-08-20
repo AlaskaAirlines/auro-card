@@ -35,8 +35,20 @@
   }
 
   .content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
     padding: var(--ds-size-200, vac.$ds-size-200) 0;
     padding-top: 0;
+  }
+
+  // Drop the call-to-action to the bottom of the card so CTAs line up
+  // across a row/grid of cards. Targets the slotted element directly
+  // because the cta <slot> is display:contents and generates no box, so
+  // margin-top:auto on the slot itself would be ignored. Collapses to a
+  // no-op when the card is not stretched taller than its content.
+  ::slotted([slot="cta"]) {
+    margin-top: auto;
   }
 }
 
@@ -79,7 +91,10 @@
 // Navigation Card
 
 :host([href])  {
-  [auro-hyperlink] {
+  [auro-hyperlink][part="link"] {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
     border-radius: var(--ds-border-radius, vac.$ds-border-radius);
     overflow: hidden;
     box-shadow: var(--ds-elevation-100, vac.$ds-elevation-100);
@@ -88,6 +103,9 @@
     outline-style: solid;
 
     &::part(link) {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
       text-decoration: none;
       color: inherit;
     }
