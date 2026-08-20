@@ -295,7 +295,7 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "7.1.0",
+            "name": "8.0.3",
             "module": "src/hyperlinkVersion.js"
           }
         }
