@@ -92,7 +92,7 @@ In cases where the project is not able to process JS assets, there are pre-proce
   <img
     slot="image"
     src="https://picsum.photos/300/200?random=0"
-    alt="Random insert"/>
+    alt=""/>
   <auro-header slot="header" level="2" display="500">Display card title here</auro-header>
   <p slot="description">
     Context goes here. Use this area to communicate more information to your users.
@@ -137,7 +137,7 @@ This will create a new custom element `<custom-card>` that behaves exactly like 
     <img
       slot="image"
       src="https://picsum.photos/300/300?random=0"
-      alt="Random insert"/>
+      alt=""/>
     <h3 slot="header">Card Title</h3>
     <p slot="description">
       Context goes here.
@@ -160,7 +160,7 @@ This will create a new custom element `<custom-card>` that behaves exactly like 
   <img
     slot="image"
     src="https://picsum.photos/300/300?random=0"
-    alt="Random insert"/>
+    alt=""/>
   <h3 slot="header">Card Title</h3>
   <p slot="description">
     Context goes here.
