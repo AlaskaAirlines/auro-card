@@ -114,8 +114,7 @@ You can do this by importing only the component class and using the `register(na
 
 <pre class="language-js"><code class="language-js">// Import the class only
 import { AuroCard } from '@aurodesignsystem/auro-card/class';
-​
-// Register with a custom name if desired
+&#10;// Register with a custom name if desired
 AuroCard.register('custom-card');</code></pre>
 
 This will create a new custom element `<custom-card>` that behaves exactly like `<auro-card>`, allowing both to coexist on the same page without interfering with each other.
