@@ -20,7 +20,7 @@
 
 ### Bordered
 
-Illustrated below is the `border` attribute. This feature defines a single border around the whole `<auro-card>` element with a pre-defined rounded corner.
+Add the `border` attribute to draw a thin border with rounded corners around the whole card.
 
 <div class="exampleWrapper">
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/bordered.html) -->
@@ -34,9 +34,9 @@ Illustrated below is the `border` attribute. This feature defines a single borde
 
 </auro-accordion>
 
-### Centered Content
+### Centered content
 
-Text can be centered by assigning the `text-align: center` attribute to the `<auro-card>` element. Similarly, elements within `<auro-card>` can be centered with the `justify-content:center` and/or `align-items:center` attributes to use flexbox to vertically and horizontally center the content within the `<auro-card>` container.
+Add the `center` attribute to center the text. To center the image and call to action too, set `align-items: center` on the card, as the first example does.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/center.html) -->
@@ -52,9 +52,9 @@ Text can be centered by assigning the `text-align: center` attribute to the `<au
 
 ### Navigation
 
-The `<auro-card>` custom element, with its `href` attribute, creates a `<auro-hyperlink>` element to web pages, files, email addresses, locations in the same page, or anything else a URL can address. The second example illustrates the accessible icon when using the `target` attribute.
+Add `href` to make the whole card a link to a web page, file, email address, or location in the same page. URLs that run script, such as `javascript:`, are removed. The card wraps its content in an `<auro-hyperlink>`. When you set `target="_blank"`, as in the second example, the card shows an icon that signals the link opens in a new tab.
 
-Additionally notice the navigation card with the QR code icon. See in this example how the `variant="inset-stretch"` was used to add additional margin spacing to the top and bottom of the content placement in the card.
+The third example places a QR code icon in the `image` slot and uses `variant="inset-stretch"` to add space above the icon and below the text.
 
 <div class="exampleWrapper">
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/navigation.html) -->
@@ -70,7 +70,7 @@ Additionally notice the navigation card with the QR code icon. See in this examp
 
 ### Variants
 
-The following examples make use of the `inset-container` or `inset-content` variants. As the name implies, the inset variants will add inner padding either on the whole card or only in the `description` and `cta` content slots.
+The following examples use the `inset-container` and `inset-content` variants. Use `inset-container` to pad the whole card, image included. Use `inset-content` to pad only the header, description, and call to action, so the image stays edge to edge.
 
 <div class="exampleWrapper">
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/inset.html) -->
@@ -90,7 +90,7 @@ The following examples make use of the `inset-container` or `inset-content` vari
 
 These cards are loosely based on the "Typography" example images from [alaskaair.com](https://alaskaair.com) and serve as a way to show that complex card-like layouts are possible with `<auro-card>` beyond what we show here.
 
-Note that this example also uses a `style` tag to set most of the styles - this is to show that you don't have to use inline styles and can generally use whatever styling solution you prefer.
+Note that this example also uses a `style` tag to set most of the styles. This shows that you don't have to use inline styles and can generally use whatever styling solution you prefer.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/typography-cards.html) -->
@@ -124,7 +124,7 @@ This requires no extra configuration: place the cards in a CSS `grid` or `flex` 
 
 ## Restyle Component with CSS Variables
 
-The component may be restyled by changing the values of the following token(s).
+Restyle the component by changing the values of the following tokens.
 
 <!-- Remove section if component does not have any component specific tokens -->
 

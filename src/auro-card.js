@@ -41,17 +41,22 @@ import tokensCss from "./styles/tokens.scss";
  * @summary Card that groups an image, header, description, and call to action, and can act as a single link.
  * @customElement auro-card
  *
+ * @attr {'inset-content' | 'inset-container' | 'inset-stretch'} variant - Sets how padding is applied. Use `inset-content` to pad the text and leave the image edge to edge, `inset-container` to pad the whole card, image included, or `inset-stretch` to let the image and text reach the left and right edges, with space above the image and below the text. Without a value, the card adds no extra left, right, or top padding. When `href` is set, the text always gets left and right padding, even with `inset-stretch`.
+ *
  * @slot image - An image for the top of the card. An `<img>` fills the full width of the card.
  * @slot header - The card's heading text.
  * @slot description - Supporting text shown below the header.
  * @slot cta - A call to action, such as a button or link, shown below the description. When the card is taller than its content, such as in a row of cards, it moves to the bottom so calls to action line up.
  * @csspart content - The container that holds the header, description, and cta slots.
- * @csspart link - The [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#link) that wraps the whole card. Only present when `href` is set.
+ * @csspart link - The [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#link) that wraps the whole card. Only present when `href` is set.
  * @csspart imageWrapper - The container around the image slot.
- * @csspart image - The image slot.
- * @csspart header - The header slot.
- * @csspart description - The description slot.
- * @csspart cta - The cta slot.
+ * @csspart image - The `<slot>` element that holds the image content.
+ * @csspart header - The `<slot>` element that holds the header content.
+ * @csspart description - The `<slot>` element that holds the description content.
+ * @csspart cta - The `<slot>` element that holds the call to action.
+ *
+ * @cssprop --ds-auro-card-border-color - Color of the card's border, which shows when `border` is set. A card with `href` also uses it for the outline around the card.
+ * @cssprop --ds-auro-card-background-color - Color behind the card's content. Cards with `border` or `href` use the theme's surface color by default, and other cards are transparent.
  */
 
 export class AuroCard extends LitElement {
@@ -104,7 +109,7 @@ export class AuroCard extends LitElement {
       },
 
       /**
-       * Makes the whole card a single link to an address such as `/destinations/hawaii` (the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#href) `href` attribute), including its safe handling of URLs. Because the card's content is rendered inside the link, avoid placing other links or buttons in the card's slots.
+       * Makes the whole card a single link to an address such as `/destinations/hawaii` (the [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#href) `href` attribute), including its safe handling of URLs. Because the card's content is rendered inside the link, avoid placing other links or buttons in the card's slots.
        * @category behavior
        */
       href: {
@@ -113,7 +118,7 @@ export class AuroCard extends LitElement {
       },
 
       /**
-       * Sets how the linked page relates to this one, such as `noopener` or `nofollow` (the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#rel) `rel` attribute).
+       * Sets how the linked page relates to this one, such as `noopener` or `nofollow` (the [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#rel) `rel` attribute).
        * @relevantWhen href
        * @category behavior
        */
@@ -123,7 +128,7 @@ export class AuroCard extends LitElement {
       },
 
       /**
-       * Passes a `relative` attribute to the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api). The hyperlink version this card uses (8.x) does not currently act on it, so it has no visible effect.
+       * Passes a `relative` attribute to the [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api). The auro-hyperlink version this card uses does not currently act on it, so it has no visible effect.
        * @relevantWhen href
        * @category behavior
        */
@@ -133,7 +138,7 @@ export class AuroCard extends LitElement {
       },
 
       /**
-       * Sets the card's accessibility role. Without `href`, the role is `article`. With `href`, the value is passed to the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#role), and no role is set when it is empty.
+       * Sets the card's accessibility role. Without `href`, the role is `article`. With `href`, the value is passed to the [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#role), and no role is set when it is empty.
        * @category behavior
        */
       role: {
@@ -142,21 +147,11 @@ export class AuroCard extends LitElement {
       },
 
       /**
-       * Sets where the link opens, such as `_blank` for a new tab or `_self` for the current tab (the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#target) `target` attribute).
+       * Sets where the link opens, such as `_blank` for a new tab or `_self` for the current tab (the [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#target) `target` attribute).
        * @relevantWhen href
        * @category behavior
        */
       target: {
-        type: String,
-        reflect: true
-      },
-
-      /**
-       * Sets how padding is applied. Use `inset-content` to pad the text and leave the image edge to edge, `inset-container` to pad the whole card, image included, or `inset-stretch` to let the image and text reach the left and right edges, with space above the image and below the text. Without a value, no extra padding is added.
-       * @type {'inset-content' | 'inset-container' | 'inset-stretch'}
-       * @category ui
-       */
-      variant: {
         type: String,
         reflect: true
       }

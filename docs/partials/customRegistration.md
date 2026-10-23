@@ -6,4 +6,4 @@ import { AuroCard } from '@aurodesignsystem/auro-card/class';
 AuroCard.register('custom-card');
 ```
 
-This will create a new custom element `<custom-card>` that behaves exactly like `<auro-card>`, allowing both to coexist on the same page without interfering with each other.
+This creates a new custom element `<custom-card>` that behaves exactly like `<auro-card>`, allowing both to coexist on the same page without interfering with each other.
