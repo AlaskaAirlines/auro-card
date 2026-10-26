@@ -25,16 +25,16 @@ summary of information, such as a destination, offer, or article teaser.
 
 ### Properties & Attributes
 
-| Properties | Attributes | Modifiers | Type                                                    | Default | Description                                                                                                                                                                                                                                                                                                                                    |
-| ---------- | ---------- | --------- | ------------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| border     | border     |           | boolean                                                 |         | Adds a thin border and rounded corners around the card.                                                                                                                                                                                                                                                                                        |
-| center     | center     |           | boolean                                                 |         | Centers the text within the card.                                                                                                                                                                                                                                                                                                              |
-| href       | href       |           | string                                                  |         | Makes the whole card a single link to an address such as `/destinations/hawaii` (the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#href) `href` attribute), including its safe handling of URLs. Because the card's content is rendered inside the link, avoid placing other links or buttons in the card's slots. |
-| rel        | rel        |           | string                                                  |         | Sets how the linked page relates to this one, such as `noopener` or `nofollow` (the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#rel) `rel` attribute).                                                                                                                                                           |
-| relative   | relative   |           | boolean                                                 |         | Passes a `relative` attribute to the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api). The hyperlink version this card uses (8.x) does not currently act on it, so it has no visible effect.                                                                                                                         |
-| role       | role       |           | string                                                  |         | Sets the card's accessibility role. Without `href`, the role is `article`. With `href`, the value is passed to the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#role), and no role is set when it is empty.                                                                                                       |
-| target     | target     |           | string                                                  |         | Sets where the link opens, such as `_blank` for a new tab or `_self` for the current tab (the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#target) `target` attribute).                                                                                                                                           |
-| variant    | variant    |           | `inset-content` \| `inset-container` \| `inset-stretch` |         | Sets how padding is applied. Use `inset-content` to pad the text and leave the image edge to edge, `inset-container` to pad the whole card, image included, or `inset-stretch` to let the image and text reach the left and right edges, with space above the image and below the text. Without a value, no extra padding is added.            |
+| Properties | Attributes | Modifiers | Type                                                    | Default | Description                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ---------- | ---------- | --------- | ------------------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| border     | border     |           | boolean                                                 |         | Adds a thin border and rounded corners around the card.                                                                                                                                                                                                                                                                                                                                                                                                  |
+| center     | center     |           | boolean                                                 |         | Centers the text within the card.                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| href       | href       |           | string                                                  |         | Makes the whole card a single link to an address such as `/destinations/hawaii` (the [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#href) `href` attribute), including its safe handling of URLs. Because the card's content is rendered inside the link, avoid placing other links or buttons in the card's slots.                                                                                                         |
+| rel        | rel        |           | string                                                  |         | Sets how the linked page relates to this one, such as `noopener` or `nofollow` (the [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#rel) `rel` attribute).                                                                                                                                                                                                                                                                   |
+| relative   | relative   |           | boolean                                                 |         | Passes a `relative` attribute to the [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api). The auro-hyperlink version this card uses does not currently act on it, so it has no visible effect.                                                                                                                                                                                                                                  |
+| role       | role       |           | string                                                  |         | Sets the card's accessibility role. Without `href`, the role is `article`. With `href`, the value is passed to the [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#role), and no role is set when it is empty.                                                                                                                                                                                                               |
+| target     | target     |           | string                                                  |         | Sets where the link opens, such as `_blank` for a new tab or `_self` for the current tab (the [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#target) `target` attribute).                                                                                                                                                                                                                                                   |
+|            | variant    |           | `inset-content` \| `inset-container` \| `inset-stretch` |         | Sets how padding is applied. Use `inset-content` to pad the text and leave the image edge to edge, `inset-container` to pad the whole card, image included, or `inset-stretch` to let the image and text reach the left and right edges, with space above the image and below the text. Without a value, the card adds no extra left, right, or top padding. When `href` is set, the text always gets left and right padding, even with `inset-stretch`. |
 
 ### Methods
 
@@ -53,15 +53,22 @@ summary of information, such as a destination, offer, or article teaser.
 
 ### CSS Shadow Parts
 
-| Name         | Description                                                                                                                                     |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| content      | The container that holds the header, description, and cta slots.                                                                                |
-| cta          | The cta slot.                                                                                                                                   |
-| description  | The description slot.                                                                                                                           |
-| header       | The header slot.                                                                                                                                |
-| image        | The image slot.                                                                                                                                 |
-| imageWrapper | The container around the image slot.                                                                                                            |
-| link         | The [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#link) that wraps the whole card. Only present when `href` is set. |
+| Name         | Description                                                                                                                                       |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| content      | The container that holds the header, description, and cta slots.                                                                                  |
+| cta          | The `<slot>` element that holds the call to action.                                                                                               |
+| description  | The `<slot>` element that holds the description content.                                                                                          |
+| header       | The `<slot>` element that holds the header content.                                                                                               |
+| image        | The `<slot>` element that holds the image content.                                                                                                |
+| imageWrapper | The container around the image slot.                                                                                                              |
+| link         | The [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#link) that wraps the whole card. Only present when `href` is set. |
+
+### CSS Custom Properties
+
+| Name                            | Description                                                                                                                               |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| --ds-auro-card-border-color     | Color of the card's border, which shows when `border` is set. A card with `href` also uses it for the outline around the card.            |
+| --ds-auro-card-background-color | Color behind the card's content. Cards with `border` or `href` use the theme's surface color by default, and other cards are transparent. |
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## Basic
@@ -113,7 +120,7 @@ summary of information, such as a destination, offer, or article teaser.
 
 ### Bordered
 
-Illustrated below is the `border` attribute. This feature defines a single border around the whole `<auro-card>` element with a pre-defined rounded corner.
+Add the `border` attribute to draw a thin border with rounded corners around the whole card.
 
 <div class="exampleWrapper">
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/bordered.html) -->
@@ -124,7 +131,7 @@ Illustrated below is the `border` attribute. This feature defines a single borde
       slot="image"
       src="https://picsum.photos/200/300?random=3"
       alt=""/>
-<auro-header slot="header" level="2" display="500">Inset Container</auro-header>
+<auro-header slot="header" level="2" display="500">Inset container</auro-header>
 <p slot="description">
       Context goes here. Describe the page this card represents.
 </p>
@@ -139,7 +146,7 @@ Illustrated below is the `border` attribute. This feature defines a single borde
       slot="image"
       src="https://picsum.photos/200/300?random=4"
       alt=""/>
-<auro-header slot="header" level="2" display="500">Inset Content</auro-header>
+<auro-header slot="header" level="2" display="500">Inset content</auro-header>
 <p slot="description">
       Context goes here. Describe the page this card represents.
 </p>
@@ -163,7 +170,7 @@ Illustrated below is the `border` attribute. This feature defines a single borde
       slot="image"
       src="https://picsum.photos/200/300?random=3"
       alt=""/&gt;
-    &lt;auro-header slot="header" level="2" display="500"&gt;Inset Container&lt;/auro-header&gt;
+    &lt;auro-header slot="header" level="2" display="500"&gt;Inset container&lt;/auro-header&gt;
     &lt;p slot="description"&gt;
       Context goes here. Describe the page this card represents.
     &lt;/p&gt;
@@ -178,7 +185,7 @@ Illustrated below is the `border` attribute. This feature defines a single borde
       slot="image"
       src="https://picsum.photos/200/300?random=4"
       alt=""/&gt;
-      &lt;auro-header slot="header" level="2" display="500"&gt;Inset Content&lt;/auro-header&gt;
+      &lt;auro-header slot="header" level="2" display="500"&gt;Inset content&lt;/auro-header&gt;
     &lt;p slot="description"&gt;
       Context goes here. Describe the page this card represents.
     &lt;/p&gt;
@@ -192,9 +199,9 @@ Illustrated below is the `border` attribute. This feature defines a single borde
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-### Centered Content
+### Centered content
 
-Text can be centered by assigning the `text-align: center` attribute to the `<auro-card>` element. Similarly, elements within `<auro-card>` can be centered with the `justify-content:center` and/or `align-items:center` attributes to use flexbox to vertically and horizontally center the content within the `<auro-card>` container.
+Add the `center` attribute to center the text. To center the image and call to action too, set `align-items: center` on the card, as the first example does.
 
 <div class="exampleWrapper">
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/center.html) -->
@@ -216,7 +223,7 @@ Text can be centered by assigning the `text-align: center` attribute to the `<au
         alt="Random insert 0"
         style="max-width: 200px; overflow: hidden; width: unset; margin: 0 auto;"
       />
-<auro-header slot="header" level="2" display="500" style="max-width: 250px;">Centered Content</auro-header>
+<auro-header slot="header" level="2" display="500" style="max-width: 250px;">Centered content</auro-header>
 <p slot="description" style="max-width: 250px;">
         This is centered description content. Also, notice the CTA and image are
         centered.
@@ -255,7 +262,7 @@ Text can be centered by assigning the `text-align: center` attribute to the `<au
         style="color: var(--ds-color-brand-breeze-400, #00cff0);">
 </auro-icon>
 <auro-header slot="header" level="2" display="500">
-        Card Title
+        Card title
 </auro-header>
 <p slot="description">
         Context goes here. Describe the page this card represents.
@@ -289,7 +296,7 @@ Text can be centered by assigning the `text-align: center` attribute to the `<au
       alt="Random insert 0"
       style="max-width: 200px; overflow: hidden; width: unset; margin: 0 auto;"
     /&gt;
-    &lt;auro-header slot="header" level="2" display="500" style="max-width: 250px;"&gt;Centered Content&lt;/auro-header&gt;
+    &lt;auro-header slot="header" level="2" display="500" style="max-width: 250px;"&gt;Centered content&lt;/auro-header&gt;
     &lt;p slot="description" style="max-width: 250px;"&gt;
       This is centered description content. Also, notice the CTA and image are
       centered.
@@ -328,7 +335,7 @@ Text can be centered by assigning the `text-align: center` attribute to the `<au
       style="color: var(--ds-color-brand-breeze-400, #00cff0);"&gt;
     &lt;/auro-icon&gt;
     &lt;auro-header slot="header" level="2" display="500"&gt;
-      Card Title
+      Card title
     &lt;/auro-header&gt;
     &lt;p slot="description"&gt;
       Context goes here. Describe the page this card represents.
@@ -343,9 +350,9 @@ Text can be centered by assigning the `text-align: center` attribute to the `<au
 
 ### Navigation
 
-The `<auro-card>` custom element, with its `href` attribute, creates a `<auro-hyperlink>` element to web pages, files, email addresses, locations in the same page, or anything else a URL can address. The second example illustrates the accessible icon when using the `target` attribute.
+Add `href` to make the whole card a link to a web page, file, email address, or location in the same page. URLs that run script, such as `javascript:`, are removed. The card wraps its content in an `<auro-hyperlink>`. When you set `target="_blank"`, as in the second example, the card shows an icon that signals the link opens in a new tab.
 
-Additionally notice the navigation card with the QR code icon. See in this example how the `variant="inset-stretch"` was used to add additional margin spacing to the top and bottom of the content placement in the card.
+The third example places a QR code icon in the `image` slot and uses `variant="inset-stretch"` to add space above the icon and below the text.
 
 <div class="exampleWrapper">
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/navigation.html) -->
@@ -409,7 +416,7 @@ Additionally notice the navigation card with the QR code icon. See in this examp
     style="color: var(--ds-color-brand-breeze-400, #00cff0); width: 60px;">
 </auro-icon>
 <auro-header slot="header" level="2" display="500">
-    Card Title
+    Card title
 </auro-header>
 <p slot="description">
     Context goes here. Describe the page this card represents.
@@ -482,7 +489,7 @@ Additionally notice the navigation card with the QR code icon. See in this examp
     style="color: var(--ds-color-brand-breeze-400, #00cff0); width: 60px;"&gt;
   &lt;/auro-icon&gt;
   &lt;auro-header slot="header" level="2" display="500"&gt;
-    Card Title
+    Card title
   &lt;/auro-header&gt;
   &lt;p slot="description"&gt;
     Context goes here. Describe the page this card represents.
@@ -494,7 +501,7 @@ Additionally notice the navigation card with the QR code icon. See in this examp
 
 ### Variants
 
-The following examples make use of the `inset-container` or `inset-content` variants. As the name implies, the inset variants will add inner padding either on the whole card or only in the `description` and `cta` content slots.
+The following examples use the `inset-container` and `inset-content` variants. Use `inset-container` to pad the whole card, image included. Use `inset-content` to pad only the header, description, and call to action, so the image stays edge to edge.
 
 <div class="exampleWrapper">
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/inset.html) -->
@@ -579,7 +586,7 @@ The following examples make use of the `inset-container` or `inset-content` vari
 
 These cards are loosely based on the "Typography" example images from [alaskaair.com](https://alaskaair.com) and serve as a way to show that complex card-like layouts are possible with `<auro-card>` beyond what we show here.
 
-Note that this example also uses a `style` tag to set most of the styles - this is to show that you don't have to use inline styles and can generally use whatever styling solution you prefer.
+Note that this example also uses a `style` tag to set most of the styles. This shows that you don't have to use inline styles and can generally use whatever styling solution you prefer.
 
 <div class="exampleWrapper">
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/typography-cards.html) -->
@@ -631,7 +638,7 @@ Note that this example also uses a `style` tag to set most of the styles - this 
 </p>
 <div slot="cta">
 <auro-hyperlink type="cta" href="/">
-          Book a Flight
+          Book a flight
 </auro-hyperlink>
 </div>
 </auro-card>
@@ -648,7 +655,7 @@ Note that this example also uses a `style` tag to set most of the styles - this 
 </p>
 <div slot="cta">
 <auro-hyperlink type="cta" href="/" ondark>
-          Book a Flight
+          Book a flight
 </auro-hyperlink>
 </div>
 </auro-card>
@@ -707,7 +714,7 @@ Note that this example also uses a `style` tag to set most of the styles - this 
     &lt;/p&gt;
     &lt;div slot="cta"&gt;
       &lt;auro-hyperlink type="cta" href="/"&gt;
-        Book a Flight
+        Book a flight
       &lt;/auro-hyperlink&gt;
     &lt;/div&gt;
   &lt;/auro-card&gt;
@@ -724,7 +731,7 @@ Note that this example also uses a `style` tag to set most of the styles - this 
     &lt;/p&gt;
     &lt;div slot="cta"&gt;
       &lt;auro-hyperlink type="cta" href="/" ondark&gt;
-        Book a Flight
+        Book a flight
       &lt;/auro-hyperlink&gt;
     &lt;/div&gt;
   &lt;/auro-card&gt;
@@ -837,7 +844,7 @@ This requires no extra configuration: place the cards in a CSS `grid` or `flex` 
 
 ## Restyle Component with CSS Variables
 
-The component may be restyled by changing the values of the following token(s).
+Restyle the component by changing the values of the following tokens.
 
 <!-- Remove section if component does not have any component specific tokens -->
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../src/styles/tokens.scss) -->
@@ -846,6 +853,5 @@ The component may be restyled by changing the values of the following token(s).
 <pre class="language-scss"><code class="language-scss">:host {
   --ds-auro-card-border-color: transparent;
   --ds-auro-card-background-color: transparent;
-  --ds-auro-card-texticon-color: inherit;
 }</code></pre>
 <!-- AURO-GENERATED-CONTENT:END -->
