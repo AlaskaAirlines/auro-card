@@ -8,53 +8,63 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "The `<auro-card>` element provides users a flexible way to convey a summary of information.",
+          "description": "A card that groups an image, a header, a description, and a call to action into one\nsummary of information, such as a destination, offer, or article teaser.\n\n**Key capabilities**\n- **Content areas**: four named slots (`image`, `header`, `description`, `cta`) that you\n  fill with your own content.\n- **Clickable card**: setting `href` makes the whole card a single link, built on\n  `<auro-hyperlink>`, including its safe handling of URLs.\n- **Spacing options**: set `variant` to `inset-content`, `inset-container`, or `inset-stretch`\n  to choose how padding is applied around the image and text.\n- **Border and alignment**: `border` adds an outline with rounded corners, and `center`\n  centers the text.\n\n**Example**\n```html\n<auro-card href=\"/destinations/hawaii\" border>\n  <img slot=\"image\" src=\"hawaii.jpg\" alt=\"A beach in Hawaii\" />\n  <span slot=\"header\">Hawaii</span>\n  <span slot=\"description\">Fly nonstop from the West Coast.</span>\n</auro-card>\n```",
           "name": "AuroCard",
+          "cssProperties": [
+            {
+              "description": "Color of the card's border, which shows when `border` is set. A card with `href` also uses it for the outline around the card.",
+              "name": "--ds-auro-card-border-color"
+            },
+            {
+              "description": "Color behind the card's content. Cards with `border` or `href` use the theme's surface color by default, and other cards are transparent.",
+              "name": "--ds-auro-card-background-color"
+            }
+          ],
           "cssParts": [
             {
-              "description": "Apply styles to the outer string text container.",
+              "description": "The container that holds the header, description, and cta slots.",
               "name": "content"
             },
             {
-              "description": "Apply styles to the named cta slot container.",
+              "description": "The `<slot>` element that holds the call to action.",
               "name": "cta"
             },
             {
-              "description": "Apply styles to the named description slot container.",
+              "description": "The `<slot>` element that holds the description content.",
               "name": "description"
             },
             {
-              "description": "Apply styles to the named header slot container.",
+              "description": "The `<slot>` element that holds the header content.",
               "name": "header"
             },
             {
-              "description": "Apply styles to the named image slot container.",
+              "description": "The `<slot>` element that holds the image content.",
               "name": "image"
             },
             {
-              "description": "Apply styles to the outer image slot container.",
+              "description": "The container around the image slot.",
               "name": "imageWrapper"
             },
             {
-              "description": "Apply styles to the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#link) element.",
+              "description": "The [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#link) that wraps the whole card. Only present when `href` is set.",
               "name": "link"
             }
           ],
           "slots": [
             {
-              "description": "Content slot for call-to-action content.",
+              "description": "A call to action, such as a button or link, shown below the description. When the card is taller than its content, such as in a row of cards, it moves to the bottom so calls to action line up.",
               "name": "cta"
             },
             {
-              "description": "Content slot for string text description content.",
+              "description": "Supporting text shown below the header.",
               "name": "description"
             },
             {
-              "description": "Content slot for string text header content.",
+              "description": "The card's heading text.",
               "name": "header"
             },
             {
-              "description": "Content slot for image content.",
+              "description": "An image for the top of the card. An `<img>` fills the full width of the card.",
               "name": "image"
             }
           ],
@@ -73,9 +83,10 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "Adds desired UI border to the `auro-card` element.",
+              "description": "Adds a thin border and rounded corners around the card.",
               "attribute": "border",
-              "reflects": true
+              "reflects": true,
+              "category": "ui"
             },
             {
               "kind": "field",
@@ -84,9 +95,10 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "Centers content within the scope of the `auro-card`.",
+              "description": "Centers the text within the card.",
               "attribute": "center",
-              "reflects": true
+              "reflects": true,
+              "category": "ui"
             },
             {
               "kind": "field",
@@ -95,9 +107,10 @@
               "type": {
                 "text": "string"
               },
-              "description": "Sets the card to function as a hyperlink to the provided href value & disables the default CTA slot.",
+              "description": "Makes the whole card a single link to an address such as `/destinations/hawaii` (the [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#href) `href` attribute), including its safe handling of URLs. Because the card's content is rendered inside the link, avoid placing other links or buttons in the card's slots.",
               "attribute": "href",
-              "reflects": true
+              "reflects": true,
+              "category": "behavior"
             },
             {
               "kind": "method",
@@ -107,14 +120,14 @@
                 {
                   "name": "name",
                   "default": "\"auro-card\"",
-                  "description": "The name of the element that you want to register.",
+                  "description": "The tag name to register the element under.",
                   "optional": true,
                   "type": {
                     "text": "string"
                   }
                 }
               ],
-              "description": "This will register this element with the browser.",
+              "description": "Registers the element with the browser under a tag name. Use a custom name to run this version alongside another version of `auro-card` on the same page.",
               "type": {
                 "text": "register(name?: string = \"auro-card\") => void"
               }
@@ -126,9 +139,11 @@
               "type": {
                 "text": "string"
               },
-              "description": "Sets rel attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#rel).",
+              "description": "Sets how the linked page relates to this one, such as `noopener` or `nofollow` (the [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#rel) `rel` attribute).",
               "attribute": "rel",
-              "reflects": true
+              "reflects": true,
+              "relevantWhen": "href",
+              "category": "behavior"
             },
             {
               "kind": "field",
@@ -137,9 +152,11 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "If true, the auto URL re-write feature will be disabled. [See here for info about hyperlink relative attribute](https://auro.alaskaair.com/components/auro/hyperlink/api#relative).",
+              "description": "Passes a `relative` attribute to the [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api). The auro-hyperlink version this card uses does not currently act on it, so it has no visible effect.",
               "attribute": "relative",
-              "reflects": true
+              "reflects": true,
+              "relevantWhen": "href",
+              "category": "behavior"
             },
             {
               "kind": "field",
@@ -148,9 +165,10 @@
               "type": {
                 "text": "string"
               },
-              "description": "Sets role attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#role).",
+              "description": "Sets the card's accessibility role. Without `href`, the role is `article`. With `href`, the value is passed to the [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#role), and no role is set when it is empty.",
               "attribute": "role",
-              "reflects": true
+              "reflects": true,
+              "category": "behavior"
             },
             {
               "kind": "method",
@@ -170,20 +188,11 @@
               "type": {
                 "text": "string"
               },
-              "description": "Sets target attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#target).",
+              "description": "Sets where the link opens, such as `_blank` for a new tab or `_self` for the current tab (the [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#target) `target` attribute).",
               "attribute": "target",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "variant",
-              "privacy": "public",
-              "type": {
-                "text": "'inset-content' | 'inset-container' | 'inset-stretch'"
-              },
-              "description": "Sets the variant of the card.",
-              "attribute": "variant",
-              "reflects": true
+              "reflects": true,
+              "relevantWhen": "href",
+              "category": "behavior"
             }
           ],
           "attributes": [
@@ -192,64 +201,73 @@
               "type": {
                 "text": "boolean"
               },
-              "description": "Adds desired UI border to the `auro-card` element.",
-              "fieldName": "border"
+              "description": "Adds a thin border and rounded corners around the card.",
+              "fieldName": "border",
+              "category": "ui"
             },
             {
               "name": "center",
               "type": {
                 "text": "boolean"
               },
-              "description": "Centers content within the scope of the `auro-card`.",
-              "fieldName": "center"
+              "description": "Centers the text within the card.",
+              "fieldName": "center",
+              "category": "ui"
             },
             {
               "name": "href",
               "type": {
                 "text": "string"
               },
-              "description": "Sets the card to function as a hyperlink to the provided href value & disables the default CTA slot.",
-              "fieldName": "href"
+              "description": "Makes the whole card a single link to an address such as `/destinations/hawaii` (the [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#href) `href` attribute), including its safe handling of URLs. Because the card's content is rendered inside the link, avoid placing other links or buttons in the card's slots.",
+              "fieldName": "href",
+              "category": "behavior"
             },
             {
               "name": "rel",
               "type": {
                 "text": "string"
               },
-              "description": "Sets rel attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#rel).",
-              "fieldName": "rel"
+              "description": "Sets how the linked page relates to this one, such as `noopener` or `nofollow` (the [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#rel) `rel` attribute).",
+              "fieldName": "rel",
+              "relevantWhen": "href",
+              "category": "behavior"
             },
             {
               "name": "relative",
               "type": {
                 "text": "boolean"
               },
-              "description": "If true, the auto URL re-write feature will be disabled. [See here for info about hyperlink relative attribute](https://auro.alaskaair.com/components/auro/hyperlink/api#relative).",
-              "fieldName": "relative"
+              "description": "Passes a `relative` attribute to the [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api). The auro-hyperlink version this card uses does not currently act on it, so it has no visible effect.",
+              "fieldName": "relative",
+              "relevantWhen": "href",
+              "category": "behavior"
             },
             {
               "name": "role",
               "type": {
                 "text": "string"
               },
-              "description": "Sets role attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#role).",
-              "fieldName": "role"
+              "description": "Sets the card's accessibility role. Without `href`, the role is `article`. With `href`, the value is passed to the [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#role), and no role is set when it is empty.",
+              "fieldName": "role",
+              "category": "behavior"
             },
             {
               "name": "target",
               "type": {
                 "text": "string"
               },
-              "description": "Sets target attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#target).",
-              "fieldName": "target"
+              "description": "Sets where the link opens, such as `_blank` for a new tab or `_self` for the current tab (the [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#target) `target` attribute).",
+              "fieldName": "target",
+              "relevantWhen": "href",
+              "category": "behavior"
             },
             {
-              "name": "variant",
               "type": {
                 "text": "'inset-content' | 'inset-container' | 'inset-stretch'"
               },
-              "description": "Sets the variant of the card.",
-              "fieldName": "variant"
+              "description": "Sets how padding is applied. Use `inset-content` to pad the text and leave the image edge to edge, `inset-container` to pad the whole card, image included, or `inset-stretch` to let the image and text reach the left and right edges, with space above the image and below the text. Without a value, the card adds no extra left, right, or top padding. When `href` is set, the text always gets left and right padding, even with `inset-stretch`.",
+              "name": "variant"
             }
           ],
           "superclass": {
@@ -258,6 +276,7 @@
           },
           "tagName": "auro-card",
           "customElement": true,
+          "summary": "Card that groups an image, header, description, and call to action, and can act as a single link.",
           "modulePath": "src/auro-card.js"
         }
       ],
@@ -295,7 +314,7 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "8.0.3",
+            "name": "0.0.0-pr369.0",
             "module": "src/hyperlinkVersion.js"
           }
         }

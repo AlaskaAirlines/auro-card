@@ -16,20 +16,47 @@ import tokensCss from "./styles/tokens.scss";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
- * The `<auro-card>` element provides users a flexible way to convey a summary of information.
+ * A card that groups an image, a header, a description, and a call to action into one
+ * summary of information, such as a destination, offer, or article teaser.
+ *
+ * **Key capabilities**
+ * - **Content areas**: four named slots (`image`, `header`, `description`, `cta`) that you
+ *   fill with your own content.
+ * - **Clickable card**: setting `href` makes the whole card a single link, built on
+ *   `<auro-hyperlink>`, including its safe handling of URLs.
+ * - **Spacing options**: set `variant` to `inset-content`, `inset-container`, or `inset-stretch`
+ *   to choose how padding is applied around the image and text.
+ * - **Border and alignment**: `border` adds an outline with rounded corners, and `center`
+ *   centers the text.
+ *
+ * **Example**
+ * ```html
+ * <auro-card href="/destinations/hawaii" border>
+ *   <img slot="image" src="hawaii.jpg" alt="A beach in Hawaii" />
+ *   <span slot="header">Hawaii</span>
+ *   <span slot="description">Fly nonstop from the West Coast.</span>
+ * </auro-card>
+ * ```
+ *
+ * @summary Card that groups an image, header, description, and call to action, and can act as a single link.
  * @customElement auro-card
  *
- * @slot image - Content slot for image content.
- * @slot header - Content slot for string text header content.
- * @slot description - Content slot for string text description content.
- * @slot cta - Content slot for call-to-action content.
- * @csspart content - Apply styles to the outer string text container.
- * @csspart link - Apply styles to the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#link) element.
- * @csspart imageWrapper - Apply styles to the outer image slot container.
- * @csspart image - Apply styles to the named image slot container.
- * @csspart header - Apply styles to the named header slot container.
- * @csspart description - Apply styles to the named description slot container.
- * @csspart cta - Apply styles to the named cta slot container.
+ * @attr {'inset-content' | 'inset-container' | 'inset-stretch'} variant - Sets how padding is applied. Use `inset-content` to pad the text and leave the image edge to edge, `inset-container` to pad the whole card, image included, or `inset-stretch` to let the image and text reach the left and right edges, with space above the image and below the text. Without a value, the card adds no extra left, right, or top padding. When `href` is set, the text always gets left and right padding, even with `inset-stretch`.
+ *
+ * @slot image - An image for the top of the card. An `<img>` fills the full width of the card.
+ * @slot header - The card's heading text.
+ * @slot description - Supporting text shown below the header.
+ * @slot cta - A call to action, such as a button or link, shown below the description. When the card is taller than its content, such as in a row of cards, it moves to the bottom so calls to action line up.
+ * @csspart content - The container that holds the header, description, and cta slots.
+ * @csspart link - The [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#link) that wraps the whole card. Only present when `href` is set.
+ * @csspart imageWrapper - The container around the image slot.
+ * @csspart image - The `<slot>` element that holds the image content.
+ * @csspart header - The `<slot>` element that holds the header content.
+ * @csspart description - The `<slot>` element that holds the description content.
+ * @csspart cta - The `<slot>` element that holds the call to action.
+ *
+ * @cssprop --ds-auro-card-border-color - Color of the card's border, which shows when `border` is set. A card with `href` also uses it for the outline around the card.
+ * @cssprop --ds-auro-card-background-color - Color behind the card's content. Cards with `border` or `href` use the theme's surface color by default, and other cards are transparent.
  */
 
 export class AuroCard extends LitElement {
@@ -64,7 +91,8 @@ export class AuroCard extends LitElement {
   static get properties() {
     return {
       /**
-       * Adds desired UI border to the `auro-card` element.
+       * Adds a thin border and rounded corners around the card.
+       * @category ui
        */
       border: {
         type: Boolean,
@@ -72,7 +100,8 @@ export class AuroCard extends LitElement {
       },
 
       /**
-       * Centers content within the scope of the `auro-card`.
+       * Centers the text within the card.
+       * @category ui
        */
       center: {
         type: Boolean,
@@ -80,7 +109,8 @@ export class AuroCard extends LitElement {
       },
 
       /**
-       * Sets the card to function as a hyperlink to the provided href value & disables the default CTA slot.
+       * Makes the whole card a single link to an address such as `/destinations/hawaii` (the [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#href) `href` attribute), including its safe handling of URLs. Because the card's content is rendered inside the link, avoid placing other links or buttons in the card's slots.
+       * @category behavior
        */
       href: {
         type: String,
@@ -88,7 +118,9 @@ export class AuroCard extends LitElement {
       },
 
       /**
-       * Sets rel attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#rel).
+       * Sets how the linked page relates to this one, such as `noopener` or `nofollow` (the [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#rel) `rel` attribute).
+       * @relevantWhen href
+       * @category behavior
        */
       rel: {
         type: String,
@@ -96,7 +128,9 @@ export class AuroCard extends LitElement {
       },
 
       /**
-       * If true, the auto URL re-write feature will be disabled. [See here for info about hyperlink relative attribute](https://auro.alaskaair.com/components/auro/hyperlink/api#relative).
+       * Passes a `relative` attribute to the [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api). The auro-hyperlink version this card uses does not currently act on it, so it has no visible effect.
+       * @relevantWhen href
+       * @category behavior
        */
       relative: {
         type: Boolean,
@@ -104,7 +138,8 @@ export class AuroCard extends LitElement {
       },
 
       /**
-       * Sets role attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#role).
+       * Sets the card's accessibility role. Without `href`, the role is `article`. With `href`, the value is passed to the [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#role), and no role is set when it is empty.
+       * @category behavior
        */
       role: {
         type: String,
@@ -112,18 +147,11 @@ export class AuroCard extends LitElement {
       },
 
       /**
-       * Sets target attribute on the [auro-hyperlink](https://auro.alaskaair.com/components/auro/hyperlink/api#target).
+       * Sets where the link opens, such as `_blank` for a new tab or `_self` for the current tab (the [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#target) `target` attribute).
+       * @relevantWhen href
+       * @category behavior
        */
       target: {
-        type: String,
-        reflect: true
-      },
-
-      /**
-       * Sets the variant of the card.
-       * @type {'inset-content' | 'inset-container' | 'inset-stretch'}
-       */
-      variant: {
         type: String,
         reflect: true
       }
@@ -131,11 +159,11 @@ export class AuroCard extends LitElement {
   }
 
   /**
-   * This will register this element with the browser.
-   * @param {string} [name="auro-card"] - The name of the element that you want to register.
+   * Registers the element with the browser under a tag name. Use a custom name to run this version alongside another version of `auro-card` on the same page.
+   * @param {string} [name="auro-card"] - The tag name to register the element under.
    *
    * @example
-   * AuroCard.register("custom-card") // this will register this element to <custom-card/>
+   * AuroCard.register("custom-card") // makes the element available as <custom-card>
    *
    */
   static register(name = "auro-card") {
