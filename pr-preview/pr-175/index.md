@@ -31,9 +31,9 @@ Use `<auro-card>` when you want to:
 The basic example shows the `image`, `header`, `description`, and `cta` slots on a single standalone card. By default, the card is only as wide as its content.
 
 **Content recommendations:**
-- Use `<auro-header>` with `display="500"` for headings
-- Use `<p>` elements for body text  
-- Use `<auro-hyperlink>` or `<auro-hyperlink type="cta">` for the `cta` slot
+- Use `<auro-header>` with `display="500"` for headings.
+- Use `<p>` elements for body text.
+- Use `<auro-hyperlink>` or `<auro-hyperlink type="cta">` for the `cta` slot.
 
 Set a `width` or `max-width` to control the card's size and how the text wraps.
 
