@@ -47,7 +47,8 @@
             },
             {
               "description": "The [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#link) that wraps the whole card. Only present when `href` is set.",
-              "name": "link"
+              "name": "link",
+              "relevantWhen": "href"
             }
           ],
           "slots": [
