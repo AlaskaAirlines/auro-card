@@ -8,7 +8,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "A card that groups an image, a header, a description, and a call to action into one\nsummary of information, such as a destination, offer, or article teaser.\n\n**Key capabilities**\n- **Content areas**: four named slots (`image`, `header`, `description`, `cta`) that you\n  fill with your own content.\n- **Clickable card**: setting `href` makes the whole card a single link, built on\n  `<auro-hyperlink>`, including its safe handling of URLs.\n- **Spacing options**: set `variant` to `inset-content`, `inset-container`, or `inset-stretch`\n  to choose how padding is applied around the image and text.\n- **Border and alignment**: `border` adds an outline with rounded corners, and `center`\n  centers the text.\n\n**Example**\n```html\n<auro-card href=\"/destinations/hawaii\" border>\n  <img slot=\"image\" src=\"hawaii.jpg\" alt=\"A beach in Hawaii\" />\n  <span slot=\"header\">Hawaii</span>\n  <span slot=\"description\">Fly nonstop from the West Coast.</span>\n</auro-card>\n```",
+          "description": "A card that groups an image, a header, a description, and a call to action into one\nsummary of information, such as a destination, offer, or article teaser.\n\n**Key capabilities**\n- **Content areas**: Four named slots (`image`, `header`, `description`, and `cta`) hold\n  your own content.\n- **Clickable card**: Setting `href` makes the whole card a single link, built on\n  `<auro-hyperlink>` with its safe handling of URLs.\n- **Spacing options**: Set `variant` to `inset-content`, `inset-container`, or `inset-stretch`\n  to choose how padding is applied around the image and text.\n- **Border and alignment**: Add `border` for a thin border with rounded corners, and `center`\n  to center the text.\n\n**Example**\n```html\n<auro-card href=\"/destinations/hawaii\" border>\n  <img slot=\"image\" src=\"hawaii.jpg\" alt=\"A beach in Hawaii\" />\n  <span slot=\"header\">Hawaii</span>\n  <span slot=\"description\">Fly nonstop from the West Coast.</span>\n</auro-card>\n```",
           "name": "AuroCard",
           "cssProperties": [
             {
@@ -314,7 +314,7 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "0.0.0-pr369.0",
+            "name": "8.0.7",
             "module": "src/hyperlinkVersion.js"
           }
         }

@@ -20,14 +20,14 @@ import tokensCss from "./styles/tokens.scss";
  * summary of information, such as a destination, offer, or article teaser.
  *
  * **Key capabilities**
- * - **Content areas**: four named slots (`image`, `header`, `description`, `cta`) that you
- *   fill with your own content.
- * - **Clickable card**: setting `href` makes the whole card a single link, built on
- *   `<auro-hyperlink>`, including its safe handling of URLs.
- * - **Spacing options**: set `variant` to `inset-content`, `inset-container`, or `inset-stretch`
+ * - **Content areas**: Four named slots (`image`, `header`, `description`, and `cta`) hold
+ *   your own content.
+ * - **Clickable card**: Setting `href` makes the whole card a single link, built on
+ *   `<auro-hyperlink>` with its safe handling of URLs.
+ * - **Spacing options**: Set `variant` to `inset-content`, `inset-container`, or `inset-stretch`
  *   to choose how padding is applied around the image and text.
- * - **Border and alignment**: `border` adds an outline with rounded corners, and `center`
- *   centers the text.
+ * - **Border and alignment**: Add `border` for a thin border with rounded corners, and `center`
+ *   to center the text.
  *
  * **Example**
  * ```html

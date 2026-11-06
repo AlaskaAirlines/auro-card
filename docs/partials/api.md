@@ -16,7 +16,7 @@
 
 </auro-accordion>
 
-## Property & Attribute Examples
+## Property and attribute examples
 
 ### Bordered
 
@@ -84,7 +84,7 @@ The following examples use the `inset-container` and `inset-content` variants. U
 
 </auro-accordion>
 
-## Common Usage Patterns & Functional Examples
+## Common usage patterns
 
 ### Complex cards
 
@@ -122,7 +122,7 @@ This requires no extra configuration: place the cards in a CSS `grid` or `flex` 
 
 </auro-accordion>
 
-## Restyle Component with CSS Variables
+## Restyle with CSS custom properties
 
 Restyle the component by changing the values of the following tokens.
 
