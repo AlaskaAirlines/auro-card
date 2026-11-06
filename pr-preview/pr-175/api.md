@@ -53,15 +53,15 @@ summary of information, such as a destination, offer, or article teaser.
 
 ### CSS shadow parts
 
-| Name         | Description                                                                                                                                       |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| content      | The container that holds the header, description, and cta slots.                                                                                  |
-| cta          | The `<slot>` element that holds the call to action.                                                                                               |
-| description  | The `<slot>` element that holds the description content.                                                                                          |
-| header       | The `<slot>` element that holds the header content.                                                                                               |
-| image        | The `<slot>` element that holds the image content.                                                                                                |
-| imageWrapper | The container around the image slot.                                                                                                              |
-| link         | The [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#link) that wraps the whole card. Only present when `href` is set. |
+| Name         | Relevant when | Description                                                                                                                                       |
+| ------------ | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| content      |               | The container that holds the header, description, and cta slots.                                                                                  |
+| cta          |               | The `<slot>` element that holds the call to action.                                                                                               |
+| description  |               | The `<slot>` element that holds the description content.                                                                                          |
+| header       |               | The `<slot>` element that holds the header content.                                                                                               |
+| image        |               | The `<slot>` element that holds the image content.                                                                                                |
+| imageWrapper |               | The container around the image slot.                                                                                                              |
+| link         | `href`        | The [`auro-hyperlink`](https://auro.alaskaair.com/components/auro/hyperlink/api#link) that wraps the whole card. Only present when `href` is set. |
 
 ### CSS custom properties
 
